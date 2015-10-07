@@ -1,0 +1,42 @@
+﻿<Application
+    x:Class="SpartaHack.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpartaHack"
+    RequestedTheme="Dark">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+
+                <ResourceDictionary x:Key="Dark">
+
+                    <SolidColorBrush x:Key="TextBoxForegroundHeaderThemeBrush" Color="#FF80FFDB" />
+                    <SolidColorBrush x:Key="TextBoxPlaceholderTextThemeBrush" Color="#AB000000" />
+                    <SolidColorBrush x:Key="TextBoxBackgroundThemeBrush" Color="#FF80FFDB" />
+                    <SolidColorBrush x:Key="TextBoxBorderThemeBrush" Color="#A3000000" />
+                    <SolidColorBrush x:Key="TextBoxButtonBackgroundThemeBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="TextBoxButtonBorderThemeBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="TextBoxButtonForegroundThemeBrush" Color="#FF000000" />
+                    <SolidColorBrush x:Key="TextSelectionHighlightColorThemeBrush" Color="#FF4617b4" />
+                    <SolidColorBrush x:Key="TextBoxButtonPointerOverBackgroundThemeBrush" Color="#FFDEDEDE" />
+                    <SolidColorBrush x:Key="TextBoxButtonPointerOverBorderThemeBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="TextBoxButtonPointerOverForegroundThemeBrush" Color="Black" />
+                    <SolidColorBrush x:Key="TextBoxButtonPressedBackgroundThemeBrush" Color="#FF000000" />
+                    <SolidColorBrush x:Key="TextBoxButtonPressedBorderThemeBrush" Color="Transparent" />
+                    <SolidColorBrush x:Key="TextBoxButtonPressedForegroundThemeBrush" Color="#FF80FFDB" />
+                    <SolidColorBrush x:Key="TextBoxDisabledBackgroundThemeBrush" Color="#66CACACA" />
+                    <SolidColorBrush x:Key="TextBoxDisabledBorderThemeBrush" Color="#26000000" />
+                    <SolidColorBrush x:Key="TextBoxDisabledForegroundThemeBrush" Color="#FF666666" />
+                    <SolidColorBrush x:Key="TextBoxForegroundThemeBrush" Color="#FF000000" />
+
+
+
+                    <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
+                        <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
+                    </ResourceDictionary>
+                </ResourceDictionary.ThemeDictionaries>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+
