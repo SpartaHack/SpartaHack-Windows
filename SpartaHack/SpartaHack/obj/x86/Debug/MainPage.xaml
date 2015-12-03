@@ -47,7 +47,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Grid Background="#19000000" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
+        <Grid Background="DarkGray" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
 
             <Button x:ConnectionId='10' x:Name="HambButton"  RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="DarkGray" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
