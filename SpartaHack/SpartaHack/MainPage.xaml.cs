@@ -22,12 +22,36 @@ namespace SpartaHack
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public MainPage()
+        public static Title title;
+        public MainPage(Frame frame)
         {
             this.InitializeComponent();
+            this.MySplitView.Content = frame;
+            title = new Title();
+            DataContext = title;
         }
 
-        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+      
+        private void OnNotificationsChecked(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
+            if (MySplitView.Content != null)
+                ((Frame)MySplitView.Content).Navigate(typeof(HomePage));
+        }
+        private void OnMapsChecked(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
+            if (MySplitView.Content != null)
+                ((Frame)MySplitView.Content).Navigate(typeof(MapPage));
+        }
+        private void OnLoginChecked(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
+            if (MySplitView.Content != null)
+                ((Frame)MySplitView.Content).Navigate(typeof(LoginPage));
+        }
+
+        private void HambButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
