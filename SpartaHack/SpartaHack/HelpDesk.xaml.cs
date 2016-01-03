@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Parse;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -37,6 +37,22 @@ namespace SpartaHack
                 new Ticket() {Title="Need help with Java" , Description="Getting error 0x123456789ABCDEF"}
             };
             Tickets.Source = t;
+            getCategories();
+        }
+        public async void getCategories()
+        {
+            ParseQuery<ParseObject> query = ParseObject.GetQuery("HelpDesk");
+
+            List<Ticket> categories = new List<Ticket>();
+            Ticket category;
+            foreach(ParseObject obj in await query.FindAsync())
+            {
+                category = new Ticket();
+                category.Title = obj["category"].ToString();
+                category.Description = obj["Description"].ToString();
+                categories.Add(category);
+            }
+            Categories.Source = categories;
         }
     }
     public class Ticket
@@ -44,4 +60,6 @@ namespace SpartaHack
         public string Title { get; set; }
         public string Description { get; set; }
     }
+
+
 }
