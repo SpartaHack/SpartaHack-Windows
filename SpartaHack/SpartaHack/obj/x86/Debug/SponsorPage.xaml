@@ -11,13 +11,13 @@
             <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-            <CollectionViewSource x:Name="Sponsors"/>
+            <CollectionViewSource x:ConnectionId='1' x:Name="Sponsors"/>
         </ResourceDictionary>
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
 
-        <GridView x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}" SelectionChanged="grdSponsors_SelectionChanged" >
+        <GridView x:ConnectionId='2' x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="10">
@@ -29,3 +29,4 @@
         </GridView>
     </Grid>
 </Page>
+
