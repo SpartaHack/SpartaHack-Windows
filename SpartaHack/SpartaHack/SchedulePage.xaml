@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="SpartaHack.SchedulePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpartaHack"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
+            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
+            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+            <CollectionViewSource x:Name="Events"/>
+            <DataTemplate>
+                <StackPanel Margin="10">
+                    <TextBlock FontSize="18" Text="{Binding EventTime}" Foreground="{StaticResource TargetForeground}"/>
+                    <TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
+                    <TextBlock FontSize="12" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}"/>
+                </StackPanel>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+
+    </Page.Resources>
+    <Grid  Background="{StaticResource TargetBackground}" >
+        <!--<Pivot Margin="5,5,0,0">
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}"/>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <PivotItem Header="FRIDAY - FEB 26th" >
+                <ListView></ListView>
+            </PivotItem>
+            <PivotItem Header="SATURDAY - FEB 27th">
+                <ListView></ListView>
+            </PivotItem>
+            <PivotItem Header="SUNDAY - FEB 28th">
+                <ListView></ListView>
+            </PivotItem>
+        </Pivot>-->
+        <ListView>
+            
+        </ListView>
+    </Grid>
+</Page>

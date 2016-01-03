@@ -63,6 +63,18 @@ namespace SpartaHack
             if (MySplitView.Content != null)
                 ((Frame)MySplitView.Content).Navigate(typeof(SponsorPage));
         }
+        private void OnAwardsChecked(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
+            if (MySplitView.Content != null)
+                ((Frame)MySplitView.Content).Navigate(typeof(AwardsPage));
+        }
+        private void OnScheduleChecked(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
+            if (MySplitView.Content != null)
+                ((Frame)MySplitView.Content).Navigate(typeof(SchedulePage));
+        }
         private void HambButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;

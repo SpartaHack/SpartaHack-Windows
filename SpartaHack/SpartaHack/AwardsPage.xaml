@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="SpartaHack.SponsorPage"
+    x:Class="SpartaHack.AwardsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SpartaHack"
@@ -11,22 +11,10 @@
             <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-            <CollectionViewSource x:ConnectionId='1' x:Name="Sponsors"/>
+            <CollectionViewSource x:Name="Sponsors"/>
         </ResourceDictionary>
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
-
-        <GridView x:ConnectionId='2' x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="10">
-                        <Image Height="200" Source="{Binding Logo}"/>
-                        <TextBlock Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
     </Grid>
 </Page>
-

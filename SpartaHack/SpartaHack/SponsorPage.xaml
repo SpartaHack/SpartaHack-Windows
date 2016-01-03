@@ -20,10 +20,10 @@
         <GridView x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}" SelectionChanged="grdSponsors_SelectionChanged" >
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="10">
-                        <Image Height="200" Source="{Binding Logo}"/>
-                        <TextBlock Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
-                    </StackPanel>
+                    <Grid Margin="10" Width="400">
+                        <Image Width="400" Source="{Binding Logo}" VerticalAlignment="Top"/>
+                        <TextBlock VerticalAlignment="Bottom" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
+                    </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>

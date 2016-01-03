@@ -30,14 +30,9 @@ namespace SpartaHack
         {
             base.OnNavigatedTo(e);
             MainPage.title.Value = "HELP DESK";
-            List<Ticket> t = new List<Ticket>()
-            {
-                new Ticket() {Title="Help Ive fallen", Description="and I cant get up"},
-                new Ticket() {Title="Insomnia Cookies", Description="Crumbs stuck in keyboard" },
-                new Ticket() {Title="Need help with Java" , Description="Getting error 0x123456789ABCDEF"}
-            };
-            Tickets.Source = t;
+        
             getCategories();
+            getTickets();
         }
         public async void getCategories()
         {
@@ -53,6 +48,22 @@ namespace SpartaHack
                 categories.Add(category);
             }
             Categories.Source = categories;
+        }
+
+        public async void getTickets()
+        {
+            ParseQuery<ParseObject> query = ParseObject.GetQuery("HelpDeskTickets");
+
+            List<Ticket> tickets = new List<Ticket>();
+            Ticket t;
+            foreach (ParseObject obj in await query.FindAsync())
+            {
+                t = new Ticket();
+                
+                t.Description = obj["description"].ToString();
+               tickets.Add(t);
+            }
+            Tickets.Source = tickets;
         }
     }
     public class Ticket

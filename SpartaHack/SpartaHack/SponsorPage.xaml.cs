@@ -55,12 +55,12 @@ namespace SpartaHack
 
         private async void grdSponsors_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (grdSponsors.SelectedIndex != -1)
-            {
-                Sponsor s = grdSponsors.SelectedItem as Sponsor;
-                await Windows.System.Launcher.LaunchUriAsync(s.URL);
-                grdSponsors.SelectedIndex = -1;
-            }
+            //if (grdSponsors.SelectedIndex != -1)
+            //{
+            //    Sponsor s = grdSponsors.SelectedItem as Sponsor;
+            //    await Windows.System.Launcher.LaunchUriAsync(s.URL);
+            //    grdSponsors.SelectedIndex = -1;
+            //}
         }
     }
     public class Sponsor

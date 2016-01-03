@@ -75,12 +75,13 @@
                     
                     <StackPanel>
 
-
+                        <RadioButton Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnScheduleChecked"/>
                         <RadioButton Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>
-                        <RadioButton Tag="&#xE8CF;" Content="Concierge"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>
+                        <!--<RadioButton Tag="&#xE8CF;" Content="Concierge"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>-->
                         <RadioButton Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapsChecked"/>
-                        <RadioButton Tag="&#xE897;" Content="Mentor"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHelpChecked"/>
-                        <RadioButton Tag="&#xE716;" Content="Sponsors / Awards"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorsChecked"/>
+                        <RadioButton Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHelpChecked"/>
+                        <RadioButton Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorsChecked"/>
+                        <RadioButton Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnAwardsChecked"/>
 
 
                     </StackPanel>
