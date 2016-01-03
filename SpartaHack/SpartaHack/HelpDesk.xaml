@@ -14,7 +14,7 @@
 
             <DataTemplate x:Key="ticketView">
 
-                <StackPanel Margin="10" >
+                <StackPanel Margin="10">
                     <TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
                     <TextBlock FontSize="12" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}"/>
                 </StackPanel>
@@ -37,7 +37,8 @@
         
             
             <TextBlock Text="CURRENT TICKETS" FontSize="18" Grid.Row="1" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
-            <ListView SelectedIndex="-1" Grid.Row="1" Margin="0,40,0,0" ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}"/>
+           
+            <ListView SelectedIndex="-1" Grid.Row="1" Margin="0,40,0,0" ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False"/>
 
 
         </Grid>

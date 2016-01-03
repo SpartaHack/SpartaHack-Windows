@@ -84,6 +84,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="IsHoldingEnabled" />
+      <RootProperty Name="IsDoubleTapEnabled" />
+      <RootProperty Name="IsRightTapEnabled" />
     </RootType>
     <RootType FullName="SpartaHack.HelpDesk" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
