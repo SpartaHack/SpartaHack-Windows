@@ -132,21 +132,23 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
-            _typeNameTable[0] = "SpartaHack.HomePage";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "SpartaHack.HelpDesk";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "SpartaHack.LoginPage";
-            _typeNameTable[4] = "SpartaHack.MainPage";
-            _typeNameTable[5] = "SpartaHack.MapPage";
+            _typeNameTable[3] = "SpartaHack.HomePage";
+            _typeNameTable[4] = "SpartaHack.LoginPage";
+            _typeNameTable[5] = "SpartaHack.MainPage";
+            _typeNameTable[6] = "SpartaHack.MapPage";
 
-            _typeTable = new global::System.Type[6];
-            _typeTable[0] = typeof(global::SpartaHack.HomePage);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::SpartaHack.HelpDesk);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::SpartaHack.LoginPage);
-            _typeTable[4] = typeof(global::SpartaHack.MainPage);
-            _typeTable[5] = typeof(global::SpartaHack.MapPage);
+            _typeTable[3] = typeof(global::SpartaHack.HomePage);
+            _typeTable[4] = typeof(global::SpartaHack.LoginPage);
+            _typeTable[5] = typeof(global::SpartaHack.MainPage);
+            _typeTable[6] = typeof(global::SpartaHack.MapPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -181,9 +183,10 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_HomePage() { return new global::SpartaHack.HomePage(); }
-        private object Activate_3_LoginPage() { return new global::SpartaHack.LoginPage(); }
-        private object Activate_5_MapPage() { return new global::SpartaHack.MapPage(); }
+        private object Activate_0_HelpDesk() { return new global::SpartaHack.HelpDesk(); }
+        private object Activate_3_HomePage() { return new global::SpartaHack.HomePage(); }
+        private object Activate_4_LoginPage() { return new global::SpartaHack.LoginPage(); }
+        private object Activate_6_MapPage() { return new global::SpartaHack.MapPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -195,9 +198,9 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  SpartaHack.HomePage
+            case 0:   //  SpartaHack.HelpDesk
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_HomePage;
+                userType.Activator = Activate_0_HelpDesk;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -210,22 +213,29 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
                 xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  SpartaHack.LoginPage
+            case 3:   //  SpartaHack.HomePage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_LoginPage;
+                userType.Activator = Activate_3_HomePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  SpartaHack.MainPage
+            case 4:   //  SpartaHack.LoginPage
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_LoginPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  SpartaHack.MainPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  SpartaHack.MapPage
+            case 6:   //  SpartaHack.MapPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_MapPage;
+                userType.Activator = Activate_6_MapPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </Page.Resources>
     <Border BorderThickness="1,0,0,0" BorderBrush="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}">
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Background="{StaticResource TargetBackground}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>
@@ -23,12 +23,13 @@
             
             <Image HorizontalAlignment="Center" Source="Assets/FacebookTwitterIGProfilePic.png" Grid.Row="0"/>
             <StackPanel x:ConnectionId='1' x:Name="grdLogin" Grid.Row="1" >
-            <TextBox x:ConnectionId='4' x:Name="txtEmail" PlaceholderText="Email Address" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"/>
-            <PasswordBox x:ConnectionId='5' x:Name="txtPassword" PlaceholderText="Password" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"                              />
-                <Button x:ConnectionId='6' x:Name="btnLogin" Content="Login" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"                       />
+            <TextBox x:ConnectionId='5' x:Name="txtEmail" PlaceholderText="Email Address" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"/>
+            <PasswordBox x:ConnectionId='6' x:Name="txtPassword" PlaceholderText="Password" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"                              />
+                <Button x:ConnectionId='7' x:Name="btnLogin" Content="Login" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"                       />
             </StackPanel>
             <StackPanel x:ConnectionId='2' x:Name="grdLoggedIn" Visibility="Collapsed">
-                <Button x:ConnectionId='3' x:Name="btnLogout" Content="Logout" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"                        />
+                <Image x:ConnectionId='3' Height="300" Width="300" x:Name="imgQR" HorizontalAlignment="Center"/>
+                <Button x:ConnectionId='4' x:Name="btnLogout" Content="Logout" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"                        />
 
             </StackPanel>
         </Grid>

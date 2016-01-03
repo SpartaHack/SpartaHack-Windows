@@ -30,9 +30,10 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="2">
-                            <Grid Background="#5D5D5D" Height="100" >
-                            <TextBlock Text="{Binding}"/>
-                        </Grid>
+                            <StackPanel Background="#5D5D5D" Height="100" >
+                                <TextBlock Margin="2" Text="{Binding Title}" FontSize="22" Typography.Capitals="AllSmallCaps" />
+                            <TextBlock Margin="20,10,0,0" Text="{Binding Description}"/>
+                        </StackPanel>
                             <Polygon Points="10,0 10,15, 25,0" Stroke="#5D5D5D" Fill="#5D5D5D" />
                         </StackPanel>
                     </DataTemplate>

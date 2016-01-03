@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </Page.Resources>
     <Border BorderThickness="1,0,0,0" BorderBrush="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}">
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Background="{StaticResource TargetBackground}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>

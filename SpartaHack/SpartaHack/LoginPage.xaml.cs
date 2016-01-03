@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Net.Http;
 using Parse;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -35,8 +36,7 @@ namespace SpartaHack
 
 
            user = await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
-
-          
+            getQRCode(user["qrCode"] as ParseFile);
             ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", user.ObjectId);
             ParseObject applicant = await query.FirstAsync();
             List<KeyValuePair<string, object>> data = applicant.ToList<KeyValuePair<string, object>>();
@@ -59,6 +59,16 @@ namespace SpartaHack
             grdLogin.Visibility = Visibility.Visible;
             grdLoggedIn.Visibility = Visibility.Collapsed;
 
+        }
+
+
+        async void getQRCode(ParseFile file)
+        {
+            Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+            HttpClient client = new HttpClient();
+            bi.UriSource = file.Url;
+
+            imgQR.Source = bi;
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {

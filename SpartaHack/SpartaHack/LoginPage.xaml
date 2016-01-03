@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </Page.Resources>
     <Border BorderThickness="1,0,0,0" BorderBrush="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}">
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Background="{StaticResource TargetBackground}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="*"/>
@@ -28,6 +28,7 @@
                 <Button x:Name="btnLogin" Content="Login" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10" Click="btnLogin_Click"/>
             </StackPanel>
             <StackPanel x:Name="grdLoggedIn" Visibility="Collapsed">
+                <Image Height="300" Width="300" x:Name="imgQR" HorizontalAlignment="Center"/>
                 <Button x:Name="btnLogout" Content="Logout" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10" Click="btnLogout_Click"/>
 
             </StackPanel>

@@ -48,7 +48,7 @@ namespace SpartaHack
         protected override  void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            MainPage.title.Value = "NOTIFICATIONS";
+            MainPage.title.Value = "ANNOUNCEMENTS";
         }
 
     }

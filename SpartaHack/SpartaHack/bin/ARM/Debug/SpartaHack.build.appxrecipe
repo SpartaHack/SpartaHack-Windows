@@ -94,9 +94,6 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Parse.UWP\Properties\Parse.UWP.rd.xml">
       <PackagePath>Parse.UWP\Properties\Parse.UWP.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Parse.WinRT.dll">
-      <PackagePath>Parse.WinRT.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Parse\Parse.dll">
       <PackagePath>Parse\Parse.dll</PackagePath>
     </AppxPackagedFile>

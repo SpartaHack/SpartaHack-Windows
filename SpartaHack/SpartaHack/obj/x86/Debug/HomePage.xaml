@@ -15,18 +15,15 @@
         </ResourceDictionary>
         
     </Page.Resources>
-    <Border BorderThickness="1,0,0,0" BorderBrush="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}">
-        <Grid >
-            <Grid.Background>
-                <ImageBrush Stretch="UniformToFill" ImageSource="Assets/FacebookTwitterIGProfilePic.png"/>
-            </Grid.Background>
+     <Grid Background="{StaticResource TargetBackground}" >
+       
 
-            <!--<Image Source="/Assets/mlhBackground.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.95" />-->
+            <Image Source="Assets/logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.95" />
 
                
                 
           
-            <ItemsControl x:ConnectionId='2' x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" Margin="5">
+            <ItemsControl x:ConnectionId='2'  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" Margin="10" MaxWidth="500">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="2">
@@ -40,6 +37,6 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </Grid>
-    </Border>
+
 </Page>
 

@@ -47,19 +47,23 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Grid Background="#19000000" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
+        <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource TargetForeground}">
 
-            <Button x:ConnectionId='10' x:Name="HambButton"  RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="DarkGray" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+
+            <Grid Background="{StaticResource TargetBackground}" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
+
+                <Button x:ConnectionId='10' x:Name="HambButton"  RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="DarkGray" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-            <TextBlock Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Value}" FontWeight="ExtraBold"/>
+                <TextBlock Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Value}" FontWeight="ExtraBold"/>
 
 
 
-          
 
 
-        </Grid>
+
+            </Grid>
+        </Border>
         <SplitView x:ConnectionId='3' x:Name="MySplitView" Margin="0,48,0,0" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="50" IsPaneOpen="False" PaneBackground="{StaticResource TargetBackground}" BorderBrush="{StaticResource TargetForeground}">
 
             <SplitView.Pane >

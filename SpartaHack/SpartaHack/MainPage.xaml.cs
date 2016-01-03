@@ -50,10 +50,16 @@ namespace SpartaHack
             if (MySplitView.Content != null)
                 ((Frame)MySplitView.Content).Navigate(typeof(LoginPage));
         }
-
+        private void OnHelpChecked(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
+            if (MySplitView.Content != null)
+                ((Frame)MySplitView.Content).Navigate(typeof(HelpDesk));
+        }
         private void HambButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+            bgPane.Width = MySplitView.IsPaneOpen ? 200 : 48;
         }
     }
 }
