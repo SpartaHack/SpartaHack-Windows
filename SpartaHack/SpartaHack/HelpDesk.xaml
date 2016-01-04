@@ -12,25 +12,33 @@
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
 
-            <DataTemplate x:Key="ticketView">
-                <Button Background="Transparent" HorizontalAlignment="Stretch">
-                    <Button.Content>
-                <StackPanel Margin="10" >
+            <DataTemplate x:Name="ticketHeaderView">
+                
+                <StackPanel Margin="10" Tapped="StackPanel_Tapped" MinWidth="400" >
                     <TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
                     <TextBlock FontSize="12" Text="{Binding Description}" Foreground="White" TextWrapping="WrapWholeWords"/>
+                            <FlyoutBase.AttachedFlyout>
+                                <Flyout Placement="Right">
+                                    <StackPanel Width="300">
+                                        <TextBlock Text="REPORT YOUR PROBLEM"/>
+                                        <TextBlock Text="{Binding Title}"/>
+                                        <TextBox PlaceholderText="Please descrive your problem"  Text="{Binding ProblemDescription, Mode=TwoWay}" Margin="5"/>
+                                        <Button x:Name="btnSubmit" Content="SUBMIT" Margin="5" Click="btnSubmit_Click"/>
+                                    </StackPanel>
+                                </Flyout>
+                            </FlyoutBase.AttachedFlyout>
                 </StackPanel>
-                    </Button.Content>
-                    <Button.Flyout>
-                        <Flyout>
-                            <StackPanel Width="300">
-                        <TextBlock Text="REPORT YOUR PROBLEM"/>
-                        <TextBlock Text="{Binding Title}"/>
-                        <TextBox PlaceholderText="Please descrive your problem"  Text="{Binding ProblemDescription, Mode=TwoWay}" Margin="5"/>
-                        <Button x:Name="btnSubmit" Content="SUBMIT" Margin="5" Click="btnSubmit_Click"/>
-                            </StackPanel>
-                        </Flyout>
-                    </Button.Flyout>
-                </Button>
+                    
+            </DataTemplate>
+            
+            
+            
+            <DataTemplate x:Key="ticketView">
+                <StackPanel Margin="10" >
+                    <!--<TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>-->
+                    <TextBlock FontSize="18" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}" TextWrapping="WrapWholeWords"/>
+                    <TextBlock FontSize="12" Margin="5" Text="{Binding Time}" Foreground="White" FontWeight="Bold"/>
+                </StackPanel>
             </DataTemplate>
             
             <CollectionViewSource x:Name="Tickets"/>
@@ -41,16 +49,16 @@
     <Grid  Background="{StaticResource TargetBackground}">
         <Grid Margin="5,5,0,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
                 <TextBlock Grid.Row="0" FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC"/>
-            <ListView x:Name="lsvCategories" IsSynchronizedWithCurrentItem="False" SelectedIndex="-1" Margin="0,20,0,0" Grid.Row="0" Grid.RowSpan="1" ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketView}" SelectionChanged="lsvCategories_SelectionChanged">
-                
+            <ListView x:Name="lsvCategories" IsSynchronizedWithCurrentItem="False" SelectedIndex="-1" Margin="0,20,0,0" Grid.Row="0" Grid.RowSpan="1" ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" >
+
             </ListView>
            
-            <TextBlock Text="CURRENT TICKETS" FontSize="18" Grid.Row="1" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
+            <TextBlock Text="YOUR CURRENT TICKETS" FontSize="18" Grid.Row="1" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
 
             <ListView SelectedIndex="-1"  IsSynchronizedWithCurrentItem="False" Grid.Row="1" Margin="0,40,0,0" ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False"/>
 

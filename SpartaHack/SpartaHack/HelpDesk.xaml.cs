@@ -53,23 +53,34 @@ namespace SpartaHack
 
         public async void getTickets()
         {
-            ParseQuery<ParseObject> query = ParseObject.GetQuery("HelpDeskTickets");
-
             List<Ticket> tickets = new List<Ticket>();
-            Ticket t;
-            foreach (ParseObject obj in await query.FindAsync())
+           
+            if (ParseUser.CurrentUser == null)
             {
-                t = new Ticket();
-                
-                t.Description = obj["description"].ToString();
-               tickets.Add(t);
+                tickets.Add(new Ticket()
+                {
+                    Description = "Looks like youre not logged in, login so you can see your support tickets"
+                });
+            }
+            else
+            { 
+                ParseQuery<ParseObject> query = ParseObject.GetQuery("HelpDeskTickets").WhereEqualTo("user", ParseUser.CurrentUser);
+
+                Ticket t;
+                foreach (ParseObject obj in await query.FindAsync())
+                {
+                    t = new Ticket();
+                    t.Created = obj.CreatedAt.Value;
+                    t.Description = obj["description"].ToString();
+                    tickets.Add(t);
+                }
             }
             Tickets.Source = tickets;
         }
 
-        private void lsvCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void lsvCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //grdProblem.DataContext = lsvCategories.SelectedItem;
+          
         }
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -89,6 +100,14 @@ namespace SpartaHack
             getTickets();
 
         }
+
+        private async void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (ParseUser.CurrentUser == null)
+                await new Windows.UI.Popups.MessageDialog("Please sign in before reporting an incident", "Youre not logged in").ShowAsync();
+            else
+                FlyoutBase.ShowAttachedFlyout(sender as FrameworkElement);
+        }
     }
     public class Ticket
     {
@@ -96,6 +115,8 @@ namespace SpartaHack
         public string Description { get; set; }
         public string ProblemDescription { get; set; }
         public string objectId { get; set; }
+        public DateTime Created { get; set; }
+        public string Time { get { return Created.ToString("G"); } }
     }
 
 
