@@ -31,29 +31,35 @@ namespace SpartaHack
         }
         bool loggedIn = false;
         ParseUser user;
+
+
+
+
         async void login()
         {
 
+            try {
+                user = await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
+                getQRCode(user["qrCode"] as ParseFile);
+                ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", user.ObjectId);
+                ParseObject applicant = await query.FirstAsync();
+               
+                //grdFlyout.DataContext = applicant;
+              
 
-           user = await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
-            getQRCode(user["qrCode"] as ParseFile);
-            ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", user.ObjectId);
-            ParseObject applicant = await query.FirstAsync();
-            List<KeyValuePair<string, object>> data = applicant.ToList<KeyValuePair<string, object>>();
-
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            foreach (KeyValuePair<string, object> d in data)
-                sb.AppendLine(string.Format("{0}    {1}", d.Key, d.Value));
-            await new Windows.UI.Popups.MessageDialog(sb.ToString()).ShowAsync();
-
-            grdLogin.Visibility = Visibility.Collapsed;
-            grdLoggedIn.Visibility = Visibility.Visible;
-            MainPage.title.Value = "WELCOME " + applicant["firstName"];
+                grdLogin.Visibility = Visibility.Collapsed;
+                grdLoggedIn.Visibility = Visibility.Visible;
+                txtHeader.Text = "WELCOME " + applicant["firstName"];
+            }
+            catch(Exception e)
+            {
+                await new Windows.UI.Popups.MessageDialog("Looks like you typed in something wrong", "Woops...").ShowAsync();
+            }
         }
         async void logout()
         {
             await ParseUser.LogOutAsync();
-            MainPage.title.Value = "GOODBYE " + user.Username;
+            txtHeader.Text = "SPARTAHACK 2016";
 
             MainPage.title.Value = "LOGIN";
             grdLogin.Visibility = Visibility.Visible;
@@ -61,6 +67,18 @@ namespace SpartaHack
 
         }
 
+        async void setupProfileScreen()
+        {
+            ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", ParseUser.CurrentUser.ObjectId);
+            ParseObject applicant = await query.FirstAsync();
+
+            //grdFlyout.DataContext = applicant;
+
+
+            grdLogin.Visibility = Visibility.Collapsed;
+            grdLoggedIn.Visibility = Visibility.Visible;
+            txtHeader.Text = "WELCOME " + applicant["firstName"];
+        }
 
         async void getQRCode(ParseFile file)
         {
@@ -78,6 +96,19 @@ namespace SpartaHack
         {
             base.OnNavigatedTo(e);
             MainPage.title.Value = "LOGIN";
+            if(ParseUser.CurrentUser==null)
+            {
+                txtHeader.Text = "SPARTAHACK 2016";
+
+                MainPage.title.Value = "LOGIN";
+                grdLogin.Visibility = Visibility.Visible;
+                grdLoggedIn.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                setupProfileScreen();
+            }
+
         }
 
         private void txtPassword_KeyDown(object sender, KeyRoutedEventArgs e)

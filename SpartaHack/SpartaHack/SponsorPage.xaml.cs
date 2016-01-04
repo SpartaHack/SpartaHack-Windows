@@ -52,7 +52,7 @@ namespace SpartaHack
                 sponsor.Level = obj["level"].ToString();
                 sponsors.Add(sponsor);
             }
-            var query = from s in sponsors
+            var query = from s in sponsors orderby s.numLevel descending
                         group s by s.Level into grouped
                         select new SponsorGroup(grouped)
                         {
@@ -67,12 +67,12 @@ namespace SpartaHack
 
         private async void grdSponsors_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if (grdSponsors.SelectedIndex != -1)
-            //{
-            //    Sponsor s = grdSponsors.SelectedItem as Sponsor;
-            //    await Windows.System.Launcher.LaunchUriAsync(s.URL);
-            //    grdSponsors.SelectedIndex = -1;
-            //}
+            if (grdSponsors.SelectedIndex != -1)
+            {
+                Sponsor s = grdSponsors.SelectedItem as Sponsor;
+                await Windows.System.Launcher.LaunchUriAsync(s.URL);
+                grdSponsors.SelectedIndex = -1;
+            }
         }
     }
     public class Sponsor
@@ -87,6 +87,25 @@ namespace SpartaHack
             Logo = new BitmapImage();
             Logo.UriSource = file.Url;
         }
+
+        public int numLevel
+        {
+            get
+            {
+                if (Level == "partner")
+                    return 1;
+                if (Level == "trainee")
+                    return 2;
+                if (Level == "warrior")
+                    return 3;
+                if (Level == "commander")
+                    return 4;
+                if (Level == "ledgend")
+                    return 5;
+                return 0;
+            }
+        }
+
     }
 
     public class SponsorGroup:ObservableCollection<Sponsor>

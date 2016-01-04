@@ -18,21 +18,26 @@
      <Grid Background="{StaticResource TargetBackground}" >
        
 
-            <Image Source="Assets/logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.95" />
+            <!--<Image Source="Assets/logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.95" />-->
 
                
-                
+               
           
             <ItemsControl  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" Margin="10" MaxWidth="500">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="2">
-                            <StackPanel Background="#5D5D5D" Height="100" >
-                                <TextBlock Margin="2" Text="{Binding Title}" FontSize="22" Typography.Capitals="AllSmallCaps" />
-                            <TextBlock Margin="20,10,0,0" Text="{Binding Description}"/>
-                        </StackPanel>
-                            <Polygon Points="10,0 10,15, 25,0" Stroke="#5D5D5D" Fill="#5D5D5D" />
-                        </StackPanel>
+                    <StackPanel Width="380" Margin="0,5">
+                        <Border BorderBrush="{StaticResource TargetForeground}" BorderThickness="1,1,1,0">
+                    <StackPanel>
+                        <TextBlock Margin="10" HorizontalAlignment="Left" Text="{Binding Title}" FontSize="22" Typography.Capitals="AllSmallCaps" />
+                        <TextBlock Margin="20,30,0,0" HorizontalAlignment="Left" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
+
+                    </StackPanel>
+                        </Border>
+                        <Polyline Points="0,0 10,0 10,15, 25,0, 380,0" StrokeThickness="1" Stroke="{StaticResource TargetForeground}"/>
+
+                    </StackPanel>
+ 
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

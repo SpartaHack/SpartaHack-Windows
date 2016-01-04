@@ -30,7 +30,7 @@ namespace SpartaHack
             title = new Title();
             DataContext = title;
         }
-
+     
       
         private void OnNotificationsChecked(object sender, RoutedEventArgs e)
         {

@@ -13,21 +13,21 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
             <CollectionViewSource x:Name="Sponsors" IsSourceGrouped="True"/>
             <DataTemplate x:Name="lsvHeader">
-                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Level}" FontFamily="{StaticResource TargetFont}"/>
+                <TextBlock Margin="5" FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Level}" FontFamily="{StaticResource TargetFont}"/>
             </DataTemplate>
         </ResourceDictionary>
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
 
-        <GridView x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}" SelectionChanged="grdSponsors_SelectionChanged" >
+        <GridView  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}" SelectionChanged="grdSponsors_SelectionChanged" >
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </GridView.GroupStyle>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Margin="10" Width="400">
-                        <Image Width="400" Source="{Binding Logo}" VerticalAlignment="Top"/>
+                    <Grid Margin="10" Width="400" >
+                        <Image Width="400" Height="200" Source="{Binding Logo}" VerticalAlignment="Top"/>
                         <TextBlock VerticalAlignment="Bottom" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
                     </Grid>
                 </DataTemplate>

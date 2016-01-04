@@ -45,6 +45,7 @@ namespace SpartaHack
                 category = new Ticket();
                 category.Title = obj["category"].ToString();
                 category.Description = obj["Description"].ToString();
+                category.objectId = obj.ObjectId;
                 categories.Add(category);
             }
             Categories.Source = categories;
@@ -65,11 +66,36 @@ namespace SpartaHack
             }
             Tickets.Source = tickets;
         }
+
+        private void lsvCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //grdProblem.DataContext = lsvCategories.SelectedItem;
+        }
+
+        private async void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            ParseObject ticket = new ParseObject("HelpDeskTickets");
+            Button b = sender as Button;
+            Ticket t = b.DataContext as Ticket;
+            ticket["description"] = t.ProblemDescription;
+            ticket["user"] = ParseUser.CurrentUser;
+            ticket["category"] = new ParseObject("HelpDesk")
+            {
+                ObjectId = t.objectId
+            };
+            await ticket.SaveAsync();
+            
+            await new Windows.UI.Popups.MessageDialog("Your message has been sent!", "Thank you for letting us know").ShowAsync();
+            getTickets();
+
+        }
     }
     public class Ticket
     {
         public string Title { get; set; }
         public string Description { get; set; }
+        public string ProblemDescription { get; set; }
+        public string objectId { get; set; }
     }
 
 

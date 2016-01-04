@@ -45,7 +45,7 @@
                 <ListView></ListView>
             </PivotItem>
         </Pivot>-->
-        <ListView ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
+        <ListView  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
             <ListView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </ListView.GroupStyle>

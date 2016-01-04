@@ -57,7 +57,7 @@
             <Button x:ConnectionId='12' x:Name="HambButton" BorderBrush="{StaticResource TargetForeground}" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    BorderThickness=".75" Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-            <TextBlock Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Value}" FontWeight="ExtraBold"/>
+            <TextBlock Margin="48,0,0,0" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Value}" FontWeight="ExtraBold"/>
 
 
 
@@ -86,7 +86,7 @@
 
                     </StackPanel>
 
-                    <RadioButton x:ConnectionId='5' VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
+                    <RadioButton x:ConnectionId='5' x:Name="rdLogin" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
 
 
                 </Grid>
