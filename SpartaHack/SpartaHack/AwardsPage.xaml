@@ -11,10 +11,25 @@
             <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-            <CollectionViewSource x:Name="Sponsors"/>
+            <CollectionViewSource x:Name="Awards" IsSourceGrouped="True"/>
+            <DataTemplate x:Name="grdAward">
+                <Grid Width="150" Height="150">
+                    <TextBlock Margin="5" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
+                    <TextBlock Margin="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="18" Text="{Binding Description}" Foreground="White"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Name="lsvHeader">
+                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Company}" FontFamily="{StaticResource TargetFont}"/>
+            </DataTemplate>
         </ResourceDictionary>
 
     </Page.Resources>
-    <Grid  Background="{StaticResource TargetBackground}" >
+    <Grid  Background="{StaticResource TargetBackground}"  >
+        <GridView ItemsSource="{Binding Source={StaticResource Awards}}" ItemTemplate="{Binding Source={StaticResource grdAward}}">
+            <GridView.GroupStyle>
+                <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
+            </GridView.GroupStyle>
+        </GridView>
     </Grid>
 </Page>
+ 

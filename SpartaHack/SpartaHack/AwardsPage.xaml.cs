@@ -12,7 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Parse;
+using System.Collections.ObjectModel;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -30,6 +31,42 @@ namespace SpartaHack
         {
             base.OnNavigatedTo(e);
             MainPage.title.Value = "AWARDS";
+            getAwards();
         }
+        public async void getAwards()
+        {
+            ParseQuery<ParseObject> query = ParseObject.GetQuery("Prizes");
+            List<Prize> prizes = new List<Prize>();
+            Prize p;
+            foreach(ParseObject obj in await query.FindAsync())
+            {
+                p = new Prize();
+                p.Name = obj["name"].ToString();
+                p.Company = obj["company"].ToString();
+                p.Description = obj["description"].ToString();
+                prizes.Add(p);
+            }
+            Awards.Source = from pr in prizes
+                    group pr by pr.Company into grouped
+                    select new PrizeList(grouped)
+                    {
+                        Company = grouped.Key
+                    };
+            
+        }
+    }
+    public class Prize
+    {
+        public string Name { get; set; }
+        public string Company { get; set; }
+        public string Description { get; set; }
+    }
+    public class PrizeList: ObservableCollection<Prize>
+    {
+        public PrizeList(IEnumerable<Prize> items) : base(items)
+        {
+        }
+
+        public string Company { get; set; }
     }
 }

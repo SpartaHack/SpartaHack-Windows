@@ -26,11 +26,11 @@ namespace SpartaHack
         }
         async void getAnnouncements()
         {
-            //try
-            //{
+            try
+            {
                 List<Announcement> announcements = new List<Announcement>();
                 List<ParseObject> _announcements = new List<ParseObject>(await ParseObject.GetQuery("Announcements").FindAsync());
-                foreach(ParseObject obj in _announcements)
+                foreach (ParseObject obj in _announcements)
                 {
                     announcements.Add(new Announcement
                     {
@@ -39,11 +39,11 @@ namespace SpartaHack
                     });
                 }
                 Data.Source = announcements;
-            //}
-            //catch
-            //{
+            }
+            catch
+            {
 
-            //}
+            }
         }
         protected override  void OnNavigatedTo(NavigationEventArgs e)
         {
