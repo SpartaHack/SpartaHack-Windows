@@ -16,7 +16,7 @@
 
                 <StackPanel Margin="10">
                     <TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
-                    <TextBlock FontSize="12" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}"/>
+                    <TextBlock FontSize="12" Text="{Binding Description}" Foreground="White" TextWrapping="WrapWholeWords"/>
                 </StackPanel>
             </DataTemplate>
             

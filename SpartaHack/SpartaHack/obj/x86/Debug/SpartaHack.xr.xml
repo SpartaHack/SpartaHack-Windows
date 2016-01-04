@@ -4,7 +4,9 @@
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="Day" />
     <RootPropertyPathName Name="Time" />
+    <RootPropertyPathName Name="Level" />
     <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="Logo" />
   </Roots.PropertyPathNames>
@@ -27,7 +29,9 @@
       <RootProperty Name="RequestedTheme" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.FontFamily" />
-    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource" />
+    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
+      <RootProperty Name="IsSourceGrouped" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
@@ -68,12 +72,12 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Text" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="TextWrapping" />
       <RootProperty Name="Style" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
@@ -90,6 +94,7 @@
       <RootProperty Name="IsHoldingEnabled" />
       <RootProperty Name="IsDoubleTapEnabled" />
       <RootProperty Name="IsRightTapEnabled" />
+      <RootProperty Name="GroupStyle" />
     </RootType>
     <RootType FullName="SpartaHack.HelpDesk" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -196,6 +201,9 @@
     </RootType>
     <RootType FullName="SpartaHack.MainPage" />
     <RootType FullName="SpartaHack.MapPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
+      <RootProperty Name="HeaderTemplate" />
+    </RootType>
     <RootType FullName="SpartaHack.SchedulePage" />
     <RootType FullName="System.Double" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
@@ -266,6 +274,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="GroupStyle" />
       <RootProperty Name="ItemTemplate" />
       <RootEvent Name="SelectionChanged" />
     </RootType>

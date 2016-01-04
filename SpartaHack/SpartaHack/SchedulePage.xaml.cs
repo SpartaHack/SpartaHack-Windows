@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Parse;
+using System.Collections.ObjectModel;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -37,7 +38,7 @@ namespace SpartaHack
             ParseQuery<ParseObject> query = ParseObject.GetQuery("Schedule");
             List<SHEvent> events = new List<SHEvent>();
             SHEvent e;
-            foreach(ParseObject obj in await query.FindAsync())
+            foreach (ParseObject obj in await query.FindAsync())
             {
                 e = new SHEvent();
                 e.EventTime = DateTime.Parse(obj["eventTime"].ToString());
@@ -45,20 +46,27 @@ namespace SpartaHack
                 e.Description = obj["eventDescription"].ToString();
                 events.Add(e);
             }
-            Events.Source = events;
+            var groupEvents = from ev in events group ev by ev.EventTime.Date into grouped select new EventGroup(grouped)
+            {
+                Day = grouped.Key.ToString("D")
+        };
+            Events.Source = groupEvents;
         }
 
     }
     public class SHEvent
     {
         public DateTime EventTime { get; set; }
-        public string Time {
-            get
-            {
-                return EventTime.DayOfWeek.ToString() + ", " + EventTime.ToString("G");
-            }
-        }
+        public string Time { get { return EventTime.ToString("t"); } }
         public string Title { get; set; }
         public string Description { get; set; }
+    }
+    public class EventGroup : ObservableCollection<SHEvent>
+    {
+        public EventGroup(IEnumerable<SHEvent> items) : base(items)
+        {
+        }
+        
+        public string Day{ get; set; }
     }
 }

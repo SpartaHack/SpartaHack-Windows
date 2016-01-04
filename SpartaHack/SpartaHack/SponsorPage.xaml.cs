@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Net.Http;
 using Parse;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Collections.ObjectModel;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -38,19 +39,30 @@ namespace SpartaHack
         }
         public async void getSponsors()
         {
-            ParseQuery<ParseObject> query = ParseObject.GetQuery("Company");
-            var companies = await query.FindAsync();
+            ParseQuery<ParseObject> parseQuery = ParseObject.GetQuery("Company");
+            var companies = await parseQuery.FindAsync();
             List<Sponsor> sponsors = new List<Sponsor>();
             Sponsor sponsor;
-            foreach(ParseObject obj in companies)
+            foreach (ParseObject obj in companies)
             {
                 sponsor = new Sponsor();
                 sponsor.getLogo(obj["img"] as ParseFile);
                 sponsor.Name = obj["name"].ToString();
                 sponsor.URL = new Uri(obj["url"].ToString());
+                sponsor.Level = obj["level"].ToString();
                 sponsors.Add(sponsor);
             }
-            Sponsors.Source = sponsors;
+            var query = from s in sponsors
+                        group s by s.Level into grouped
+                        select new SponsorGroup(grouped)
+                        {
+                            Level = grouped.Key,
+
+                        };
+            
+            Sponsors.Source = query;
+
+
         }
 
         private async void grdSponsors_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -67,6 +79,8 @@ namespace SpartaHack
     {
         public string Name { get; set; }
         public BitmapImage Logo { get; set; }
+
+        public string Level { get; set; }
         public Uri URL { get; set; }
         public void getLogo(ParseFile file)
         {
@@ -74,4 +88,14 @@ namespace SpartaHack
             Logo.UriSource = file.Url;
         }
     }
+
+    public class SponsorGroup:ObservableCollection<Sponsor>
+    {
+        public SponsorGroup(IEnumerable<Sponsor> items) : base(items)
+        {
+        }
+
+        public string Level { get; set; }
+    }
+
 }

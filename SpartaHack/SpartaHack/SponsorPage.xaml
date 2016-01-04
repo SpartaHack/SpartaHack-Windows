@@ -11,13 +11,19 @@
             <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-            <CollectionViewSource x:Name="Sponsors"/>
+            <CollectionViewSource x:Name="Sponsors" IsSourceGrouped="True"/>
+            <DataTemplate x:Name="lsvHeader">
+                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Level}" FontFamily="{StaticResource TargetFont}"/>
+            </DataTemplate>
         </ResourceDictionary>
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
 
         <GridView x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}" SelectionChanged="grdSponsors_SelectionChanged" >
+            <GridView.GroupStyle>
+                <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
+            </GridView.GroupStyle>
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="10" Width="400">
