@@ -4,6 +4,7 @@
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="Time" />
     <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="Logo" />
   </Roots.PropertyPathNames>
@@ -72,8 +73,8 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="Style" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Style" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />

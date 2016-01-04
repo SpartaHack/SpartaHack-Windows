@@ -11,8 +11,8 @@
             <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-            <CollectionViewSource x:Name="Events"/>
-            <DataTemplate x:Name="tmpEvent">
+            <CollectionViewSource x:ConnectionId='1' x:Name="Events"/>
+            <DataTemplate x:ConnectionId='2' x:Name="tmpEvent">
                 <StackPanel Margin="10">
                     
                     <TextBlock  FontSize="18" VerticalAlignment="Bottom"  Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
@@ -46,3 +46,4 @@
         </ListView>
     </Grid>
 </Page>
+

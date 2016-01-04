@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Parse;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -26,5 +26,39 @@ namespace SpartaHack
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            MainPage.title.Value = "SCHEDULE";
+            getSchedule();
+        }
+        public async void getSchedule()
+        {
+            ParseQuery<ParseObject> query = ParseObject.GetQuery("Schedule");
+            List<SHEvent> events = new List<SHEvent>();
+            SHEvent e;
+            foreach(ParseObject obj in await query.FindAsync())
+            {
+                e = new SHEvent();
+                e.EventTime = DateTime.Parse(obj["eventTime"].ToString());
+                e.Title = obj["eventTitle"].ToString();
+                e.Description = obj["eventDescription"].ToString();
+                events.Add(e);
+            }
+            Events.Source = events;
+        }
+
+    }
+    public class SHEvent
+    {
+        public DateTime EventTime { get; set; }
+        public string Time {
+            get
+            {
+                return EventTime.DayOfWeek.ToString() + ", " + EventTime.ToString("G");
+            }
+        }
+        public string Title { get; set; }
+        public string Description { get; set; }
     }
 }
