@@ -46,7 +46,7 @@ namespace SpartaHack
                 e.Description = obj["eventDescription"].ToString();
                 events.Add(e);
             }
-            var groupEvents = from ev in events group ev by ev.EventTime.Date into grouped select new EventGroup(grouped)
+            var groupEvents = from ev in events orderby ev.EventTime ascending group ev by ev.EventTime.Date into grouped select new EventGroup(grouped)
             {
                 Day = grouped.Key.ToString("D")
         };
