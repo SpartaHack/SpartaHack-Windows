@@ -78,11 +78,7 @@ namespace SpartaHack
             Tickets.Source = tickets;
         }
 
-        private async void lsvCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-          
-        }
-
+      
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             ParseObject ticket = new ParseObject("HelpDeskTickets");

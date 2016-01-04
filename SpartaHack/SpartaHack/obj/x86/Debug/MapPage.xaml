@@ -6,9 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
+            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
+            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+          
+        </ResourceDictionary>
 
-    <Grid >
-
+    </Page.Resources>
+    <Grid  Background="{StaticResource TargetBackground}"  >
+<TextBlock Text="Not available yet" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource TargetForeground}"/>
     </Grid>
 </Page>
 

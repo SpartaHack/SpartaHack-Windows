@@ -17,11 +17,11 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid>
+    <Grid x:ConnectionId='1'                     >
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:ConnectionId='1' x:Name="WideState">
+                <VisualState x:ConnectionId='2' x:Name="WideState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="700" />
                     </VisualState.StateTriggers>
@@ -33,7 +33,7 @@
                     </VisualState.Setters>
                 </VisualState>
 
-                <VisualState x:ConnectionId='2' x:Name="NarrowState">
+                <VisualState x:ConnectionId='3' x:Name="NarrowState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
 
@@ -54,7 +54,7 @@
 
         <Grid Background="{StaticResource TargetBackground}"  Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
 
-            <Button x:ConnectionId='12' x:Name="HambButton" BorderBrush="{StaticResource TargetForeground}" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+            <Button x:ConnectionId='13' x:Name="HambButton" BorderBrush="{StaticResource TargetForeground}" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    BorderThickness=".75" Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
             <TextBlock Margin="48,0,0,0" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Value}" FontWeight="ExtraBold"/>
@@ -66,27 +66,27 @@
 
         </Grid>
 
-        <SplitView x:ConnectionId='3' x:Name="MySplitView"  Margin="0,48,0,0" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="48" IsPaneOpen="False" PaneBackground="{StaticResource TargetBackground}">
+        <SplitView x:ConnectionId='4' x:Name="MySplitView"  Margin="0,48,0,0" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="48" IsPaneOpen="False" PaneBackground="{StaticResource TargetBackground}">
 
             <SplitView.Pane  >
                 <Grid >
-                  <Grid x:ConnectionId='4' x:Name="bgPane" Width="48"   BorderBrush="{StaticResource TargetForeground}" BorderThickness="0" HorizontalAlignment="Left" ></Grid> 
+                  <Grid x:ConnectionId='5' x:Name="bgPane" Width="48"   BorderBrush="{StaticResource TargetForeground}" BorderThickness="0" HorizontalAlignment="Left" ></Grid> 
 
                     
                     <StackPanel>
 
-                        <RadioButton x:ConnectionId='6' Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
-                        <RadioButton x:ConnectionId='7' Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                 />
+                        <RadioButton x:ConnectionId='7' x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
+                        <RadioButton x:ConnectionId='8' x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                 />
                         <!--<RadioButton Tag="&#xE8CF;" Content="Concierge"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>-->
-                        <RadioButton x:ConnectionId='8' Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
-                        <RadioButton x:ConnectionId='9' Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
-                        <RadioButton x:ConnectionId='10' Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
-                        <RadioButton x:ConnectionId='11' Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
+                        <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
+                        <RadioButton x:ConnectionId='10' x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
+                        <RadioButton x:ConnectionId='11' x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
+                        <RadioButton x:ConnectionId='12' x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
 
 
                     </StackPanel>
 
-                    <RadioButton x:ConnectionId='5' x:Name="rdLogin" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
+                    <RadioButton x:ConnectionId='6' x:Name="rdLogin" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
 
 
                 </Grid>

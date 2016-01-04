@@ -29,6 +29,7 @@ namespace SpartaHack
             this.MySplitView.Content = frame;
             title = new Title();
             DataContext = title;
+
         }
      
       
@@ -79,6 +80,11 @@ namespace SpartaHack
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
             bgPane.Width = MySplitView.IsPaneOpen ? 200 : 48;
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            rdNotifications.IsChecked = true;
         }
     }
 }

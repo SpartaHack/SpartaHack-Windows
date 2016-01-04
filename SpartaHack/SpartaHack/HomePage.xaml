@@ -23,12 +23,12 @@
                
                
           
-            <ItemsControl  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" Margin="10" MaxWidth="500">
-                <ItemsControl.ItemTemplate>
+            <ListView IsSynchronizedWithCurrentItem="False"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" Margin="10" MaxWidth="500">
+                <ListView.ItemTemplate>
                     <DataTemplate>
-                    <StackPanel Width="380" Margin="0,5">
+                    <StackPanel  Margin="0,5" Width="380">
                         <Border BorderBrush="{StaticResource TargetForeground}" BorderThickness="1,1,1,0">
-                    <StackPanel>
+                    <StackPanel Margin="10">
                         <TextBlock Margin="10" HorizontalAlignment="Left" Text="{Binding Title}" FontSize="22" Typography.Capitals="AllSmallCaps" />
                         <TextBlock Margin="20,30,0,0" HorizontalAlignment="Left" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
 
@@ -39,8 +39,8 @@
                     </StackPanel>
  
                     </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
 
 </Page>

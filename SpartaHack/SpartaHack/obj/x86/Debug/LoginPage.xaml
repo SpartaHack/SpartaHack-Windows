@@ -13,8 +13,7 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
         </ResourceDictionary>
     </Page.Resources>
-    <Border BorderThickness="1,0,0,0" BorderBrush="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}">
-        <Grid Background="{StaticResource TargetBackground}">
+    <Grid Background="{StaticResource TargetBackground}">
 
             <TextBlock x:ConnectionId='1' x:Name="txtHeader" Text="SPARTAHACK 2016" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="32"/>
 
@@ -50,6 +49,6 @@
 
             </StackPanel>
         </Grid>
-    </Border>
+    
 </Page>
 

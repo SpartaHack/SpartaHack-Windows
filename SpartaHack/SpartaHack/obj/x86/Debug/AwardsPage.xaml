@@ -13,19 +13,23 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
             <CollectionViewSource x:ConnectionId='1' x:Name="Awards" IsSourceGrouped="True"/>
             <DataTemplate x:ConnectionId='2' x:Name="grdAward">
-                <Grid Width="150" Height="150">
+                <Grid Width="150" Height="150" Margin="10">
                     <TextBlock Margin="5" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
                     <TextBlock Margin="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="18" Text="{Binding Description}" Foreground="White"/>
                 </Grid>
             </DataTemplate>
             <DataTemplate x:ConnectionId='3' x:Name="lsvHeader">
-                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Company}" FontFamily="{StaticResource TargetFont}"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="12" Foreground="{StaticResource TargetForeground}" Text="SPONSORED BY: " FontFamily="{StaticResource TargetFont}" VerticalAlignment="Bottom" Margin="0,0,10,0"/>
+
+                    <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Company}" FontFamily="{StaticResource TargetFont}"/>
+                </StackPanel>
             </DataTemplate>
         </ResourceDictionary>
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}"  >
-        <GridView ItemsSource="{Binding Source={StaticResource Awards}}" ItemTemplate="{Binding Source={StaticResource grdAward}}">
+        <GridView ItemsSource="{Binding Source={StaticResource Awards}}" ItemTemplate="{Binding Source={StaticResource grdAward}}" Margin="10">
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </GridView.GroupStyle>
