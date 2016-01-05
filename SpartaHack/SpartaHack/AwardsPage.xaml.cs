@@ -30,11 +30,18 @@ namespace SpartaHack
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            try { 
             MainPage.title.Value = "AWARDS";
             getAwards();
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in AwardsPage, OnNavigatedTo(): " + ex.Message);
+            }
         }
         public async void getAwards()
         {
+            try { 
             ParseQuery<ParseObject> query = ParseObject.GetQuery("Prizes");
             List<Prize> prizes = new List<Prize>();
             Prize p;
@@ -52,7 +59,12 @@ namespace SpartaHack
                     {
                         Company = grouped.Key
                     };
-            
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in AwardsPage, getAwards(): " + ex.Message);
+            }
+
         }
     }
     public class Prize

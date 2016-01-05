@@ -32,35 +32,47 @@ namespace SpartaHack
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            try { 
             MainPage.title.Value = "SPONSORS";
             grdSponsors.SelectedIndex = -1;
             getSponsors();
-           
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in SponsorPage, OnNavigatedTo(): " + ex.Message);
+            }
+
         }
         public async void getSponsors()
         {
-            ParseQuery<ParseObject> parseQuery = ParseObject.GetQuery("Company");
-            var companies = await parseQuery.FindAsync();
-            List<Sponsor> sponsors = new List<Sponsor>();
-            Sponsor sponsor;
-            foreach (ParseObject obj in companies)
-            {
-                sponsor = new Sponsor();
-                sponsor.getLogo(obj["img"] as ParseFile);
-                sponsor.Name = obj["name"].ToString();
-                sponsor.URL = new Uri(obj["url"].ToString());
-                sponsor.Level = obj["level"].ToString();
-                sponsors.Add(sponsor);
-            }
-            var query = from s in sponsors orderby s.numLevel descending
-                        group s by s.Level into grouped
-                        select new SponsorGroup(grouped)
-                        {
-                            Level = grouped.Key,
+            try {
+                ParseQuery<ParseObject> parseQuery = ParseObject.GetQuery("Company");
+                var companies = await parseQuery.FindAsync();
+                List<Sponsor> sponsors = new List<Sponsor>();
+                Sponsor sponsor;
+                foreach (ParseObject obj in companies)
+                {
+                    sponsor = new Sponsor();
+                    sponsor.getLogo(obj["img"] as ParseFile);
+                    sponsor.Name = obj["name"].ToString();
+                    sponsor.URL = new Uri(obj["url"].ToString());
+                    sponsor.Level = obj["level"].ToString();
+                    sponsors.Add(sponsor);
+                }
+                var query = from s in sponsors orderby s.numLevel descending
+                            group s by s.Level into grouped
+                            select new SponsorGroup(grouped)
+                            {
+                                Level = grouped.Key,
 
-                        };
-            
-            Sponsors.Source = query;
+                            };
+
+                Sponsors.Source = query;
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in SponsorsPage, getSponsors(): " + ex.Message);
+            }
 
 
         }

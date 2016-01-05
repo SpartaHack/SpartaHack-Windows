@@ -29,13 +29,24 @@ namespace SpartaHack
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            try
+            { 
             MainPage.title.Value = "HELP DESK";
         
             getCategories();
             getTickets();
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in HelpDesk, OnNavigatedTo: " + ex.Message);
+            }
         }
         public async void getCategories()
         {
+            try
+            {
+
+            
             ParseQuery<ParseObject> query = ParseObject.GetQuery("HelpDesk");
 
             List<Ticket> categories = new List<Ticket>();
@@ -49,10 +60,16 @@ namespace SpartaHack
                 categories.Add(category);
             }
             Categories.Source = categories;
-        }
+            }
+            catch(Exception ex)
+            {
+                DebugingHelper.ShowError("Error in HelpDesk, getCategories(): " + ex.Message);
+            }
+}
 
         public async void getTickets()
         {
+            try { 
             List<Ticket> tickets = new List<Ticket>();
            
             if (ParseUser.CurrentUser == null)
@@ -76,34 +93,57 @@ namespace SpartaHack
                 }
             }
             Tickets.Source = tickets;
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in HelpDesk, getTickets(): " + ex.Message);
+            }
         }
 
       
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            ParseObject ticket = new ParseObject("HelpDeskTickets");
-            Button b = sender as Button;
-            Ticket t = b.DataContext as Ticket;
-            ticket["description"] = t.ProblemDescription;
-            ticket["user"] = ParseUser.CurrentUser;
-            ticket["category"] = new ParseObject("HelpDesk")
+            try
             {
-                ObjectId = t.objectId
-            };
-            await ticket.SaveAsync();
-            
-            await new Windows.UI.Popups.MessageDialog("Your message has been sent!", "Thank you for letting us know").ShowAsync();
-            getTickets();
+                Button b = sender as Button;
+                Ticket t = b.DataContext as Ticket;
+                if (t.ProblemDescription != null)
+                {
+                    ParseObject ticket = new ParseObject("HelpDeskTickets");
+
+
+                    ticket["description"] = t.ProblemDescription;
+                    ticket["user"] = ParseUser.CurrentUser;
+                    ticket["category"] = new ParseObject("HelpDesk")
+                    {
+                        ObjectId = t.objectId
+                    };
+                    await ticket.SaveAsync();
+
+                    await new Windows.UI.Popups.MessageDialog("Your message has been sent!", "Thank you for letting us know").ShowAsync();
+                    getTickets();
+                }
+            }
+            catch(Exception ex)
+            {
+                DebugingHelper.ShowError("Error in HelpDesk, btnSubmit: " + ex.Message);
+            }
 
         }
 
         private async void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            try { 
             if (ParseUser.CurrentUser == null)
                 await new Windows.UI.Popups.MessageDialog("Please sign in before reporting an incident", "Youre not logged in").ShowAsync();
             else
                 FlyoutBase.ShowAttachedFlyout(sender as FrameworkElement);
-        }
+            }
+            catch(Exception ex)
+            {
+                DebugingHelper.ShowError("Error in HelpDesk, StackPanel_Tapped: " + ex.Message);
+            }
+}
     }
     public class Ticket
     {

@@ -30,30 +30,46 @@ namespace SpartaHack
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            try { 
             MainPage.title.Value = "SCHEDULE";
             getSchedule();
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in SchedulePage, OnNavigatedTo(): " + ex.Message);
+            }
         }
         public async void getSchedule()
         {
-            ParseQuery<ParseObject> query = ParseObject.GetQuery("Schedule");
-            List<SHEvent> events = new List<SHEvent>();
-            SHEvent e;
-            foreach (ParseObject obj in await query.FindAsync())
+            try
             {
-                e = new SHEvent();
-                e.EventTime = DateTime.Parse(obj["eventTime"].ToString());
-                e.Title = obj["eventTitle"].ToString();
-                e.Description = obj["eventDescription"].ToString();
-                events.Add(e);
-            }
-            var groupEvents = from ev in events orderby ev.EventTime ascending group ev by ev.EventTime.Date into grouped select new EventGroup(grouped)
-            {
-                Day = grouped.Key.ToString("D")
-        };
-            Events.Source = groupEvents;
-        }
+                ParseQuery<ParseObject> query = ParseObject.GetQuery("Schedule");
+                List<SHEvent> events = new List<SHEvent>();
+                SHEvent e;
+                foreach (ParseObject obj in await query.FindAsync())
+                {
+                    e = new SHEvent();
+                    e.EventTime = DateTime.Parse(obj["eventTime"].ToString());
+                    e.Title = obj["eventTitle"].ToString();
+                    e.Description = obj["eventDescription"].ToString();
+                    events.Add(e);
+                }
+                var groupEvents = from ev in events
+                                  orderby ev.EventTime ascending
+                                  group ev by ev.EventTime.Date into grouped
+                                  select new EventGroup(grouped)
+                                  {
+                                      Day = grouped.Key.ToString("D")
+                                  };
+                Events.Source = groupEvents;
 
-    }
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in SchedulePage, getSchedule(): " + ex.Message);
+            }
+        }
+}
     public class SHEvent
     {
         public DateTime EventTime { get; set; }

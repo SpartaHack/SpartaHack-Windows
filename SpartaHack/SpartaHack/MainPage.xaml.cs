@@ -35,56 +35,92 @@ namespace SpartaHack
       
         private void OnNotificationsChecked(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = false;
-            if (MySplitView.Content != null)
-                ((Frame)MySplitView.Content).Navigate(typeof(HomePage));
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(HomePage));
+            }
+            catch { }
         }
         private void OnMapsChecked(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = false;
-            if (MySplitView.Content != null)
-                ((Frame)MySplitView.Content).Navigate(typeof(MapPage));
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(MapPage));
+            }
+            catch { }
         }
         private void OnLoginChecked(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = false;
-            if (MySplitView.Content != null)
-                ((Frame)MySplitView.Content).Navigate(typeof(LoginPage));
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(LoginPage));
+            }
+            catch { }
         }
         private void OnHelpChecked(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = false;
-            if (MySplitView.Content != null)
-                ((Frame)MySplitView.Content).Navigate(typeof(HelpDesk));
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(HelpDesk));
+            }
+            catch { }
         }
 
         private void OnSponsorsChecked(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = false;
-            if (MySplitView.Content != null)
-                ((Frame)MySplitView.Content).Navigate(typeof(SponsorPage));
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(SponsorPage));
+            }
+            catch { }
         }
         private void OnAwardsChecked(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = false;
-            if (MySplitView.Content != null)
-                ((Frame)MySplitView.Content).Navigate(typeof(AwardsPage));
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(AwardsPage));
+            }
+            catch { }
         }
         private void OnScheduleChecked(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = false;
-            if (MySplitView.Content != null)
-                ((Frame)MySplitView.Content).Navigate(typeof(SchedulePage));
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(SchedulePage));
+            }
+            catch { }
         }
         private void HambButton_Click(object sender, RoutedEventArgs e)
         {
-            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-            bgPane.Width = MySplitView.IsPaneOpen ? 200 : 48;
+            try
+            {
+                MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+                bgPane.Width = MySplitView.IsPaneOpen ? 200 : 48;
+            }
+            catch { }
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            rdNotifications.IsChecked = true;
+            try
+            {
+                rdNotifications.IsChecked = true;
+            }
+            catch { }
         }
     }
 }

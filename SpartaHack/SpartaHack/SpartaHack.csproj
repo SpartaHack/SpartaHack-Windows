@@ -108,6 +108,7 @@
     <Compile Include="AwardsPage.xaml.cs">
       <DependentUpon>AwardsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DebugingHelper.cs" />
     <Compile Include="HelpDesk.xaml.cs">
       <DependentUpon>HelpDesk.xaml</DependentUpon>
     </Compile>
@@ -141,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Parse\Parse.dll" />
     <Content Include="Parse\Parse.pdb" />
     <Content Include="Parse\Parse.UWP.dll" />
@@ -153,7 +155,6 @@
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>

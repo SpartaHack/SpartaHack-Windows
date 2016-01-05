@@ -20,9 +20,6 @@ namespace SpartaHack
         public HomePage()
         {
             this.InitializeComponent();
-            getAnnouncements();
-           
-            
         }
         async void getAnnouncements()
         {
@@ -40,15 +37,26 @@ namespace SpartaHack
                 }
                 Data.Source = announcements;
             }
-            catch
+            catch(Exception ex)
             {
-
+            
+            
+                DebugingHelper.ShowError("Error in HomePage, getAnnouncements(): " + ex.Message);
+            
             }
         }
         protected override  void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            MainPage.title.Value = "ANNOUNCEMENTS";
+            try
+            {
+                MainPage.title.Value = "ANNOUNCEMENTS";
+                getAnnouncements();
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in HomePage, OnNavigatedTo(): " + ex.Message);
+            }
         }
 
     }

@@ -58,17 +58,27 @@ namespace SpartaHack
         }
         async void logout()
         {
+            try
+            {
+
             await ParseUser.LogOutAsync();
             txtHeader.Text = "SPARTAHACK 2016";
 
             MainPage.title.Value = "LOGIN";
             grdLogin.Visibility = Visibility.Visible;
             grdLoggedIn.Visibility = Visibility.Collapsed;
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, logout(): " + ex.Message);
+            }
 
         }
 
         async void setupProfileScreen()
         {
+            try
+            { 
             ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", ParseUser.CurrentUser.ObjectId);
             ParseObject applicant = await query.FirstAsync();
 
@@ -78,15 +88,27 @@ namespace SpartaHack
             grdLogin.Visibility = Visibility.Collapsed;
             grdLoggedIn.Visibility = Visibility.Visible;
             txtHeader.Text = "WELCOME " + applicant["firstName"];
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, setupProfileScreen(): " + ex.Message);
+            }
         }
 
         async void getQRCode(ParseFile file)
         {
+            try
+            {
             Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
             HttpClient client = new HttpClient();
             bi.UriSource = file.Url;
 
             imgQR.Source = bi;
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, getQRCode(): " + ex.Message);
+            }
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -95,7 +117,8 @@ namespace SpartaHack
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            MainPage.title.Value = "LOGIN";
+            try {
+                MainPage.title.Value = "LOGIN";
             if(ParseUser.CurrentUser==null)
             {
                 txtHeader.Text = "SPARTAHACK 2016";
@@ -108,18 +131,28 @@ namespace SpartaHack
             {
                 setupProfileScreen();
             }
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, OnNavigatedTo(): " + ex.Message);
+            }
 
         }
 
         private void txtPassword_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-
+            try { 
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
                 login();
                 e.Handled = true;
             }
-            
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
+            }
+
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
