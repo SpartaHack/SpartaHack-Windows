@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Net.Http;
 using Parse;
+using Windows.Graphics.Imaging;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -94,16 +95,38 @@ namespace SpartaHack
                 DebugingHelper.ShowError("Error in LoginPage, setupProfileScreen(): " + ex.Message);
             }
         }
+        async void getQRCodeFromFile()
+        {
+            try { 
+            var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
 
+            var buffer = await Windows.Storage.FileIO.ReadBufferAsync(fileio);
+            Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+
+            await bi.SetSourceAsync(buffer.AsStream().AsRandomAccessStream());
+            imgQR.Source = bi;
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, getQRCodeFromFile(): " + ex.Message);
+            }
+        }
         async void getQRCode(ParseFile file)
         {
             try
             {
             Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
             HttpClient client = new HttpClient();
-            bi.UriSource = file.Url;
-
+                byte[] data=await client.GetByteArrayAsync(file.Url);
+                // bi.UriSource = file.Url;
+             await bi.SetSourceAsync(new MemoryStream(data).AsRandomAccessStream());
             imgQR.Source = bi;
+
+               var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.CreateFileAsync("QR.png", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+
+
+                await Windows.Storage.FileIO.WriteBytesAsync(fileio, data);
             }
             catch (Exception ex)
             {
@@ -130,6 +153,7 @@ namespace SpartaHack
             else
             {
                 setupProfileScreen();
+                    getQRCodeFromFile();
             }
             }
             catch (Exception ex)

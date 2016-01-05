@@ -92,7 +92,7 @@ namespace SpartaHack
                     tickets.Add(t);
                 }
             }
-            Tickets.Source = tickets;
+            Tickets.Source = from ti in tickets orderby ti.Created descending select ti;
             }
             catch (Exception ex)
             {

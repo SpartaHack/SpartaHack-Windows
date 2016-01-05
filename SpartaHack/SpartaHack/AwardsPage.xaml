@@ -14,7 +14,7 @@
             <CollectionViewSource x:Name="Awards" IsSourceGrouped="True"/>
             <DataTemplate x:Name="grdAward">
                 <Grid Width="150" Height="150" Margin="10">
-                    <TextBlock Margin="5" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
+                    <TextBlock FontFamily="{StaticResource TargetFont}" Margin="5" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="24" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
                     <TextBlock Margin="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="18" Text="{Binding Description}" Foreground="White"/>
                 </Grid>
             </DataTemplate>
@@ -29,7 +29,7 @@
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}"  >
-        <GridView ItemsSource="{Binding Source={StaticResource Awards}}" ItemTemplate="{Binding Source={StaticResource grdAward}}" Margin="10">
+        <GridView IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Awards}}" ItemTemplate="{Binding Source={StaticResource grdAward}}" Margin="10">
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </GridView.GroupStyle>
