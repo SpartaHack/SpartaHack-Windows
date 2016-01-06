@@ -49,7 +49,7 @@ namespace SpartaHack
             {
                 p = new Prize();
                 p.Name = obj["name"].ToString();
-                p.Company = obj["company"].ToString();
+                    p.Company = (await ((ParseObject)obj["sponsor"]).FetchIfNeededAsync())["name"].ToString();
                 p.Description = obj["description"].ToString();
                 prizes.Add(p);
             }

@@ -7,6 +7,7 @@
     <RootPropertyPathName Name="Time" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="ProblemDescription" />
+    <RootPropertyPathName Name="Pinned" />
     <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="Day" />
     <RootPropertyPathName Name="Level" />
@@ -56,6 +57,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Style" />
     </RootType>

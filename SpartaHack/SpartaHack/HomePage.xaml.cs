@@ -32,10 +32,12 @@ namespace SpartaHack
                     announcements.Add(new Announcement
                     {
                         Title = obj["Title"].ToString(),
+                        pinned = (bool)obj["Pinned"],
+                        Created = obj.CreatedAt.Value.ToLocalTime(),
                         Description = obj["Description"].ToString()
                     });
                 }
-                Data.Source = announcements;
+                Data.Source = from note in announcements orderby note.pinned descending select note;
             }
             catch(Exception ex)
             {
@@ -64,5 +66,10 @@ namespace SpartaHack
     {
         public string Title { get; set; }
         public string Description { get; set; }
+
+        public DateTime Created { get; set; }
+        public string Time { get { return Created.ToString("G"); } }
+        public bool pinned { get; set; }
+        public Visibility Pinned { get { return pinned ? Visibility.Visible : Visibility.Collapsed; } }
     }
 }

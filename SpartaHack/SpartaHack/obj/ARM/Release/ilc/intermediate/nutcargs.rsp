@@ -1,0 +1,9 @@
+/ignoreAccessChecks
+/metadataFile "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\intermediate\ILTransformed\SpartaHack.metadata"
+/gvmAssemblyName "System.Private.CoreLib"
+/o
+/sharedGenerics
+/ilmergeinfo "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\intermediate\ILTransformed\SpartaHack.csv"
+/sharedGenericsMode StandardHeuristics
+/in "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\intermediate\ILTransformed\SpartaHack.ilexe"
+/out "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\intermediate\MDIL\SpartaHack.mdilexe"

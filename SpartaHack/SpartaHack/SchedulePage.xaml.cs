@@ -49,7 +49,8 @@ namespace SpartaHack
                 foreach (ParseObject obj in await query.FindAsync())
                 {
                     e = new SHEvent();
-                    e.EventTime = DateTime.Parse(obj["eventTime"].ToString());
+                    e.EventTime = ((DateTime)obj["eventTime"]).ToLocalTime();
+                    
                     e.Title = obj["eventTitle"].ToString();
                     e.Description = obj["eventDescription"].ToString();
                     events.Add(e);

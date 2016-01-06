@@ -31,7 +31,7 @@ namespace SpartaHack
            
         }
         bool loggedIn = false;
-        ParseUser user;
+        
 
 
 
@@ -40,17 +40,9 @@ namespace SpartaHack
         {
 
             try {
-                user = await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
-                getQRCode(user["qrCode"] as ParseFile);
-                ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", user.ObjectId);
-                ParseObject applicant = await query.FirstAsync();
-               
-                //grdFlyout.DataContext = applicant;
-              
-
-                grdLogin.Visibility = Visibility.Collapsed;
-                grdLoggedIn.Visibility = Visibility.Visible;
-                txtHeader.Text = "WELCOME " + applicant["firstName"];
+                await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
+                getQRCode(ParseUser.CurrentUser["qrCode"] as ParseFile);
+                setupProfileScreen();
             }
             catch(Exception e)
             {
@@ -62,7 +54,7 @@ namespace SpartaHack
             try
             {
 
-            await ParseUser.LogOutAsync();
+                await ParseUser.LogOutAsync();
             txtHeader.Text = "SPARTAHACK 2016";
 
             MainPage.title.Value = "LOGIN";
@@ -79,16 +71,22 @@ namespace SpartaHack
         async void setupProfileScreen()
         {
             try
-            { 
-            ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", ParseUser.CurrentUser.ObjectId);
-            ParseObject applicant = await query.FirstAsync();
+            {
+                grdLogin.Visibility = Visibility.Collapsed;
+                grdLoggedIn.Visibility = Visibility.Visible;
+                try {
+                    ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", ParseUser.CurrentUser.ObjectId);
+                    ParseObject applicant = await query.FirstAsync();
 
-            //grdFlyout.DataContext = applicant;
+                    //grdFlyout.DataContext = applicant;
+                    txtHeader.Text = "WELCOME " + applicant["firstName"];
 
-
-            grdLogin.Visibility = Visibility.Collapsed;
-            grdLoggedIn.Visibility = Visibility.Visible;
-            txtHeader.Text = "WELCOME " + applicant["firstName"];
+                }
+                catch
+                {
+                    txtHeader.Text = "WELCOME " + ParseUser.CurrentUser.Username;
+                }           
+            
             }
             catch (Exception ex)
             {

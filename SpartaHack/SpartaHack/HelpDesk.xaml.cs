@@ -74,20 +74,30 @@ namespace SpartaHack
            
             if (ParseUser.CurrentUser == null)
             {
-                tickets.Add(new Ticket()
-                {
-                    Description = "Looks like youre not logged in, login so you can see your support tickets"
+                    tickets.Add(new Ticket()
+                    {
+                        Description = "Looks like youre not logged in, login so you can see your support tickets",
+                        Created = DateTime.Now
                 });
+                    
             }
             else
-            { 
-                ParseQuery<ParseObject> query = ParseObject.GetQuery("HelpDeskTickets").WhereEqualTo("user", ParseUser.CurrentUser);
+            {
+                    ParseQuery<ParseObject> query;
+                    if(ParseUser.CurrentUser["role"].ToString()=="admin")
+                    {
+                        query = ParseObject.GetQuery("HelpDeskTickets");
+                    }
+                    else
+                    {
+                        query = ParseObject.GetQuery("HelpDeskTickets").WhereEqualTo("user", ParseUser.CurrentUser);
+                    }
 
                 Ticket t;
                 foreach (ParseObject obj in await query.FindAsync())
                 {
                     t = new Ticket();
-                    t.Created = obj.CreatedAt.Value;
+                    t.Created = obj.CreatedAt.Value.ToLocalTime();
                     t.Description = obj["description"].ToString();
                     tickets.Add(t);
                 }
