@@ -23,13 +23,18 @@ namespace SpartaHack
     public sealed partial class MainPage : Page
     {
         public static Title title;
+        DateTime d;
         public MainPage(Frame frame)
         {
             this.InitializeComponent();
             this.MySplitView.Content = frame;
             title = new Title();
             DataContext = title;
-
+            DispatcherTimer dt = new DispatcherTimer();
+            dt.Interval = TimeSpan.FromSeconds(.5);
+            d = DateTime.Now.AddHours(1);
+            dt.Tick += (s, e) => { txtCountDown.Text = d.Subtract(DateTime.Now).ToString("t"); };
+            txtCountDown.Loaded += (s, e) => { dt.Start(); };
         }
      
       

@@ -76,6 +76,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Opacity" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ColumnDefinitions" />
