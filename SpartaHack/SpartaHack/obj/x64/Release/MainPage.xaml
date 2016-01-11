@@ -28,7 +28,7 @@
                     <VisualState.Setters>
 
                         <Setter Target="MySplitView.DisplayMode"
-                            Value="CompactInline" />
+                            Value="CompactOverlay" />
                         
                     </VisualState.Setters>
                 </VisualState>
@@ -43,7 +43,7 @@
 
 
                         <Setter Target="MySplitView.DisplayMode"
-                            Value="CompactOverlay" />
+                            Value="Overlay" />
                         
 
                     </VisualState.Setters>
@@ -52,13 +52,14 @@
         </VisualStateManager.VisualStateGroups>
 
 
-        <Grid Background="{StaticResource TargetBackground}"  Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
+        <Grid Background="{StaticResource TargetBackground}" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
 
             <Button x:ConnectionId='13' x:Name="HambButton" BorderBrush="{StaticResource TargetForeground}" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    BorderThickness=".75" Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
             <TextBlock Margin="48,0,0,0" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Value}" FontWeight="ExtraBold"/>
 
+            <TextBlock x:ConnectionId='14' Margin="0,0,5,0"  Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" />
 
 
 
@@ -70,15 +71,14 @@
 
             <SplitView.Pane  >
                 <Grid >
-                  <Grid x:ConnectionId='5' x:Name="bgPane" Width="48"   BorderBrush="{StaticResource TargetForeground}" BorderThickness="0" HorizontalAlignment="Left" ></Grid> 
+                  <Grid x:ConnectionId='5' x:Name="bgPane" Width="48"   BorderBrush="{StaticResource TargetForeground}" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid> 
 
                     
                     <StackPanel>
 
                         <RadioButton x:ConnectionId='7' x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
                         <RadioButton x:ConnectionId='8' x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                 />
-                        <!--<RadioButton Tag="&#xE8CF;" Content="Concierge"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>-->
-                        <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
+                       <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
                         <RadioButton x:ConnectionId='10' x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
                         <RadioButton x:ConnectionId='11' x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
                         <RadioButton x:ConnectionId='12' x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
@@ -95,5 +95,6 @@
 
         </SplitView>
     </Grid>
+  
 </Page>
 

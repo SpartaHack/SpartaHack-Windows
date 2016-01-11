@@ -56,7 +56,7 @@ namespace SpartaHack
                 category = new Ticket();
                 category.Title = obj["category"].ToString();
                 category.Description = obj["Description"].ToString();
-                category.objectId = obj.ObjectId;
+                category.Category = obj.ObjectId;
                 categories.Add(category);
             }
             Categories.Source = categories;
@@ -98,8 +98,15 @@ namespace SpartaHack
                 {
                     t = new Ticket();
                     t.Created = obj.CreatedAt.Value.ToLocalTime();
-                    t.Description = obj["description"].ToString();
-                    tickets.Add(t);
+                        string val;
+                         obj.TryGetValue<string>("subject",out val);
+                        t.Title = val;
+                        obj.TryGetValue<string>("location", out val);
+                        t.Location = val;
+                        obj.TryGetValue<string>("description", out val);
+                        t.Description = val;
+                        tickets.Add(t);
+                        t.ObjectId = obj.ObjectId;
                 }
             }
             Tickets.Source = from ti in tickets orderby ti.Created descending select ti;
@@ -113,33 +120,43 @@ namespace SpartaHack
       
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+           
             try
             {
-                Button b = sender as Button;
-                Ticket t = b.DataContext as Ticket;
-                if (t.ProblemDescription != null)
+                if (ParseUser.CurrentUser != null)
                 {
-                    ParseObject ticket = new ParseObject("HelpDeskTickets");
-
-
-                    ticket["description"] = t.ProblemDescription;
-                    ticket["user"] = ParseUser.CurrentUser;
-                    ticket["category"] = new ParseObject("HelpDesk")
+                    Ticket t = cmbCategories.SelectedItem as Ticket;
+                    if (txtDescription.Text!="" &&txtLocation.Text!=""&& txtTitle.Text!="")
                     {
-                        ObjectId = t.objectId
-                    };
-                    await ticket.SaveAsync();
+                        ParseObject ticket = new ParseObject("HelpDeskTickets");
 
-                    await new Windows.UI.Popups.MessageDialog("Your message has been sent!", "Thank you for letting us know").ShowAsync();
-                    getTickets();
+                        ticket["subject"] = txtTitle.Text;
+                        ticket["description"] = txtDescription.Text;
+                        ticket["user"] = ParseUser.CurrentUser;
+                        ticket["location"] = txtLocation.Text;
+                        ticket["category"] = new ParseObject("HelpDesk")
+                        {
+                            ObjectId = t.Category
+                        };
+                        await ticket.SaveAsync();
+
+                        await new Windows.UI.Popups.MessageDialog("Your message has been sent!", "Thank you for letting us know").ShowAsync();
+                        getTickets();
+                    }
+                }
+                else
+                {
+                    await new Windows.UI.Popups.MessageDialog( "login so you can see your support tickets", "Looks like you're not logged in").ShowAsync();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 DebugingHelper.ShowError("Error in HelpDesk, btnSubmit: " + ex.Message);
             }
 
-        }
+
+
+            }
 
         private async void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -154,13 +171,61 @@ namespace SpartaHack
                 DebugingHelper.ShowError("Error in HelpDesk, StackPanel_Tapped: " + ex.Message);
             }
 }
+
+        private async void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (ParseUser.CurrentUser != null)
+                {
+                    ParseObject ticket = new ParseObject("HelpDeskTickets");
+                    Ticket t = ((sender as Button).DataContext as Ticket);
+                    ticket.ObjectId = t.ObjectId;
+                    
+                    Windows.UI.Popups.MessageDialog md = new Windows.UI.Popups.MessageDialog(t.Title,"Are you sure you want to delete your ticket?");
+                    
+                    md.Commands.Add(new Windows.UI.Popups.UICommand("ok", (s) =>
+                     {
+                         ticket.DeleteAsync();
+                         getTickets();
+                     }));
+                    md.Commands.Add(new Windows.UI.Popups.UICommand("cancel"));
+
+                    await md.ShowAsync();
+
+
+
+
+
+
+
+                }
+            }
+            catch(Exception ex)
+            {
+                DebugingHelper.ShowError("Error in HelpDesk, btnDelete: " + ex.Message);
+            }
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                txtTitle.Text = "";
+                txtDescription.Text = "";
+                txtLocation.Text = "";
+            }
+            catch { }
+        }
     }
     public class Ticket
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public string ProblemDescription { get; set; }
-        public string objectId { get; set; }
+        public string Location { get; set; }
+
+        public string Category { get; set; }
+        public string ObjectId { get; set; }
         public DateTime Created { get; set; }
         public string Time { get { return Created.ToString("G"); } }
     }

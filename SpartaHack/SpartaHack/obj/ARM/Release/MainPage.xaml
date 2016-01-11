@@ -28,7 +28,7 @@
                     <VisualState.Setters>
 
                         <Setter Target="MySplitView.DisplayMode"
-                            Value="CompactInline" />
+                            Value="CompactOverlay" />
                         
                     </VisualState.Setters>
                 </VisualState>
@@ -43,7 +43,7 @@
 
 
                         <Setter Target="MySplitView.DisplayMode"
-                            Value="Inline" />
+                            Value="Overlay" />
                         
 
                     </VisualState.Setters>
@@ -78,8 +78,7 @@
 
                         <RadioButton x:ConnectionId='7' x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
                         <RadioButton x:ConnectionId='8' x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                 />
-                        <!--<RadioButton Tag="&#xE8CF;" Content="Concierge"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>-->
-                        <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
+                       <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
                         <RadioButton x:ConnectionId='10' x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
                         <RadioButton x:ConnectionId='11' x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
                         <RadioButton x:ConnectionId='12' x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
@@ -96,5 +95,6 @@
 
         </SplitView>
     </Grid>
+  
 </Page>
 
