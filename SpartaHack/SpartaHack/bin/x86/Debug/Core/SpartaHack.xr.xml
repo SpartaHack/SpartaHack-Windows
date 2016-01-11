@@ -41,9 +41,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="MinWidth" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="Tapped" />
     </RootType>
@@ -54,8 +55,9 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="TextAlignment" />
@@ -67,14 +69,14 @@
       <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Children" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Width" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="BorderThickness" />

@@ -55,8 +55,11 @@ namespace SpartaHack
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-
-            await ParsePush.SubscribeAsync("");
+            try
+            {
+                await ParsePush.SubscribeAsync("");
+            }
+            catch { }
 
             if (Window.Current.Content == null)
             {

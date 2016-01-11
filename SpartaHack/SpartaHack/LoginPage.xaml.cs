@@ -41,7 +41,7 @@ namespace SpartaHack
 
             try {
                 await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
-                getQRCode(ParseUser.CurrentUser["qrCode"] as ParseFile);
+                getQRCode();
                 setupProfileScreen();
 
             }
@@ -113,10 +113,11 @@ namespace SpartaHack
                 DebugingHelper.ShowError("Error in LoginPage, getQRCodeFromFile(): " + ex.Message);
             }
         }
-        async void getQRCode(ParseFile file)
+        async void getQRCode()
         {
             try
             {
+                ParseFile file = ParseUser.CurrentUser["qrcode"] as ParseFile;
             Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
             HttpClient client = new HttpClient();
                 byte[] data=await client.GetByteArrayAsync(file.Url);
