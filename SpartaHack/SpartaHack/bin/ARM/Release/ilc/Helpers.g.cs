@@ -979,6 +979,15 @@ namespace McgInterop
 		internal static int StdCall__int__(
 					global::System.IntPtr pfn, 
 					void* arg0, 
+					global::System.TimeSpan arg1)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
 					global::Windows.Graphics.Display.DisplayOrientations arg1)
 		{
 			// This method is implemented elsewhere in the toolchain

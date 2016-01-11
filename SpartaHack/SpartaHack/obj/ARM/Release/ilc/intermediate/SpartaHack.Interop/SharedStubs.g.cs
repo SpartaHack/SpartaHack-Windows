@@ -39257,6 +39257,29 @@ namespace McgInterop
 			}
 		}
 
+		// Signature, Windows.UI.Xaml.IDispatcherTimer.put_Interval, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_TimeSpan__Windows_Foundation__TimeSpan, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static void Proc_TimeSpan__(
+					global::System.__ComObject __this, 
+					global::System.TimeSpan value, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			int unsafe___return__;
+			// Marshalling
+			// Call to native method
+			unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+								__this, 
+								__typeHnd, 
+								__targetIndex, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+		}
+
 		// Signature, Windows.Foundation.Collections.IIterator<System.IDisposable>.get_Current, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] System_IDisposable__Windows_Foundation__IClosable *, 
 		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -57173,6 +57196,34 @@ namespace McgInterop
 								arg0, 
 								arg1, 
 								arg2
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.GC.KeepAlive(__this);
+			if (__result < 0)
+				global::McgInterop.McgHelpers.ThrowFailed(
+									__result, 
+									__typeHnd
+								);
+			return __result;
+		}
+
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static int ComCall__HRESULT(
+					global::System.__ComObject __this, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex, 
+					global::System.TimeSpan arg0)
+		{
+			void* __pThis = ((void*)global::System.Runtime.InteropServices.McgModuleManager.GetInterface(
+								__this, 
+								__typeHnd
+							));
+			global::System.IntPtr __pTarget = (*(((global::System.IntPtr**)__pThis)))[__targetIndex];
+			int __result = global::McgInterop.Intrinsics.StdCall__int__(
+								__pTarget, 
+								__pThis, 
+								arg0
 							);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			global::System.GC.KeepAlive(__this);

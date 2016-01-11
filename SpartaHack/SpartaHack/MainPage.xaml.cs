@@ -31,13 +31,24 @@ namespace SpartaHack
             title = new Title();
             DataContext = title;
             DispatcherTimer dt = new DispatcherTimer();
-            dt.Interval = TimeSpan.FromSeconds(.5);
-            d = DateTime.Now.AddHours(1);
-            dt.Tick += (s, e) => { txtCountDown.Text = d.Subtract(DateTime.Now).ToString("t"); };
+            dt.Interval = TimeSpan.FromSeconds(1);
+            d = DateTime.Now.AddSeconds(30);
+            dt.Tick += Dt_Tick;
             txtCountDown.Loaded += (s, e) => { dt.Start(); };
+
+
+            MySplitView.PaneClosed += (s, e) => { bgPane.Width = 48; };
         }
-     
-      
+
+        private void Dt_Tick(object sender, object e)
+        {
+            TimeSpan dt = d.Subtract(DateTime.Now);
+            if (dt.Seconds <= 0)
+                txtCountDown.Text = "FINISHED";
+            else
+                txtCountDown.Text = dt.ToString(@"hh\:mm\:ss");
+        }
+
         private void OnNotificationsChecked(object sender, RoutedEventArgs e)
         {
             try

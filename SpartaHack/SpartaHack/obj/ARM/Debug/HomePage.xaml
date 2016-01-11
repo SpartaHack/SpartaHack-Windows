@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="SpartaHack.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpartaHack"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
+            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
+            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+            <CollectionViewSource x:ConnectionId='1' x:Name="Data"/>
+        </ResourceDictionary>
+        
+    </Page.Resources>
+     <Grid Background="{StaticResource TargetBackground}" >
+       
+
+            <!--<Image Source="Assets/logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.95" />-->
+
+               
+               
+          
+            <ListView x:ConnectionId='2' IsSynchronizedWithCurrentItem="False"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Center" Margin="10" MaxWidth="500">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <StackPanel  Margin="0,5" Width="350">
+                        <Border BorderBrush="{StaticResource TargetForeground}" BorderThickness="1">
+                    <StackPanel Margin="10">
+                               
+                                <Grid>
+                                <TextBlock  Margin="5" HorizontalAlignment="Left" Text="{Binding Title}" FontSize="22" Foreground="{StaticResource TargetForeground}" Typography.Capitals="AllSmallCaps" />
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE718;" HorizontalAlignment="Right" Visibility="{Binding Pinned}" Margin="5"/>
+                                </Grid>
+                                    <TextBlock  FontSize="12" Margin="5" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White"  FontWeight="Bold"/>
+                                <TextBlock Margin="10,5" FontSize="12" HorizontalAlignment="Left" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
+
+                    </StackPanel>
+                        </Border>
+                        <Grid>
+                        <Polyline Points="10,0 10,15 25,0" StrokeThickness="1" Stroke="{StaticResource TargetForeground}"/>
+                        <Polyline Points="10,-1 25,-1" StrokeThickness="2" Stroke="{StaticResource TargetBackground}"/>
+                        </Grid>
+                    </StackPanel>
+ 
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+</Page>
+

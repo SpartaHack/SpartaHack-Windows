@@ -28,6 +28,9 @@
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Assets\logo.png">
+      <PackagePath>Assets\logo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Assets\mlhBackground.png">
       <PackagePath>Assets\mlhBackground.png</PackagePath>
     </AppxPackagedFile>
@@ -50,8 +53,8 @@
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
