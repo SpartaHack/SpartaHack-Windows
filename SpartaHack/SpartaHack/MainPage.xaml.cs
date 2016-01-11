@@ -32,7 +32,7 @@ namespace SpartaHack
             DataContext = title;
             DispatcherTimer dt = new DispatcherTimer();
             dt.Interval = TimeSpan.FromSeconds(1);
-            d = DateTime.Now.AddSeconds(30);
+            d = DateTime.Parse("2/27/2016 8:00 AM");
             dt.Tick += Dt_Tick;
             txtCountDown.Loaded += (s, e) => { dt.Start(); };
 
@@ -126,6 +126,7 @@ namespace SpartaHack
             {
                 MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
                 bgPane.Width = MySplitView.IsPaneOpen ? 200 : 48;
+                
             }
             catch { }
         }

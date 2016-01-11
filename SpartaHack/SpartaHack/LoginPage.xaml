@@ -13,14 +13,15 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid Background="{StaticResource TargetBackground}">
+    <ScrollViewer Background="{StaticResource TargetBackground}">
+        <StackPanel >
 
-            <TextBlock x:Name="txtHeader" Text="SPARTAHACK 2016" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="32"/>
+            <TextBlock x:Name="txtHeader" Text="SPARTAHACK 2016" TextWrapping="WrapWholeWords" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="32"/>
 
             <StackPanel x:Name="grdLogin" Margin="0,40,0,0"  >
                 <Image HorizontalAlignment="Center" Source="Assets/FacebookTwitterIGProfilePic.png" MaxWidth="400"/>
                 <TextBox x:Name="txtEmail" PlaceholderText="Email Address" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"/>
-            <PasswordBox x:Name="txtPassword" PlaceholderText="Password" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10" KeyDown="txtPassword_KeyDown"/>
+                <PasswordBox x:Name="txtPassword" PlaceholderText="Password" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10" KeyDown="txtPassword_KeyDown"/>
                 <Button x:Name="btnLogin" Content="Login" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10" Click="btnLogin_Click"/>
             </StackPanel>
             <StackPanel x:Name="grdLoggedIn"  Margin="10,40,10,0" Visibility="Collapsed">
@@ -36,8 +37,10 @@
                                 <TextBox x:Name="txtFormFN"  Foreground="{StaticResource TargetForeground}" Text="{Binding firstName}"   BorderBrush="{StaticResource TargetForeground}" Margin="5"/>
                                 <TextBlock Foreground="{StaticResource TargetForeground}" Text="LAST NAME" Margin="5"/>
                                 <TextBox x:Name="txtFormLN"  Foreground="{StaticResource TargetForeground}" Text="{Binding lastName}"   BorderBrush="{StaticResource TargetForeground}" Margin="5"/>
-                                --><!--<TextBlock Foreground="{StaticResource TargetForeground}" Text="EMAIL" Margin="5"/>
-                                <TextBox x:Name="txtFormEmail"  Foreground="{StaticResource TargetForeground}" Text="{Binding Email}"   BorderBrush="{StaticResource TargetForeground}" Margin="5"/>--><!--
+                                -->
+                <!--<TextBlock Foreground="{StaticResource TargetForeground}" Text="EMAIL" Margin="5"/>
+                                <TextBox x:Name="txtFormEmail"  Foreground="{StaticResource TargetForeground}" Text="{Binding Email}"   BorderBrush="{StaticResource TargetForeground}" Margin="5"/>-->
+                <!--
 
                                 </StackPanel>
                             </ScrollViewer>
@@ -48,6 +51,7 @@
                 <Button x:Name="btnLogout" Content="Logout" Foreground="{StaticResource TargetForeground}"   BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10" Click="btnLogout_Click"/>
 
             </StackPanel>
-        </Grid>
-    
+        </StackPanel>
+    </ScrollViewer>
+
 </Page>

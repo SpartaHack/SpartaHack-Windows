@@ -43,10 +43,12 @@ namespace SpartaHack
                 await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
                 getQRCode(ParseUser.CurrentUser["qrCode"] as ParseFile);
                 setupProfileScreen();
+
             }
             catch(Exception e)
             {
                 await new Windows.UI.Popups.MessageDialog("Looks like you typed in something wrong", "Woops...").ShowAsync();
+                txtPassword.Password = "";
             }
         }
         async void logout()
@@ -74,6 +76,8 @@ namespace SpartaHack
             {
                 grdLogin.Visibility = Visibility.Collapsed;
                 grdLoggedIn.Visibility = Visibility.Visible;
+                txtEmail.Text = "";
+                txtPassword.Password = "";
                 try {
                     ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", ParseUser.CurrentUser.ObjectId);
                     ParseObject applicant = await query.FirstAsync();

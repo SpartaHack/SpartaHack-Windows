@@ -170,6 +170,10 @@
       <RootMethod Name="SetCapitals" />
     </RootType>
     <RootType FullName="SpartaHack.HomePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
