@@ -55,10 +55,10 @@ namespace SpartaHack
         {
             try
             {
-
+                deleteQRCodeFromFile();
                 await ParseUser.LogOutAsync();
             txtHeader.Text = "SPARTAHACK 2016";
-
+                imgQR.Source = null;
             MainPage.title.Value = "LOGIN";
             grdLogin.Visibility = Visibility.Visible;
             grdLoggedIn.Visibility = Visibility.Collapsed;
@@ -97,6 +97,19 @@ namespace SpartaHack
                 DebugingHelper.ShowError("Error in LoginPage, setupProfileScreen(): " + ex.Message);
             }
         }
+        async void deleteQRCodeFromFile()
+        {
+            try
+            {
+                var file = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
+                await file.DeleteAsync();
+             
+            }
+            catch(Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, deleteQRCodeFromFile(): " + ex.Message);
+            }
+        }
         async void getQRCodeFromFile()
         {
             try { 
@@ -117,7 +130,7 @@ namespace SpartaHack
         {
             try
             {
-                ParseFile file = ParseUser.CurrentUser["qrcode"] as ParseFile;
+                ParseFile file = ParseUser.CurrentUser["qrCode"] as ParseFile;
             Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
             HttpClient client = new HttpClient();
                 byte[] data=await client.GetByteArrayAsync(file.Url);

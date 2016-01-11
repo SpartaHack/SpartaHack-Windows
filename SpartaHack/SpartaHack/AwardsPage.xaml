@@ -13,12 +13,12 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
             <CollectionViewSource x:Name="Awards" IsSourceGrouped="True"/>
             <DataTemplate x:Name="grdAward">
-                <StackPanel Width="150" Height="150" Margin="10">
+                <Grid Width="150" Height="150" Margin="10">
 
                     <!--<Ellipse Stroke="{StaticResource TargetForeground}" Width="150" Height="150"/>-->
-                    <TextBlock FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="140" VerticalAlignment="Center"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
-                    <TextBlock Margin="5" Width="150"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
-                </StackPanel>
+                    <TextBlock FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="140" VerticalAlignment="Top"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
+                    <TextBlock Margin="5" Width="140" VerticalAlignment="Bottom"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
+                </Grid>
             </DataTemplate>
             <DataTemplate x:Name="lsvHeader">
                 <StackPanel Orientation="Horizontal">
