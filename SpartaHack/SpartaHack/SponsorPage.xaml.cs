@@ -86,6 +86,15 @@ namespace SpartaHack
                 grdSponsors.SelectedIndex = -1;
             }
         }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                getSponsors();
+            }
+            catch { }
+        }
     }
     public class Sponsor
     {

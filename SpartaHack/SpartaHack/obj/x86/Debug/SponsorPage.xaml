@@ -19,20 +19,66 @@
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='3' x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
 
-        <GridView x:ConnectionId='3'  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Visible" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Collapsed" />
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='4' x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+
+
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Collapsed" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Visible" />
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <GridView x:ConnectionId='5'  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </GridView.GroupStyle>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Margin="10" Width="400" >
-                        <Image Width="400" Height="200" Source="{Binding Logo}" VerticalAlignment="Top"/>
-                        <TextBlock VerticalAlignment="Bottom" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
-                    </Grid>
+                    <StackPanel Margin="10" Width="250" >
+                        <Image Width="250" Height="100"  Source="{Binding Logo}" VerticalAlignment="Top"/>
+                        <TextBlock  TextWrapping="WrapWholeWords" HorizontalAlignment="Center" Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
+                    </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
     </Grid>
+    <Page.TopAppBar>
+        <CommandBar x:ConnectionId='6' Margin="48,48,0,0" x:Name="TopAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed">
+            <AppBarButton x:ConnectionId='7' Icon="Refresh"                          />
+        </CommandBar>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <CommandBar x:ConnectionId='8' x:Name="BottomAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed" >
+            <AppBarButton x:ConnectionId='9' Icon="Refresh"                          />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
 

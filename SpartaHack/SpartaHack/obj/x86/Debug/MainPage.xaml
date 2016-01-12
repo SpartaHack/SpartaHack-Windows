@@ -71,22 +71,26 @@
 
             <SplitView.Pane  >
                 <Grid >
-                  <Grid x:ConnectionId='5' x:Name="bgPane" Width="48"   BorderBrush="{StaticResource TargetForeground}" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid> 
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="48"/>
+                    </Grid.RowDefinitions>
+                  <Grid x:ConnectionId='5' x:Name="bgPane" Width="48" Grid.RowSpan="2"   BorderBrush="{StaticResource TargetForeground}" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid>
 
-                    
-                    <StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Grid.Row="0" >
 
-                        <RadioButton x:ConnectionId='7' x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
-                        <RadioButton x:ConnectionId='8' x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                 />
-                       <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
-                        <RadioButton x:ConnectionId='10' x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
-                        <RadioButton x:ConnectionId='11' x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
-                        <RadioButton x:ConnectionId='12' x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
+                            <RadioButton x:ConnectionId='7' x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
+                            <RadioButton x:ConnectionId='8' x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                 />
+                            <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
+                            <RadioButton x:ConnectionId='10' x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
+                            <RadioButton x:ConnectionId='11' x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
+                            <RadioButton x:ConnectionId='12' x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
 
 
-                    </StackPanel>
-
-                    <RadioButton x:ConnectionId='6' x:Name="rdLogin" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
+                        </StackPanel>
+                    </ScrollViewer>
+                    <RadioButton x:ConnectionId='6' x:Name="rdLogin" Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
 
 
                 </Grid>

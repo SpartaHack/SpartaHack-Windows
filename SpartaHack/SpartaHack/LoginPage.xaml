@@ -18,7 +18,7 @@
 
             <TextBlock x:Name="txtHeader" Text="SPARTAHACK 2016" TextWrapping="WrapWholeWords" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="32"/>
 
-            <StackPanel x:Name="grdLogin" Margin="0,40,0,0"  >
+            <StackPanel x:Name="grdLogin" Margin="0,34,0,0"  >
                 <Image HorizontalAlignment="Center" Source="Assets/FacebookTwitterIGProfilePic.png" MaxWidth="400"/>
                 <TextBox x:Name="txtEmail" PlaceholderText="Email Address" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10"/>
                 <PasswordBox x:Name="txtPassword" PlaceholderText="Password" Foreground="{StaticResource TargetForeground}"  Height="20" BorderBrush="{StaticResource TargetForeground}" HorizontalAlignment="Center" Width="200" Margin="10" KeyDown="txtPassword_KeyDown"/>

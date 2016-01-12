@@ -61,6 +61,15 @@ namespace SpartaHack
             }
         }
 
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                getAnnouncements();
+               
+            }
+            catch { }
+        }
     }
     class Announcement
     {

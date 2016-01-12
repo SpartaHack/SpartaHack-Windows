@@ -217,6 +217,15 @@ namespace SpartaHack
             }
             catch { }
         }
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                getCategories();
+                getTickets();
+            }
+            catch { }
+        }
     }
     public class Ticket
     {

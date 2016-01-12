@@ -55,6 +55,10 @@
 
                         <Setter Target="grdListTickets.(RelativePanel.RightOf)"
                             Value="grdAddTicket" />
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Visible" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Collapsed" />
 
                     </VisualState.Setters>
                 </VisualState>
@@ -70,6 +74,10 @@
 
                         <Setter Target="grdListTickets.(RelativePanel.Below)"
                             Value="grdAddTicket" />
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Collapsed" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Visible" />
 
 
                     </VisualState.Setters>
@@ -103,5 +111,15 @@
             </RelativePanel>
         </ScrollViewer>
     </Grid>
+    <Page.TopAppBar>
+        <CommandBar x:ConnectionId='15' Margin="48,48,0,0" x:Name="TopAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed">
+            <AppBarButton x:ConnectionId='16' Icon="Refresh"                          />
+        </CommandBar>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <CommandBar x:ConnectionId='17' x:Name="BottomAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed" >
+            <AppBarButton x:ConnectionId='18' Icon="Refresh"                          />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
 

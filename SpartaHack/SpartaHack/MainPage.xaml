@@ -71,22 +71,26 @@
 
             <SplitView.Pane  >
                 <Grid >
-                  <Grid x:Name="bgPane" Width="48"   BorderBrush="{StaticResource TargetForeground}" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid> 
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="48"/>
+                    </Grid.RowDefinitions>
+                  <Grid x:Name="bgPane" Width="48" Grid.RowSpan="2"   BorderBrush="{StaticResource TargetForeground}" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid>
 
-                    
-                    <StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Grid.Row="0" >
 
-                        <RadioButton x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnScheduleChecked"/>
-                        <RadioButton x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>
-                       <RadioButton x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapsChecked"/>
-                        <RadioButton x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHelpChecked"/>
-                        <RadioButton x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorsChecked"/>
-                        <RadioButton x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnAwardsChecked"/>
+                            <RadioButton x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnScheduleChecked"/>
+                            <RadioButton x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>
+                            <RadioButton x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapsChecked"/>
+                            <RadioButton x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHelpChecked"/>
+                            <RadioButton x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorsChecked"/>
+                            <RadioButton x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnAwardsChecked"/>
 
 
-                    </StackPanel>
-
-                    <RadioButton x:Name="rdLogin" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnLoginChecked"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <RadioButton x:Name="rdLogin" Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnLoginChecked"/>
 
 
                 </Grid>

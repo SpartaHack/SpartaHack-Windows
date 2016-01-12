@@ -29,27 +29,61 @@
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
-        <!--<Pivot Margin="5,5,0,0">
-            <Pivot.HeaderTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding}" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}"/>
-                </DataTemplate>
-            </Pivot.HeaderTemplate>
-            <PivotItem Header="FRIDAY - FEB 26th" >
-                <ListView></ListView>
-            </PivotItem>
-            <PivotItem Header="SATURDAY - FEB 27th">
-                <ListView></ListView>
-            </PivotItem>
-            <PivotItem Header="SUNDAY - FEB 28th">
-                <ListView></ListView>
-            </PivotItem>
-        </Pivot>-->
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='4' x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Visible" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Collapsed" />
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='5' x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+
+
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Collapsed" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Visible" />
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+
         <ListView  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
             <ListView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </ListView.GroupStyle>
         </ListView>
     </Grid>
+    <Page.TopAppBar>
+        <CommandBar x:ConnectionId='6' Margin="48,48,0,0" x:Name="TopAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed">
+            <AppBarButton x:ConnectionId='7' Icon="Refresh"                          />
+            
+        </CommandBar>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <CommandBar x:ConnectionId='8' x:Name="BottomAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed" >
+            <AppBarButton x:ConnectionId='9' Icon="Refresh"                          />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
 

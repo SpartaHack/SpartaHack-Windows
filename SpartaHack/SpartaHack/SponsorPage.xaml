@@ -19,6 +19,42 @@
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="700" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Visible" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Collapsed" />
+
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+
+
+                        <Setter Target="TopAppBar.Visibility"
+                            Value="Collapsed" />
+                        <Setter Target="BottomAppBar.Visibility"
+                            Value="Visible" />
+
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <GridView  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}" SelectionChanged="grdSponsors_SelectionChanged" >
             <GridView.GroupStyle>
@@ -26,12 +62,22 @@
             </GridView.GroupStyle>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Margin="10" Width="400" >
-                        <Image Width="400" Height="200" Source="{Binding Logo}" VerticalAlignment="Top"/>
-                        <TextBlock VerticalAlignment="Bottom" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
-                    </Grid>
+                    <StackPanel Margin="10" Width="250" >
+                        <Image Width="250" Height="100"  Source="{Binding Logo}" VerticalAlignment="Top"/>
+                        <TextBlock  TextWrapping="WrapWholeWords" HorizontalAlignment="Center" Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>
+                    </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
     </Grid>
+    <Page.TopAppBar>
+        <CommandBar Margin="48,48,0,0" x:Name="TopAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed">
+            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
+        </CommandBar>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <CommandBar x:Name="BottomAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed" >
+            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

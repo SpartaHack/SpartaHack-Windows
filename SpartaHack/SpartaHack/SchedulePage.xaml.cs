@@ -70,7 +70,15 @@ namespace SpartaHack
                 DebugingHelper.ShowError("Error in SchedulePage, getSchedule(): " + ex.Message);
             }
         }
-}
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                getSchedule();
+            }
+            catch { }
+        }
+    }
     public class SHEvent
     {
         public DateTime EventTime { get; set; }
