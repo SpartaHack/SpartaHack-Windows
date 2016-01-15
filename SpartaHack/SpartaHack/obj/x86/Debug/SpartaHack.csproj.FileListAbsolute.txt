@@ -514,3 +514,17 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\WinMetadata\Windows.winmd
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Parse.UWP\Properties\Parse.UWP.rd.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\resources.pri
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\PullToRefresh.UWP.winmd
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\PullToRefresh.UWP.winmd
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\PullToRefresh.UWP.pri
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\PullToRefresh.UWP.pri.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\PullToRefresh.UWP.winmd
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\PullToRefresh.g.i.cs
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\PullToRefresh.g.cs
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\PullToRefresh.xaml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\PullToRefresh.xbf
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\PullToRefresh.xbf

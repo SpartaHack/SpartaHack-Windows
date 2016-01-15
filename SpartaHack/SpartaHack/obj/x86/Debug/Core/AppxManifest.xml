@@ -38,6 +38,18 @@
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshBox" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshScrollViewer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshListView" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefresh_UWP_XamlTypeInfo.XamlMetaDataProvider" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullRefreshProgressControl" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="14.0" />

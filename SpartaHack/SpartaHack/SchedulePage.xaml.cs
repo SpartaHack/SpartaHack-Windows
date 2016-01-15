@@ -63,6 +63,7 @@ namespace SpartaHack
                                       Day = grouped.Key.ToString("D")
                                   };
                 Events.Source = groupEvents;
+                showLoading();
 
             }
             catch (Exception ex)
@@ -70,7 +71,18 @@ namespace SpartaHack
                 DebugingHelper.ShowError("Error in SchedulePage, getSchedule(): " + ex.Message);
             }
         }
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+
+        private async void showLoading()
+        {
+            pgrRing.IsActive = true;
+            lsvSchedule.Visibility = Visibility.Collapsed;
+            await System.Threading.Tasks.Task.Delay(300);
+            lsvSchedule.Visibility = Visibility.Visible;
+            pgrRing.IsActive = false;
+        }
+
+
+        private void PullToRefreshBox_RefreshInvoked(DependencyObject sender, object args)
         {
             try
             {

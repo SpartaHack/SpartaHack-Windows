@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ptr="using:PullToRefresh.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -25,14 +26,14 @@
             
             
             <DataTemplate x:Key="ticketView">
-                <Grid>
-                <StackPanel Margin="10" HorizontalAlignment="Left" Width="300" >
+                <Grid  >
+                <StackPanel HorizontalAlignment="Stretch" >
                     <TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
                     <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="12" Margin="0,5,0,0" Text="{Binding Time}" Foreground="White" FontWeight="Bold"/>
                     <TextBlock FontSize="12" Margin="10,5,0,0" Text="{Binding Location}" Foreground="White" FontWeight="Bold"/>
                     </StackPanel>
-                    <TextBlock FontSize="12" Margin="5" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}" TextWrapping="WrapWholeWords"/>
+                    <TextBlock FontSize="12" Margin="5" MaxWidth="500" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}" TextWrapping="WrapWholeWords"/>
 
                 </StackPanel>
                     <Button x:Name="btnDelete" Click="btnDelete_Click" FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Tag="{Binding ObjectId}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" Background="Transparent"/>
@@ -45,7 +46,7 @@
         
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}">
-        <VisualStateManager.VisualStateGroups>
+        <!--<VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState x:Name="WideState">
                     <VisualState.StateTriggers>
@@ -55,10 +56,8 @@
 
                         <Setter Target="grdListTickets.(RelativePanel.RightOf)"
                             Value="grdAddTicket" />
-                        <Setter Target="TopAppBar.Visibility"
-                            Value="Visible" />
-                        <Setter Target="BottomAppBar.Visibility"
-                            Value="Collapsed" />
+                        
+                        
 
                     </VisualState.Setters>
                 </VisualState>
@@ -74,18 +73,13 @@
 
                         <Setter Target="grdListTickets.(RelativePanel.Below)"
                             Value="grdAddTicket" />
-                        <Setter Target="TopAppBar.Visibility"
-                            Value="Collapsed" />
-                        <Setter Target="BottomAppBar.Visibility"
-                            Value="Visible" />
-
+                       
 
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-        <ScrollViewer>
-            <RelativePanel HorizontalAlignment="Stretch">
+        </VisualStateManager.VisualStateGroups>-->
+        <StackPanel Orientation="Horizontal">
 
 
                 <StackPanel x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Left" Margin="10">
@@ -102,23 +96,49 @@
                     </StackPanel>
                 </StackPanel>
 
-                <Grid x:Name="grdListTickets" Margin="10" >
-                    <TextBlock Text="YOUR CURRENT TICKETS" FontSize="18"  FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
+                <Grid x:Name="grdListTickets" MinHeight="600"  >
+                    <TextBlock Text="YOUR CURRENT TICKETS" Width="5000" FontSize="18" HorizontalAlignment="Stretch" Margin="5"  FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
+                    
+                    <ptr:PullToRefreshBox RefreshThreshold="160" RefreshInvoked="PullToRefreshBox_RefreshInvoked" MinHeight="300" Margin="0,40,0,0"  >
 
-                    <ListView SelectedIndex="-1"  IsSynchronizedWithCurrentItem="False"  Margin="0,40,0,0" ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False"/>
+                        <ptr:PullToRefreshBox.TopIndicatorTemplate>
+                            <DataTemplate>
+                                <local:PullToRefresh PullProgress="{Binding}" Height="161"
+                                    VerticalAlignment="Bottom">
+                                    <local:PullToRefresh.SymbolStyle>
+                                        <Style TargetType="SymbolIcon">
+                                            <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                                        </Style>
+                                    </local:PullToRefresh.SymbolStyle>
+                                    <local:PullToRefresh.TextStyle>
+                                        <Style TargetType="TextBlock" >
+                                            <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                                        </Style>
+                                    </local:PullToRefresh.TextStyle>
+                                </local:PullToRefresh>
+                            </DataTemplate>
+                        </ptr:PullToRefreshBox.TopIndicatorTemplate>
+                        
+                        <ListView x:Name="lsvTickets" IsSynchronizedWithCurrentItem="False" MinHeight="400"   ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" HorizontalAlignment="Stretch"  >
+
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </ptr:PullToRefreshBox>
+                    <ProgressRing x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0"/>
 
                 </Grid>
-            </RelativePanel>
-        </ScrollViewer>
+            </StackPanel>
+            
+        
+     
+
+        
     </Grid>
-    <Page.TopAppBar>
-        <CommandBar Margin="48,48,0,0" x:Name="TopAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed">
-            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
-        </CommandBar>
-    </Page.TopAppBar>
-    <Page.BottomAppBar>
-        <CommandBar x:Name="BottomAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed" >
-            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
-        </CommandBar>
-    </Page.BottomAppBar>
+  
 </Page>

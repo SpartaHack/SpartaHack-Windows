@@ -128,6 +128,9 @@
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PullToRefresh.xaml.cs">
+      <DependentUpon>PullToRefresh.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PullToRefresh.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

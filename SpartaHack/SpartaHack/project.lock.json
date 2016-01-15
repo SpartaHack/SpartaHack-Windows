@@ -240,6 +240,11 @@
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         }
       },
+      "PullToRefresh.UWP/0.3.3": {
+        "compile": {
+          "ref/uap10.0/PullToRefresh.UWP.winmd": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.0, )",
@@ -1855,6 +1860,11 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PullToRefresh.UWP/0.3.3": {
+        "compile": {
+          "ref/uap10.0/PullToRefresh.UWP.winmd": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -3505,6 +3515,11 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PullToRefresh.UWP/0.3.3": {
+        "compile": {
+          "ref/uap10.0/PullToRefresh.UWP.winmd": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -5162,6 +5177,11 @@
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         }
       },
+      "PullToRefresh.UWP/0.3.3": {
+        "compile": {
+          "ref/uap10.0/PullToRefresh.UWP.winmd": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.0, )",
@@ -6810,6 +6830,11 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PullToRefresh.UWP/0.3.3": {
+        "compile": {
+          "ref/uap10.0/PullToRefresh.UWP.winmd": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -8467,6 +8492,11 @@
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
         }
       },
+      "PullToRefresh.UWP/0.3.3": {
+        "compile": {
+          "ref/uap10.0/PullToRefresh.UWP.winmd": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.0, )",
@@ -10115,6 +10145,11 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PullToRefresh.UWP/0.3.3": {
+        "compile": {
+          "ref/uap10.0/PullToRefresh.UWP.winmd": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -12212,6 +12247,37 @@
         "Newtonsoft.Json.nuspec",
         "package/services/metadata/core-properties/49e907fc018c4c7ab632e6d4ad4766f8.psmdcp",
         "tools/install.ps1"
+      ]
+    },
+    "PullToRefresh.UWP/0.3.3": {
+      "sha512": "3jM9lZQs/OinvRQcq0k633YzMJIy40BNEwK/SbTqXGmNveuFFdTezv5gaEI9LqLRJY8j/Ya5shPancrd5IZx/w==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "build/uap10.0/lib/win10-ARM/PullToRefresh.UWP.pri",
+        "build/uap10.0/lib/win10-ARM/PullToRefresh.UWP.winmd",
+        "build/uap10.0/lib/win10-ARM/PullToRefresh.UWP/Properties/PullToRefresh.UWP.rd.xml",
+        "build/uap10.0/lib/win10-ARM/PullToRefresh.UWP/PullToRefresh.UWP.xr.xml",
+        "build/uap10.0/lib/win10-ARM/PullToRefresh.UWP/Themes/Generic.xbf",
+        "build/uap10.0/lib/win10-x64/PullToRefresh.UWP.pri",
+        "build/uap10.0/lib/win10-x64/PullToRefresh.UWP.winmd",
+        "build/uap10.0/lib/win10-x64/PullToRefresh.UWP/Properties/PullToRefresh.UWP.rd.xml",
+        "build/uap10.0/lib/win10-x64/PullToRefresh.UWP/PullToRefresh.UWP.xr.xml",
+        "build/uap10.0/lib/win10-x64/PullToRefresh.UWP/Themes/Generic.xbf",
+        "build/uap10.0/lib/win10-x86/PullToRefresh.UWP.pri",
+        "build/uap10.0/lib/win10-x86/PullToRefresh.UWP.winmd",
+        "build/uap10.0/lib/win10-x86/PullToRefresh.UWP/Properties/PullToRefresh.UWP.rd.xml",
+        "build/uap10.0/lib/win10-x86/PullToRefresh.UWP/PullToRefresh.UWP.xr.xml",
+        "build/uap10.0/lib/win10-x86/PullToRefresh.UWP/Themes/Generic.xbf",
+        "build/uap10.0/PullToRefresh.UWP.targets",
+        "package/services/metadata/core-properties/96bd1c3b8eff4e67ad21a399453f644f.psmdcp",
+        "PullToRefresh.UWP.nuspec",
+        "ref/uap10.0/PullToRefresh.UWP.pri",
+        "ref/uap10.0/PullToRefresh.UWP.winmd",
+        "ref/uap10.0/PullToRefresh.UWP/Properties/PullToRefresh.UWP.rd.xml",
+        "ref/uap10.0/PullToRefresh.UWP/PullToRefresh.UWP.xr.xml",
+        "ref/uap10.0/PullToRefresh.UWP/Themes/Generic.xbf"
       ]
     },
     "System.AppContext/4.0.0": {
@@ -14916,7 +14982,8 @@
       "Microsoft.ApplicationInsights.PersistenceChannel >= 1.0.0",
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "Newtonsoft.Json >= 7.0.1"
+      "Newtonsoft.Json >= 7.0.1",
+      "PullToRefresh.UWP >= 0.3.3"
     ],
     "UAP,Version=v10.0": []
   }

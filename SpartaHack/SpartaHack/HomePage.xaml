@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ptr="using:PullToRefresh.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -16,50 +17,29 @@
         
     </Page.Resources>
      <Grid Background="{StaticResource TargetBackground}" >
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState x:Name="WideState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="700" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-
-                        <Setter Target="TopAppBar.Visibility"
-                            Value="Visible" />
-                        <Setter Target="BottomAppBar.Visibility"
-                            Value="Collapsed" />
-                        
-                    </VisualState.Setters>
-                </VisualState>
-
-                <VisualState x:Name="NarrowState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0" />
-
-                    </VisualState.StateTriggers>
-
-                    <VisualState.Setters>
-
-
-                        <Setter Target="TopAppBar.Visibility"
-                            Value="Collapsed" />
-                        <Setter Target="BottomAppBar.Visibility"
-                            Value="Visible" />
-                      
-
-
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-
-
-        <!--<Image Source="Assets/logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.95" />-->
-
-
-
-
-        <ListView IsSynchronizedWithCurrentItem="False"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Center" MaxWidth="500" MinWidth="250" >
+        <ptr:PullToRefreshBox RefreshThreshold="160" RefreshInvoked="PullToRefreshBox_RefreshInvoked" >
+            
+            <ptr:PullToRefreshBox.TopIndicatorTemplate>
+                <DataTemplate>
+                    <local:PullToRefresh PullProgress="{Binding}" Height="161"
+                                    VerticalAlignment="Bottom">
+                        <local:PullToRefresh.SymbolStyle>
+                            <Style TargetType="SymbolIcon">
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.SymbolStyle>
+                        <local:PullToRefresh.TextStyle>
+                            <Style TargetType="TextBlock" >
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.TextStyle>
+                    </local:PullToRefresh>
+                </DataTemplate>
+            </ptr:PullToRefreshBox.TopIndicatorTemplate>
+            
+            <ListView IsSynchronizedWithCurrentItem="False" Margin="5"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
             
                 <ListView.ItemTemplate>
                     
@@ -91,18 +71,17 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
-        
-        </Grid>
+        </ptr:PullToRefreshBox>
+        <!--<Button x:Name="btnRefresh" Click="btnRefresh_Click" FontFamily="Segoe MDL2 Assets"  Margin="20"  Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Grid>
+                <Ellipse Width="48" Height="48" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource TargetBackground}" Text="&#xE72C;" FontFamily="Segoe MDL2 Assets"/>
+            </Grid>
+           
+        </Button>-->
+       
+         <ProgressRing x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
 
-    <Page.TopAppBar>
-        <CommandBar Margin="48,48,0,0" x:Name="TopAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed">
-            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
-        </CommandBar>
-    </Page.TopAppBar>
-    <Page.BottomAppBar>
-        <CommandBar x:Name="BottomAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed" >
-            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
-        </CommandBar>
-    </Page.BottomAppBar>
     
 </Page>

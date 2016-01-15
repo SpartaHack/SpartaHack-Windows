@@ -59,12 +59,26 @@ namespace SpartaHack
                     {
                         Company = grouped.Key
                     };
+                showLoading();
             }
             catch (Exception ex)
             {
                 DebugingHelper.ShowError("Error in AwardsPage, getAwards(): " + ex.Message);
             }
 
+        }
+        private async void showLoading()
+        {
+            pgrRing.IsActive = true;
+            grdAwards.Visibility = Visibility.Collapsed;
+            await System.Threading.Tasks.Task.Delay(300);
+            grdAwards.Visibility = Visibility.Visible;
+            pgrRing.IsActive = false;
+        }
+
+        private void PullToRefreshBox_RefreshInvoked(DependencyObject sender, object args)
+        {
+            getAwards();
         }
     }
     public class Prize

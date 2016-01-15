@@ -68,6 +68,7 @@ namespace SpartaHack
                             };
 
                 Sponsors.Source = query;
+                showLoading();
             }
             catch (Exception ex)
             {
@@ -76,7 +77,14 @@ namespace SpartaHack
 
 
         }
-
+        private async void showLoading()
+        {
+            pgrRing.IsActive = true;
+            grdSponsors.Visibility = Visibility.Collapsed;
+            await System.Threading.Tasks.Task.Delay(300);
+            grdSponsors.Visibility = Visibility.Visible;
+            pgrRing.IsActive = false;
+        }
         private async void grdSponsors_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (grdSponsors.SelectedIndex != -1)
@@ -87,7 +95,9 @@ namespace SpartaHack
             }
         }
 
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+
+
+        private void PullToRefreshBox_RefreshInvoked(DependencyObject sender, object args)
         {
             try
             {

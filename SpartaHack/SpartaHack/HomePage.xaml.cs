@@ -25,19 +25,30 @@ namespace SpartaHack
         {
             try
             {
-                List<Announcement> announcements = new List<Announcement>();
-                List<ParseObject> _announcements = new List<ParseObject>(await ParseObject.GetQuery("Announcements").FindAsync());
-                foreach (ParseObject obj in _announcements)
-                {
-                    announcements.Add(new Announcement
+               
+                
+                    List<Announcement> announcements = new List<Announcement>();
+                    List<ParseObject> _announcements = new List<ParseObject>( await ParseObject.GetQuery("Announcements").FindAsync());
+              
+                    foreach (ParseObject obj in _announcements)
                     {
-                        Title = obj["Title"].ToString(),
-                        pinned = (bool)obj["Pinned"],
-                        Created = obj.CreatedAt.Value.ToLocalTime(),
-                        Description = obj["Description"].ToString()
-                    });
-                }
-                Data.Source = from note in announcements orderby note.pinned descending select note;
+                        announcements.Add(new Announcement
+                        {
+                            Title = obj["Title"].ToString(),
+                            pinned = (bool)obj["Pinned"],
+                            Created = obj.CreatedAt.Value.ToLocalTime(),
+                            Description = obj["Description"].ToString()
+                        });
+                    }
+                    Data.Source = from note in announcements orderby note.pinned descending select note;
+
+                showLoading();
+
+
+
+                    
+               
+
             }
             catch(Exception ex)
             {
@@ -61,14 +72,21 @@ namespace SpartaHack
             }
         }
 
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        private async void showLoading()
         {
-            try
-            {
-                getAnnouncements();
-               
-            }
-            catch { }
+            pgrRing.IsActive = true;
+            listAnnouncements.Visibility = Visibility.Collapsed;
+            await System.Threading.Tasks.Task.Delay(300);
+            listAnnouncements.Visibility = Visibility.Visible;
+            pgrRing.IsActive = false;
+        }
+       
+
+
+
+        private void PullToRefreshBox_RefreshInvoked(DependencyObject sender, object args)
+        {
+            getAnnouncements();
         }
     }
     class Announcement

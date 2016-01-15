@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ptr="using:PullToRefresh.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -29,60 +30,37 @@
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState x:Name="WideState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="700" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
+        <ptr:PullToRefreshBox RefreshThreshold="160" RefreshInvoked="PullToRefreshBox_RefreshInvoked" >
 
-                        <Setter Target="TopAppBar.Visibility"
-                            Value="Visible" />
-                        <Setter Target="BottomAppBar.Visibility"
-                            Value="Collapsed" />
+            <ptr:PullToRefreshBox.TopIndicatorTemplate>
+                <DataTemplate>
+                    <local:PullToRefresh PullProgress="{Binding}" Height="161"
+                                    VerticalAlignment="Bottom">
+                        <local:PullToRefresh.SymbolStyle>
+                            <Style TargetType="SymbolIcon">
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.SymbolStyle>
+                        <local:PullToRefresh.TextStyle>
+                            <Style TargetType="TextBlock" >
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.TextStyle>
+                    </local:PullToRefresh>
+                </DataTemplate>
+            </ptr:PullToRefreshBox.TopIndicatorTemplate>
 
-                    </VisualState.Setters>
-                </VisualState>
+            <ListView x:Name="lsvSchedule"  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
+                <ListView.GroupStyle>
+                    <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
+                </ListView.GroupStyle>
+            </ListView>
+        </ptr:PullToRefreshBox>
 
-                <VisualState x:Name="NarrowState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0" />
+        <ProgressRing x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-                    </VisualState.StateTriggers>
-
-                    <VisualState.Setters>
-
-
-                        <Setter Target="TopAppBar.Visibility"
-                            Value="Collapsed" />
-                        <Setter Target="BottomAppBar.Visibility"
-                            Value="Visible" />
-
-
-
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-
-
-
-        <ListView  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
-            <ListView.GroupStyle>
-                <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
-            </ListView.GroupStyle>
-        </ListView>
     </Grid>
-    <Page.TopAppBar>
-        <CommandBar Margin="48,48,0,0" x:Name="TopAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed">
-            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
-            
-        </CommandBar>
-    </Page.TopAppBar>
-    <Page.BottomAppBar>
-        <CommandBar x:Name="BottomAppBar" Background="{StaticResource TargetBackground}" Visibility="Collapsed" >
-            <AppBarButton Icon="Refresh"  Click="btnRefresh_Click"/>
-        </CommandBar>
-    </Page.BottomAppBar>
+
 </Page>

@@ -110,6 +110,7 @@ namespace SpartaHack
                 }
             }
             Tickets.Source = from ti in tickets orderby ti.Created descending select ti;
+                showLoading();
             }
             catch (Exception ex)
             {
@@ -117,7 +118,14 @@ namespace SpartaHack
             }
         }
 
-      
+        private async void showLoading()
+        {
+            pgrRing.IsActive = true;
+            lsvTickets.Visibility = Visibility.Collapsed;
+            await System.Threading.Tasks.Task.Delay(300);
+            lsvTickets.Visibility = Visibility.Visible;
+            pgrRing.IsActive = false;
+        }
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
            
@@ -217,7 +225,8 @@ namespace SpartaHack
             }
             catch { }
         }
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+
+        private void PullToRefreshBox_RefreshInvoked(DependencyObject sender, object args)
         {
             try
             {

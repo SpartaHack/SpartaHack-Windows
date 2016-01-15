@@ -112,6 +112,15 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\PullToRefresh.UWP.winmd">
+      <PackagePath>PullToRefresh.UWP.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml">
+      <PackagePath>PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml">
+      <PackagePath>PullToRefresh.UWP\PullToRefresh.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
