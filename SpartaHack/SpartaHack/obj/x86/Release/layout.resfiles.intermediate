@@ -12,10 +12,4 @@ Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.scale-100.png
 Assets\Wide310x150Logo.scale-200.png
 SpartaHack.xr.xml
-Parse\Parse.dll
-Parse\Parse.pdb
-Parse\Parse.UWP.dll
-Parse\Parse.UWP.pdb
-Parse\Parse.UWP\Properties\Parse.UWP.rd.xml
-Parse\Parse.xml
 Properties\Default.rd.xml

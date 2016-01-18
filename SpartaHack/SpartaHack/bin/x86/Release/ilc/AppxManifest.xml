@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="47002MMPIndustries.SpartaHack" Publisher="CN=98AE6015-DA35-4C52-821A-32B1274E1CBD" Version="1.1.1.0" ProcessorArchitecture="x86" />
+  <Identity Name="47002MMPIndustries.SpartaHack" Publisher="CN=98AE6015-DA35-4C52-821A-32B1274E1CBD" Version="1.1.2.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="23ce9752-905d-4ff9-9c28-cacf0a721d44" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>SpartaHack</DisplayName>
@@ -41,6 +41,18 @@
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>SpartaHack.dll</Path>
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshBox" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshScrollViewer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshListView" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefresh_UWP_XamlTypeInfo.XamlMetaDataProvider" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullRefreshProgressControl" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />
     <build:Item Name="VisualStudio" Version="14.0" />

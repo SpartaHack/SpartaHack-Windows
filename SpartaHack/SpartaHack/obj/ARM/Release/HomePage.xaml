@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ptr="using:PullToRefresh.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -16,39 +17,72 @@
         
     </Page.Resources>
      <Grid Background="{StaticResource TargetBackground}" >
-       
-
-            <!--<Image Source="Assets/logo.png" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Opacity="0.95" />-->
-
-               
-               
-          
-            <ListView x:ConnectionId='2' IsSynchronizedWithCurrentItem="False"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Center" Margin="10" MaxWidth="500">
+        <ptr:PullToRefreshBox x:ConnectionId='2' RefreshThreshold="160"                                                  >
+            
+            <ptr:PullToRefreshBox.TopIndicatorTemplate>
+                <DataTemplate>
+                    <local:PullToRefresh PullProgress="{Binding}" Height="161"
+                                    VerticalAlignment="Bottom">
+                        <local:PullToRefresh.SymbolStyle>
+                            <Style TargetType="SymbolIcon">
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.SymbolStyle>
+                        <local:PullToRefresh.TextStyle>
+                            <Style TargetType="TextBlock" >
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.TextStyle>
+                    </local:PullToRefresh>
+                </DataTemplate>
+            </ptr:PullToRefreshBox.TopIndicatorTemplate>
+            
+            <ListView x:ConnectionId='4' IsSynchronizedWithCurrentItem="False" Margin="5"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
+            
                 <ListView.ItemTemplate>
+                    
                     <DataTemplate>
-                    <StackPanel  Margin="0,5" Width="350">
-                        <Border BorderBrush="{StaticResource TargetForeground}" BorderThickness="1">
-                    <StackPanel Margin="10">
+                    <StackPanel Margin="0,0,0,48" >
+                        
+                            <StackPanel  BorderBrush="{StaticResource TargetForeground}" BorderThickness="1,1,1,0" HorizontalAlignment="Stretch">
                                
                                 <Grid>
                                 <TextBlock  Margin="5" HorizontalAlignment="Left" Text="{Binding Title}" FontSize="22" Foreground="{StaticResource TargetForeground}" Typography.Capitals="AllSmallCaps" />
                                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE718;" HorizontalAlignment="Right" Visibility="{Binding Pinned}" Margin="5"/>
                                 </Grid>
                                     <TextBlock  FontSize="12" Margin="5" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White"  FontWeight="Bold"/>
-                                <TextBlock Margin="10,5" FontSize="12" HorizontalAlignment="Left" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
+                                <TextBlock Margin="10,5" FontSize="12" HorizontalAlignment="Left" MaxWidth="500" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
 
                     </StackPanel>
-                        </Border>
+                        
                         <Grid>
-                        <Polyline Points="10,0 10,15 25,0" StrokeThickness="1" Stroke="{StaticResource TargetForeground}"/>
-                        <Polyline Points="10,-1 25,-1" StrokeThickness="2" Stroke="{StaticResource TargetBackground}"/>
+                        <Polyline Points="0,0 10,0 10,15 25,0" StrokeThickness="1" Stroke="{StaticResource TargetForeground}"/>
+                            <Grid VerticalAlignment="Top" Height="1" Margin="25,0,0,0" BorderBrush="{StaticResource TargetForeground}" BorderThickness="1"/>
                         </Grid>
                     </StackPanel>
  
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
-        </Grid>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        </ptr:PullToRefreshBox>
+        <!--<Button x:Name="btnRefresh" Click="btnRefresh_Click" FontFamily="Segoe MDL2 Assets"  Margin="20"  Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Grid>
+                <Ellipse Width="48" Height="48" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource TargetBackground}" Text="&#xE72C;" FontFamily="Segoe MDL2 Assets"/>
+            </Grid>
+           
+        </Button>-->
+       
+         <ProgressRing x:ConnectionId='3' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
 
+    
 </Page>
 

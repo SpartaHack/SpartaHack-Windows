@@ -16,6 +16,7 @@
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Parse\Parse.dll" "Parse\Parse.dll"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Parse\Parse.UWP.dll" "Parse\Parse.UWP.dll"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Parse\Parse.xml" "Parse\Parse.xml"
+"C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\PullToRefresh.UWP.winmd" "PullToRefresh.UWP.winmd"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\resources.pri" "resources.pri"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\SpartaHack.dll" "SpartaHack.dll"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\SpartaHack.exe" "SpartaHack.exe"

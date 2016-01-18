@@ -101,7 +101,6 @@
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\mlhBackground.png" />
     <Content Include="Assets\Moondance.otf" />
-    <None Include="Parse\Parse.UWP.pri" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -127,8 +126,9 @@
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ParseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PullToRefresh.xaml.cs">
+    <Compile Include="Styles\PullToRefresh.xaml.cs">
       <DependentUpon>PullToRefresh.xaml</DependentUpon>
     </Compile>
     <Compile Include="SchedulePage.xaml.cs">
@@ -137,7 +137,7 @@
     <Compile Include="SponsorPage.xaml.cs">
       <DependentUpon>SponsorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Title.cs" />
+    <Compile Include="Styles\Title.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -151,12 +151,6 @@
     <Content Include="Assets\StoreLogo.scale-100.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Parse\Parse.dll" />
-    <Content Include="Parse\Parse.pdb" />
-    <Content Include="Parse\Parse.UWP.dll" />
-    <Content Include="Parse\Parse.UWP.pdb" />
-    <Content Include="Parse\Parse.UWP\Properties\Parse.UWP.rd.xml" />
-    <Content Include="Parse\Parse.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -196,7 +190,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PullToRefresh.xaml">
+    <Page Include="Styles\PullToRefresh.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,7 +198,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SplitViewStyles.xaml">
+    <Page Include="Styles\SplitViewStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -214,17 +208,17 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Parse, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Parse\Parse.dll</HintPath>
-    </Reference>
-    <Reference Include="Parse.UWP, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Parse\Parse.UWP.dll</HintPath>
-    </Reference>
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <ProjectReference Include="..\Parse.UWP\Parse.UWP.csproj">
+      <Project>{7fd39803-bd49-4b8f-a033-06287f3dfc50}</Project>
+      <Name>Parse.UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Parse\Parse.csproj">
+      <Project>{de07a443-9619-4bd7-b540-41296f8a2959}</Project>
+      <Name>Parse</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -398,3 +398,16 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\intermediate\TransformedCoreLib\System.Runtime.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\intermediate\TransformedCoreLib\System.Runtime.Implementation.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\SpartaHack.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\PullToRefresh.xbf
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\PullToRefresh.UWP.winmd
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\PullToRefresh.UWP.winmd
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\PullToRefresh.UWP.pri
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\PullToRefresh.g.i.cs
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\PullToRefresh.g.cs
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\PullToRefresh.xaml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\PullToRefresh.xbf
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\PullToRefresh.UWP.pri.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\in\PullToRefresh.UWP.winmd
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\in\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\ARM\Release\ilc\in\PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml

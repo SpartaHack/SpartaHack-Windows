@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ptr="using:PullToRefresh.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -31,11 +32,37 @@
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}"  >
-        <GridView IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Awards}}" ItemTemplate="{Binding Source={StaticResource grdAward}}" Margin="10">
+        <ptr:PullToRefreshBox x:ConnectionId='4' RefreshThreshold="160"                                                  MinHeight="300" Margin="5"  >
+
+            <ptr:PullToRefreshBox.TopIndicatorTemplate>
+                <DataTemplate>
+                    <local:PullToRefresh PullProgress="{Binding}" Height="161"
+                                    VerticalAlignment="Bottom">
+                        <local:PullToRefresh.SymbolStyle>
+                            <Style TargetType="SymbolIcon">
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.SymbolStyle>
+                        <local:PullToRefresh.TextStyle>
+                            <Style TargetType="TextBlock" >
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.TextStyle>
+                    </local:PullToRefresh>
+                </DataTemplate>
+            </ptr:PullToRefreshBox.TopIndicatorTemplate>
+        <GridView x:ConnectionId='6' x:Name="grdAwards" IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Awards}}" ItemTemplate="{Binding Source={StaticResource grdAward}}" Margin="10">
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </GridView.GroupStyle>
         </GridView>
+            </ptr:PullToRefreshBox>
+       
+
+        <ProgressRing x:ConnectionId='5' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
     </Grid>
 </Page>
  

@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ptr="using:PullToRefresh.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -25,14 +26,14 @@
             
             
             <DataTemplate x:Key="ticketView">
-                <Grid>
-                <StackPanel Margin="10" HorizontalAlignment="Left" Width="300" >
+                <Grid  >
+                <StackPanel HorizontalAlignment="Stretch" >
                     <TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
                     <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="12" Margin="0,5,0,0" Text="{Binding Time}" Foreground="White" FontWeight="Bold"/>
                     <TextBlock FontSize="12" Margin="10,5,0,0" Text="{Binding Location}" Foreground="White" FontWeight="Bold"/>
                     </StackPanel>
-                    <TextBlock FontSize="12" Margin="5" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}" TextWrapping="WrapWholeWords"/>
+                    <TextBlock HorizontalAlignment="Left" FontSize="12" Margin="5" MaxWidth="500" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}" TextWrapping="WrapWholeWords"/>
 
                 </StackPanel>
                     <Button x:ConnectionId='4' x:Name="btnDelete"                         FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Tag="{Binding ObjectId}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" Background="Transparent"/>
@@ -45,63 +46,80 @@
         
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState x:ConnectionId='5' x:Name="WideState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="700" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-
-                        <Setter Target="grdListTickets.(RelativePanel.RightOf)"
-                            Value="grdAddTicket" />
-
-                    </VisualState.Setters>
-                </VisualState>
-
-                <VisualState x:ConnectionId='6' x:Name="NarrowState">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0" />
-
-                    </VisualState.StateTriggers>
-
-                    <VisualState.Setters>
 
 
-                        <Setter Target="grdListTickets.(RelativePanel.Below)"
-                            Value="grdAddTicket" />
+                
+
+                
+                    <TextBlock Text="YOUR CURRENT TICKETS" Width="5000" FontSize="18" HorizontalAlignment="Stretch" Margin="10,5"  FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
+                    
+                    <ptr:PullToRefreshBox x:ConnectionId='5' RefreshThreshold="160"                                                  Margin="10,40,0,20"  >
+
+                        <ptr:PullToRefreshBox.TopIndicatorTemplate>
+                            <DataTemplate>
+                                <local:PullToRefresh PullProgress="{Binding}" Height="161"
+                                    VerticalAlignment="Bottom">
+                                    <local:PullToRefresh.SymbolStyle>
+                                        <Style TargetType="SymbolIcon">
+                                            <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                                        </Style>
+                                    </local:PullToRefresh.SymbolStyle>
+                                    <local:PullToRefresh.TextStyle>
+                                        <Style TargetType="TextBlock" >
+                                            <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                                        </Style>
+                                    </local:PullToRefresh.TextStyle>
+                                </local:PullToRefresh>
+                            </DataTemplate>
+                        </ptr:PullToRefreshBox.TopIndicatorTemplate>
+                        
+                        <ListView x:ConnectionId='15' x:Name="lsvTickets" IsSynchronizedWithCurrentItem="False" MinHeight="400"   ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" HorizontalAlignment="Stretch"  >
+
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                        </ListView>
+                    </ptr:PullToRefreshBox>
+                    <ProgressRing x:ConnectionId='6' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0"/>
 
 
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-        <ScrollViewer>
-            <RelativePanel HorizontalAlignment="Stretch">
+        <Button x:ConnectionId='7' x:Name="btnAdd" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20" Background="Transparent" BorderBrush="Transparent">
+            <Button.Flyout>
+                <Flyout Placement="Full">
+                <StackPanel x:ConnectionId='8' x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
+                    <TextBlock Margin="10"  FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC" HorizontalAlignment="Center"/>
 
-
-                <StackPanel x:ConnectionId='7' x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Left" Margin="10">
-                    <TextBlock  FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC"/>
-                 
                     <ComboBox x:ConnectionId='9' x:Name="cmbCategories" Margin="10" ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" Width="300"/>
                     <TextBox x:ConnectionId='10'  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
 
                     <TextBox x:ConnectionId='11' x:Name="txtLocation" Margin="10" PlaceholderText="Location ex: Wells B115" Foreground="{StaticResource TargetForeground}" BorderBrush="{StaticResource TargetForeground}"/>
                     <TextBox x:ConnectionId='12' x:Name="txtDescription" MinHeight="20" TextWrapping="Wrap" Margin="10" PlaceholderText="Please describe your problem" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:ConnectionId='13' x:Name="btnSubmit"                         Content="SUBMIT" Margin="10"/>
-                        <Button x:ConnectionId='14' x:Name="btnCancel"                          Content="CANCEL" Margin="10"/>
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                        <Button x:ConnectionId='13' x:Name="btnSubmit" Grid.Column="0"                         Content="SUBMIT" Margin="10" HorizontalAlignment="Stretch"/>
+                        <Button x:ConnectionId='14' x:Name="btnCancel" Grid.Column="1"                          Content="CANCEL" Margin="10" HorizontalAlignment="Stretch"/>
+                        </Grid>
                     </StackPanel>
-                </StackPanel>
+                    </Flyout>
+            </Button.Flyout>
+            <Grid>
+                <Ellipse Width="40" Height="40" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="&#xE710;" FontFamily="Segoe MDL2 Assets" Foreground="{StaticResource TargetBackground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        
+        
+        </Button>
 
-                <Grid x:ConnectionId='8' x:Name="grdListTickets" Margin="10" >
-                    <TextBlock Text="YOUR CURRENT TICKETS" FontSize="18"  FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
 
-                    <ListView SelectedIndex="-1"  IsSynchronizedWithCurrentItem="False"  Margin="0,40,0,0" ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False"/>
-
-                </Grid>
-            </RelativePanel>
-        </ScrollViewer>
     </Grid>
+  
 </Page>
 

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -128,13 +127,13 @@ namespace SpartaHack
         }
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-           
+
             try
             {
                 if (ParseUser.CurrentUser != null)
                 {
                     Ticket t = cmbCategories.SelectedItem as Ticket;
-                    if (txtDescription.Text!="" &&txtLocation.Text!=""&& txtTitle.Text!="")
+                    if (txtDescription.Text != "" && txtLocation.Text != "" && txtTitle.Text != "")
                     {
                         ParseObject ticket = new ParseObject("HelpDeskTickets");
 
@@ -149,12 +148,13 @@ namespace SpartaHack
                         await ticket.SaveAsync();
 
                         await new Windows.UI.Popups.MessageDialog("Your message has been sent!", "Thank you for letting us know").ShowAsync();
+                        btnAdd.Flyout.Hide();
                         getTickets();
                     }
                 }
                 else
                 {
-                    await new Windows.UI.Popups.MessageDialog( "login so you can see your support tickets", "Looks like you're not logged in").ShowAsync();
+                    await new Windows.UI.Popups.MessageDialog("login so you can see your support tickets", "Looks like you're not logged in").ShowAsync();
                 }
             }
             catch (Exception ex)
@@ -164,7 +164,7 @@ namespace SpartaHack
 
 
 
-            }
+        }
 
         private async void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
         {
@@ -222,6 +222,7 @@ namespace SpartaHack
                 txtTitle.Text = "";
                 txtDescription.Text = "";
                 txtLocation.Text = "";
+                btnAdd.Flyout.Hide();
             }
             catch { }
         }

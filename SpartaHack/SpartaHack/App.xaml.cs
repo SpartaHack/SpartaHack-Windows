@@ -5,8 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -16,6 +15,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Parse;
+using Windows.Data.Xml.Dom;
+using System.Xml;
+using System.Xml.Linq;
+
 namespace SpartaHack
 {
     /// <summary>
@@ -36,7 +39,7 @@ namespace SpartaHack
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            ParseClient.Initialize("p3FuD3whdYxozQ3XZ8eaxM3OUca3TtvnDma3Huhb", "33Is9CGoVvQaaMGJ5pFPAq6b58KbISkLpvHEULaD");
+            ParseService.Initialize();
 
         }
 
@@ -48,19 +51,9 @@ namespace SpartaHack
         /// <param name="e">Details about the launch request and process.</param>
         protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
+            await ParseService.OnLaunchedAsync(e);
 
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
-            try
-            {
-                await ParsePush.SubscribeAsync("");
-            }
-            catch { }
-
+            
             if (Window.Current.Content == null)
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
@@ -95,9 +88,49 @@ namespace SpartaHack
             }
             // Ensure the current window is active
             Window.Current.Activate();
+
+           
+            
+           
+            //await ParsePush.SubscribeAsync("");
+
+            //ParsePush.ParsePushNotificationReceived += (sender, args) =>
+            // {
+
+            //     var xDoc = new XDocument(
+            //    new XElement("toast",
+            //        new XElement("visual",
+            //            new XElement("binding", new XAttribute("template", "ToastGeneric"),
+            //                new XElement("text", "C# Corner"),
+            //                new XElement("text", "Did you got MVP award?")
+            //                )
+            //            ),// actions 
+            //        new XElement("actions",
+            //            new XElement("action", new XAttribute("activationType", "background"),
+            //                new XAttribute("content", "Yes"), new XAttribute("arguments", "yes")),
+            //            new XElement("action", new XAttribute("activationType", "background"),
+            //                new XAttribute("content", "No"), new XAttribute("arguments", "no"))
+            //            )
+            //        )
+            //    );
+
+            //var xmlDoc = new Windows.Data.Xml.Dom.XmlDocument();
+            //xmlDoc.LoadXml(xDoc.ToString());
+
+
+
+
+
+
+
+            //var notifi = Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier();
+            //      notifi.Show(new Windows.UI.Notifications.ToastNotification(xmlDoc));
+            //  };
+           
         }
 
-     
+      
+
 
         /// <summary>
         /// Invoked when Navigation to a certain page fails

@@ -67,6 +67,18 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             {
                 xamlType = CreateXamlType(typeIndex);
             }
+            var userXamlType = xamlType as global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType;
+            if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
+            {
+                global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForType(type);
+                if (libXamlType != null)
+                {
+                    if(libXamlType.IsConstructible || xamlType == null)
+                    {
+                        xamlType = libXamlType;
+                    }
+                }
+            }
             if (xamlType != null)
             {
                 _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
@@ -90,6 +102,18 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             if(typeIndex != -1)
             {
                 xamlType = CreateXamlType(typeIndex);
+            }
+            var userXamlType = xamlType as global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType;
+            if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
+            {
+                global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForName(typeName);
+                if (libXamlType != null)
+                {
+                    if(libXamlType.IsConstructible || xamlType == null)
+                    {
+                        xamlType = libXamlType;
+                    }
+                }
             }
             if (xamlType != null)
             {
@@ -132,29 +156,41 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[10];
-            _typeNameTable[0] = "SpartaHack.AwardsPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "SpartaHack.HelpDesk";
-            _typeNameTable[4] = "SpartaHack.HomePage";
-            _typeNameTable[5] = "SpartaHack.LoginPage";
-            _typeNameTable[6] = "SpartaHack.MainPage";
-            _typeNameTable[7] = "SpartaHack.MapPage";
-            _typeNameTable[8] = "SpartaHack.SchedulePage";
-            _typeNameTable[9] = "SpartaHack.SponsorPage";
+            _typeNameTable = new string[16];
+            _typeNameTable[0] = "PullToRefresh.UWP.PullToRefreshBox";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[2] = "Double";
+            _typeNameTable[3] = "Windows.UI.Xaml.DataTemplate";
+            _typeNameTable[4] = "SpartaHack.PullToRefresh";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[6] = "Windows.UI.Xaml.Style";
+            _typeNameTable[7] = "SpartaHack.AwardsPage";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[9] = "SpartaHack.HelpDesk";
+            _typeNameTable[10] = "SpartaHack.HomePage";
+            _typeNameTable[11] = "SpartaHack.LoginPage";
+            _typeNameTable[12] = "SpartaHack.MainPage";
+            _typeNameTable[13] = "SpartaHack.MapPage";
+            _typeNameTable[14] = "SpartaHack.SchedulePage";
+            _typeNameTable[15] = "SpartaHack.SponsorPage";
 
-            _typeTable = new global::System.Type[10];
-            _typeTable[0] = typeof(global::SpartaHack.AwardsPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::SpartaHack.HelpDesk);
-            _typeTable[4] = typeof(global::SpartaHack.HomePage);
-            _typeTable[5] = typeof(global::SpartaHack.LoginPage);
-            _typeTable[6] = typeof(global::SpartaHack.MainPage);
-            _typeTable[7] = typeof(global::SpartaHack.MapPage);
-            _typeTable[8] = typeof(global::SpartaHack.SchedulePage);
-            _typeTable[9] = typeof(global::SpartaHack.SponsorPage);
+            _typeTable = new global::System.Type[16];
+            _typeTable[0] = typeof(global::PullToRefresh.UWP.PullToRefreshBox);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[2] = typeof(global::System.Double);
+            _typeTable[3] = typeof(global::Windows.UI.Xaml.DataTemplate);
+            _typeTable[4] = typeof(global::SpartaHack.PullToRefresh);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[7] = typeof(global::SpartaHack.AwardsPage);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[9] = typeof(global::SpartaHack.HelpDesk);
+            _typeTable[10] = typeof(global::SpartaHack.HomePage);
+            _typeTable[11] = typeof(global::SpartaHack.LoginPage);
+            _typeTable[12] = typeof(global::SpartaHack.MainPage);
+            _typeTable[13] = typeof(global::SpartaHack.MapPage);
+            _typeTable[14] = typeof(global::SpartaHack.SchedulePage);
+            _typeTable[15] = typeof(global::SpartaHack.SponsorPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -189,13 +225,15 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_AwardsPage() { return new global::SpartaHack.AwardsPage(); }
-        private object Activate_3_HelpDesk() { return new global::SpartaHack.HelpDesk(); }
-        private object Activate_4_HomePage() { return new global::SpartaHack.HomePage(); }
-        private object Activate_5_LoginPage() { return new global::SpartaHack.LoginPage(); }
-        private object Activate_7_MapPage() { return new global::SpartaHack.MapPage(); }
-        private object Activate_8_SchedulePage() { return new global::SpartaHack.SchedulePage(); }
-        private object Activate_9_SponsorPage() { return new global::SpartaHack.SponsorPage(); }
+        private object Activate_0_PullToRefreshBox() { return new global::PullToRefresh.UWP.PullToRefreshBox(); }
+        private object Activate_4_PullToRefresh() { return new global::SpartaHack.PullToRefresh(); }
+        private object Activate_7_AwardsPage() { return new global::SpartaHack.AwardsPage(); }
+        private object Activate_9_HelpDesk() { return new global::SpartaHack.HelpDesk(); }
+        private object Activate_10_HomePage() { return new global::SpartaHack.HomePage(); }
+        private object Activate_11_LoginPage() { return new global::SpartaHack.LoginPage(); }
+        private object Activate_13_MapPage() { return new global::SpartaHack.MapPage(); }
+        private object Activate_14_SchedulePage() { return new global::SpartaHack.SchedulePage(); }
+        private object Activate_15_SponsorPage() { return new global::SpartaHack.SponsorPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -207,65 +245,99 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  SpartaHack.AwardsPage
-                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_AwardsPage;
-                userType.SetIsLocalType();
+            case 0:   //  PullToRefresh.UWP.PullToRefreshBox
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
+                userType.Activator = Activate_0_PullToRefreshBox;
+                userType.AddMemberName("RefreshThreshold");
+                userType.AddMemberName("TopIndicatorTemplate");
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Windows.UI.Xaml.Controls.ContentControl
                 xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  Double
                 xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  SpartaHack.HelpDesk
-                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_HelpDesk;
+            case 3:   //  Windows.UI.Xaml.DataTemplate
+                xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  SpartaHack.PullToRefresh
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_4_PullToRefresh;
+                userType.AddMemberName("PullProgress");
+                userType.AddMemberName("SymbolStyle");
+                userType.AddMemberName("TextStyle");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  SpartaHack.HomePage
+            case 5:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Windows.UI.Xaml.Style
+                xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  SpartaHack.AwardsPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_HomePage;
+                userType.Activator = Activate_7_AwardsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  SpartaHack.LoginPage
+            case 8:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  SpartaHack.HelpDesk
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_LoginPage;
+                userType.Activator = Activate_9_HelpDesk;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  SpartaHack.MainPage
+            case 10:   //  SpartaHack.HomePage
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_HomePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  SpartaHack.LoginPage
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_LoginPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  SpartaHack.MainPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  SpartaHack.MapPage
+            case 13:   //  SpartaHack.MapPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_MapPage;
+                userType.Activator = Activate_13_MapPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  SpartaHack.SchedulePage
+            case 14:   //  SpartaHack.SchedulePage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_SchedulePage;
+                userType.Activator = Activate_14_SchedulePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  SpartaHack.SponsorPage
+            case 15:   //  SpartaHack.SponsorPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_SponsorPage;
+                userType.Activator = Activate_15_SponsorPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -273,12 +345,155 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             return xamlType;
         }
 
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> _otherProviders;
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> OtherProviders
+        {
+            get
+            {
+                if(_otherProviders == null)
+                {
+                    var otherProviders = new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider>();
+                    global::Windows.UI.Xaml.Markup.IXamlMetadataProvider provider;
+                    provider = new global::PullToRefresh.UWP.PullToRefresh_UWP_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
+                    otherProviders.Add(provider); 
+                    _otherProviders = otherProviders;
+                }
+                return _otherProviders;
+            }
+        }
 
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForName(string typeName)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            global::Windows.UI.Xaml.Markup.IXamlType foundXamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(typeName);
+                if(xamlType != null)
+                {
+                    if(xamlType.IsConstructible)    // not Constructible means it might be a Return Type Stub
+                    {
+                        return xamlType;
+                    }
+                    foundXamlType = xamlType;
+                }
+            }
+            return foundXamlType;
+        }
+
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForType(global::System.Type type)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            global::Windows.UI.Xaml.Markup.IXamlType foundXamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(type);
+                if(xamlType != null)
+                {
+                    if(xamlType.IsConstructible)    // not Constructible means it might be a Return Type Stub
+                    {
+                        return xamlType;
+                    }
+                    foundXamlType = xamlType;
+                }
+            }
+            return foundXamlType;
+        }
+
+        private object get_0_PullToRefreshBox_RefreshThreshold(object instance)
+        {
+            var that = (global::PullToRefresh.UWP.PullToRefreshBox)instance;
+            return that.RefreshThreshold;
+        }
+        private void set_0_PullToRefreshBox_RefreshThreshold(object instance, object Value)
+        {
+            var that = (global::PullToRefresh.UWP.PullToRefreshBox)instance;
+            that.RefreshThreshold = (global::System.Double)Value;
+        }
+        private object get_1_PullToRefreshBox_TopIndicatorTemplate(object instance)
+        {
+            var that = (global::PullToRefresh.UWP.PullToRefreshBox)instance;
+            return that.TopIndicatorTemplate;
+        }
+        private void set_1_PullToRefreshBox_TopIndicatorTemplate(object instance, object Value)
+        {
+            var that = (global::PullToRefresh.UWP.PullToRefreshBox)instance;
+            that.TopIndicatorTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_2_PullToRefresh_PullProgress(object instance)
+        {
+            var that = (global::SpartaHack.PullToRefresh)instance;
+            return that.PullProgress;
+        }
+        private void set_2_PullToRefresh_PullProgress(object instance, object Value)
+        {
+            var that = (global::SpartaHack.PullToRefresh)instance;
+            that.PullProgress = (global::System.Double)Value;
+        }
+        private object get_3_PullToRefresh_SymbolStyle(object instance)
+        {
+            var that = (global::SpartaHack.PullToRefresh)instance;
+            return that.SymbolStyle;
+        }
+        private void set_3_PullToRefresh_SymbolStyle(object instance, object Value)
+        {
+            var that = (global::SpartaHack.PullToRefresh)instance;
+            that.SymbolStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_4_PullToRefresh_TextStyle(object instance)
+        {
+            var that = (global::SpartaHack.PullToRefresh)instance;
+            return that.TextStyle;
+        }
+        private void set_4_PullToRefresh_TextStyle(object instance, object Value)
+        {
+            var that = (global::SpartaHack.PullToRefresh)instance;
+            that.TextStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::SpartaHack.SpartaHack_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "PullToRefresh.UWP.PullToRefreshBox.RefreshThreshold":
+                userType = (global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PullToRefresh.UWP.PullToRefreshBox");
+                xamlMember = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlMember(this, "RefreshThreshold", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_PullToRefreshBox_RefreshThreshold;
+                xamlMember.Setter = set_0_PullToRefreshBox_RefreshThreshold;
+                break;
+            case "PullToRefresh.UWP.PullToRefreshBox.TopIndicatorTemplate":
+                userType = (global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PullToRefresh.UWP.PullToRefreshBox");
+                xamlMember = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlMember(this, "TopIndicatorTemplate", "Windows.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_1_PullToRefreshBox_TopIndicatorTemplate;
+                xamlMember.Setter = set_1_PullToRefreshBox_TopIndicatorTemplate;
+                break;
+            case "SpartaHack.PullToRefresh.PullProgress":
+                userType = (global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpartaHack.PullToRefresh");
+                xamlMember = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlMember(this, "PullProgress", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_2_PullToRefresh_PullProgress;
+                xamlMember.Setter = set_2_PullToRefresh_PullProgress;
+                break;
+            case "SpartaHack.PullToRefresh.SymbolStyle":
+                userType = (global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpartaHack.PullToRefresh");
+                xamlMember = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlMember(this, "SymbolStyle", "Windows.UI.Xaml.Style");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_3_PullToRefresh_SymbolStyle;
+                xamlMember.Setter = set_3_PullToRefresh_SymbolStyle;
+                break;
+            case "SpartaHack.PullToRefresh.TextStyle":
+                userType = (global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SpartaHack.PullToRefresh");
+                xamlMember = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlMember(this, "TextStyle", "Windows.UI.Xaml.Style");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_4_PullToRefresh_TextStyle;
+                xamlMember.Setter = set_4_PullToRefresh_TextStyle;
+                break;
+            }
             return xamlMember;
         }
     }
