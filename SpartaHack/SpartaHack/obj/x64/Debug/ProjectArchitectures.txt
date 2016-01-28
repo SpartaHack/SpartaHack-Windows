@@ -1,0 +1,5 @@
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\Parse.UWP.csproj;x64
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\Parse.csproj;neutral
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\Parse.csproj;neutral
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\SpartaHack.csproj;x64
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\SpartaHackToast.csproj;x64

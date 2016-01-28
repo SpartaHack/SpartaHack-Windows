@@ -20,7 +20,7 @@
     <PackageCertificateKeyFile>SpartaHack_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>EB8FF09D14131E480EC952C7F44EEF0500308366</PackageCertificateThumbprint>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
-    <AppxBundle>Never</AppxBundle>
+    <AppxBundle>Auto</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
@@ -126,7 +126,7 @@
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ParseService.cs" />
+    <Compile Include="Toast\ParseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Styles\PullToRefresh.xaml.cs">
       <DependentUpon>PullToRefresh.xaml</DependentUpon>
@@ -212,12 +212,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Parse.UWP\Parse.UWP.csproj">
-      <Project>{7fd39803-bd49-4b8f-a033-06287f3dfc50}</Project>
+      <Project>{f7c2be8d-ac16-4786-a0c4-1945b1b61d08}</Project>
       <Name>Parse.UWP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Parse\Parse.csproj">
       <Project>{de07a443-9619-4bd7-b540-41296f8a2959}</Project>
       <Name>Parse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpartaHackToast\SpartaHackToast.csproj">
+      <Project>{75ed5032-d7f4-477f-a7c4-e838d2005638}</Project>
+      <Name>SpartaHackToast</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

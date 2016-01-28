@@ -1,7 +1,8 @@
-﻿// Copyright (c) 2015-present, Parse, LLC.  All rights reserved.  This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.  An additional grant of patent rights can be found in the PATENTS file in the same directory.
+// Copyright (c) 2015-present, Parse, LLC.  All rights reserved.  This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.  An additional grant of patent rights can be found in the PATENTS file in the same directory.
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -34,10 +35,10 @@ namespace Parse.Internal {
             var data = user.ServerDataToJSONObjectForSerialization();
             data["objectId"] = user.ObjectId;
             if (user.CreatedAt != null) {
-              data["createdAt"] = user.CreatedAt.Value.ToString(ParseClient.DateFormatString);
+              data["createdAt"] = user.CreatedAt.Value.ToString(ParseClient.DateFormatStrings.First());
             }
             if (user.UpdatedAt != null) {
-              data["updatedAt"] = user.UpdatedAt.Value.ToString(ParseClient.DateFormatString);
+              data["updatedAt"] = user.UpdatedAt.Value.ToString(ParseClient.DateFormatStrings.First());
             }
 
             ParseClient.ApplicationSettings["CurrentUser"] = Json.Encode(data);
@@ -66,8 +67,8 @@ namespace Parse.Internal {
           ParseUser user = null;
           if (userDataString != null) {
             var userData =  Json.Parse(userDataString) as IDictionary<string, object>;
-            user = ParseObject.CreateWithoutData<ParseUser>(null);
-            user.HandleFetchResult(ParseObjectCoder.Instance.Decode(userData, ParseDecoder.Instance));
+            var state = ParseObjectCoder.Instance.Decode(userData, ParseDecoder.Instance);
+            user = ParseObject.FromState<ParseUser>(state, "_User");
           }
 
           CurrentUser = user;

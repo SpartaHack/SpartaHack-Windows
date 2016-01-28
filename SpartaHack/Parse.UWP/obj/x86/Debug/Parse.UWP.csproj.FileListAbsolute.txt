@@ -4,7 +4,6 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\bin\x
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\bin\x86\Debug\Parse.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\bin\x86\Debug\Parse.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\bin\x86\Debug\Parse.xml
-C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\Parse.UWP.csprojResolveAssemblyReference.cache
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\Parse.UWP.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\Parse.UWP.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\priconfig.xml

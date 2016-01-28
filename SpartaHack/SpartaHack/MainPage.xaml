@@ -54,7 +54,7 @@
 
         <Grid Background="{StaticResource TargetBackground}" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
 
-            <Button x:Name="HambButton" BorderBrush="{StaticResource TargetForeground}" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+            <Button x:Name="HambButton" BorderBrush="#26494D" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="#162934" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    BorderThickness=".75" Width="48" Height="48"  Click="HambButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
             <TextBlock  Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Value}" FontWeight="ExtraBold"/>
@@ -67,7 +67,7 @@
 
         </Grid>
 
-        <SplitView x:Name="MySplitView"  Margin="0,48,0,0" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="48" IsPaneOpen="False" PaneBackground="{StaticResource TargetBackground}">
+        <SplitView x:Name="MySplitView"  Margin="0,48,0,0" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="48" IsPaneOpen="False" PaneBackground="#162934">
 
             <SplitView.Pane  >
                 <Grid >
@@ -75,7 +75,7 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="48"/>
                     </Grid.RowDefinitions>
-                  <Grid x:Name="bgPane" Width="48" Grid.RowSpan="2"   BorderBrush="{StaticResource TargetForeground}" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid>
+                    <Grid x:Name="bgPane" Width="48" Grid.RowSpan="2"   BorderBrush="#26494D" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid>
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <StackPanel Grid.Row="0" >

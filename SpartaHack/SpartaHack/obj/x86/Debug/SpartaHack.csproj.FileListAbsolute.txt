@@ -52,6 +52,9 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack.exe
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack.xr.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHackToast.dll
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHackToast.pdb
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHackToast\Properties\SpartaHackToast.rd.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\System.AppContext.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\System.Collections.Concurrent.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\System.Collections.dll
@@ -263,8 +266,11 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Parse.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Parse.UWP.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\PullToRefresh.UWP.winmd
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHackToast.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Parse.UWP.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Parse.UWP.pri
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHackToast.pdb
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHackToast.pri
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Parse.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Parse.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\PullToRefresh.UWP.pri
@@ -386,6 +392,7 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\SpartaHack.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Parse.UWP.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Parse.pdb
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\SpartaHackToast.pdb
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Microsoft.ApplicationInsights.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll
@@ -495,6 +502,7 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\System.Xml.XmlSerializer.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Parse.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Parse.UWP.dll
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\SpartaHackToast.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\PullToRefresh.UWP.winmd
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\ApplicationInsights.config
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Assets\FacebookTwitterIGProfilePic.png
@@ -509,9 +517,10 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Assets\Moondance.otf
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Properties\Default.rd.xml
-C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Parse.UWP\Properties\Parse.UWP.rd.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\SpartaHackToast\Properties\SpartaHackToast.rd.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\SpartaHack.xr.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\WinMetadata\Windows.winmd
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\resources.pri
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\SpartaHack.csproj.GenerateResource.Cache

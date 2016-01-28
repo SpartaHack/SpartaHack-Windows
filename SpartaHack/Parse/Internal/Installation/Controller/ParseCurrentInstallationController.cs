@@ -41,10 +41,10 @@ namespace Parse.Internal {
             var data = installation.ServerDataToJSONObjectForSerialization();
             data["objectId"] = installation.ObjectId;
             if (installation.CreatedAt != null) {
-              data["createdAt"] = installation.CreatedAt.Value.ToString(ParseClient.DateFormatString);
+              data["createdAt"] = installation.CreatedAt.Value.ToString(ParseClient.DateFormatStrings.First());
             }
             if (installation.UpdatedAt != null) {
-              data["updatedAt"] = installation.UpdatedAt.Value.ToString(ParseClient.DateFormatString);
+              data["updatedAt"] = installation.UpdatedAt.Value.ToString(ParseClient.DateFormatStrings.First());
             }
 
             ParseClient.ApplicationSettings["CurrentInstallation"] = Json.Encode(data);
@@ -70,8 +70,8 @@ namespace Parse.Internal {
           ParseInstallation installation = null;
           if (installationDataString != null) {
             var installationData = ParseClient.DeserializeJsonString(installationDataString);
-            installation = ParseObject.CreateWithoutData<ParseInstallation>(null);
-            installation.HandleFetchResult(ParseObjectCoder.Instance.Decode(installationData, ParseDecoder.Instance));
+            var state = ParseObjectCoder.Instance.Decode(installationData, ParseDecoder.Instance);
+            installation = ParseObject.FromState<ParseInstallation>(state, "_Installation");
           } else {
             installation = ParseObject.Create<ParseInstallation>();
             installation.SetIfDifferent("installationId" , installationIdController.Get().ToString());

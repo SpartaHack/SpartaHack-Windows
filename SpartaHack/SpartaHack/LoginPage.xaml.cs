@@ -29,9 +29,7 @@ namespace SpartaHack
             this.InitializeComponent();
            
         }
-        bool loggedIn = false;
-        
-
+     
 
 
 
@@ -40,6 +38,14 @@ namespace SpartaHack
 
             try {
                 await ParseUser.LogInAsync(txtEmail.Text, txtPassword.Password);
+                try
+                {
+                    ParseInstallation.CurrentInstallation.Add("user", ParseUser.CurrentUser);
+                }
+                catch { }
+
+                await ParseInstallation.CurrentInstallation.SaveAsync();
+                
                 getQRCode();
                 setupProfileScreen();
 
@@ -47,6 +53,7 @@ namespace SpartaHack
             catch(Exception e)
             {
                 await new Windows.UI.Popups.MessageDialog("Looks like you typed in something wrong", "Woops...").ShowAsync();
+                DebugingHelper.ShowError(e.Message);
                 txtPassword.Password = "";
             }
         }
@@ -56,7 +63,9 @@ namespace SpartaHack
             {
                 deleteQRCodeFromFile();
                 await ParseUser.LogOutAsync();
-            txtHeader.Text = "SPARTAHACK 2016";
+                ParseInstallation.CurrentInstallation.Remove("user");
+                await ParseInstallation.CurrentInstallation.SaveAsync();
+                txtHeader.Text = "SPARTAHACK 2016";
                 imgQR.Source = null;
             MainPage.title.Value = "LOGIN";
             grdLogin.Visibility = Visibility.Visible;
@@ -78,10 +87,11 @@ namespace SpartaHack
                 txtEmail.Text = "";
                 txtPassword.Password = "";
                 try {
-                    ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("userId", ParseUser.CurrentUser.ObjectId);
+                    ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("user", ParseUser.CurrentUser);
                     ParseObject applicant = await query.FirstAsync();
 
                     //grdFlyout.DataContext = applicant;
+                    
                     txtHeader.Text = "WELCOME " + applicant["firstName"];
 
                 }
@@ -197,6 +207,41 @@ namespace SpartaHack
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
             logout();
+        }
+
+        private async void tsPush_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (tsPush.IsOn)
+                await ParsePush.SubscribeAsync("");
+            else
+                await ParsePush.UnsubscribeAsync("");
+        }
+
+        private void tsPush_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                if (ParseInstallation.CurrentInstallation.Channels != null)
+                    tsPush.IsOn = ParseInstallation.CurrentInstallation.Channels.Contains("");
+            }
+            catch { }
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            try
+            {
+                if (e.Key == Windows.System.VirtualKey.Enter)
+                {
+                    txtPassword.Focus(FocusState.Programmatic);
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                DebugingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
+            }
         }
     }
 }

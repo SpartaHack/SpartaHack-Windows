@@ -33959,6 +33959,496 @@ namespace McgInterop
 			return returnValue__retval;
 		}
 
+		// Signature, Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs.get_ToastNotification, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_UI_Notifications_ToastNotification__Windows_UI_Notifications__ToastNotification *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.UI.Notifications.ToastNotification Func_UI_Notifications_ToastNotification__(
+					global::System.__ComObject __this, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::Windows.UI.Notifications.IToastNotification__Impl.Vtbl** unsafe_value__retval = default(global::Windows.UI.Notifications.IToastNotification__Impl.Vtbl**);
+			global::Windows.UI.Notifications.ToastNotification value__retval = default(global::Windows.UI.Notifications.ToastNotification);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				unsafe_value__retval = null;
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = (global::Windows.UI.Notifications.ToastNotification)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe_value__retval), 
+									typeof(global::Windows.UI.Notifications.IToastNotification).TypeHandle, 
+									typeof(global::Windows.UI.Notifications.ToastNotification).TypeHandle
+								);
+				// Return
+				return value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value__retval)));
+			}
+		}
+
+		// Signature, Windows.UI.Notifications.IToastNotification.get_Content, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_Data_Xml_Dom_XmlDocument__Windows_Data_Xml_Dom__XmlDocument *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.Data.Xml.Dom.XmlDocument Func_Data_Xml_Dom_XmlDocument__(
+					global::System.__ComObject __this, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::Windows.Data.Xml.Dom.IXmlDocument__Impl.Vtbl** unsafe_value__retval = default(global::Windows.Data.Xml.Dom.IXmlDocument__Impl.Vtbl**);
+			global::Windows.Data.Xml.Dom.XmlDocument value__retval = default(global::Windows.Data.Xml.Dom.XmlDocument);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				unsafe_value__retval = null;
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = (global::Windows.Data.Xml.Dom.XmlDocument)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe_value__retval), 
+									typeof(global::Windows.Data.Xml.Dom.IXmlDocument).TypeHandle, 
+									typeof(global::Windows.Data.Xml.Dom.XmlDocument).TypeHandle
+								);
+				// Return
+				return value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value__retval)));
+			}
+		}
+
+		// Signature, Windows.Data.Xml.Dom.IXmlDocument.GetElementsByTagName, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.HSTRINGMarshaller] string__System.Runtime.InteropServices.HSTRING, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_Data_Xml_Dom_XmlNodeList__Windows_Data_Xml_Dom__XmlNodeList *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.Data.Xml.Dom.XmlNodeList Func_string__Data_Xml_Dom_XmlNodeList__(
+					global::System.__ComObject __this, 
+					string tagName, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::System.Runtime.InteropServices.HSTRING unsafe_tagName = default(global::System.Runtime.InteropServices.HSTRING);
+			global::Windows.Data.Xml.Dom.IXmlNodeList__Impl.Vtbl** unsafe_elements__retval = default(global::Windows.Data.Xml.Dom.IXmlNodeList__Impl.Vtbl**);
+			global::Windows.Data.Xml.Dom.XmlNodeList elements__retval = default(global::Windows.Data.Xml.Dom.XmlNodeList);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				fixed (char* pBuffer_tagName = tagName)
+				{
+					global::System.Runtime.InteropServices.HSTRING_HEADER hstring_header_tagName;
+					global::System.Runtime.InteropServices.McgMarshal.StringToHStringReference(pBuffer_tagName, tagName, &(hstring_header_tagName), &(unsafe_tagName));
+					unsafe_elements__retval = null;
+					// Call to native method
+					unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+										__this, 
+										__typeHnd, 
+										__targetIndex, 
+										unsafe_tagName, 
+										&(unsafe_elements__retval)
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					elements__retval = (global::Windows.Data.Xml.Dom.XmlNodeList)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+										((global::System.IntPtr)unsafe_elements__retval), 
+										typeof(global::Windows.Data.Xml.Dom.IXmlNodeList).TypeHandle, 
+										typeof(global::Windows.Data.Xml.Dom.XmlNodeList).TypeHandle
+									);
+				}
+				// Return
+				return elements__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_elements__retval)));
+			}
+		}
+
+		// Signature, Windows.Data.Xml.Dom.IXmlNode.get_Attributes, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_Data_Xml_Dom_XmlNamedNodeMap__Windows_Data_Xml_Dom__XmlNamedNodeMap *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.Data.Xml.Dom.XmlNamedNodeMap Func_Data_Xml_Dom_XmlNamedNodeMap__(
+					global::System.__ComObject __this, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::Windows.Data.Xml.Dom.IXmlNamedNodeMap__Impl.Vtbl** unsafe_value__retval = default(global::Windows.Data.Xml.Dom.IXmlNamedNodeMap__Impl.Vtbl**);
+			global::Windows.Data.Xml.Dom.XmlNamedNodeMap value__retval = default(global::Windows.Data.Xml.Dom.XmlNamedNodeMap);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				unsafe_value__retval = null;
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									&(unsafe_value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				value__retval = (global::Windows.Data.Xml.Dom.XmlNamedNodeMap)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe_value__retval), 
+									typeof(global::Windows.Data.Xml.Dom.IXmlNamedNodeMap).TypeHandle, 
+									typeof(global::Windows.Data.Xml.Dom.XmlNamedNodeMap).TypeHandle
+								);
+				// Return
+				return value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value__retval)));
+			}
+		}
+
+		// Signature, Windows.Data.Xml.Dom.IXmlNamedNodeMap.GetNamedItem, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.HSTRINGMarshaller] string__System.Runtime.InteropServices.HSTRING, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.Data.Xml.Dom.IXmlNode Func_string__Data_Xml_Dom_IXmlNode__(
+					global::System.__ComObject __this, 
+					string name, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::System.Runtime.InteropServices.HSTRING unsafe_name = default(global::System.Runtime.InteropServices.HSTRING);
+			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe_node__retval = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
+			global::Windows.Data.Xml.Dom.IXmlNode node__retval = default(global::Windows.Data.Xml.Dom.IXmlNode);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				fixed (char* pBuffer_name = name)
+				{
+					global::System.Runtime.InteropServices.HSTRING_HEADER hstring_header_name;
+					global::System.Runtime.InteropServices.McgMarshal.StringToHStringReference(pBuffer_name, name, &(hstring_header_name), &(unsafe_name));
+					unsafe_node__retval = null;
+					// Call to native method
+					unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+										__this, 
+										__typeHnd, 
+										__targetIndex, 
+										unsafe_name, 
+										&(unsafe_node__retval)
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					node__retval = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+										((global::System.IntPtr)unsafe_node__retval), 
+										typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
+									);
+				}
+				// Return
+				return node__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_node__retval)));
+			}
+		}
+
+		// Signature, System.Collections.Generic.IReadOnlyList<Windows.Data.Xml.Dom.IXmlNode>.GetAt, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.Data.Xml.Dom.IXmlNode Func_uint__Data_Xml_Dom_IXmlNode__(
+					global::System.__ComObject __this, 
+					uint index, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe___value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
+			global::Windows.Data.Xml.Dom.IXmlNode __value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				unsafe___value__retval = null;
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									index, 
+									&(unsafe___value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				__value__retval = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe___value__retval), 
+									typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
+								);
+				// Return
+				return __value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe___value__retval)));
+			}
+		}
+
+		// Signature, System.Collections.Generic.IReadOnlyList<Windows.Data.Xml.Dom.IXmlNode>.IndexOf, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.CBoolMarshaller] bool__bool, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static bool Func_Data_Xml_Dom_IXmlNode__out_uint__bool__(
+					global::System.__ComObject __this, 
+					global::Windows.Data.Xml.Dom.IXmlNode value, 
+					out uint index, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe_value = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
+			uint unsafe_index;
+			bool __value__retval;
+			sbyte unsafe___value__retval;
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				unsafe_value = (global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**)global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(
+									value, 
+									typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
+								);
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									unsafe_value, 
+									&(unsafe_index), 
+									&(unsafe___value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				__value__retval = unsafe___value__retval != 0;
+				index = unsafe_index;
+				// Return
+				return __value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value)));
+				global::System.GC.KeepAlive(value);
+			}
+		}
+
+		// Signature, System.Collections.Generic.IReadOnlyList<Windows.Data.Xml.Dom.IXmlNode>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static uint Func_uint__out_rg_Data_Xml_Dom_IXmlNode__uint__(
+					global::System.__ComObject __this, 
+					uint startIndex, 
+					global::Windows.Data.Xml.Dom.IXmlNode[] items, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			uint unsafe_items_mcgLength = 0;
+			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl*** unsafe_items = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***);
+			uint unsafe___value__retval;
+			uint __value__retval;
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				if (items != null)
+					unsafe_items_mcgLength = (uint)items.Length;
+				if (items != null)
+					unsafe_items = (global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***)global::McgInterop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**))));
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									startIndex, 
+									unsafe_items_mcgLength, 
+									unsafe_items, 
+									&(unsafe___value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				__value__retval = unsafe___value__retval;
+				if (items != null)
+					for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
+					{
+						// [fwd] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
+						items[mcgIdx] = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+											((global::System.IntPtr)unsafe_items[mcgIdx]), 
+											typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
+										);
+					}
+				// Return
+				return __value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_items != null)
+					for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
+					{
+						// [fwd] [in] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
+						global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
+					}
+				global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
+			}
+		}
+
+		// Signature, System.Collections.Generic.IEnumerable<Windows.Data.Xml.Dom.IXmlNode>.First, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Foundation_Collections_IIterator_1_Windows_Data_Xml_Dom_IXmlNode___Windows_Foundation_Collections__IIterator_A_Windows_Data_Xml_Dom_IXmlNode_V_ *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode> Func__Collections_IIterator_1_Data_Xml_Dom_IXmlNode___(
+					global::System.__ComObject __this, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::Windows.Foundation.Collections.IIterator_A_Windows_Data_Xml_Dom_IXmlNode_V___Impl.Vtbl** unsafe___value__retval = default(global::Windows.Foundation.Collections.IIterator_A_Windows_Data_Xml_Dom_IXmlNode_V___Impl.Vtbl**);
+			global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode> __value__retval = default(global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode>);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				unsafe___value__retval = null;
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									&(unsafe___value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				__value__retval = (global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode>)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe___value__retval), 
+									typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode>).TypeHandle
+								);
+				// Return
+				return __value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe___value__retval)));
+			}
+		}
+
+		// Signature, Windows.Foundation.Collections.IIterator<Windows.Data.Xml.Dom.IXmlNode>.get_Current, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static global::Windows.Data.Xml.Dom.IXmlNode Func_Data_Xml_Dom_IXmlNode__(
+					global::System.__ComObject __this, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe___value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
+			global::Windows.Data.Xml.Dom.IXmlNode __value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode);
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				unsafe___value__retval = null;
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									&(unsafe___value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				__value__retval = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe___value__retval), 
+									typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
+								);
+				// Return
+				return __value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe___value__retval)));
+			}
+		}
+
+		// Signature, Windows.Foundation.Collections.IIterator<Windows.Data.Xml.Dom.IXmlNode>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		internal static uint Func_out_rg_Data_Xml_Dom_IXmlNode__uint__(
+					global::System.__ComObject __this, 
+					global::Windows.Data.Xml.Dom.IXmlNode[] items, 
+					global::System.RuntimeTypeHandle __typeHnd, 
+					int __targetIndex)
+		{
+			// Setup
+			uint unsafe_items_mcgLength = 0;
+			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl*** unsafe_items = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***);
+			uint unsafe___value__retval;
+			uint __value__retval;
+			int unsafe___return__;
+			try
+			{
+				// Marshalling
+				if (items != null)
+					unsafe_items_mcgLength = (uint)items.Length;
+				if (items != null)
+					unsafe_items = (global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***)global::McgInterop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**))));
+				// Call to native method
+				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
+									__this, 
+									__typeHnd, 
+									__targetIndex, 
+									unsafe_items_mcgLength, 
+									unsafe_items, 
+									&(unsafe___value__retval)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				__value__retval = unsafe___value__retval;
+				if (items != null)
+					for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
+					{
+						// [fwd] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
+						items[mcgIdx] = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+											((global::System.IntPtr)unsafe_items[mcgIdx]), 
+											typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
+										);
+					}
+				// Return
+				return __value__retval;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_items != null)
+					for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
+					{
+						// [fwd] [in] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
+						global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
+					}
+				global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
+			}
+		}
+
 		// Signature, Windows.UI.Xaml.Media.Imaging.IBitmapSource.SetSourceAsync, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Storage_Streams_IRandomAccessStream__Windows_Storage_Streams__IRandomAccessStream *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Foundation_IAsyncAction__Windows_Foundation__IAsyncAction *, 
 		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -38045,496 +38535,6 @@ namespace McgInterop
 			{
 				// Cleanup
 				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value)));
-			}
-		}
-
-		// Signature, Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs.get_ToastNotification, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_UI_Notifications_ToastNotification__Windows_UI_Notifications__ToastNotification *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.UI.Notifications.ToastNotification Func_UI_Notifications_ToastNotification__(
-					global::System.__ComObject __this, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::Windows.UI.Notifications.IToastNotification__Impl.Vtbl** unsafe_value__retval = default(global::Windows.UI.Notifications.IToastNotification__Impl.Vtbl**);
-			global::Windows.UI.Notifications.ToastNotification value__retval = default(global::Windows.UI.Notifications.ToastNotification);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				unsafe_value__retval = null;
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									&(unsafe_value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				value__retval = (global::Windows.UI.Notifications.ToastNotification)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe_value__retval), 
-									typeof(global::Windows.UI.Notifications.IToastNotification).TypeHandle, 
-									typeof(global::Windows.UI.Notifications.ToastNotification).TypeHandle
-								);
-				// Return
-				return value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value__retval)));
-			}
-		}
-
-		// Signature, Windows.UI.Notifications.IToastNotification.get_Content, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_Data_Xml_Dom_XmlDocument__Windows_Data_Xml_Dom__XmlDocument *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.Data.Xml.Dom.XmlDocument Func_Data_Xml_Dom_XmlDocument__(
-					global::System.__ComObject __this, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::Windows.Data.Xml.Dom.IXmlDocument__Impl.Vtbl** unsafe_value__retval = default(global::Windows.Data.Xml.Dom.IXmlDocument__Impl.Vtbl**);
-			global::Windows.Data.Xml.Dom.XmlDocument value__retval = default(global::Windows.Data.Xml.Dom.XmlDocument);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				unsafe_value__retval = null;
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									&(unsafe_value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				value__retval = (global::Windows.Data.Xml.Dom.XmlDocument)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe_value__retval), 
-									typeof(global::Windows.Data.Xml.Dom.IXmlDocument).TypeHandle, 
-									typeof(global::Windows.Data.Xml.Dom.XmlDocument).TypeHandle
-								);
-				// Return
-				return value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value__retval)));
-			}
-		}
-
-		// Signature, Windows.Data.Xml.Dom.IXmlDocument.GetElementsByTagName, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.HSTRINGMarshaller] string__System.Runtime.InteropServices.HSTRING, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_Data_Xml_Dom_XmlNodeList__Windows_Data_Xml_Dom__XmlNodeList *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.Data.Xml.Dom.XmlNodeList Func_string__Data_Xml_Dom_XmlNodeList__(
-					global::System.__ComObject __this, 
-					string tagName, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::System.Runtime.InteropServices.HSTRING unsafe_tagName = default(global::System.Runtime.InteropServices.HSTRING);
-			global::Windows.Data.Xml.Dom.IXmlNodeList__Impl.Vtbl** unsafe_elements__retval = default(global::Windows.Data.Xml.Dom.IXmlNodeList__Impl.Vtbl**);
-			global::Windows.Data.Xml.Dom.XmlNodeList elements__retval = default(global::Windows.Data.Xml.Dom.XmlNodeList);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				fixed (char* pBuffer_tagName = tagName)
-				{
-					global::System.Runtime.InteropServices.HSTRING_HEADER hstring_header_tagName;
-					global::System.Runtime.InteropServices.McgMarshal.StringToHStringReference(pBuffer_tagName, tagName, &(hstring_header_tagName), &(unsafe_tagName));
-					unsafe_elements__retval = null;
-					// Call to native method
-					unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-										__this, 
-										__typeHnd, 
-										__targetIndex, 
-										unsafe_tagName, 
-										&(unsafe_elements__retval)
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					elements__retval = (global::Windows.Data.Xml.Dom.XmlNodeList)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-										((global::System.IntPtr)unsafe_elements__retval), 
-										typeof(global::Windows.Data.Xml.Dom.IXmlNodeList).TypeHandle, 
-										typeof(global::Windows.Data.Xml.Dom.XmlNodeList).TypeHandle
-									);
-				}
-				// Return
-				return elements__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_elements__retval)));
-			}
-		}
-
-		// Signature, Windows.Data.Xml.Dom.IXmlNode.get_Attributes, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.WinRTClassMarshaller] Windows_Data_Xml_Dom_XmlNamedNodeMap__Windows_Data_Xml_Dom__XmlNamedNodeMap *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.Data.Xml.Dom.XmlNamedNodeMap Func_Data_Xml_Dom_XmlNamedNodeMap__(
-					global::System.__ComObject __this, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::Windows.Data.Xml.Dom.IXmlNamedNodeMap__Impl.Vtbl** unsafe_value__retval = default(global::Windows.Data.Xml.Dom.IXmlNamedNodeMap__Impl.Vtbl**);
-			global::Windows.Data.Xml.Dom.XmlNamedNodeMap value__retval = default(global::Windows.Data.Xml.Dom.XmlNamedNodeMap);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				unsafe_value__retval = null;
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									&(unsafe_value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				value__retval = (global::Windows.Data.Xml.Dom.XmlNamedNodeMap)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe_value__retval), 
-									typeof(global::Windows.Data.Xml.Dom.IXmlNamedNodeMap).TypeHandle, 
-									typeof(global::Windows.Data.Xml.Dom.XmlNamedNodeMap).TypeHandle
-								);
-				// Return
-				return value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value__retval)));
-			}
-		}
-
-		// Signature, Windows.Data.Xml.Dom.IXmlNamedNodeMap.GetNamedItem, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.HSTRINGMarshaller] string__System.Runtime.InteropServices.HSTRING, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.Data.Xml.Dom.IXmlNode Func_string__Data_Xml_Dom_IXmlNode__(
-					global::System.__ComObject __this, 
-					string name, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::System.Runtime.InteropServices.HSTRING unsafe_name = default(global::System.Runtime.InteropServices.HSTRING);
-			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe_node__retval = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
-			global::Windows.Data.Xml.Dom.IXmlNode node__retval = default(global::Windows.Data.Xml.Dom.IXmlNode);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				fixed (char* pBuffer_name = name)
-				{
-					global::System.Runtime.InteropServices.HSTRING_HEADER hstring_header_name;
-					global::System.Runtime.InteropServices.McgMarshal.StringToHStringReference(pBuffer_name, name, &(hstring_header_name), &(unsafe_name));
-					unsafe_node__retval = null;
-					// Call to native method
-					unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-										__this, 
-										__typeHnd, 
-										__targetIndex, 
-										unsafe_name, 
-										&(unsafe_node__retval)
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					node__retval = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-										((global::System.IntPtr)unsafe_node__retval), 
-										typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
-									);
-				}
-				// Return
-				return node__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_node__retval)));
-			}
-		}
-
-		// Signature, System.Collections.Generic.IReadOnlyList<Windows.Data.Xml.Dom.IXmlNode>.GetAt, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.Data.Xml.Dom.IXmlNode Func_uint__Data_Xml_Dom_IXmlNode__(
-					global::System.__ComObject __this, 
-					uint index, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe___value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
-			global::Windows.Data.Xml.Dom.IXmlNode __value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				unsafe___value__retval = null;
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									index, 
-									&(unsafe___value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				__value__retval = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe___value__retval), 
-									typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
-								);
-				// Return
-				return __value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe___value__retval)));
-			}
-		}
-
-		// Signature, System.Collections.Generic.IReadOnlyList<Windows.Data.Xml.Dom.IXmlNode>.IndexOf, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.CBoolMarshaller] bool__bool, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static bool Func_Data_Xml_Dom_IXmlNode__out_uint__bool__(
-					global::System.__ComObject __this, 
-					global::Windows.Data.Xml.Dom.IXmlNode value, 
-					out uint index, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe_value = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
-			uint unsafe_index;
-			bool __value__retval;
-			sbyte unsafe___value__retval;
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				unsafe_value = (global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**)global::System.Runtime.InteropServices.McgModuleManager.ObjectToComInterface(
-									value, 
-									typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
-								);
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									unsafe_value, 
-									&(unsafe_index), 
-									&(unsafe___value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				__value__retval = unsafe___value__retval != 0;
-				index = unsafe_index;
-				// Return
-				return __value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value)));
-				global::System.GC.KeepAlive(value);
-			}
-		}
-
-		// Signature, System.Collections.Generic.IReadOnlyList<Windows.Data.Xml.Dom.IXmlNode>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static uint Func_uint__out_rg_Data_Xml_Dom_IXmlNode__uint__(
-					global::System.__ComObject __this, 
-					uint startIndex, 
-					global::Windows.Data.Xml.Dom.IXmlNode[] items, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			uint unsafe_items_mcgLength = 0;
-			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl*** unsafe_items = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***);
-			uint unsafe___value__retval;
-			uint __value__retval;
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				if (items != null)
-					unsafe_items_mcgLength = (uint)items.Length;
-				if (items != null)
-					unsafe_items = (global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***)global::McgInterop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**))));
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									startIndex, 
-									unsafe_items_mcgLength, 
-									unsafe_items, 
-									&(unsafe___value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				__value__retval = unsafe___value__retval;
-				if (items != null)
-					for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
-					{
-						// [fwd] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
-						items[mcgIdx] = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-											((global::System.IntPtr)unsafe_items[mcgIdx]), 
-											typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
-										);
-					}
-				// Return
-				return __value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				if (unsafe_items != null)
-					for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
-					{
-						// [fwd] [in] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
-						global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
-					}
-				global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
-			}
-		}
-
-		// Signature, System.Collections.Generic.IEnumerable<Windows.Data.Xml.Dom.IXmlNode>.First, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Foundation_Collections_IIterator_1_Windows_Data_Xml_Dom_IXmlNode___Windows_Foundation_Collections__IIterator_A_Windows_Data_Xml_Dom_IXmlNode_V_ *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode> Func__Collections_IIterator_1_Data_Xml_Dom_IXmlNode___(
-					global::System.__ComObject __this, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::Windows.Foundation.Collections.IIterator_A_Windows_Data_Xml_Dom_IXmlNode_V___Impl.Vtbl** unsafe___value__retval = default(global::Windows.Foundation.Collections.IIterator_A_Windows_Data_Xml_Dom_IXmlNode_V___Impl.Vtbl**);
-			global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode> __value__retval = default(global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode>);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				unsafe___value__retval = null;
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									&(unsafe___value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				__value__retval = (global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode>)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe___value__retval), 
-									typeof(global::Windows.Foundation.Collections.IIterator<global::Windows.Data.Xml.Dom.IXmlNode>).TypeHandle
-								);
-				// Return
-				return __value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe___value__retval)));
-			}
-		}
-
-		// Signature, Windows.Foundation.Collections.IIterator<Windows.Data.Xml.Dom.IXmlNode>.get_Current, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode *, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static global::Windows.Data.Xml.Dom.IXmlNode Func_Data_Xml_Dom_IXmlNode__(
-					global::System.__ComObject __this, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl** unsafe___value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**);
-			global::Windows.Data.Xml.Dom.IXmlNode __value__retval = default(global::Windows.Data.Xml.Dom.IXmlNode);
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				unsafe___value__retval = null;
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									&(unsafe___value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				__value__retval = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe___value__retval), 
-									typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
-								);
-				// Return
-				return __value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe___value__retval)));
-			}
-		}
-
-		// Signature, Windows.Foundation.Collections.IIterator<Windows.Data.Xml.Dom.IXmlNode>.GetMany, [fwd] [return] [Mcg.CodeGen.ComHRESULTReturnMarshaller] void__int, [fwd] [out] [Mcg.CodeGen.ArrayMarshaller] rg_Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * *, [fwd] [out] [retval] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		internal static uint Func_out_rg_Data_Xml_Dom_IXmlNode__uint__(
-					global::System.__ComObject __this, 
-					global::Windows.Data.Xml.Dom.IXmlNode[] items, 
-					global::System.RuntimeTypeHandle __typeHnd, 
-					int __targetIndex)
-		{
-			// Setup
-			uint unsafe_items_mcgLength = 0;
-			global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl*** unsafe_items = default(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***);
-			uint unsafe___value__retval;
-			uint __value__retval;
-			int unsafe___return__;
-			try
-			{
-				// Marshalling
-				if (items != null)
-					unsafe_items_mcgLength = (uint)items.Length;
-				if (items != null)
-					unsafe_items = (global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl***)global::McgInterop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(unsafe_items_mcgLength * sizeof(global::Windows.Data.Xml.Dom.IXmlNode__Impl.Vtbl**))));
-				// Call to native method
-				unsafe___return__ = global::McgInterop.ComCallHelpers.ComCall__HRESULT(
-									__this, 
-									__typeHnd, 
-									__targetIndex, 
-									unsafe_items_mcgLength, 
-									unsafe_items, 
-									&(unsafe___value__retval)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				__value__retval = unsafe___value__retval;
-				if (items != null)
-					for (uint mcgIdx = 0; (mcgIdx < unsafe_items_mcgLength); mcgIdx++)
-					{
-						// [fwd] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
-						items[mcgIdx] = (global::Windows.Data.Xml.Dom.IXmlNode)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-											((global::System.IntPtr)unsafe_items[mcgIdx]), 
-											typeof(global::Windows.Data.Xml.Dom.IXmlNode).TypeHandle
-										);
-					}
-				// Return
-				return __value__retval;
-			}
-			finally
-			{
-				// Cleanup
-				if (unsafe_items != null)
-					for (uint mcgIdx_1 = 0; (mcgIdx_1 < unsafe_items_mcgLength); mcgIdx_1++)
-					{
-						// [fwd] [in] [out] [optional] [Mcg.CodeGen.ComInterfaceMarshaller] Windows_Data_Xml_Dom_IXmlNode__Windows_Data_Xml_Dom__IXmlNode * items
-						global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_items[mcgIdx_1])));
-					}
-				global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_items);
 			}
 		}
 

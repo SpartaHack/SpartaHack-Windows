@@ -89,7 +89,7 @@ namespace SpartaHack
                     }
                     else
                     {
-                        query = ParseObject.GetQuery("HelpDeskTickets").WhereEqualTo("user", ParseUser.CurrentUser);
+                        query = ParseObject.GetQuery("HelpDeskTickets").WhereEqualTo("user", ParseUser.CurrentUser).WhereNotEqualTo("status", "Expired");
                     }
 
                 Ticket t;
@@ -194,7 +194,7 @@ namespace SpartaHack
                     
                     md.Commands.Add(new Windows.UI.Popups.UICommand("ok", (s) =>
                      {
-                         ticket.DeleteAsync();
+                         ticket["status"] = "Expired";
                          getTickets();
                      }));
                     md.Commands.Add(new Windows.UI.Popups.UICommand("cancel"));

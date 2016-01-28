@@ -237,6 +237,11 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="Header" />
+      <RootEvent Name="Toggled" />
+      <RootEvent Name="Loaded" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Foreground" />

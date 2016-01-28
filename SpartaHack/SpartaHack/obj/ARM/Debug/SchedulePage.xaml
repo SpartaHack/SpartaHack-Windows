@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ptr="using:PullToRefresh.UWP"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -14,10 +15,10 @@
             <CollectionViewSource x:ConnectionId='1' x:Name="Events" IsSourceGrouped="True"/>
             <DataTemplate x:ConnectionId='2' x:Name="tmpEvent">
                 <StackPanel Margin="0,5">
-                    
-                    <TextBlock  FontSize="22" VerticalAlignment="Bottom"  Text="{Binding Title}" Foreground="{StaticResource TargetForeground}" />
-                    <TextBlock  FontSize="12" Margin="0,5,0,0" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White"  FontWeight="Bold"/>
-
+                    <Grid HorizontalAlignment="Stretch">
+                    <TextBlock  FontSize="22" VerticalAlignment="Center"  Text="{Binding Title}" Foreground="{StaticResource TargetForeground}" />
+                    <TextBlock  FontSize="12" VerticalAlignment="Bottom" Margin="0,5,0,0" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White"  FontWeight="Bold" HorizontalAlignment="Right"/>
+                    </Grid>
                     <TextBlock  FontSize="12" Margin="5,5,0,0" TextWrapping="WrapWholeWords" Text="{Binding Description}" Foreground="White"/>
                 
                 </StackPanel>
@@ -29,27 +30,43 @@
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" >
-        <!--<Pivot Margin="5,5,0,0">
-            <Pivot.HeaderTemplate>
+        <ptr:PullToRefreshBox x:ConnectionId='4' RefreshThreshold="160"                                                  >
+
+            <ptr:PullToRefreshBox.TopIndicatorTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding}" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}"/>
+                    <local:PullToRefresh PullProgress="{Binding}" Height="161"
+                                    VerticalAlignment="Bottom">
+                        <local:PullToRefresh.SymbolStyle>
+                            <Style TargetType="SymbolIcon">
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.SymbolStyle>
+                        <local:PullToRefresh.TextStyle>
+                            <Style TargetType="TextBlock" >
+                                <Setter Property="Foreground"
+                            Value="{StaticResource TargetForeground}" />
+                            </Style>
+                        </local:PullToRefresh.TextStyle>
+                    </local:PullToRefresh>
                 </DataTemplate>
-            </Pivot.HeaderTemplate>
-            <PivotItem Header="FRIDAY - FEB 26th" >
-                <ListView></ListView>
-            </PivotItem>
-            <PivotItem Header="SATURDAY - FEB 27th">
-                <ListView></ListView>
-            </PivotItem>
-            <PivotItem Header="SUNDAY - FEB 28th">
-                <ListView></ListView>
-            </PivotItem>
-        </Pivot>-->
-        <ListView  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
-            <ListView.GroupStyle>
-                <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
-            </ListView.GroupStyle>
-        </ListView>
+            </ptr:PullToRefreshBox.TopIndicatorTemplate>
+
+            <ListView x:ConnectionId='6' x:Name="lsvSchedule"  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
+                <ListView.GroupStyle>
+                    <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
+                </ListView.GroupStyle>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </ptr:PullToRefreshBox>
+
+        <ProgressRing x:ConnectionId='5' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
     </Grid>
+
 </Page>
 

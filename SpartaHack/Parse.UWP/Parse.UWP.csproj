@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7FD39803-BD49-4B8F-A033-06287F3DFC50}</ProjectGuid>
+    <ProjectGuid>{F7C2BE8D-AC16-4786-A0C4-1945B1B61D08}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Parse.UWP</RootNamespace>
     <AssemblyName>Parse.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -35,6 +35,28 @@
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <PlatformTarget>ARM</PlatformTarget>
@@ -80,43 +102,17 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <PlatformTarget>x86</PlatformTarget>
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-  </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Parse\Internal\HttpClient.UWP.cs">
-      <Link>Internal\HttpClient.UWP.cs</Link>
+    <Compile Include="..\Parse\Internal\HttpClient\UWP\HttpClient.UWP.cs">
+      <Link>Internal\HttpClient\UWP\HttpClient.UWP.cs</Link>
     </Compile>
-    <Compile Include="..\Parse\ParseAnalytics.cs" />
-    <Compile Include="..\Parse\ParseAnalytics.UWP.cs" />
-    <Compile Include="..\Parse\ParseFacebookUtils.cs" />
-    <Compile Include="..\Parse\ParseFacebookUtils.UWP.cs" />
-    <Compile Include="..\Parse\ParsePush.cs" />
-    <Compile Include="..\Parse\ParsePush.UWP.cs" />
-    <Compile Include="..\Parse\PlatformHooks.UWP.cs" />
+    <Compile Include="..\Parse\Internal\PlatformHooks\UWP\PlatformHooks.UWP.cs">
+      <Link>Internal\PlatformHooks\UWP\PlatformHooks.UWP.cs</Link>
+    </Compile>
     <Compile Include="..\Parse\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
@@ -126,15 +122,31 @@
     <Compile Include="..\Parse\Properties\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="..\Parse\Public\Partial\ParseAnalytics.cs">
+      <Link>Public\Partial\ParseAnalytics.cs</Link>
+    </Compile>
+    <Compile Include="..\Parse\Public\Partial\ParseFacebookUtils.cs">
+      <Link>Public\Partial\ParseFacebookUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\Parse\Public\Partial\ParsePush.cs">
+      <Link>Public\Partial\ParsePush.cs</Link>
+    </Compile>
+    <Compile Include="..\Parse\Public\UWP\ParseAnalytics.UWP.cs">
+      <Link>Public\UWP\ParseAnalytics.UWP.cs</Link>
+    </Compile>
+    <Compile Include="..\Parse\Public\UWP\ParseFacebookUtils.UWP.cs">
+      <Link>Public\UWP\ParseFacebookUtils.UWP.cs</Link>
+    </Compile>
+    <Compile Include="..\Parse\Public\UWP\ParsePush.UWP.cs">
+      <Link>Public\UWP\ParsePush.UWP.cs</Link>
+    </Compile>
+    <EmbeddedResource Include="Properties\Parse.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Parse\Parse.csproj">
       <Project>{de07a443-9619-4bd7-b540-41296f8a2959}</Project>
       <Name>Parse</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Properties\Parse.UWP.rd.xml" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

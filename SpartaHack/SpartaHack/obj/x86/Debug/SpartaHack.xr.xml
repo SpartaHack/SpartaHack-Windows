@@ -49,7 +49,6 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="FontSize" />
@@ -63,6 +62,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="TextTrimming" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Style" />
@@ -80,11 +80,11 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="Loaded" />
@@ -182,6 +182,7 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -201,6 +202,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="SelectionMode" />
       <RootProperty Name="GroupStyle" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
@@ -213,11 +215,6 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="SpartaHack.HelpDesk" />
-    <RootType FullName="Windows.UI.Xaml.Shapes.Polyline">
-      <RootProperty Name="Points" />
-      <RootProperty Name="StrokeThickness" />
-      <RootProperty Name="Stroke" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Typography">
       <RootMethod Name="GetCapitals" />
       <RootMethod Name="SetCapitals" />
@@ -229,13 +226,22 @@
       <RootProperty Name="VerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Source" />
       <RootProperty Name="MaxWidth" />
+      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="OnContent" />
+      <RootProperty Name="OffContent" />
+      <RootEvent Name="Toggled" />
+      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="PlaceholderText" />

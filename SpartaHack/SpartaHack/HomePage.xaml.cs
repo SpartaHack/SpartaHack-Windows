@@ -39,7 +39,7 @@ namespace SpartaHack
                             Description = obj["Description"].ToString()
                         });
                     }
-                    Data.Source = from note in announcements orderby note.pinned descending select note;
+                    Data.Source = from note in announcements orderby note.Created descending orderby note.pinned descending  select note;
 
                 showLoading();
 
@@ -94,7 +94,13 @@ namespace SpartaHack
         public string Description { get; set; }
 
         public DateTime Created { get; set; }
-        public string Time { get { return Created.ToString("G"); } }
+        public string Time { get {
+                if (DateTime.Now.DayOfYear == Created.DayOfYear)
+                    return Created.ToString("t");
+                else if (DateTime.Now - Created == TimeSpan.FromDays(1))
+                    return "Yesterday";
+                else
+                    return (DateTime.Now - Created).Days + " Days Ago"; } }
         public bool pinned { get; set; }
         public Visibility Pinned { get { return pinned ? Visibility.Visible : Visibility.Collapsed; } }
     }

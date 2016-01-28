@@ -1,0 +1,17 @@
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\bin\ARM\Debug\SpartaHackToast.dll
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\bin\ARM\Debug\SpartaHackToast.pdb
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\bin\ARM\Debug\SpartaHackToast.pri
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\SpartaHackToast.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\SpartaHackToast.dll
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\SpartaHackToast.pdb
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\priconfig.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\priconfig.xml.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\layout.resfiles
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\layout.resfiles.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\resources.resfiles
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\resources.resfiles.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\pri.resfiles
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\pri.resfiles.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\qualifiers.txt
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\qualifiers.txt.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt

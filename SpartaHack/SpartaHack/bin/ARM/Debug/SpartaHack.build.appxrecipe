@@ -112,6 +112,15 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\PullToRefresh.UWP.winmd">
+      <PackagePath>PullToRefresh.UWP.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml">
+      <PackagePath>PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml">
+      <PackagePath>PullToRefresh.UWP\PullToRefresh.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
@@ -120,6 +129,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\SpartaHack.xr.xml">
       <PackagePath>SpartaHack.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\SpartaHackToast.dll">
+      <PackagePath>SpartaHackToast.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\SpartaHackToast\Properties\SpartaHackToast.rd.xml">
+      <PackagePath>SpartaHackToast\Properties\SpartaHackToast.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

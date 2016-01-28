@@ -1,0 +1,16 @@
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\bin\x64\Debug\SpartaHackToast.dll
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\bin\x64\Debug\SpartaHackToast.pdb
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\bin\x64\Debug\SpartaHackToast.pri
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\SpartaHackToast.dll
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\SpartaHackToast.pdb
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\priconfig.xml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\layout.resfiles
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\resources.resfiles
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\pri.resfiles
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\qualifiers.txt
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt

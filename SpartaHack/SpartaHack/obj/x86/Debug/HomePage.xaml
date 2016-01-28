@@ -39,30 +39,28 @@
                 </DataTemplate>
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
             
-            <ListView x:ConnectionId='4' IsSynchronizedWithCurrentItem="False" Margin="5"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
+            <ListView x:ConnectionId='4' IsSynchronizedWithCurrentItem="False" Margin="5" SelectionMode="None"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
             
                 <ListView.ItemTemplate>
                     
                     <DataTemplate>
-                    <StackPanel Margin="0,0,0,48" >
-                        
-                            <StackPanel  BorderBrush="{StaticResource TargetForeground}" BorderThickness="1,1,1,0" HorizontalAlignment="Stretch">
+                   <StackPanel  BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Margin="5">
                                
                                 <Grid>
-                                <TextBlock  Margin="5" HorizontalAlignment="Left" Text="{Binding Title}" FontSize="22" Foreground="{StaticResource TargetForeground}" Typography.Capitals="AllSmallCaps" />
-                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE718;" HorizontalAlignment="Right" Visibility="{Binding Pinned}" Margin="5"/>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="60"/>
+                                    </Grid.ColumnDefinitions>
+                                <TextBlock  Margin="5" HorizontalAlignment="Left" Text="{Binding Title}" FontSize="22" Foreground="{StaticResource TargetForeground}" TextTrimming="WordEllipsis" Typography.Capitals="AllSmallCaps" />
+                                <TextBlock  FontFamily="Segoe MDL2 Assets" Text="&#xE718;" HorizontalAlignment="Right" Visibility="{Binding Pinned}" Margin="5" VerticalAlignment="Top" />
+
+                                    <TextBlock   FontSize="12" Margin="5" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White" VerticalAlignment="Bottom"  FontWeight="Bold" HorizontalAlignment="Right"/>
                                 </Grid>
-                                    <TextBlock  FontSize="12" Margin="5" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White"  FontWeight="Bold"/>
-                                <TextBlock Margin="10,5" FontSize="12" HorizontalAlignment="Left" MaxWidth="500" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
+                                    <TextBlock Margin="10,5" FontSize="12" HorizontalAlignment="Left" MaxWidth="500" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
 
                     </StackPanel>
                         
-                        <Grid>
-                        <Polyline Points="0,0 10,0 10,15 25,0" StrokeThickness="1" Stroke="{StaticResource TargetForeground}"/>
-                            <Grid VerticalAlignment="Top" Height="1" Margin="25,0,0,0" BorderBrush="{StaticResource TargetForeground}" BorderThickness="1"/>
-                        </Grid>
-                    </StackPanel>
- 
+                      
                     </DataTemplate>
                 </ListView.ItemTemplate>
             <ListView.ItemContainerStyle>

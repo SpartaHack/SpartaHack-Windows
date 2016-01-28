@@ -51,7 +51,7 @@ namespace SpartaHack
                 foreach (ParseObject obj in companies)
                 {
                     sponsor = new Sponsor();
-                    sponsor.getLogo(obj["img"] as ParseFile);
+                    sponsor.getLogo(obj["png_img"] as ParseFile);
                     sponsor.Name = obj["name"].ToString();
                     sponsor.URL = new Uri(obj["url"].ToString());
                     sponsor.Level = obj["level"].ToString();

@@ -27,6 +27,7 @@
           <uap:Rotation Preference="landscapeFlipped" />
         </uap:InitialRotationPreference>
       </uap:VisualElements>
+     
     </Application>
   </Applications>
   <Capabilities>

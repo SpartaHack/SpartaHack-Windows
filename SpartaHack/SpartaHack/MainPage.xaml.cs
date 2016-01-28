@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Windows.Storage;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace SpartaHack
@@ -34,7 +35,12 @@ namespace SpartaHack
             d = DateTime.Parse("2/27/2016 8:00 AM");
             dt.Tick += Dt_Tick;
             txtCountDown.Loaded += (s, e) => { dt.Start(); };
-
+            ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
+            try
+            {
+                DebugingHelper.ShowError(settings.Values["Task"].ToString());
+            }
+            catch { }
 
             MySplitView.PaneClosed += (s, e) => { bgPane.Width = 48; };
         }

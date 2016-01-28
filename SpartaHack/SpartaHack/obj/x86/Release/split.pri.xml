@@ -57,11 +57,6 @@
 					<Value>SpartaHack.xr.xml</Value>
 				</Candidate>
 			</NamedResource>
-			<NamedResource name="SplitViewStyles.xbf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/SplitViewStyles.xbf">
-				<Candidate type="EmbeddedData">
-					<Base64Value>[Embedded Binary Data]</Base64Value>
-				</Candidate>
-			</NamedResource>
 			<NamedResource name="SponsorPage.xbf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/SponsorPage.xbf">
 				<Candidate type="EmbeddedData">
 					<Base64Value>[Embedded Binary Data]</Base64Value>
@@ -118,42 +113,6 @@
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
-			<ResourceMapSubtree name="Parse">
-				<NamedResource name="Parse.dll" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse/Parse.dll">
-					<Candidate type="Path">
-						<Value>Parse\Parse.dll</Value>
-					</Candidate>
-				</NamedResource>
-				<NamedResource name="Parse.pdb" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse/Parse.pdb">
-					<Candidate type="Path">
-						<Value>Parse\Parse.pdb</Value>
-					</Candidate>
-				</NamedResource>
-				<NamedResource name="Parse.UWP.dll" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse/Parse.UWP.dll">
-					<Candidate type="Path">
-						<Value>Parse\Parse.UWP.dll</Value>
-					</Candidate>
-				</NamedResource>
-				<NamedResource name="Parse.UWP.pdb" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse/Parse.UWP.pdb">
-					<Candidate type="Path">
-						<Value>Parse\Parse.UWP.pdb</Value>
-					</Candidate>
-				</NamedResource>
-				<NamedResource name="Parse.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse/Parse.xml">
-					<Candidate type="Path">
-						<Value>Parse\Parse.xml</Value>
-					</Candidate>
-				</NamedResource>
-				<ResourceMapSubtree name="Parse.UWP">
-					<ResourceMapSubtree name="Properties">
-						<NamedResource name="Parse.UWP.rd.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse/Parse.UWP/Properties/Parse.UWP.rd.xml">
-							<Candidate type="Path">
-								<Value>Parse\Parse.UWP\Properties\Parse.UWP.rd.xml</Value>
-							</Candidate>
-						</NamedResource>
-					</ResourceMapSubtree>
-				</ResourceMapSubtree>
-			</ResourceMapSubtree>
 			<ResourceMapSubtree name="Parse.UWP">
 				<ResourceMapSubtree name="Properties">
 					<NamedResource name="Parse.UWP.rd.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse.UWP/Properties/Parse.UWP.rd.xml">
@@ -167,6 +126,39 @@
 				<NamedResource name="Default.rd.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Properties/Default.rd.xml">
 					<Candidate type="Path">
 						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="PullToRefresh.UWP">
+				<NamedResource name="PullToRefresh.UWP.xr.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/PullToRefresh.UWP/PullToRefresh.UWP.xr.xml">
+					<Candidate type="Path">
+						<Value>PullToRefresh.UWP\PullToRefresh.UWP.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Properties">
+					<NamedResource name="PullToRefresh.UWP.rd.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/PullToRefresh.UWP/Properties/PullToRefresh.UWP.rd.xml">
+						<Candidate type="Path">
+							<Value>PullToRefresh.UWP\Properties\PullToRefresh.UWP.rd.xml</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xbf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/PullToRefresh.UWP/Themes/Generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Styles">
+				<NamedResource name="PullToRefresh.xbf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Styles/PullToRefresh.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplitViewStyles.xbf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Styles/SplitViewStyles.xbf">
+					<Candidate type="EmbeddedData">
+						<Base64Value>[Embedded Binary Data]</Base64Value>
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>

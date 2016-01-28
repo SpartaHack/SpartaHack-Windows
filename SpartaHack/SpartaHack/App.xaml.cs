@@ -15,9 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Parse;
-using Windows.Data.Xml.Dom;
-using System.Xml;
-using System.Xml.Linq;
+
 
 namespace SpartaHack
 {
