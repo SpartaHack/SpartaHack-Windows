@@ -13,11 +13,11 @@
     <SolidColorBrush x:Key="MenuButtonCheckedPressedBackgroundBrush" Color="Gray" />
     <SolidColorBrush x:Key="MenuButtonCheckedHoverBackgroundBrush" Color="Gray" />
 
-    <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="LightGray" />
-    <SolidColorBrush x:Key="NavButtonHoverBackgroundBrush" Color="LightGray" />
-    <SolidColorBrush x:Key="NavButtonCheckedBackgroundBrush" Color="Gray" />
-    <SolidColorBrush x:Key="NavButtonCheckedPressedBackgroundBrush" Color="LightGray" />
-    <SolidColorBrush x:Key="NavButtonCheckedHoverBackgroundBrush" Color="LightGray" />
+    <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="#FF030316" />
+    <SolidColorBrush x:Key="NavButtonHoverBackgroundBrush" Color="#FF030316" />
+    <SolidColorBrush x:Key="NavButtonCheckedBackgroundBrush" Color="#FF030316" />
+    <SolidColorBrush x:Key="NavButtonCheckedPressedBackgroundBrush" Color="#FF030316" />
+    <SolidColorBrush x:Key="NavButtonCheckedHoverBackgroundBrush" Color="#FF030316" />
     
 
     <x:Double x:Key="SplitViewNormalNavFontSize">16</x:Double>

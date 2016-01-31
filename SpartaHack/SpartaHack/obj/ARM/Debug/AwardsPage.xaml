@@ -31,7 +31,7 @@
         </ResourceDictionary>
 
     </Page.Resources>
-    <Grid  Background="{StaticResource TargetBackground}"  >
+    <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0"  >
         <ptr:PullToRefreshBox x:ConnectionId='4' RefreshThreshold="160"                                                  MinHeight="300" Margin="5"  >
 
             <ptr:PullToRefreshBox.TopIndicatorTemplate>

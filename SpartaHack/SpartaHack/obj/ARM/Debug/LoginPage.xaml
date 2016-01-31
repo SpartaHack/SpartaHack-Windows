@@ -13,7 +13,7 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
         </ResourceDictionary>
     </Page.Resources>
-    <ScrollViewer Background="{StaticResource TargetBackground}">
+    <ScrollViewer Margin="0,48,0,0" Background="{StaticResource TargetBackground}">
         <StackPanel  >
 
             <TextBlock x:ConnectionId='1' x:Name="txtHeader" Text="SPARTAHACK 2016" TextWrapping="WrapWholeWords" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="32"/>

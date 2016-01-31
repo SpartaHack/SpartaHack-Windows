@@ -11,21 +11,20 @@ namespace SpartaHackToast
 {
     public sealed class ToastHelper : IBackgroundTask
     {
+        BackgroundTaskDeferral _deferral;
         public void Run(IBackgroundTaskInstance taskInstance)
         {
-           // var deferal = taskInstance.GetDeferral();
-            ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
-            string taskName = taskInstance.Task.Name;
+            _deferral = taskInstance.GetDeferral();
+            //ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
+            // string taskName = taskInstance.Task.Name;
 
-            Debug.WriteLine("Background " + taskName + " starting...");
+            // Debug.WriteLine("Background " + taskName + " starting...");
 
-            // Store the content received from the notification so it can be retrieved from the UI.
-           // RawNotification notification = (RawNotification)taskInstance.TriggerDetails;
-            settings.Values["Task"] = "TEST";
+            // // Store the content received from the notification so it can be retrieved from the UI.
+            //// RawNotification notification = (RawNotification)taskInstance.TriggerDetails;
+            //settings.Values["Task"] = "TEST";
 
-            Debug.WriteLine("Background " + taskName + " completed!");
-
-
+            // Debug.WriteLine("Background " + taskName + " completed!");
 
 
 
@@ -33,28 +32,30 @@ namespace SpartaHackToast
 
 
 
-            //var xDoc = new XDocument(
-            //new XElement("toast",
-            //    new XElement("visual",
-            //        new XElement("binding", new XAttribute("template", "ToastGeneric"),
-            //            new XElement("text", "SpartaHack 2016"),
-            //            new XElement("text", "test")
-            //            )
-            //        ),// actions 
-            //    new XElement("actions",
-            //        new XElement("action", new XAttribute("activationType", "background"),
-            //            new XAttribute("content", "Yes"), new XAttribute("arguments", "yes")),
-            //        new XElement("action", new XAttribute("activationType", "background"),
-            //            new XAttribute("content", "No"), new XAttribute("arguments", "no"))
-            //        )
-            //    )
-            //);
 
-            // var xmlDoc = new Windows.Data.Xml.Dom.XmlDocument();
-            // xmlDoc.LoadXml(xDoc.ToString());
-            // var notifi = ToastNotificationManager.CreateToastNotifier();
-            // notifi.Show(new ToastNotification(xmlDoc));
-           // deferal.Complete();
+
+            var xDoc = new XDocument(
+            new XElement("toast",
+                new XElement("visual",
+                    new XElement("binding", new XAttribute("template", "ToastGeneric"),
+                        new XElement("text", "SpartaHack 2016"),
+                        new XElement("text", "test")
+                        )
+                    ),// actions 
+                new XElement("actions",
+                    new XElement("action", new XAttribute("activationType", "background"),
+                        new XAttribute("content", "Yes"), new XAttribute("arguments", "yes")),
+                    new XElement("action", new XAttribute("activationType", "background"),
+                        new XAttribute("content", "No"), new XAttribute("arguments", "no"))
+                    )
+                )
+            );
+
+            var xmlDoc = new Windows.Data.Xml.Dom.XmlDocument();
+            xmlDoc.LoadXml(xDoc.ToString());
+            var notifi = ToastNotificationManager.CreateToastNotifier();
+            notifi.Show(new ToastNotification(xmlDoc));
+            _deferral.Complete();
         }
     }
 }

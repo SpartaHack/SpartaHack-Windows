@@ -19,7 +19,7 @@
         </ResourceDictionary>
 
     </Page.Resources>
-    <Grid  Background="{StaticResource TargetBackground}" >
+    <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0" >
 
         <ptr:PullToRefreshBox RefreshThreshold="160" RefreshInvoked="PullToRefreshBox_RefreshInvoked" MinHeight="300"  >
 

@@ -17,3 +17,4 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\qualifiers.txt
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\obj\x86\Debug\Parse.UWP.csprojResolveAssemblyReference.cache

@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Net.Http;
 using Parse;
 using Windows.Graphics.Imaging;
+using ZXing;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -46,7 +47,7 @@ namespace SpartaHack
 
                 await ParseInstallation.CurrentInstallation.SaveAsync();
                 
-                getQRCode();
+               
                 setupProfileScreen();
 
             }
@@ -61,7 +62,7 @@ namespace SpartaHack
         {
             try
             {
-                deleteQRCodeFromFile();
+               // deleteQRCodeFromFile();
                 await ParseUser.LogOutAsync();
                 ParseInstallation.CurrentInstallation.Remove("user");
                 await ParseInstallation.CurrentInstallation.SaveAsync();
@@ -98,66 +99,75 @@ namespace SpartaHack
                 catch
                 {
                     txtHeader.Text = "WELCOME " + ParseUser.CurrentUser.Username;
-                }           
-            
+                }
+                BarcodeWriter writer = new BarcodeWriter();
+                writer.Format = BarcodeFormat.QR_CODE;
+                writer.Options.Height = 200;
+                writer.Options.Width = 200;
+                var result = writer.Write(ParseUser.CurrentUser.ObjectId);
+               
+
+                imgQR.Source = result.ToBitmap() as Windows.UI.Xaml.Media.Imaging.WriteableBitmap;
+
+
             }
             catch (Exception ex)
             {
                 DebugingHelper.ShowError("Error in LoginPage, setupProfileScreen(): " + ex.Message);
             }
         }
-        async void deleteQRCodeFromFile()
-        {
-            try
-            {
-                var file = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
-                await file.DeleteAsync();
+        //async void deleteQRCodeFromFile()
+        //{
+        //    try
+        //    {
+        //        var file = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
+        //        await file.DeleteAsync();
              
-            }
-            catch(Exception ex)
-            {
-                DebugingHelper.ShowError("Error in LoginPage, deleteQRCodeFromFile(): " + ex.Message);
-            }
-        }
-        async void getQRCodeFromFile()
-        {
-            try { 
-            var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        DebugingHelper.ShowError("Error in LoginPage, deleteQRCodeFromFile(): " + ex.Message);
+        //    }
+        //}
+        //async void getQRCodeFromFile()
+        //{
+        //    try { 
+        //    var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
 
-            var buffer = await Windows.Storage.FileIO.ReadBufferAsync(fileio);
-            Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+        //    var buffer = await Windows.Storage.FileIO.ReadBufferAsync(fileio);
+        //    Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
 
-            await bi.SetSourceAsync(buffer.AsStream().AsRandomAccessStream());
-            imgQR.Source = bi;
-            }
-            catch (Exception ex)
-            {
-                DebugingHelper.ShowError("Error in LoginPage, getQRCodeFromFile(): " + ex.Message);
-            }
-        }
-        async void getQRCode()
-        {
-            try
-            {
-                ParseFile file = ParseUser.CurrentUser["qrCode"] as ParseFile;
-            Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
-            HttpClient client = new HttpClient();
-                byte[] data=await client.GetByteArrayAsync(file.Url);
-                // bi.UriSource = file.Url;
-             await bi.SetSourceAsync(new MemoryStream(data).AsRandomAccessStream());
-            imgQR.Source = bi;
+        //    await bi.SetSourceAsync(buffer.AsStream().AsRandomAccessStream());
+        //    imgQR.Source = bi;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DebugingHelper.ShowError("Error in LoginPage, getQRCodeFromFile(): " + ex.Message);
+        //    }
+        //}
+        //async void getQRCode()
+        //{
+        //    try
+        //    {
+        //        ParseFile file = ParseUser.CurrentUser["qrCode"] as ParseFile;
+        //    Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
+        //    HttpClient client = new HttpClient();
+        //        byte[] data=await client.GetByteArrayAsync(file.Url);
+        //        // bi.UriSource = file.Url;
+        //     await bi.SetSourceAsync(new MemoryStream(data).AsRandomAccessStream());
+        //    imgQR.Source = bi;
 
-               var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.CreateFileAsync("QR.png", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+        //       var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.CreateFileAsync("QR.png", Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
 
 
-                await Windows.Storage.FileIO.WriteBytesAsync(fileio, data);
-            }
-            catch (Exception ex)
-            {
-                DebugingHelper.ShowError("Error in LoginPage, getQRCode(): " + ex.Message);
-            }
-        }
+        //        await Windows.Storage.FileIO.WriteBytesAsync(fileio, data);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DebugingHelper.ShowError("Error in LoginPage, getQRCode(): " + ex.Message);
+        //    }
+        //}
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             login();
@@ -178,7 +188,7 @@ namespace SpartaHack
             else
             {
                 setupProfileScreen();
-                    getQRCodeFromFile();
+                    
             }
             }
             catch (Exception ex)

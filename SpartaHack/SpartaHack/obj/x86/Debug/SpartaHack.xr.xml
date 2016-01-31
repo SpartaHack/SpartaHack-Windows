@@ -49,6 +49,8 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="FontSize" />
@@ -62,8 +64,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="TextTrimming" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="TextTrimming" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Style" />
     </RootType>
@@ -158,8 +160,8 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Width" />
       <RootProperty Name="RequestedTheme" />
-      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Height" />
+      <RootProperty Name="BorderThickness" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
@@ -171,6 +173,7 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Width" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Height" />
@@ -221,6 +224,7 @@
     </RootType>
     <RootType FullName="SpartaHack.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="VerticalScrollBarVisibility" />

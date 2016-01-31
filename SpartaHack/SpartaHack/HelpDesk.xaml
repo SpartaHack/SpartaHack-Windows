@@ -42,10 +42,11 @@
             
             <CollectionViewSource x:Name="Tickets"/>
             <CollectionViewSource x:Name="Categories"/>
+            <CollectionViewSource x:Name="SubCategories"/>
         </ResourceDictionary>
         
     </Page.Resources>
-    <Grid  Background="{StaticResource TargetBackground}">
+    <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0">
 
 
                 
@@ -93,8 +94,9 @@
                 <StackPanel x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
                     <TextBlock Margin="10"  FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC" HorizontalAlignment="Center"/>
 
-                    <ComboBox x:Name="cmbCategories" Margin="10" ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" Width="300"/>
-                    <TextBox  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
+                    <ComboBox x:Name="cmbCategories"  Margin="10" SelectionChanged="cmbCategories_SelectionChanged" ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" Width="300"/>
+                        <ComboBox x:Name="cmbSubCategories" Margin="10" ItemsSource="{Binding Source={StaticResource SubCategories}}" Width="300"/>
+                        <TextBox  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
 
                     <TextBox x:Name="txtLocation" Margin="10" PlaceholderText="Location ex: Wells B115" Foreground="{StaticResource TargetForeground}" BorderBrush="{StaticResource TargetForeground}"/>
                     <TextBox x:Name="txtDescription" MinHeight="20" TextWrapping="Wrap" Margin="10" PlaceholderText="Please describe your problem" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>

@@ -48,14 +48,16 @@ namespace SpartaHack
             
             ParseQuery<ParseObject> query = ParseObject.GetQuery("HelpDesk");
 
-            List<Ticket> categories = new List<Ticket>();
-            Ticket category;
+            List<TicketCategory> categories = new List<TicketCategory>();
+            TicketCategory category;
             foreach(ParseObject obj in await query.FindAsync())
             {
-                category = new Ticket();
+                category = new TicketCategory();
                 category.Title = obj["category"].ToString();
                 category.Description = obj["Description"].ToString();
                 category.Category = obj.ObjectId;
+
+                    category.SubCategories = obj.Get<List<object>>("subCategory");
                 categories.Add(category);
             }
             Categories.Source = categories;
@@ -136,7 +138,9 @@ namespace SpartaHack
                     if (txtDescription.Text != "" && txtLocation.Text != "" && txtTitle.Text != "")
                     {
                         ParseObject ticket = new ParseObject("HelpDeskTickets");
-
+                        ticket["subCategory"] = cmbSubCategories.SelectedItem.ToString();
+                        ticket["status"] = "Open";
+                        ticket["notifiedFlag"] = false;
                         ticket["subject"] = txtTitle.Text;
                         ticket["description"] = txtDescription.Text;
                         ticket["user"] = ParseUser.CurrentUser;
@@ -236,6 +240,11 @@ namespace SpartaHack
             }
             catch { }
         }
+
+        private void cmbCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SubCategories.Source = (cmbCategories.SelectedItem as TicketCategory).SubCategories;
+        }
     }
     public class Ticket
     {
@@ -244,9 +253,16 @@ namespace SpartaHack
         public string Location { get; set; }
 
         public string Category { get; set; }
+
+        public string SubCategory { get; set; }
         public string ObjectId { get; set; }
         public DateTime Created { get; set; }
         public string Time { get { return Created.ToString("G"); } }
+    }
+
+    public class TicketCategory:Ticket
+    {
+        public List<object> SubCategories { get; set; }
     }
 
 

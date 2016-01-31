@@ -15,7 +15,7 @@
         </ResourceDictionary>
 
     </Page.Resources>
-    <Grid  Background="{StaticResource TargetBackground}"  >
+    <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0"  >
 <TextBlock Text="Not available yet" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource TargetForeground}"/>
     </Grid>
 </Page>

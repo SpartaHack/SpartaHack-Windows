@@ -130,7 +130,7 @@ namespace SpartaHack
             try
             {
                 MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-                bgPane.Width = MySplitView.IsPaneOpen ? 200 : 48;
+                bgPane.Width = MySplitView.IsPaneOpen ? MySplitView.OpenPaneLength : MySplitView.CompactPaneLength;
                 
             }
             catch { }

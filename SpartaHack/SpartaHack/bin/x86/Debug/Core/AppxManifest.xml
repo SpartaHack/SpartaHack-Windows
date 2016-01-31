@@ -15,7 +15,7 @@
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
-    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10586.0" />
     <PackageDependency Name="Microsoft.NET.CoreRuntime.1.0" MinVersion="1.0.23302.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
     <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.23019.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
@@ -35,6 +35,13 @@
           <uap:Rotation Preference="landscapeFlipped" />
         </uap:InitialRotationPreference>
       </uap:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="SpartaHackToast.ToastHelper">
+          <BackgroundTasks>
+            <Task Type="pushNotification" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>
@@ -44,11 +51,42 @@
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>SpartaHack.exe</Path>
+        <ActivatableClass ActivatableClassId="ZXing.Aztec.AztecResultMetadata" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Aztec.AztecEncodingOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Aztec.AztecWriter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.QrCode.QrCodeEncodingOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.QrCode.QRCodeWriter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.QrCode.Internal.ErrorCorrectionLevel" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.QrCode.Internal.QRCodeDecoderMetaData" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Rendering.PixelDataRenderer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Common.ReedSolomon.GenericGF" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Common.BitArray" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Common.Detector.WhiteRectangleDetector" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Common.EncodingOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Common.BitSource" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Common.DecodingOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Common.BitMatrix" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.ResultPoint" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Datamatrix.DataMatrixWriter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Datamatrix.Encoder.DefaultPlacement" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Datamatrix.DatamatrixEncodingOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Datamatrix.Internal.Version" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.BarcodeReader" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Dimension" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.PDF417.PDF417ResultMetadata" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.PDF417.PDF417EncodingOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.PDF417.PDF417Writer" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.PDF417.Internal.Dimensions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.Result" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.BarcodeWriter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.OneD.Code128EncodingOptions" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ZXing.OneD.UPCAWriter" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullRefreshProgressControl" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshBox" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshScrollViewer" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefreshListView" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullToRefresh_UWP_XamlTypeInfo.XamlMetaDataProvider" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="PullToRefresh.UWP.PullRefreshProgressControl" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="SpartaHackToast.ToastHelper" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>
