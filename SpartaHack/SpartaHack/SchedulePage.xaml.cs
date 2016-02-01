@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Parse;
-using System.Collections.ObjectModel;
+using SpartaHack.Styles;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -57,9 +57,9 @@ namespace SpartaHack
                 var groupEvents = from ev in events
                                   orderby ev.EventTime ascending
                                   group ev by ev.EventTime.Date into grouped
-                                  select new EventGroup(grouped)
+                                  select new HeaderGroup(grouped)
                                   {
-                                      Day = grouped.Key.ToString("D")
+                                      Header = grouped.Key.ToString("D")
                                   };
                 Events.Source = groupEvents;
                 showLoading();
@@ -97,12 +97,5 @@ namespace SpartaHack
         public string Title { get; set; }
         public string Description { get; set; }
     }
-    public class EventGroup : ObservableCollection<SHEvent>
-    {
-        public EventGroup(IEnumerable<SHEvent> items) : base(items)
-        {
-        }
-        
-        public string Day{ get; set; }
-    }
+   
 }

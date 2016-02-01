@@ -67,7 +67,7 @@ namespace SpartaHack
                 ParseInstallation.CurrentInstallation.Remove("user");
                 await ParseInstallation.CurrentInstallation.SaveAsync();
                 txtHeader.Text = "SPARTAHACK 2016";
-                imgQR.Source = null;
+                imgBC.Source = null;
             MainPage.title.Value = "LOGIN";
             grdLogin.Visibility = Visibility.Visible;
             grdLoggedIn.Visibility = Visibility.Collapsed;
@@ -101,13 +101,14 @@ namespace SpartaHack
                     txtHeader.Text = "WELCOME " + ParseUser.CurrentUser.Username;
                 }
                 BarcodeWriter writer = new BarcodeWriter();
-                writer.Format = BarcodeFormat.QR_CODE;
+                writer.Format = BarcodeFormat.CODE_128;
                 writer.Options.Height = 200;
-                writer.Options.Width = 200;
+                writer.Options.Width = 400;
+                writer.Options.Margin = 10;
                 var result = writer.Write(ParseUser.CurrentUser.ObjectId);
                
 
-                imgQR.Source = result.ToBitmap() as Windows.UI.Xaml.Media.Imaging.WriteableBitmap;
+                imgBC.Source = result.ToBitmap() as Windows.UI.Xaml.Media.Imaging.WriteableBitmap;
 
 
             }

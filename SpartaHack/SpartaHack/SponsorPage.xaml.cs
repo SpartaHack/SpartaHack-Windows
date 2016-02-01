@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Net.Http;
 using Parse;
 using Windows.UI.Xaml.Media.Imaging;
-using System.Collections.ObjectModel;
+using SpartaHack.Styles;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -59,9 +59,9 @@ namespace SpartaHack
                 }
                 var query = from s in sponsors orderby s.numLevel descending
                             group s by s.Level into grouped
-                            select new SponsorGroup(grouped)
+                            select new HeaderGroup(grouped)
                             {
-                                Level = grouped.Key,
+                                Header = grouped.Key,
 
                             };
 
@@ -137,13 +137,6 @@ namespace SpartaHack
 
     }
 
-    public class SponsorGroup:ObservableCollection<Sponsor>
-    {
-        public SponsorGroup(IEnumerable<Sponsor> items) : base(items)
-        {
-        }
-
-        public string Level { get; set; }
-    }
+    
 
 }

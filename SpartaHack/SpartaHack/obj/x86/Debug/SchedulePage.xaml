@@ -24,7 +24,7 @@
                 </StackPanel>
             </DataTemplate>
             <DataTemplate x:ConnectionId='3' x:Name="lsvHeader">
-                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Day}" FontFamily="{StaticResource TargetFont}"/>
+                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
             </DataTemplate>
         </ResourceDictionary>
 

@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Parse;
+using SpartaHack.Styles;
 namespace SpartaHack
 {
     public sealed partial class HomePage : Page
@@ -39,7 +40,11 @@ namespace SpartaHack
                             Description = obj["Description"].ToString()
                         });
                     }
-                    Data.Source = from note in announcements orderby note.Created descending orderby note.pinned descending  select note;
+                Data.Source = from note in announcements orderby note.Created descending orderby note.pinned descending
+                              group note by note.pinned into grouped select new HeaderGroup(grouped)
+                              {
+                                  Header = grouped.Key ? "Pinned" : "Notifications"
+                              };
 
                 showLoading();
 

@@ -126,6 +126,7 @@
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Styles\HeaderGroup.cs" />
     <Compile Include="Toast\ParseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Styles\PullToRefresh.xaml.cs">

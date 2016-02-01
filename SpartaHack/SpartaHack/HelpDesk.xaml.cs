@@ -243,7 +243,11 @@ namespace SpartaHack
 
         private void cmbCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            SubCategories.Source = (cmbCategories.SelectedItem as TicketCategory).SubCategories;
+            try
+            {
+                SubCategories.Source = (cmbCategories.SelectedItem as TicketCategory).SubCategories;
+            }
+            catch { }
         }
     }
     public class Ticket

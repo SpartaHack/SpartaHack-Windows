@@ -12,7 +12,10 @@
             <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-            <CollectionViewSource x:Name="Data"/>
+            <CollectionViewSource x:Name="Data" IsSourceGrouped="True"/>
+            <DataTemplate x:Name="lsvHeader">
+                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
+            </DataTemplate>
         </ResourceDictionary>
         
     </Page.Resources>
@@ -40,11 +43,13 @@
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
             
             <ListView IsSynchronizedWithCurrentItem="False" Margin="5" SelectionMode="None"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
-            
+                <ListView.GroupStyle>
+                    <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
+                </ListView.GroupStyle>
                 <ListView.ItemTemplate>
                     
                     <DataTemplate>
-                   <StackPanel  BorderBrush="{StaticResource TargetForeground}" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Margin="0,5">
+                   <StackPanel  BorderBrush="{StaticResource TargetForeground}" BorderThickness="0,0,0,0" HorizontalAlignment="Stretch" Margin="0,5">
                                
                                 <Grid>
                                     <Grid.ColumnDefinitions>
