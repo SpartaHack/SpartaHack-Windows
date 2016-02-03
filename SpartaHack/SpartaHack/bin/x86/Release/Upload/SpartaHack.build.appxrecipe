@@ -348,8 +348,14 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\bin\x86\Release\Parse.UWP.dll">
       <PackagePath>Parse.UWP.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\.nuget\packages\ZXing.Net\0.14.0.1\lib\windows8\ZXing.winmd">
+      <PackagePath>ZXing.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\.nuget\packages\PullToRefresh.UWP\0.3.3\build\uap10.0\lib\win10-x86\PullToRefresh.UWP.winmd">
       <PackagePath>PullToRefresh.UWP.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\bin\x86\Release\SpartaHackToast.winmd">
+      <PackagePath>SpartaHackToast.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
@@ -394,11 +400,14 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\Moondance.otf">
       <PackagePath>Assets\Moondance.otf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\PDFs\ios-map.pdf">
+      <PackagePath>PDFs\ios-map.pdf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\Properties\Parse.UWP.rd.xml">
-      <PackagePath>Parse.UWP\Properties\Parse.UWP.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHackToast\Properties\SpartaHackToast.rd.xml">
+      <PackagePath>SpartaHackToast\Properties\SpartaHackToast.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\SpartaHack.xr.xml">
       <PackagePath>SpartaHack.xr.xml</PackagePath>

@@ -54,7 +54,7 @@ namespace SpartaHack
             catch(Exception e)
             {
                 await new Windows.UI.Popups.MessageDialog("Looks like you typed in something wrong", "Woops...").ShowAsync();
-                DebugingHelper.ShowError(e.Message);
+                DebuggingHelper.ShowError(e.Message);
                 txtPassword.Password = "";
             }
         }
@@ -74,7 +74,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in LoginPage, logout(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in LoginPage, logout(): " + ex.Message);
             }
 
         }
@@ -114,7 +114,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in LoginPage, setupProfileScreen(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in LoginPage, setupProfileScreen(): " + ex.Message);
             }
         }
         //async void deleteQRCodeFromFile()
@@ -194,7 +194,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in LoginPage, OnNavigatedTo(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in LoginPage, OnNavigatedTo(): " + ex.Message);
             }
 
         }
@@ -210,7 +210,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
             }
 
         }
@@ -251,7 +251,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
             }
         }
     }

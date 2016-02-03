@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>23ce9752-905d-4ff9-9c28-cacf0a721d44</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Release\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>B7471CE463FF3E3DDFB1D6CAD5EE639FFA5EE700368562CF6D149A03D986DDFA</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>5015F212959331B4C4164D413986F4A0FFF9364F626F8B5EA333635746C3A069</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>47002MMPIndustries.SpartaHack_1.1.2.0_x86__c1c6qnm3bnjg4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>47002MMPIndustries.SpartaHack_c1c6qnm3bnjg4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>47002MMPIndustries.SpartaHack</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-17T20:36:07.213</Modified>
+      <Modified>2016-02-02T22:47:03.126</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -85,21 +85,33 @@
       <PackagePath>ClrCompression.dll</PackagePath>
       <Modified>2015-08-03T00:43:40.055</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\PDFs\ios-map.pdf">
+      <PackagePath>PDFs\ios-map.pdf</PackagePath>
+      <Modified>2016-02-02T15:10:25.028</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\PullToRefresh.UWP.winmd">
       <PackagePath>PullToRefresh.UWP.winmd</PackagePath>
       <Modified>2016-01-13T06:00:48.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-17T20:33:48.163</Modified>
+      <Modified>2016-02-02T22:44:42.876</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\SpartaHack.dll">
       <PackagePath>SpartaHack.dll</PackagePath>
-      <Modified>2016-01-17T20:36:06.129</Modified>
+      <Modified>2016-02-02T22:47:01.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\SpartaHack.exe">
       <PackagePath>SpartaHack.exe</PackagePath>
-      <Modified>2016-01-17T20:36:07.170</Modified>
+      <Modified>2016-02-02T22:47:03.088</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\SpartaHackToast.winmd">
+      <PackagePath>SpartaHackToast.winmd</PackagePath>
+      <Modified>2016-02-02T22:44:38.394</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\ZXing.winmd">
+      <PackagePath>ZXing.winmd</PackagePath>
+      <Modified>2016-01-31T22:11:12.526</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -24,6 +24,8 @@ namespace SpartaHack
     {
         public static Title title;
         DateTime d;
+        public static MainPage root;
+        public static Frame rootFrame;
         public MainPage(Frame frame)
         {
             this.InitializeComponent();
@@ -38,20 +40,23 @@ namespace SpartaHack
             ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
             try
             {
-                DebugingHelper.ShowError(settings.Values["Task"].ToString());
+                DebuggingHelper.ShowError(settings.Values["Task"].ToString());
             }
             catch { }
 
             MySplitView.PaneClosed += (s, e) => { bgPane.Width = 48; };
+            root = this;
+            rootFrame = MySplitView.Content as Frame;
         }
 
         private void Dt_Tick(object sender, object e)
         {
             TimeSpan dt = d.Subtract(DateTime.Now);
-            if (dt.Seconds <= 0)
+            if (dt.TotalSeconds <= 0)
                 txtCountDown.Text = "FINISHED";
             else
-                txtCountDown.Text = dt.ToString(@"hh\:mm\:ss");
+                //txtCountDown.Text = dt.ToString(@"hh\:mm\:ss");
+                txtCountDown.Text = ((int)dt.TotalHours).ToString() + "h " + dt.Minutes.ToString() + "m " + dt.Seconds.ToString()+"s";
         }
 
         private void OnNotificationsChecked(object sender, RoutedEventArgs e)

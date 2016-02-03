@@ -35,7 +35,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in SchedulePage, OnNavigatedTo(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in SchedulePage, OnNavigatedTo(): " + ex.Message);
             }
         }
         public async void getSchedule()
@@ -51,7 +51,16 @@ namespace SpartaHack
                     e.EventTime = ((DateTime)obj["eventTime"]).ToLocalTime();
                     
                     e.Title = obj["eventTitle"].ToString();
-                    e.Description = obj["eventDescription"].ToString();
+                    try
+                    {
+                        e.Description = obj["eventDescription"].ToString();
+                    }
+                    catch { }
+                    try
+                    {
+                        e.Location = obj["eventLocation"].ToString();
+                    }
+                    catch { }
                     events.Add(e);
                 }
                 var groupEvents = from ev in events
@@ -64,10 +73,23 @@ namespace SpartaHack
                 Events.Source = groupEvents;
                 showLoading();
 
+                try {
+                    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                    {
+                        var item = from ev in events where ev.EventTime > DateTime.Now.AddDays(25) select ev;
+
+                        lsvSchedule.ScrollIntoView(item.First());
+                    });
+                }
+                catch
+                {
+                    //spartahack is over
+                }
+                
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in SchedulePage, getSchedule(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in SchedulePage, getSchedule(): " + ex.Message);
             }
         }
 
@@ -95,6 +117,8 @@ namespace SpartaHack
         public DateTime EventTime { get; set; }
         public string Time { get { return EventTime.ToString("t"); } }
         public string Title { get; set; }
+
+        public string Location { get; set; }
         public string Description { get; set; }
     }
    

@@ -35,7 +35,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in AwardsPage, OnNavigatedTo(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in AwardsPage, OnNavigatedTo(): " + ex.Message);
             }
         }
         public async void getAwards()
@@ -48,7 +48,11 @@ namespace SpartaHack
             {
                 p = new Prize();
                 p.Name = obj["name"].ToString();
-                    p.Company = (await ((ParseObject)obj["sponsor"]).FetchIfNeededAsync())["name"].ToString();
+                    try
+                    {
+                        p.Company = (await ((ParseObject)obj["sponsor"]).FetchIfNeededAsync())["name"].ToString();
+                    }
+                    catch { p.Company = "SpartaHack"; }
                 p.Description = obj["description"].ToString();
                 prizes.Add(p);
             }
@@ -62,7 +66,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in AwardsPage, getAwards(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in AwardsPage, getAwards(): " + ex.Message);
             }
 
         }

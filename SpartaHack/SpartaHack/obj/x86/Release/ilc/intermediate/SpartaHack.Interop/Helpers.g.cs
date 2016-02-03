@@ -694,6 +694,147 @@ namespace McgInterop
 		internal static int StdCall__int__(
 					global::System.IntPtr pfn, 
 					void* arg0, 
+					int arg1, 
+					void* arg2)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					int arg1)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					byte arg1, 
+					void* arg2, 
+					void* arg3)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					uint arg1, 
+					byte arg2)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					byte arg1)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					global::ZXing.BarcodeFormat arg1, 
+					void* arg2, 
+					void* arg3)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					uint arg1, 
+					global::ZXing.BarcodeFormat arg2)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					global::ZXing.BarcodeFormat arg1)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					uint arg1, 
+					int arg2)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					global::System.Runtime.InteropServices.HSTRING arg1, 
+					global::ZXing.BarcodeFormat arg2, 
+					int arg3, 
+					int arg4, 
+					void* arg5)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					global::System.Runtime.InteropServices.HSTRING arg1, 
+					global::ZXing.BarcodeFormat arg2, 
+					int arg3, 
+					int arg4, 
+					void* arg5, 
+					void* arg6)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					void* arg1, 
+					global::ZXing.BarcodeFormat arg2, 
+					global::System.Runtime.InteropServices.HSTRING arg3, 
+					void* arg4)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					void* arg1, 
+					global::ZXing.BarcodeFormat arg2, 
+					global::System.Runtime.InteropServices.HSTRING arg3, 
+					void* arg4, 
+					void* arg5)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
 					global::Windows.Foundation.Point arg1, 
 					void* arg2)
 		{
@@ -752,28 +893,9 @@ namespace McgInterop
 		internal static int StdCall__int__(
 					global::System.IntPtr pfn, 
 					void* arg0, 
-					int arg1)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
 					global::Windows.Foundation.Point arg1, 
 					global::Windows.Foundation.Rect arg2, 
 					void* arg3)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
-					int arg1, 
-					void* arg2)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -889,37 +1011,6 @@ namespace McgInterop
 		internal static int StdCall__int__(
 					global::System.IntPtr pfn, 
 					void* arg0, 
-					double arg1, 
-					void* arg2, 
-					void* arg3)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
-					uint arg1, 
-					double arg2)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
-					uint arg1, 
-					global::Windows.Foundation.Point arg2)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
 					void* arg1, 
 					void* arg2, 
 					void* arg3, 
@@ -995,6 +1086,27 @@ namespace McgInterop
 		internal static int StdCall__int__(
 					global::System.IntPtr pfn, 
 					void* arg0, 
+					double arg1, 
+					void* arg2, 
+					void* arg3)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					uint arg1, 
+					double arg2)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
 					void* arg1, 
 					double arg2)
 		{
@@ -1006,17 +1118,6 @@ namespace McgInterop
 					global::System.IntPtr pfn, 
 					void* arg0, 
 					global::System.Runtime.InteropServices.HSTRING arg1, 
-					void* arg2, 
-					void* arg3)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
-					global::System.Type__Impl.UnsafeType arg1, 
 					void* arg2, 
 					void* arg3)
 		{
@@ -1060,6 +1161,28 @@ namespace McgInterop
 					void* arg0, 
 					void* arg1, 
 					uint arg2)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					int arg1, 
+					int arg2, 
+					void* arg3)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					global::System.Type__Impl.UnsafeType arg1, 
+					void* arg2, 
+					void* arg3)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -1143,26 +1266,6 @@ namespace McgInterop
 					global::System.IntPtr pfn, 
 					void* arg0, 
 					void* arg1, 
-					ulong arg2)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
-					void* arg1, 
-					global::Windows.Web.Http.HttpProgress__Impl.UnsafeType arg2)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
-					void* arg1, 
 					int arg2, 
 					void* arg3)
 		{
@@ -1223,18 +1326,6 @@ namespace McgInterop
 		internal static int StdCall__int__(
 					global::System.IntPtr pfn, 
 					void* arg0, 
-					void* arg1, 
-					uint arg2, 
-					void* arg3, 
-					void* arg4)
-		{
-			// This method is implemented elsewhere in the toolchain
-			return 0;
-		}
-
-		internal static int StdCall__int__(
-					global::System.IntPtr pfn, 
-					void* arg0, 
 					global::Windows.Security.Authentication.Web.WebAuthenticationOptions arg1, 
 					void* arg2, 
 					void* arg3, 
@@ -1280,6 +1371,26 @@ namespace McgInterop
 					global::System.IntPtr pfn, 
 					void* arg0, 
 					global::System.Exception__Impl.UnsafeType arg1)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					void* arg1, 
+					ulong arg2)
+		{
+			// This method is implemented elsewhere in the toolchain
+			return 0;
+		}
+
+		internal static int StdCall__int__(
+					global::System.IntPtr pfn, 
+					void* arg0, 
+					void* arg1, 
+					global::Windows.Web.Http.HttpProgress__Impl.UnsafeType arg2)
 		{
 			// This method is implemented elsewhere in the toolchain
 			return 0;
@@ -1708,526 +1819,540 @@ namespace McgInterop
 
 		public delegate void AddrOfTarget52(
 					global::System.__ComObject a0, 
-					global::Windows.UI.Xaml.DependencyObject a1, 
-					object a2);
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> a1, 
+					uint a2);
 
 		public delegate void AddrOfTarget53(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Navigation.NavigationEventArgs a2);
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget54(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs a2);
+					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
+					uint a2);
 
 		public delegate void AddrOfTarget55(
 					global::System.__ComObject a0, 
-					object a1, 
-					global::Windows.UI.Xaml.Navigation.NavigationFailedEventArgs a2);
+					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget56(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> a1, 
-					uint a2);
-
-		public delegate void AddrOfTarget57(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IBuffer, uint> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate void AddrOfTarget58(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
-					uint a2);
-
-		public delegate void AddrOfTarget59(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<uint, uint> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate void AddrOfTarget60(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<bool> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
+		public delegate void AddrOfTarget57(
+					global::System.__ComObject a0, 
+					global::ZXing.ResultPoint a1);
+
+		public delegate void AddrOfTarget58(
+					global::System.__ComObject a0, 
+					global::Windows.UI.Xaml.DependencyObject a1, 
+					object a2);
+
+		public delegate void AddrOfTarget59(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::ZXing.ResultPoint a2);
+
+		public delegate void AddrOfTarget60(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::ZXing.Result a2);
+
 		public delegate void AddrOfTarget61(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::Windows.UI.Xaml.Navigation.NavigationEventArgs a2);
+
+		public delegate void AddrOfTarget62(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::Windows.UI.Xaml.Navigation.NavigatingCancelEventArgs a2);
+
+		public delegate void AddrOfTarget63(
+					global::System.__ComObject a0, 
+					object a1, 
+					global::Windows.UI.Xaml.Navigation.NavigationFailedEventArgs a2);
+
+		public delegate void AddrOfTarget64(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Xaml.Media.Imaging.DownloadProgressEventArgs a2);
 
-		public delegate void AddrOfTarget62(
+		public delegate void AddrOfTarget65(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.FileProperties.BasicProperties> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget63(
+		public delegate void AddrOfTarget66(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IRandomAccessStream> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget64(
+		public delegate void AddrOfTarget67(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Devices.Enumeration.Pnp.PnpObjectCollection> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget65(
+		public delegate void AddrOfTarget68(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFile> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget66(
+		public delegate void AddrOfTarget69(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.StorageFolder> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget67(
+		public delegate void AddrOfTarget70(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.IStorageItem> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget68(
+		public delegate void AddrOfTarget71(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::System.Collections.Generic.IReadOnlyList<global::Windows.Storage.StorageFile>> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget69(
+		public delegate void AddrOfTarget72(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Xaml.Controls.NotifyEventArgs a2);
 
-		public delegate void AddrOfTarget70(
+		public delegate void AddrOfTarget73(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Xaml.Controls.WebViewNavigationFailedEventArgs a2);
 
-		public delegate void AddrOfTarget71(
+		public delegate void AddrOfTarget74(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewNavigationStartingEventArgs a2);
 
-		public delegate void AddrOfTarget72(
+		public delegate void AddrOfTarget75(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewContentLoadingEventArgs a2);
 
-		public delegate void AddrOfTarget73(
+		public delegate void AddrOfTarget76(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewDOMContentLoadedEventArgs a2);
 
-		public delegate void AddrOfTarget74(
+		public delegate void AddrOfTarget77(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs a2);
 
-		public delegate void AddrOfTarget75(
+		public delegate void AddrOfTarget78(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewLongRunningScriptDetectedEventArgs a2);
 
-		public delegate void AddrOfTarget76(
+		public delegate void AddrOfTarget79(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					object a2);
 
-		public delegate void AddrOfTarget77(
+		public delegate void AddrOfTarget80(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewUnviewableContentIdentifiedEventArgs a2);
 
-		public delegate void AddrOfTarget78(
+		public delegate void AddrOfTarget81(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewUnsupportedUriSchemeIdentifiedEventArgs a2);
 
-		public delegate void AddrOfTarget79(
+		public delegate void AddrOfTarget82(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewNewWindowRequestedEventArgs a2);
 
-		public delegate void AddrOfTarget80(
+		public delegate void AddrOfTarget83(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Xaml.Controls.WebView a1, 
 					global::Windows.UI.Xaml.Controls.WebViewPermissionRequestedEventArgs a2);
 
-		public delegate void AddrOfTarget81(
+		public delegate void AddrOfTarget84(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs a2);
 
-		public delegate void AddrOfTarget82(
+		public delegate void AddrOfTarget85(
 					global::System.__ComObject a0, 
 					global::Windows.Networking.PushNotifications.PushNotificationChannel a1, 
 					global::Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs a2);
 
-		public delegate void AddrOfTarget83(
+		public delegate void AddrOfTarget86(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.Collections.IObservableMap<string, string> a1, 
 					global::Windows.Foundation.Collections.IMapChangedEventArgs<string> a2);
 
-		public delegate void AddrOfTarget84(
+		public delegate void AddrOfTarget87(
 					global::System.__ComObject a0, 
 					global::Windows.System.Threading.ThreadPoolTimer a1);
 
-		public delegate void AddrOfTarget85(
+		public delegate void AddrOfTarget88(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.Networking.PushNotifications.PushNotificationChannel> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget86(
+		public delegate void AddrOfTarget89(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<string> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget87(
+		public delegate void AddrOfTarget90(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::Windows.UI.Popups.IUICommand> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate void AddrOfTarget88(
+		public delegate void AddrOfTarget91(
 					global::System.__ComObject a0, 
 					global::Windows.UI.Popups.IUICommand a1);
 
-		public delegate void AddrOfTarget89(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperation<global::Windows.Storage.Streams.IBuffer> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate void AddrOfTarget90(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperation<global::Windows.Security.Authentication.Web.WebAuthenticationResult> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate void AddrOfTarget91(
-					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IInputStream, ulong> a1, 
-					ulong a2);
-
 		public delegate void AddrOfTarget92(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IInputStream, ulong> a1, 
+					global::Windows.Foundation.IAsyncOperation<global::Windows.Data.Pdf.PdfDocument> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget93(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Web.Http.HttpResponseMessage, global::Windows.Web.Http.HttpProgress> a1, 
-					global::Windows.Web.Http.HttpProgress a2);
+					global::Windows.Foundation.IAsyncOperation<global::Windows.Security.Authentication.Web.WebAuthenticationResult> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
 
 		public delegate void AddrOfTarget94(
 					global::System.__ComObject a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Web.Http.HttpResponseMessage, global::Windows.Web.Http.HttpProgress> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate void AddrOfTarget95(
-					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncAction a1);
 
-		public delegate void AddrOfTarget96(
+		public delegate void AddrOfTarget95(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.Foundation.Diagnostics.TracingStatusChangedEventArgs a2);
 
-		public delegate void AddrOfTarget97(
+		public delegate void AddrOfTarget96(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.BackRequestedEventArgs a2);
 
-		public delegate void AddrOfTarget98(
+		public delegate void AddrOfTarget97(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.WindowActivatedEventArgs a2);
 
-		public delegate void AddrOfTarget99(
+		public delegate void AddrOfTarget98(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.CoreWindowEventArgs a2);
 
-		public delegate void AddrOfTarget100(
+		public delegate void AddrOfTarget99(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.WindowSizeChangedEventArgs a2);
 
-		public delegate void AddrOfTarget101(
+		public delegate void AddrOfTarget100(
 					global::System.__ComObject a0, 
 					object a1, 
 					global::Windows.UI.Core.VisibilityChangedEventArgs a2);
 
+		public delegate void AddrOfTarget101(
+					global::System.__ComObject a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IInputStream, ulong> a1, 
+					ulong a2);
+
 		public delegate void AddrOfTarget102(
+					global::System.__ComObject a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Storage.Streams.IInputStream, ulong> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
+
+		public delegate void AddrOfTarget103(
+					global::System.__ComObject a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Web.Http.HttpResponseMessage, global::Windows.Web.Http.HttpProgress> a1, 
+					global::Windows.Web.Http.HttpProgress a2);
+
+		public delegate void AddrOfTarget104(
+					global::System.__ComObject a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress<global::Windows.Web.Http.HttpResponseMessage, global::Windows.Web.Http.HttpProgress> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
+
+		public delegate void AddrOfTarget105(
 					global::System.__ComObject a0, 
 					global::Windows.Foundation.IAsyncOperation<global::System.Collections.Generic.IReadOnlyList<global::Windows.Security.Cryptography.Certificates.Certificate>> a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate int AddrOfTarget103(
+		public delegate int AddrOfTarget106(
 					global::System.IntPtr a0, 
 					global::System.IntPtr a1, 
 					global::System.IntPtr a2);
 
-		public delegate int AddrOfTarget104(
+		public delegate int AddrOfTarget107(
 					global::System.IntPtr a0, 
 					global::System.IntPtr a1);
 
-		public delegate int AddrOfTarget105(
+		public delegate int AddrOfTarget108(
 					global::System.IntPtr a0, 
 					uint a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable** a2);
 
-		public delegate int AddrOfTarget106(
+		public delegate int AddrOfTarget109(
 					global::System.IntPtr a0, 
 					uint* a1);
 
-		public delegate int AddrOfTarget107(
+		public delegate int AddrOfTarget110(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Interop.IBindableVectorView__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget108(
+		public delegate int AddrOfTarget111(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					uint* a2, 
 					sbyte* a3);
 
-		public delegate int AddrOfTarget109(
+		public delegate int AddrOfTarget112(
 					global::System.IntPtr a0, 
 					uint a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
 
-		public delegate int AddrOfTarget110(
+		public delegate int AddrOfTarget113(
 					global::System.IntPtr a0, 
 					uint a1);
 
-		public delegate int AddrOfTarget111(
+		public delegate int AddrOfTarget114(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1);
 
-		public delegate int AddrOfTarget112(global::System.IntPtr a0);
-
-		public delegate int AddrOfTarget113(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Interop.IBindableIterator__Impl.Vtbl*** a1);
-
-		public delegate int AddrOfTarget114(
-					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable** a1);
-
-		public delegate int AddrOfTarget115(
-					global::System.IntPtr a0, 
-					sbyte* a1);
+		public delegate int AddrOfTarget115(global::System.IntPtr a0);
 
 		public delegate int AddrOfTarget116(
 					global::System.IntPtr a0, 
-					global::Windows.Foundation.PropertyType* a1);
+					global::Windows.UI.Xaml.Interop.IBindableIterator__Impl.Vtbl*** a1);
 
 		public delegate int AddrOfTarget117(
 					global::System.IntPtr a0, 
-					byte* a1);
+					global::System.Runtime.InteropServices.__vtable_IInspectable** a1);
 
 		public delegate int AddrOfTarget118(
 					global::System.IntPtr a0, 
-					short* a1);
+					sbyte* a1);
 
 		public delegate int AddrOfTarget119(
 					global::System.IntPtr a0, 
-					ushort* a1);
+					global::Windows.Foundation.PropertyType* a1);
 
 		public delegate int AddrOfTarget120(
 					global::System.IntPtr a0, 
-					int* a1);
+					byte* a1);
 
 		public delegate int AddrOfTarget121(
 					global::System.IntPtr a0, 
-					long* a1);
+					short* a1);
 
 		public delegate int AddrOfTarget122(
 					global::System.IntPtr a0, 
-					ulong* a1);
+					ushort* a1);
 
 		public delegate int AddrOfTarget123(
 					global::System.IntPtr a0, 
-					float* a1);
+					int* a1);
 
 		public delegate int AddrOfTarget124(
 					global::System.IntPtr a0, 
-					double* a1);
+					long* a1);
 
 		public delegate int AddrOfTarget125(
 					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.HSTRING* a1);
+					ulong* a1);
 
 		public delegate int AddrOfTarget126(
 					global::System.IntPtr a0, 
-					global::System.Guid* a1);
+					float* a1);
 
 		public delegate int AddrOfTarget127(
 					global::System.IntPtr a0, 
-					global::System.DateTimeOffset__Impl.UnsafeType* a1);
+					double* a1);
 
 		public delegate int AddrOfTarget128(
 					global::System.IntPtr a0, 
-					global::System.TimeSpan* a1);
+					global::System.Runtime.InteropServices.HSTRING* a1);
 
 		public delegate int AddrOfTarget129(
 					global::System.IntPtr a0, 
-					global::Windows.Foundation.Point* a1);
+					global::System.Guid* a1);
 
 		public delegate int AddrOfTarget130(
 					global::System.IntPtr a0, 
-					global::Windows.Foundation.Size* a1);
+					global::System.DateTimeOffset__Impl.UnsafeType* a1);
 
 		public delegate int AddrOfTarget131(
 					global::System.IntPtr a0, 
-					global::Windows.Foundation.Rect* a1);
+					global::System.TimeSpan* a1);
 
 		public delegate int AddrOfTarget132(
 					global::System.IntPtr a0, 
-					uint* a1, 
-					byte** a2);
+					global::Windows.Foundation.Point* a1);
 
 		public delegate int AddrOfTarget133(
 					global::System.IntPtr a0, 
-					uint* a1, 
-					short** a2);
+					global::Windows.Foundation.Size* a1);
 
 		public delegate int AddrOfTarget134(
 					global::System.IntPtr a0, 
-					uint* a1, 
-					ushort** a2);
+					global::Windows.Foundation.Rect* a1);
 
 		public delegate int AddrOfTarget135(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					int** a2);
+					byte** a2);
 
 		public delegate int AddrOfTarget136(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					uint** a2);
+					short** a2);
 
 		public delegate int AddrOfTarget137(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					long** a2);
+					ushort** a2);
 
 		public delegate int AddrOfTarget138(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					ulong** a2);
+					int** a2);
 
 		public delegate int AddrOfTarget139(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					float** a2);
+					uint** a2);
 
 		public delegate int AddrOfTarget140(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					double** a2);
+					long** a2);
 
 		public delegate int AddrOfTarget141(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					sbyte** a2);
+					ulong** a2);
 
 		public delegate int AddrOfTarget142(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::System.Runtime.InteropServices.HSTRING** a2);
+					float** a2);
 
 		public delegate int AddrOfTarget143(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable*** a2);
+					double** a2);
 
 		public delegate int AddrOfTarget144(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::System.Guid** a2);
+					sbyte** a2);
 
 		public delegate int AddrOfTarget145(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::System.DateTimeOffset__Impl.UnsafeType** a2);
+					global::System.Runtime.InteropServices.HSTRING** a2);
 
 		public delegate int AddrOfTarget146(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::System.TimeSpan** a2);
+					global::System.Runtime.InteropServices.__vtable_IInspectable*** a2);
 
 		public delegate int AddrOfTarget147(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::Windows.Foundation.Point** a2);
+					global::System.Guid** a2);
 
 		public delegate int AddrOfTarget148(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::Windows.Foundation.Size** a2);
+					global::System.DateTimeOffset__Impl.UnsafeType** a2);
 
 		public delegate int AddrOfTarget149(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::Windows.Foundation.Rect** a2);
+					global::System.TimeSpan** a2);
 
 		public delegate int AddrOfTarget150(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::Windows.Foundation.Point** a2);
+
+		public delegate int AddrOfTarget151(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::Windows.Foundation.Size** a2);
+
+		public delegate int AddrOfTarget152(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::Windows.Foundation.Rect** a2);
+
+		public delegate int AddrOfTarget153(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_System_Object_V___Impl.Vtbl** a1, 
 					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a2);
 
-		public delegate int AddrOfTarget151(
-					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken a1);
-
-		public delegate int AddrOfTarget152(
-					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
-					sbyte* a2);
-
-		public delegate int AddrOfTarget153(
-					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
-
 		public delegate int AddrOfTarget154(
 					global::System.IntPtr a0, 
-					global::System.Collections.Specialized.NotifyCollectionChangedEventHandler__Impl.Vtbl** a1, 
-					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a2);
+					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken a1);
 
 		public delegate int AddrOfTarget155(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
-					global::Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs__Impl.Vtbl** a2);
+					sbyte* a2);
 
 		public delegate int AddrOfTarget156(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
+
+		public delegate int AddrOfTarget157(
+					global::System.IntPtr a0, 
+					global::System.Collections.Specialized.NotifyCollectionChangedEventHandler__Impl.Vtbl** a1, 
+					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a2);
+
+		public delegate int AddrOfTarget158(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
+					global::Windows.UI.Xaml.Interop.INotifyCollectionChangedEventArgs__Impl.Vtbl** a2);
+
+		public delegate int AddrOfTarget159(
 					global::System.IntPtr a0, 
 					global::System.ComponentModel.PropertyChangedEventHandler__Impl.Vtbl** a1, 
 					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a2);
 
-		public delegate int AddrOfTarget157(
+		public delegate int AddrOfTarget160(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Data.IPropertyChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget158(
+		public delegate int AddrOfTarget161(
 					global::System.IntPtr a0, 
 					global::System.Type__Impl.UnsafeType* a1);
 
-		public delegate int AddrOfTarget159(
+		public delegate int AddrOfTarget162(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable** a2);
 
-		public delegate int AddrOfTarget160(
+		public delegate int AddrOfTarget163(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable** a3);
 
-		public delegate int AddrOfTarget161(
+		public delegate int AddrOfTarget164(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a3);
 
-		public delegate int AddrOfTarget162(
+		public delegate int AddrOfTarget165(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::System.Type__Impl.UnsafeType a2, 
@@ -2235,1651 +2360,2309 @@ namespace McgInterop
 					global::System.Runtime.InteropServices.HSTRING a4, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable** a5);
 
-		public delegate int AddrOfTarget163(
+		public delegate int AddrOfTarget166(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IDependencyObject__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.IDependencyPropertyChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget164(
+		public delegate int AddrOfTarget167(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncStatus* a1);
 
-		public delegate int AddrOfTarget165(
+		public delegate int AddrOfTarget168(
 					global::System.IntPtr a0, 
 					global::System.Exception__Impl.UnsafeType* a1);
 
-		public delegate int AddrOfTarget166(
+		public delegate int AddrOfTarget169(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.IAsyncAction__Impl.Vtbl** a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate int AddrOfTarget167(
+		public delegate int AddrOfTarget170(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IDependencyObject__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.IDependencyProperty__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget168(
+		public delegate int AddrOfTarget171(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget169(
+		public delegate int AddrOfTarget172(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget170(
+		public delegate int AddrOfTarget173(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable** a2);
 
-		public delegate int AddrOfTarget171(
+		public delegate int AddrOfTarget174(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::Windows.UI.Xaml.Markup.IXamlMember__Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget172(
+		public delegate int AddrOfTarget175(
+					global::System.IntPtr a0, 
+					global::ZXing.Datamatrix.Encoder.SymbolShapeHint* a1);
+
+		public delegate int AddrOfTarget176(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.HSTRING a1, 
+					uint a2, 
+					byte* a3, 
+					uint a4, 
+					global::ZXing.IResultPointClass__Impl.Vtbl*** a5, 
+					global::ZXing.BarcodeFormat a6, 
+					global::System.IntPtr* a7);
+
+		public delegate int AddrOfTarget177(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.HSTRING a1, 
+					uint a2, 
+					byte* a3, 
+					uint a4, 
+					global::ZXing.IResultPointClass__Impl.Vtbl*** a5, 
+					global::ZXing.BarcodeFormat a6, 
+					long a7, 
+					global::System.IntPtr* a8);
+
+		public delegate int AddrOfTarget178(
+					global::System.IntPtr a0, 
+					float a1, 
+					float a2, 
+					global::System.IntPtr* a3);
+
+		public delegate int AddrOfTarget179(
+					global::System.IntPtr a0, 
+					global::ZXing.IResultPointClass__Impl.Vtbl** a1, 
+					global::ZXing.IResultPointClass__Impl.Vtbl** a2, 
+					float* a3);
+
+		public delegate int AddrOfTarget180(
+					global::System.IntPtr a0, 
+					uint a1, 
+					global::ZXing.IResultPointClass__Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget181(
+					global::System.IntPtr a0, 
+					global::ZXing.BarcodeFormat* a1);
+
+		public delegate int AddrOfTarget182(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IDictionary_A_ZXing_ResultMetadataType_j_System_Object_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget183(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::ZXing.IResultPointClass__Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget184(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IDictionary_A_ZXing_ResultMetadataType_j_System_Object_V___Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget185(
+					global::System.IntPtr a0, 
+					global::ZXing.ResultMetadataType a1, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
+
+		public delegate int AddrOfTarget186(
+					global::System.IntPtr a0, 
+					global::ZXing.DecodeHintType a1, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable** a2);
+
+		public delegate int AddrOfTarget187(
+					global::System.IntPtr a0, 
+					global::ZXing.DecodeHintType a1, 
+					sbyte* a2);
+
+		public delegate int AddrOfTarget188(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_ZXing_DecodeHintType_j_System_Object_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget189(
+					global::System.IntPtr a0, 
+					global::ZXing.DecodeHintType a1, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a2, 
+					sbyte* a3);
+
+		public delegate int AddrOfTarget190(
+					global::System.IntPtr a0, 
+					global::ZXing.DecodeHintType a1);
+
+		public delegate int AddrOfTarget191(
+					global::System.IntPtr a0, 
+					global::ZXing.DecodeHintType* a1);
+
+		public delegate int AddrOfTarget192(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.KeyValuePair_A_ZXing_DecodeHintType_j_System_Object_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget193(
+					global::System.IntPtr a0, 
+					uint a1, 
+					global::System.Collections.Generic.KeyValuePair_A_ZXing_DecodeHintType_j_System_Object_V___Impl.Vtbl*** a2, 
+					uint* a3);
+
+		public delegate int AddrOfTarget194(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_ZXing_DecodeHintType_j_System_Object_V___Impl.Vtbl*** a1, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_ZXing_DecodeHintType_j_System_Object_V___Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget195(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.HSTRING a1, 
+					global::ZXing.BarcodeFormat a2, 
+					int a3, 
+					int a4, 
+					global::ZXing.Common.IBitMatrixClass__Impl.Vtbl*** a5);
+
+		public delegate int AddrOfTarget196(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.HSTRING a1, 
+					global::ZXing.BarcodeFormat a2, 
+					int a3, 
+					int a4, 
+					global::System.Collections.Generic.IDictionary_A_ZXing_EncodeHintType_j_System_Object_V___Impl.Vtbl** a5, 
+					global::ZXing.Common.IBitMatrixClass__Impl.Vtbl*** a6);
+
+		public delegate int AddrOfTarget197(
+					global::System.IntPtr a0, 
+					int a1, 
+					global::System.IntPtr* a2);
+
+		public delegate int AddrOfTarget198(
+					global::System.IntPtr a0, 
+					int a1, 
+					int a2, 
+					global::System.IntPtr* a3);
+
+		public delegate int AddrOfTarget199(
+					global::System.IntPtr a0, 
+					int a1, 
+					int a2);
+
+		public delegate int AddrOfTarget200(
+					global::System.IntPtr a0, 
+					int a1, 
+					global::ZXing.Common.IBitArrayClass__Impl.Vtbl** a2, 
+					global::ZXing.Common.IBitArrayClass__Impl.Vtbl*** a3);
+
+		public delegate int AddrOfTarget201(
+					global::System.IntPtr a0, 
+					int a1, 
+					int a2, 
+					sbyte* a3);
+
+		public delegate int AddrOfTarget202(
+					global::System.IntPtr a0, 
+					int a1, 
+					int a2, 
+					int a3, 
+					int a4);
+
+		public delegate int AddrOfTarget203(
+					global::System.IntPtr a0, 
+					int a1, 
+					global::ZXing.Common.IBitArrayClass__Impl.Vtbl** a2);
+
+		public delegate int AddrOfTarget204(
+					global::System.IntPtr a0, 
+					global::ZXing.Rendering.IPixelDataClass__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget205(
+					global::System.IntPtr a0, 
+					global::ZXing.BarcodeFormat a1, 
+					global::System.Runtime.InteropServices.HSTRING a2, 
+					global::ZXing.Rendering.IPixelDataClass__Impl.Vtbl*** a3);
+
+		public delegate int AddrOfTarget206(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IBitArrayClass__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget207(
+					global::System.IntPtr a0, 
+					sbyte a1);
+
+		public delegate int AddrOfTarget208(
+					global::System.IntPtr a0, 
+					int a1);
+
+		public delegate int AddrOfTarget209(
+					global::System.IntPtr a0, 
+					int a1, 
+					int* a2);
+
+		public delegate int AddrOfTarget210(
+					global::System.IntPtr a0, 
+					int a1, 
+					sbyte* a2);
+
+		public delegate int AddrOfTarget211(
+					global::System.IntPtr a0, 
+					int a1, 
+					int a2, 
+					sbyte a3, 
+					sbyte* a4);
+
+		public delegate int AddrOfTarget212(
+					global::System.IntPtr a0, 
+					int a1, 
+					uint a2, 
+					byte* a3, 
+					int a4, 
+					int a5);
+
+		public delegate int AddrOfTarget213(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IBitMatrixClass__Impl.Vtbl** a1, 
+					global::ZXing.BarcodeFormat a2, 
+					global::System.Runtime.InteropServices.HSTRING a3, 
+					global::ZXing.Rendering.IPixelDataClass__Impl.Vtbl*** a4);
+
+		public delegate int AddrOfTarget214(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IBitMatrixClass__Impl.Vtbl** a1, 
+					global::ZXing.BarcodeFormat a2, 
+					global::System.Runtime.InteropServices.HSTRING a3, 
+					global::ZXing.Common.IEncodingOptionsClass__Impl.Vtbl** a4, 
+					global::ZXing.Rendering.IPixelDataClass__Impl.Vtbl*** a5);
+
+		public delegate int AddrOfTarget215(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IDictionary_A_ZXing_EncodeHintType_j_System_Object_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget216(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IKeyRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget173(
+		public delegate int AddrOfTarget217(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.IRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget174(
+		public delegate int AddrOfTarget218(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.IDragEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget175(
+		public delegate int AddrOfTarget219(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IPointerRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget176(
+		public delegate int AddrOfTarget220(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.ITappedRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget177(
+		public delegate int AddrOfTarget221(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IDoubleTappedRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget178(
+		public delegate int AddrOfTarget222(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IHoldingRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget179(
+		public delegate int AddrOfTarget223(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IRightTappedRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget180(
+		public delegate int AddrOfTarget224(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IManipulationStartingRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget181(
+		public delegate int AddrOfTarget225(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget182(
+		public delegate int AddrOfTarget226(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IManipulationStartedRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget183(
+		public delegate int AddrOfTarget227(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget184(
+		public delegate int AddrOfTarget228(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget185(
+		public delegate int AddrOfTarget229(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IUIElement__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.IDragStartingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget186(
+		public delegate int AddrOfTarget230(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IUIElement__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.IDropCompletedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget187(
+		public delegate int AddrOfTarget231(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.ISizeChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget188(
+		public delegate int AddrOfTarget232(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Size a1, 
 					global::Windows.Foundation.Size* a2);
 
-		public delegate int AddrOfTarget189(
+		public delegate int AddrOfTarget233(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IFrameworkElement__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.IDataContextChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget190(
+		public delegate int AddrOfTarget234(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IFrameworkElement__Impl.Vtbl** a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
 
-		public delegate int AddrOfTarget191(
+		public delegate int AddrOfTarget235(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.IDependencyPropertyChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget192(
+		public delegate int AddrOfTarget236(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.ISelectionChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget193(
+		public delegate int AddrOfTarget237(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.IItemClickEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget194(
+		public delegate int AddrOfTarget238(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.IDragItemsStartingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget195(
+		public delegate int AddrOfTarget239(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IListViewBase__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IContainerContentChangingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget196(
+		public delegate int AddrOfTarget240(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IListViewBase__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IDragItemsCompletedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget197(
+		public delegate int AddrOfTarget241(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IListViewBase__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IChoosingItemContainerEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget198(
+		public delegate int AddrOfTarget242(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IListViewBase__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IChoosingGroupHeaderContainerEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget199(
+		public delegate int AddrOfTarget243(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IApplicationInitializationCallbackParams__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget200(
+		public delegate int AddrOfTarget244(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.IUnhandledExceptionEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget201(
+		public delegate int AddrOfTarget245(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.ApplicationModel.ISuspendingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget202(
+		public delegate int AddrOfTarget246(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.IActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget203(
+		public delegate int AddrOfTarget247(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget204(
+		public delegate int AddrOfTarget248(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.IFileActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget205(
+		public delegate int AddrOfTarget249(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.ISearchActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget206(
+		public delegate int AddrOfTarget250(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget207(
+		public delegate int AddrOfTarget251(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget208(
+		public delegate int AddrOfTarget252(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget209(
+		public delegate int AddrOfTarget253(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget210(
+		public delegate int AddrOfTarget254(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IWindowCreatedEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget211(
+		public delegate int AddrOfTarget255(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Navigation.INavigationEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget212(
+		public delegate int AddrOfTarget256(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget213(
+		public delegate int AddrOfTarget257(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.IContextMenuEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget214(
+		public delegate int AddrOfTarget258(
 					global::System.IntPtr a0, 
 					int a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
 
-		public delegate int AddrOfTarget215(
+		public delegate int AddrOfTarget259(
 					global::System.IntPtr a0, 
 					int a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2, 
 					global::Windows.UI.Xaml.Markup.IComponentConnector__Impl.Vtbl*** a3);
 
-		public delegate int AddrOfTarget216(
+		public delegate int AddrOfTarget260(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.ITextChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget217(
+		public delegate int AddrOfTarget261(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.ITextControlPasteEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget218(
+		public delegate int AddrOfTarget262(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ITextBox__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.ITextCompositionStartedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget219(
+		public delegate int AddrOfTarget263(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ITextBox__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.ITextCompositionChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget220(
+		public delegate int AddrOfTarget264(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ITextBox__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.ITextCompositionEndedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget221(
+		public delegate int AddrOfTarget265(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ITextBox__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.ICandidateWindowBoundsChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget222(
+		public delegate int AddrOfTarget266(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ITextBox__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.ITextBoxTextChangingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget223(
+		public delegate int AddrOfTarget267(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.IScrollViewerViewChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget224(
+		public delegate int AddrOfTarget268(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.IScrollViewerViewChangingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget225(
+		public delegate int AddrOfTarget269(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.IExceptionRoutedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget226(
+		public delegate int AddrOfTarget270(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.IVisualStateChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget227(
+		public delegate int AddrOfTarget271(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ISplitView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.ISplitViewPaneClosingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget228(
+		public delegate int AddrOfTarget272(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ISplitView__Impl.Vtbl** a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
 
-		public delegate int AddrOfTarget229(
+		public delegate int AddrOfTarget273(
 					global::System.IntPtr a0, 
 					global::System.Type__Impl.UnsafeType a1, 
 					global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget230(
+		public delegate int AddrOfTarget274(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::Windows.UI.Xaml.Markup.IXamlType__Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget231(
+		public delegate int AddrOfTarget275(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType** a2);
 
-		public delegate int AddrOfTarget232(
+		public delegate int AddrOfTarget276(
+					global::System.IntPtr a0, 
+					global::ZXing.IResultPointClass__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget277(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Core.ICoreApplicationView__Impl.Vtbl** a1, 
 					global::Windows.ApplicationModel.Activation.IActivatedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget233(
+		public delegate int AddrOfTarget278(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					sbyte* a2);
 
-		public delegate int AddrOfTarget234(
+		public delegate int AddrOfTarget279(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget235(
+		public delegate int AddrOfTarget280(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2, 
 					sbyte* a3);
 
-		public delegate int AddrOfTarget236(
+		public delegate int AddrOfTarget281(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1);
 
-		public delegate int AddrOfTarget237(
+		public delegate int AddrOfTarget282(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget238(
+		public delegate int AddrOfTarget283(
 					global::System.IntPtr a0, 
 					uint a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Object_V___Impl.Vtbl*** a2, 
 					uint* a3);
 
-		public delegate int AddrOfTarget239(
+		public delegate int AddrOfTarget284(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_System_Object_V___Impl.Vtbl*** a1, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_System_Object_V___Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget240(
+		public delegate int AddrOfTarget285(
 					global::System.IntPtr a0, 
 					global::System.AttributeTargets* a1);
 
-		public delegate int AddrOfTarget241(
+		public delegate int AddrOfTarget286(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Color* a1);
 
-		public delegate int AddrOfTarget242(
+		public delegate int AddrOfTarget287(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a1);
 
-		public delegate int AddrOfTarget243(
+		public delegate int AddrOfTarget288(
 					global::System.IntPtr a0, 
 					global::System.Collections.Specialized.NotifyCollectionChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget244(
+		public delegate int AddrOfTarget289(
 					global::System.IntPtr a0, 
 					global::System.Collections.Specialized.NotifyCollectionChangedAction* a1);
 
-		public delegate int AddrOfTarget245(
+		public delegate int AddrOfTarget290(
 					global::System.IntPtr a0, 
 					global::System.ComponentModel.PropertyChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget246(
+		public delegate int AddrOfTarget291(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.CornerRadius* a1);
 
-		public delegate int AddrOfTarget247(
+		public delegate int AddrOfTarget292(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Duration* a1);
 
-		public delegate int AddrOfTarget248(
+		public delegate int AddrOfTarget293(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.DurationType* a1);
 
-		public delegate int AddrOfTarget249(
+		public delegate int AddrOfTarget294(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.GridLength* a1);
 
-		public delegate int AddrOfTarget250(
+		public delegate int AddrOfTarget295(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.GridUnitType* a1);
 
-		public delegate int AddrOfTarget251(
+		public delegate int AddrOfTarget296(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Thickness* a1);
 
-		public delegate int AddrOfTarget252(
+		public delegate int AddrOfTarget297(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.Primitives.GeneratorPosition* a1);
 
-		public delegate int AddrOfTarget253(
+		public delegate int AddrOfTarget298(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Media.Matrix* a1);
 
-		public delegate int AddrOfTarget254(
+		public delegate int AddrOfTarget299(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Media.Animation.KeyTime* a1);
 
-		public delegate int AddrOfTarget255(
+		public delegate int AddrOfTarget300(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Media.Animation.RepeatBehavior* a1);
 
-		public delegate int AddrOfTarget256(
+		public delegate int AddrOfTarget301(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Media.Animation.RepeatBehaviorType* a1);
 
-		public delegate int AddrOfTarget257(
+		public delegate int AddrOfTarget302(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Media.Media3D.Matrix3D* a1);
 
-		public delegate int AddrOfTarget258(
+		public delegate int AddrOfTarget303(
 					global::System.IntPtr a0, 
 					global::System.Numerics.Vector2* a1);
 
-		public delegate int AddrOfTarget259(
+		public delegate int AddrOfTarget304(
 					global::System.IntPtr a0, 
 					global::System.Numerics.Vector3* a1);
 
-		public delegate int AddrOfTarget260(
+		public delegate int AddrOfTarget305(
 					global::System.IntPtr a0, 
 					global::System.Numerics.Vector4* a1);
 
-		public delegate int AddrOfTarget261(
+		public delegate int AddrOfTarget306(
 					global::System.IntPtr a0, 
 					global::System.Numerics.Matrix3x2* a1);
 
-		public delegate int AddrOfTarget262(
+		public delegate int AddrOfTarget307(
 					global::System.IntPtr a0, 
 					global::System.Numerics.Matrix4x4* a1);
 
-		public delegate int AddrOfTarget263(
+		public delegate int AddrOfTarget308(
 					global::System.IntPtr a0, 
 					global::System.Numerics.Plane* a1);
 
-		public delegate int AddrOfTarget264(
+		public delegate int AddrOfTarget309(
 					global::System.IntPtr a0, 
 					global::System.Numerics.Quaternion* a1);
 
-		public delegate int AddrOfTarget265(
+		public delegate int AddrOfTarget310(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget266(
+		public delegate int AddrOfTarget311(
 					global::System.IntPtr a0, 
 					double a1);
 
-		public delegate int AddrOfTarget267(
+		public delegate int AddrOfTarget312(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IDependencyProperty__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget268(
+		public delegate int AddrOfTarget313(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IDependencyObject__Impl.Vtbl** a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
 
-		public delegate int AddrOfTarget269(
+		public delegate int AddrOfTarget314(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_DependencyObject_j_System_Object_V___Impl.Vtbl** a1, 
 					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a2);
 
-		public delegate int AddrOfTarget270(
+		public delegate int AddrOfTarget315(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IDataTemplate__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget271(
+		public delegate int AddrOfTarget316(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.IDataTemplate__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget272(
+		public delegate int AddrOfTarget317(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Visibility* a1);
+					global::Windows.ApplicationModel.Background.IBackgroundTaskInstance__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget273(
+		public delegate int AddrOfTarget318(
 					global::System.IntPtr a0, 
-					uint* a1, 
-					global::System.Type__Impl.UnsafeType** a2);
+					global::System.Nullable_A_int_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget274(
+		public delegate int AddrOfTarget319(
 					global::System.IntPtr a0, 
-					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_DependencyObject_j_System_Object_V___Impl.Vtbl*** a1);
+					global::System.Nullable_A_int_V___Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget275(
+		public delegate int AddrOfTarget320(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Core.CoreDispatcherPriority* a1);
+					global::ZXing.QrCode.Internal.IErrorCorrectionLevelClass__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget276(
+		public delegate int AddrOfTarget321(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType* a1);
+					global::ZXing.QrCode.Internal.IErrorCorrectionLevelClass__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget277(
+		public delegate int AddrOfTarget322(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.ApplicationTheme* a1);
+					int a1, 
+					global::ZXing.QrCode.Internal.IErrorCorrectionLevelClass__Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget278(
+		public delegate int AddrOfTarget323(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.ElementTheme* a1);
+					global::ZXing.IDimensionClass__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget279(
+		public delegate int AddrOfTarget324(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Controls.Orientation* a1);
+					global::System.Nullable_A_ZXing_Datamatrix_Encoder_SymbolShapeHint_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget280(
+		public delegate int AddrOfTarget325(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.HorizontalAlignment* a1);
+					global::ZXing.IDimensionClass__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget281(
+		public delegate int AddrOfTarget326(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.VerticalAlignment* a1);
+					global::System.Nullable_A_ZXing_Datamatrix_Encoder_SymbolShapeHint_V___Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget282(
+		public delegate int AddrOfTarget327(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.TextWrapping* a1);
+					int a1, 
+					int a2, 
+					sbyte a3);
 
-		public delegate int AddrOfTarget283(
+		public delegate int AddrOfTarget328(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Text.FontWeight* a1);
+					global::System.Runtime.InteropServices.HSTRING a1, 
+					int a2, 
+					int a3, 
+					global::System.IntPtr* a4);
 
-		public delegate int AddrOfTarget284(
+		public delegate int AddrOfTarget329(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.TextAlignment* a1);
+					int a1, 
+					int a2, 
+					global::ZXing.Datamatrix.Internal.IVersionClass__Impl.Vtbl*** a3);
 
-		public delegate int AddrOfTarget285(
+		public delegate int AddrOfTarget330(
 					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.RoutedEventHandler__Impl.Vtbl*** a1);
+					sbyte a1, 
+					int a2, 
+					int a3, 
+					global::System.IntPtr* a4);
 
-		public delegate int AddrOfTarget286(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Controls.Symbol* a1);
-
-		public delegate int AddrOfTarget287(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Controls.SelectionChangedEventHandler__Impl.Vtbl*** a1);
-
-		public delegate int AddrOfTarget288(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode* a1);
-
-		public delegate int AddrOfTarget289(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.FontCapitals* a1);
-
-		public delegate int AddrOfTarget290(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Controls.ScrollBarVisibility* a1);
-
-		public delegate int AddrOfTarget291(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Input.KeyEventHandler__Impl.Vtbl*** a1);
-
-		public delegate int AddrOfTarget292(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Controls.SplitViewDisplayMode* a1);
-
-		public delegate int AddrOfTarget293(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Media.Animation.EasingMode* a1);
-
-		public delegate int AddrOfTarget294(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Media.PenLineCap* a1);
-
-		public delegate int AddrOfTarget295(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Automation.Peers.AccessibilityView* a1);
-
-		public delegate int AddrOfTarget296(
-					global::System.IntPtr a0, 
-					global::Windows.UI.Xaml.Controls.ScrollMode* a1);
-
-		public delegate int AddrOfTarget297(
-					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
-					global::Windows.UI.Xaml.Navigation.INavigationEventArgs__Impl.Vtbl** a2);
-
-		public delegate int AddrOfTarget298(
-					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
-					global::Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs__Impl.Vtbl** a2);
-
-		public delegate int AddrOfTarget299(
-					global::System.IntPtr a0, 
-					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
-					global::Windows.UI.Xaml.Navigation.INavigationFailedEventArgs__Impl.Vtbl** a2);
-
-		public delegate int AddrOfTarget300(
+		public delegate int AddrOfTarget331(
 					global::System.IntPtr a0, 
 					ulong a1);
 
-		public delegate int AddrOfTarget301(
+		public delegate int AddrOfTarget332(
 					global::System.IntPtr a0, 
 					ulong a1, 
 					global::Windows.Storage.Streams.IInputStream__Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget302(
+		public delegate int AddrOfTarget333(
 					global::System.IntPtr a0, 
 					ulong a1, 
 					global::Windows.Storage.Streams.IOutputStream__Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget303(
+		public delegate int AddrOfTarget334(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.Streams.IRandomAccessStream__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget304(
+		public delegate int AddrOfTarget335(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.Streams.IBuffer__Impl.Vtbl** a1, 
 					uint a2, 
 					global::Windows.Storage.Streams.InputStreamOptions a3, 
 					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl*** a4);
 
-		public delegate int AddrOfTarget305(
+		public delegate int AddrOfTarget336(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationProgressHandler_A_Windows_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget306(
+		public delegate int AddrOfTarget337(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationProgressHandler_A_Windows_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget307(
+		public delegate int AddrOfTarget338(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_Windows_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget308(
+		public delegate int AddrOfTarget339(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_Windows_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget309(
+		public delegate int AddrOfTarget340(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.Streams.IBuffer__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget310(
+		public delegate int AddrOfTarget341(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl** a1, 
 					uint a2);
 
-		public delegate int AddrOfTarget311(
+		public delegate int AddrOfTarget342(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Storage_Streams_IBuffer_j_uint_V___Impl.Vtbl** a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate int AddrOfTarget312(
+		public delegate int AddrOfTarget343(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.Streams.IBuffer__Impl.Vtbl** a1, 
 					global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget313(
+		public delegate int AddrOfTarget344(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.IAsyncOperation_A_bool_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget314(
+		public delegate int AddrOfTarget345(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget315(
+		public delegate int AddrOfTarget346(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationProgressHandler_A_uint_j_uint_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget316(
+		public delegate int AddrOfTarget347(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget317(
+		public delegate int AddrOfTarget348(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_uint_j_uint_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget318(
+		public delegate int AddrOfTarget349(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Vtbl** a1, 
 					uint a2);
 
-		public delegate int AddrOfTarget319(
+		public delegate int AddrOfTarget350(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.IAsyncOperationWithProgress_A_uint_j_uint_V___Impl.Vtbl** a1, 
 					global::Windows.Foundation.AsyncStatus a2);
 
-		public delegate int AddrOfTarget320(
+		public delegate int AddrOfTarget351(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_bool_V___Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget321(
+		public delegate int AddrOfTarget352(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_bool_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget322(
+		public delegate int AddrOfTarget353(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::ZXing.BarcodeFormat** a2);
+
+		public delegate int AddrOfTarget354(
+					global::System.IntPtr a0, 
+					uint a1, 
+					global::ZXing.BarcodeFormat* a2);
+
+		public delegate int AddrOfTarget355(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IDecodingOptionsClass__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget356(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IDecodingOptionsClass__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget357(
+					global::System.IntPtr a0, 
+					uint a1, 
+					byte* a2, 
+					int a3, 
+					int a4, 
+					global::ZXing.BitmapFormat a5, 
+					global::ZXing.IResultClass__Impl.Vtbl*** a6);
+
+		public delegate int AddrOfTarget358(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Media.Imaging.IWriteableBitmap__Impl.Vtbl** a1, 
+					global::ZXing.IResultClass__Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget359(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IDictionary_A_ZXing_DecodeHintType_j_System_Object_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget360(
+					global::System.IntPtr a0, 
+					global::System.EventHandler_A_ZXing_Result_V___Impl.Vtbl** a1, 
+					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a2);
+
+		public delegate int AddrOfTarget361(
+					global::System.IntPtr a0, 
+					global::System.EventHandler_A_ZXing_ResultPoint_V___Impl.Vtbl** a1, 
+					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken* a2);
+
+		public delegate int AddrOfTarget362(
+					global::System.IntPtr a0, 
+					uint a1, 
+					byte* a2, 
+					int a3, 
+					int a4, 
+					global::ZXing.BitmapFormat a5, 
+					uint* a6, 
+					global::ZXing.IResultClass__Impl.Vtbl**** a7);
+
+		public delegate int AddrOfTarget363(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Media.Imaging.IWriteableBitmap__Impl.Vtbl** a1, 
+					uint* a2, 
+					global::ZXing.IResultClass__Impl.Vtbl**** a3);
+
+		public delegate int AddrOfTarget364(
+					global::System.IntPtr a0, 
+					uint a1, 
+					byte* a2, 
+					global::System.IntPtr* a3);
+
+		public delegate int AddrOfTarget365(
+					global::System.IntPtr a0, 
+					sbyte a1, 
+					global::System.IntPtr* a2);
+
+		public delegate int AddrOfTarget366(
+					global::System.IntPtr a0, 
+					uint a1, 
+					int* a2);
+
+		public delegate int AddrOfTarget367(
+					global::System.IntPtr a0, 
+					int a1, 
+					int a2, 
+					int a3, 
+					int a4, 
+					global::System.IntPtr* a5);
+
+		public delegate int AddrOfTarget368(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.HSTRING a1, 
+					global::ZXing.Common.IBitMatrixClass__Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget369(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.HSTRING a1, 
+					global::ZXing.Rendering.IPixelDataClass__Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget370(
+					global::System.IntPtr a0, 
+					global::ZXing.Writer__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget371(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IEncodingOptionsClass__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget372(
+					global::System.IntPtr a0, 
+					global::ZXing.Rendering.IBarcodeRenderer__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget373(
+					global::System.IntPtr a0, 
+					global::ZXing.Writer__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget374(
+					global::System.IntPtr a0, 
+					global::ZXing.BarcodeFormat a1);
+
+		public delegate int AddrOfTarget375(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IEncodingOptionsClass__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget376(
+					global::System.IntPtr a0, 
+					global::ZXing.Rendering.IBarcodeRenderer__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget377(
+					global::System.IntPtr a0, 
+					int a1, 
+					int a2, 
+					int a3, 
+					global::System.IntPtr* a4);
+
+		public delegate int AddrOfTarget378(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IBitMatrixClass__Impl.Vtbl** a1, 
+					global::ZXing.Common.Detector.IWhiteRectangleDetectorClass__Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget379(
+					global::System.IntPtr a0, 
+					global::ZXing.Common.IBitMatrixClass__Impl.Vtbl** a1, 
+					int a2, 
+					int a3, 
+					int a4, 
+					global::ZXing.Common.Detector.IWhiteRectangleDetectorClass__Impl.Vtbl*** a5);
+
+		public delegate int AddrOfTarget380(
+					global::System.IntPtr a0, 
+					global::ZXing.PDF417.Internal.Compaction* a1);
+
+		public delegate int AddrOfTarget381(
+					global::System.IntPtr a0, 
+					global::ZXing.PDF417.Internal.IDimensionsClass__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget382(
+					global::System.IntPtr a0, 
+					global::ZXing.PDF417.Internal.PDF417ErrorCorrectionLevel* a1);
+
+		public delegate int AddrOfTarget383(
+					global::System.IntPtr a0, 
+					global::ZXing.PDF417.Internal.Compaction a1);
+
+		public delegate int AddrOfTarget384(
+					global::System.IntPtr a0, 
+					global::ZXing.PDF417.Internal.IDimensionsClass__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget385(
+					global::System.IntPtr a0, 
+					global::ZXing.PDF417.Internal.PDF417ErrorCorrectionLevel a1);
+
+		public delegate int AddrOfTarget386(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Media.IFontFamily__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget387(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Color a1);
+
+		public delegate int AddrOfTarget388(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Media.IFontFamily__Impl.Vtbl** a1);
+
+		public delegate int AddrOfTarget389(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Visibility* a1);
+
+		public delegate int AddrOfTarget390(
+					global::System.IntPtr a0, 
+					global::ZXing.Client.Result.ParsedResultType* a1);
+
+		public delegate int AddrOfTarget391(
+					global::System.IntPtr a0, 
+					global::ZXing.Datamatrix.Encoder.Encodation* a1);
+
+		public delegate int AddrOfTarget392(
+					global::System.IntPtr a0, 
+					global::ZXing.EncodeHintType* a1);
+
+		public delegate int AddrOfTarget393(
+					global::System.IntPtr a0, 
+					global::ZXing.ResultMetadataType* a1);
+
+		public delegate int AddrOfTarget394(
+					global::System.IntPtr a0, 
+					global::ZXing.ResultPointCallback__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget395(
+					global::System.IntPtr a0, 
+					global::ZXing.BitmapFormat* a1);
+
+		public delegate int AddrOfTarget396(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Type__Impl.UnsafeType** a2);
+
+		public delegate int AddrOfTarget397(
+					global::System.IntPtr a0, 
+					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_DependencyObject_j_System_Object_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget398(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Core.CoreDispatcherPriority* a1);
+
+		public delegate int AddrOfTarget399(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType* a1);
+
+		public delegate int AddrOfTarget400(
+					global::System.IntPtr a0, 
+					global::System.EventHandler_A_ZXing_ResultPoint_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget401(
+					global::System.IntPtr a0, 
+					global::System.EventHandler_A_ZXing_Result_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget402(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.ApplicationTheme* a1);
+
+		public delegate int AddrOfTarget403(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.ElementTheme* a1);
+
+		public delegate int AddrOfTarget404(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.Orientation* a1);
+
+		public delegate int AddrOfTarget405(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.HorizontalAlignment* a1);
+
+		public delegate int AddrOfTarget406(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.VerticalAlignment* a1);
+
+		public delegate int AddrOfTarget407(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.TextWrapping* a1);
+
+		public delegate int AddrOfTarget408(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Text.FontWeight* a1);
+
+		public delegate int AddrOfTarget409(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.TextTrimming* a1);
+
+		public delegate int AddrOfTarget410(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.TextAlignment* a1);
+
+		public delegate int AddrOfTarget411(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.RoutedEventHandler__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget412(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.Symbol* a1);
+
+		public delegate int AddrOfTarget413(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.SelectionChangedEventHandler__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget414(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode* a1);
+
+		public delegate int AddrOfTarget415(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Input.KeyEventHandler__Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget416(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.ListViewSelectionMode* a1);
+
+		public delegate int AddrOfTarget417(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.FontCapitals* a1);
+
+		public delegate int AddrOfTarget418(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.ScrollBarVisibility* a1);
+
+		public delegate int AddrOfTarget419(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.SplitViewDisplayMode* a1);
+
+		public delegate int AddrOfTarget420(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Media.Animation.EasingMode* a1);
+
+		public delegate int AddrOfTarget421(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Media.PenLineCap* a1);
+
+		public delegate int AddrOfTarget422(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Automation.Peers.AccessibilityView* a1);
+
+		public delegate int AddrOfTarget423(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Controls.ScrollMode* a1);
+
+		public delegate int AddrOfTarget424(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
+					global::Windows.UI.Xaml.Navigation.INavigationEventArgs__Impl.Vtbl** a2);
+
+		public delegate int AddrOfTarget425(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
+					global::Windows.UI.Xaml.Navigation.INavigatingCancelEventArgs__Impl.Vtbl** a2);
+
+		public delegate int AddrOfTarget426(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
+					global::Windows.UI.Xaml.Navigation.INavigationFailedEventArgs__Impl.Vtbl** a2);
+
+		public delegate int AddrOfTarget427(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Media.Imaging.IDownloadProgressEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget323(
+		public delegate int AddrOfTarget428(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.Search.CommonFileQuery* a1);
 
-		public delegate int AddrOfTarget324(
+		public delegate int AddrOfTarget429(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.INotifyEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget325(
+		public delegate int AddrOfTarget430(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewNavigationFailedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget326(
+		public delegate int AddrOfTarget431(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewNavigationStartingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget327(
+		public delegate int AddrOfTarget432(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewContentLoadingEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget328(
+		public delegate int AddrOfTarget433(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewDOMContentLoadedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget329(
+		public delegate int AddrOfTarget434(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewNavigationCompletedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget330(
+		public delegate int AddrOfTarget435(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewLongRunningScriptDetectedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget331(
+		public delegate int AddrOfTarget436(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a2);
 
-		public delegate int AddrOfTarget332(
+		public delegate int AddrOfTarget437(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewUnviewableContentIdentifiedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget333(
+		public delegate int AddrOfTarget438(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewUnsupportedUriSchemeIdentifiedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget334(
+		public delegate int AddrOfTarget439(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewNewWindowRequestedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget335(
+		public delegate int AddrOfTarget440(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.IWebView__Impl.Vtbl** a1, 
 					global::Windows.UI.Xaml.Controls.IWebViewPermissionRequestedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget336(
+		public delegate int AddrOfTarget441(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_Windows_Networking_PushNotifications_PushNotificationReceivedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget337(
-					global::System.IntPtr a0, 
-					global::Windows.Networking.PushNotifications.IPushNotificationChannel__Impl.Vtbl** a1, 
-					global::Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs__Impl.Vtbl** a2);
-
-		public delegate int AddrOfTarget338(
+		public delegate int AddrOfTarget442(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Object_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget339(
+		public delegate int AddrOfTarget443(
+					global::System.IntPtr a0, 
+					global::Windows.Networking.PushNotifications.IPushNotificationChannel__Impl.Vtbl** a1, 
+					global::Windows.Networking.PushNotifications.IPushNotificationReceivedEventArgs__Impl.Vtbl** a2);
+
+		public delegate int AddrOfTarget444(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_Windows_ApplicationModel_Core_UnhandledErrorDetectedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget340(
+		public delegate int AddrOfTarget445(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_Windows_ApplicationModel_SuspendingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget341(
+		public delegate int AddrOfTarget446(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Exception__Impl.UnsafeType** a2);
 
-		public delegate int AddrOfTarget342(
+		public delegate int AddrOfTarget447(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_System_Object_j_System_Object_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget343(
+		public delegate int AddrOfTarget448(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_ZXing_EncodeHintType_j_System_Object_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget449(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_ZXing_ResultMetadataType_j_System_Object_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget450(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.FoundationContract* a1);
 
-		public delegate int AddrOfTarget344(
+		public delegate int AddrOfTarget451(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.UniversalApiContract* a1);
 
-		public delegate int AddrOfTarget345(
-					global::System.IntPtr a0, 
-					global::Windows.Foundation.Metadata.MarshalingType* a1);
-
-		public delegate int AddrOfTarget346(
+		public delegate int AddrOfTarget452(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Metadata.ThreadingModel* a1);
 
-		public delegate int AddrOfTarget347(
+		public delegate int AddrOfTarget453(
+					global::System.IntPtr a0, 
+					global::Windows.Foundation.Metadata.MarshalingType* a1);
+
+		public delegate int AddrOfTarget454(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Metadata.DeprecationType* a1);
 
-		public delegate int AddrOfTarget348(
+		public delegate int AddrOfTarget455(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.DependencyPropertyChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget349(
+		public delegate int AddrOfTarget456(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.SizeChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget350(
+		public delegate int AddrOfTarget457(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_FrameworkElement_j_Windows_UI_Xaml_DataContextChangedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget351(
+		public delegate int AddrOfTarget458(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_FrameworkElement_j_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget352(
+		public delegate int AddrOfTarget459(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.DoubleTappedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget353(
+		public delegate int AddrOfTarget460(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.DragEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget354(
+		public delegate int AddrOfTarget461(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.HoldingEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget355(
+		public delegate int AddrOfTarget462(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.ManipulationCompletedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget356(
+		public delegate int AddrOfTarget463(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.ManipulationDeltaEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget357(
+		public delegate int AddrOfTarget464(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.ManipulationInertiaStartingEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget358(
+		public delegate int AddrOfTarget465(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.ManipulationStartedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget359(
+		public delegate int AddrOfTarget466(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.ManipulationStartingEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget360(
+		public delegate int AddrOfTarget467(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.PointerEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget361(
+		public delegate int AddrOfTarget468(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.RightTappedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget362(
+		public delegate int AddrOfTarget469(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Input.TappedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget363(
+		public delegate int AddrOfTarget470(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_UIElement_j_Windows_UI_Xaml_DragStartingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget364(
+		public delegate int AddrOfTarget471(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_UIElement_j_Windows_UI_Xaml_DropCompletedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget365(
+		public delegate int AddrOfTarget472(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.DragItemsStartingEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget366(
+		public delegate int AddrOfTarget473(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ItemClickEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget367(
+		public delegate int AddrOfTarget474(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_ListViewBase_j_Windows_UI_Xaml_Controls_ContainerContentChangingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget368(
+		public delegate int AddrOfTarget475(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_ListViewBase_j_Windows_UI_Xaml_Controls_ChoosingGroupHeaderContainerEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget369(
+		public delegate int AddrOfTarget476(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_ListViewBase_j_Windows_UI_Xaml_Controls_ChoosingItemContainerEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget370(
+		public delegate int AddrOfTarget477(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_ListViewBase_j_Windows_UI_Xaml_Controls_DragItemsCompletedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget371(
+		public delegate int AddrOfTarget478(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.SuspendingEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget372(
+		public delegate int AddrOfTarget479(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.UnhandledExceptionEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget373(
+		public delegate int AddrOfTarget480(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.ContextMenuOpeningEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget374(
+		public delegate int AddrOfTarget481(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.TextChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget375(
+		public delegate int AddrOfTarget482(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.TextControlPasteEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget376(
+		public delegate int AddrOfTarget483(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_TextBox_j_Windows_UI_Xaml_Controls_CandidateWindowBoundsChangedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget377(
+		public delegate int AddrOfTarget484(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_TextBox_j_Windows_UI_Xaml_Controls_TextBoxTextChangingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget378(
+		public delegate int AddrOfTarget485(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_TextBox_j_Windows_UI_Xaml_Controls_TextCompositionChangedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget379(
+		public delegate int AddrOfTarget486(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_TextBox_j_Windows_UI_Xaml_Controls_TextCompositionEndedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget380(
+		public delegate int AddrOfTarget487(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_TextBox_j_Windows_UI_Xaml_Controls_TextCompositionStartedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget381(
+		public delegate int AddrOfTarget488(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_Windows_UI_Xaml_Controls_ScrollViewerViewChangedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget382(
+		public delegate int AddrOfTarget489(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_Windows_UI_Xaml_Controls_ScrollViewerViewChangingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget383(
+		public delegate int AddrOfTarget490(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.ExceptionRoutedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget384(
+		public delegate int AddrOfTarget491(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.VisualStateChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget385(
+		public delegate int AddrOfTarget492(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_SplitView_j_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget386(
+		public delegate int AddrOfTarget493(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_SplitView_j_Windows_UI_Xaml_Controls_SplitViewPaneClosingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget387(
+		public delegate int AddrOfTarget494(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Navigation.NavigatedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget388(
+		public delegate int AddrOfTarget495(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Navigation.NavigatingCancelEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget389(
+		public delegate int AddrOfTarget496(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Navigation.NavigationFailedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget390(
+		public delegate int AddrOfTarget497(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Navigation.NavigationStoppedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget391(
+		public delegate int AddrOfTarget498(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Media.Imaging.DownloadProgressEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget392(
+		public delegate int AddrOfTarget499(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Navigation.LoadCompletedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget393(
+		public delegate int AddrOfTarget500(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.WebViewNavigationFailedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget394(
+		public delegate int AddrOfTarget501(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.NotifyEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget395(
+		public delegate int AddrOfTarget502(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewContentLoadingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget396(
+		public delegate int AddrOfTarget503(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewDOMContentLoadedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget397(
+		public delegate int AddrOfTarget504(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewNavigationCompletedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget398(
+		public delegate int AddrOfTarget505(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewNavigationStartingEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget399(
+		public delegate int AddrOfTarget506(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewLongRunningScriptDetectedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget400(
+		public delegate int AddrOfTarget507(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget401(
+		public delegate int AddrOfTarget508(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewUnviewableContentIdentifiedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget402(
+		public delegate int AddrOfTarget509(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewNewWindowRequestedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget403(
+		public delegate int AddrOfTarget510(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewPermissionRequestedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget404(
+		public delegate int AddrOfTarget511(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_Controls_WebView_j_Windows_UI_Xaml_Controls_WebViewUnsupportedUriSchemeIdentifiedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget405(
+		public delegate int AddrOfTarget512(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken a1, 
+					global::System.EventHandler_A_ZXing_ResultPoint_V___Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget513(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken a1, 
+					sbyte* a2);
+
+		public delegate int AddrOfTarget514(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_ZXing_ResultPoint_V__V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget515(
+					global::System.IntPtr a0, 
+					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken a1, 
+					global::System.EventHandler_A_ZXing_ResultPoint_V___Impl.Vtbl** a2, 
+					sbyte* a3);
+
+		public delegate int AddrOfTarget516(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.KeyValuePair_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_ZXing_ResultPoint_V__V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget517(
+					global::System.IntPtr a0, 
+					uint a1, 
+					global::System.Collections.Generic.KeyValuePair_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_ZXing_ResultPoint_V__V___Impl.Vtbl*** a2, 
+					uint* a3);
+
+		public delegate int AddrOfTarget518(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_ZXing_ResultPoint_V__V___Impl.Vtbl*** a1, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_ZXing_ResultPoint_V__V___Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget519(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Collections.IObservableMap_A_string_j_string_V___Impl.Vtbl** a1, 
 					global::Windows.Foundation.Collections.IMapChangedEventArgs_A_string_V___Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget406(
+		public delegate int AddrOfTarget520(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Runtime.InteropServices.HSTRING* a2);
 
-		public delegate int AddrOfTarget407(
+		public delegate int AddrOfTarget521(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_string_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget408(
+		public delegate int AddrOfTarget522(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Runtime.InteropServices.HSTRING a2, 
 					sbyte* a3);
 
-		public delegate int AddrOfTarget409(
+		public delegate int AddrOfTarget523(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_string_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget410(
+		public delegate int AddrOfTarget524(
 					global::System.IntPtr a0, 
 					uint a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_string_V___Impl.Vtbl*** a2, 
 					uint* a3);
 
-		public delegate int AddrOfTarget411(
+		public delegate int AddrOfTarget525(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_string_V___Impl.Vtbl*** a1, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_string_V___Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget412(
+		public delegate int AddrOfTarget526(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.IAsyncAction__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget413(
+		public delegate int AddrOfTarget527(
 					global::System.IntPtr a0, 
 					global::Windows.System.Threading.IThreadPoolTimer__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget414(
+		public delegate int AddrOfTarget528(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.Foundation.Diagnostics.ITracingStatusChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget415(
+		public delegate int AddrOfTarget529(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_int_j_int_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget530(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.KeyValuePair_A_int_j_int_V___Impl.Vtbl*** a1);
+
+		public delegate int AddrOfTarget531(
+					global::System.IntPtr a0, 
+					uint a1, 
+					global::System.Collections.Generic.KeyValuePair_A_int_j_int_V___Impl.Vtbl*** a2, 
+					uint* a3);
+
+		public delegate int AddrOfTarget532(
+					global::System.IntPtr a0, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_int_j_int_V___Impl.Vtbl*** a1, 
+					global::System.Collections.Generic.IReadOnlyDictionary_A_int_j_int_V___Impl.Vtbl*** a2);
+
+		public delegate int AddrOfTarget533(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Collections.Generic.IDictionary_A_string_j_System_Object_V___Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget416(
+		public delegate int AddrOfTarget534(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_System_Collections_Generic_IDictionary_A_string_j_System_Object_V__V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget417(
+		public delegate int AddrOfTarget535(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Collections.Generic.IDictionary_A_string_j_System_Object_V___Impl.Vtbl** a2, 
 					sbyte* a3);
 
-		public delegate int AddrOfTarget418(
+		public delegate int AddrOfTarget536(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IDictionary_A_string_j_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget419(
+		public delegate int AddrOfTarget537(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Collections_Generic_IDictionary_A_string_j_System_Object_V__V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget420(
+		public delegate int AddrOfTarget538(
 					global::System.IntPtr a0, 
 					uint a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Collections_Generic_IDictionary_A_string_j_System_Object_V__V___Impl.Vtbl*** a2, 
 					uint* a3);
 
-		public delegate int AddrOfTarget421(
+		public delegate int AddrOfTarget539(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_System_Collections_Generic_IDictionary_A_string_j_System_Object_V__V___Impl.Vtbl*** a1, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_System_Collections_Generic_IDictionary_A_string_j_System_Object_V__V___Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget422(
+		public delegate int AddrOfTarget540(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Collections.Generic.IEnumerable_A_System_Object_V___Impl.Vtbl*** a2);
 
-		public delegate int AddrOfTarget423(
+		public delegate int AddrOfTarget541(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IReadOnlyDictionary_A_string_j_System_Collections_Generic_IEnumerable_A_System_Object_V__V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget424(
+		public delegate int AddrOfTarget542(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.HSTRING a1, 
 					global::System.Collections.Generic.IEnumerable_A_System_Object_V___Impl.Vtbl** a2, 
 					sbyte* a3);
 
-		public delegate int AddrOfTarget425(
+		public delegate int AddrOfTarget543(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.IEnumerable_A_System_Object_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget426(
+		public delegate int AddrOfTarget544(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Core.IBackRequestedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget427(
+		public delegate int AddrOfTarget545(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Popups.IUICommand__Impl.Vtbl** a1);
 
-		public delegate int AddrOfTarget428(
-					global::System.IntPtr a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Storage_Streams_IInputStream_j_ulong_V___Impl.Vtbl** a1, 
-					ulong a2);
-
-		public delegate int AddrOfTarget429(
-					global::System.IntPtr a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Storage_Streams_IInputStream_j_ulong_V___Impl.Vtbl** a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate int AddrOfTarget430(
-					global::System.IntPtr a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Web_Http_HttpResponseMessage_j_Windows_Web_Http_HttpProgress_V___Impl.Vtbl** a1, 
-					global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a2);
-
-		public delegate int AddrOfTarget431(
-					global::System.IntPtr a0, 
-					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Web_Http_HttpResponseMessage_j_Windows_Web_Http_HttpProgress_V___Impl.Vtbl** a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate int AddrOfTarget432(
+		public delegate int AddrOfTarget546(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Core.IWindowActivatedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget433(
+		public delegate int AddrOfTarget547(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Core.ICoreWindowEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget434(
+		public delegate int AddrOfTarget548(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Core.IWindowSizeChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget435(
+		public delegate int AddrOfTarget549(
 					global::System.IntPtr a0, 
 					global::System.Runtime.InteropServices.__vtable_IInspectable* a1, 
 					global::Windows.UI.Core.IVisibilityChangedEventArgs__Impl.Vtbl** a2);
 
-		public delegate int AddrOfTarget436(
+		public delegate int AddrOfTarget550(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Interop.TypeKind* a1);
 
-		public delegate int AddrOfTarget437(
+		public delegate int AddrOfTarget551(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.ApplicationInitializationCallback__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget438(
+		public delegate int AddrOfTarget552(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_Networking_PushNotifications_PushNotificationChannel_j_Windows_Networking_PushNotifications_PushNotificationReceivedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget439(
+		public delegate int AddrOfTarget553(
 					global::System.IntPtr a0, 
 					global::Windows.System.Threading.WorkItemHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget440(
+		public delegate int AddrOfTarget554(
 					global::System.IntPtr a0, 
 					global::Windows.System.VirtualKey* a1);
 
-		public delegate int AddrOfTarget441(
+		public delegate int AddrOfTarget555(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.PropertyChangedCallback__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget442(
+		public delegate int AddrOfTarget556(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.DependencyPropertyChangedCallback__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget443(
+		public delegate int AddrOfTarget557(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Collections.MapChangedEventHandler_A_string_j_string_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget444(
+		public delegate int AddrOfTarget558(
 					global::System.IntPtr a0, 
 					global::Windows.System.Threading.TimerElapsedHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget445(
+		public delegate int AddrOfTarget559(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Core.DispatchedHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget446(
+		public delegate int AddrOfTarget560(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Storage_IStorageItem_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget447(
+		public delegate int AddrOfTarget561(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_Windows_Foundation_Diagnostics_TracingStatusChangedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget448(
+		public delegate int AddrOfTarget562(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_System_Collections_Generic_IReadOnlyList_A_Windows_Storage_StorageFile_V__V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget449(
+		public delegate int AddrOfTarget563(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_string_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget450(
+		public delegate int AddrOfTarget564(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_double_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget451(
+		public delegate int AddrOfTarget565(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncActionCompletedHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget452(
+		public delegate int AddrOfTarget566(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_ApplicationModel_Core_CoreApplicationView_j_Windows_ApplicationModel_Activation_IActivatedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget453(
+		public delegate int AddrOfTarget567(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Storage_StorageFile_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget454(
+		public delegate int AddrOfTarget568(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Storage_StorageFolder_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget455(
+		public delegate int AddrOfTarget569(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.PackageVersion* a1);
 
-		public delegate int AddrOfTarget456(
+		public delegate int AddrOfTarget570(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Networking_PushNotifications_PushNotificationChannel_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget457(
+		public delegate int AddrOfTarget571(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_string_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget458(
+		public delegate int AddrOfTarget572(
 					global::System.IntPtr a0, 
 					global::System.EventHandler_A_Windows_UI_Core_BackRequestedEventArgs_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget459(
+		public delegate int AddrOfTarget573(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_UI_Popups_IUICommand_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget460(
+		public delegate int AddrOfTarget574(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Popups.UICommandInvokedHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget461(
+		public delegate int AddrOfTarget575(
 					global::System.IntPtr a0, 
-					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Storage_Streams_IBuffer_V___Impl.Vtbl*** a1);
+					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Data_Pdf_PdfDocument_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget462(
+		public delegate int AddrOfTarget576(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Devices_Enumeration_Pnp_PnpObjectCollection_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget463(
+		public delegate int AddrOfTarget577(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Storage_FileProperties_BasicProperties_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget464(
+		public delegate int AddrOfTarget578(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Security_Authentication_Web_WebAuthenticationResult_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget465(
+		public delegate int AddrOfTarget579(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::ZXing.PDF417.Internal.PDF417ErrorCorrectionLevel** a2);
+
+		public delegate int AddrOfTarget580(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Metadata.CompositionType* a1);
 
-		public delegate int AddrOfTarget466(
+		public delegate int AddrOfTarget581(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_bool_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget467(
+		public delegate int AddrOfTarget582(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_ZXing_ResultPoint_V__V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget583(
 					global::System.IntPtr a0, 
 					global::Windows.System.Threading.WorkItemPriority* a1);
 
-		public delegate int AddrOfTarget468(
+		public delegate int AddrOfTarget584(
 					global::System.IntPtr a0, 
 					global::Windows.System.Threading.WorkItemOptions* a1);
 
-		public delegate int AddrOfTarget469(
+		public delegate int AddrOfTarget585(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Diagnostics.CausalityTraceLevel* a1);
 
-		public delegate int AddrOfTarget470(
+		public delegate int AddrOfTarget586(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Diagnostics.CausalitySource* a1);
 
-		public delegate int AddrOfTarget471(
+		public delegate int AddrOfTarget587(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Diagnostics.CausalityRelation* a1);
 
-		public delegate int AddrOfTarget472(
+		public delegate int AddrOfTarget588(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.Diagnostics.CausalitySynchronousWork* a1);
 
-		public delegate int AddrOfTarget473(
+		public delegate int AddrOfTarget589(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation* a1);
 
-		public delegate int AddrOfTarget474(
+		public delegate int AddrOfTarget590(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Core.AppViewBackButtonVisibility* a1);
 
-		public delegate int AddrOfTarget475(
+		public delegate int AddrOfTarget591(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.FocusState* a1);
+
+		public delegate int AddrOfTarget592(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_ZXing_DecodeHintType_j_System_Object_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget593(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_int_j_int_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget594(
 					global::System.IntPtr a0, 
 					global::Windows.Graphics.Display.DisplayOrientations* a1);
 
-		public delegate int AddrOfTarget476(
+		public delegate int AddrOfTarget595(
 					global::System.IntPtr a0, 
 					global::Windows.Graphics.Display.ResolutionScale* a1);
 
-		public delegate int AddrOfTarget477(
+		public delegate int AddrOfTarget596(
 					global::System.IntPtr a0, 
 					global::Windows.Security.Cryptography.BinaryStringEncoding* a1);
 
-		public delegate int AddrOfTarget478(
+		public delegate int AddrOfTarget597(
 					global::System.IntPtr a0, 
 					global::Windows.Networking.Connectivity.NetworkConnectivityLevel* a1);
 
-		public delegate int AddrOfTarget479(
+		public delegate int AddrOfTarget598(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.StorageDeleteOption* a1);
 
-		public delegate int AddrOfTarget480(
+		public delegate int AddrOfTarget599(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.CreationCollisionOption* a1);
 
-		public delegate int AddrOfTarget481(
+		public delegate int AddrOfTarget600(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Collections_Generic_IDictionary_A_string_j_System_Object_V__V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget482(
+		public delegate int AddrOfTarget601(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.ActivationKind* a1);
 
-		public delegate int AddrOfTarget483(
+		public delegate int AddrOfTarget602(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.ApplicationDataCreateDisposition* a1);
 
-		public delegate int AddrOfTarget484(
+		public delegate int AddrOfTarget603(
 					global::System.IntPtr a0, 
 					global::Windows.ApplicationModel.Activation.ApplicationExecutionState* a1);
 
-		public delegate int AddrOfTarget485(
+		public delegate int AddrOfTarget604(
 					global::System.IntPtr a0, 
 					global::Windows.Devices.Enumeration.Pnp.PnpObjectType* a1);
 
-		public delegate int AddrOfTarget486(
+		public delegate int AddrOfTarget605(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.NameCollisionOption* a1);
 
-		public delegate int AddrOfTarget487(
+		public delegate int AddrOfTarget606(
 					global::System.IntPtr a0, 
 					global::Windows.Security.Authentication.Web.WebAuthenticationOptions* a1);
 
-		public delegate int AddrOfTarget488(
+		public delegate int AddrOfTarget607(
 					global::System.IntPtr a0, 
 					global::Windows.Security.Authentication.Web.WebAuthenticationStatus* a1);
 
-		public delegate int AddrOfTarget489(
-					global::System.IntPtr a0, 
-					global::Windows.Web.Http.Filters.HttpCacheReadBehavior* a1);
-
-		public delegate int AddrOfTarget490(
+		public delegate int AddrOfTarget608(
 					global::System.IntPtr a0, 
 					global::Windows.System.Profile.ProfileHardwareTokenContract* a1);
 
-		public delegate int AddrOfTarget491(
+		public delegate int AddrOfTarget609(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.WindowActivatedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget492(
+		public delegate int AddrOfTarget610(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.WindowClosedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget493(
+		public delegate int AddrOfTarget611(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.WindowSizeChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget494(
+		public delegate int AddrOfTarget612(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.WindowVisibilityChangedEventHandler__Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget495(
+		public delegate int AddrOfTarget613(
 					global::System.IntPtr a0, 
 					uint a1, 
 					global::System.Type__Impl.UnsafeType* a2, 
 					uint* a3);
 
-		public delegate int AddrOfTarget496(
+		public delegate int AddrOfTarget614(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_ulong_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget497(
+		public delegate int AddrOfTarget615(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken** a2);
 
-		public delegate int AddrOfTarget498(
+		public delegate int AddrOfTarget616(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::Windows.System.VirtualKey** a2);
 
-		public delegate int AddrOfTarget499(
+		public delegate int AddrOfTarget617(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_Windows_UI_Xaml_Markup_IXamlType_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget500(
+		public delegate int AddrOfTarget618(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_System_Type_j_Windows_UI_Xaml_Markup_IXamlType_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget501(
+		public delegate int AddrOfTarget619(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_Windows_UI_Xaml_Markup_IXamlMember_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget502(
+		public delegate int AddrOfTarget620(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_System_TimeSpan_j_string_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget621(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_ZXing_ResultPoint_j_int_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget622(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_int_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget503(
+		public delegate int AddrOfTarget623(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_System_Type_j_System_Type_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget504(
+		public delegate int AddrOfTarget624(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_System_Object_j_string_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget505(
+		public delegate int AddrOfTarget625(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Automation.Peers.PatternInterface* a1);
 
-		public delegate int AddrOfTarget506(
+		public delegate int AddrOfTarget626(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Automation.Peers.AutomationControlType* a1);
 
-		public delegate int AddrOfTarget507(
+		public delegate int AddrOfTarget627(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Automation.Peers.AutomationOrientation* a1);
 
-		public delegate int AddrOfTarget508(
+		public delegate int AddrOfTarget628(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Automation.Peers.AutomationLiveSetting* a1);
 
-		public delegate int AddrOfTarget509(
+		public delegate int AddrOfTarget629(
 					global::System.IntPtr a0, 
 					global::Windows.UI.Xaml.Automation.Peers.AutomationNavigationDirection* a1);
 
-		public delegate int AddrOfTarget510(
+		public delegate int AddrOfTarget630(
+					global::System.IntPtr a0, 
+					global::Windows.UI.Xaml.Automation.Peers.AutomationLandmarkType* a1);
+
+		public delegate int AddrOfTarget631(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_Windows_ApplicationModel_Resources_Core_NamedResource_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget511(
+		public delegate int AddrOfTarget632(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_Windows_Foundation_TypedEventHandler_A_Windows_UI_Xaml_DependencyObject_j_System_Object_V__V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget512(
+		public delegate int AddrOfTarget633(
 					global::System.IntPtr a0, 
 					uint* a1, 
-					global::System.Collections.Generic.KeyValuePair_A_int_j_int_V___Impl.Vtbl**** a2);
+					global::System.Collections.Generic.KeyValuePair_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_ZXing_Result_V__V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget513(
+		public delegate int AddrOfTarget634(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.Collections.Generic.KeyValuePair_A_System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken_j_System_EventHandler_A_System_Object_V__V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget635(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.EventHandler_A_ZXing_ResultPoint_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget636(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::ZXing.DecodeHintType** a2);
+
+		public delegate int AddrOfTarget637(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_System_Type_j_System_Object_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget514(
+		public delegate int AddrOfTarget638(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_int_j_string_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget515(
+		public delegate int AddrOfTarget639(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_char_j_string_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget516(
+		public delegate int AddrOfTarget640(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_int_j_System_Object_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget517(
+		public delegate int AddrOfTarget641(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_Windows_Storage_Streams_IRandomAccessStream_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget518(
+		public delegate int AddrOfTarget642(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::ZXing.EncodeHintType** a2);
+
+		public delegate int AddrOfTarget643(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::ZXing.ResultMetadataType** a2);
+
+		public delegate int AddrOfTarget644(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Type_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget519(
+		public delegate int AddrOfTarget645(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_ulong_j_string_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget520(
+		public delegate int AddrOfTarget646(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::Windows.Foundation.TypedEventHandler_A_Windows_UI_Xaml_DependencyObject_j_System_Object_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget521(
+		public delegate int AddrOfTarget647(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.EventHandler_A_ZXing_Result_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget648(
+					global::System.IntPtr a0, 
+					uint* a1, 
+					global::System.EventHandler_A_System_Object_V___Impl.Vtbl**** a2);
+
+		public delegate int AddrOfTarget649(
 					global::System.IntPtr a0, 
 					global::Windows.Storage.FileAccessMode* a1);
 
-		public delegate int AddrOfTarget522(
-					global::System.IntPtr a0, 
-					global::Windows.Storage.Streams.InputStreamOptions* a1);
-
-		public delegate int AddrOfTarget523(
-					global::System.IntPtr a0, 
-					global::Windows.Networking.HostNameType* a1);
-
-		public delegate int AddrOfTarget524(
+		public delegate int AddrOfTarget650(
 					global::System.IntPtr a0, 
 					uint* a1, 
 					global::System.Collections.Generic.KeyValuePair_A_System_Object_j_int_V___Impl.Vtbl**** a2);
 
-		public delegate int AddrOfTarget525(
+		public delegate int AddrOfTarget651(
+					global::System.IntPtr a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Storage_Streams_IInputStream_j_ulong_V___Impl.Vtbl** a1, 
+					ulong a2);
+
+		public delegate int AddrOfTarget652(
+					global::System.IntPtr a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Storage_Streams_IInputStream_j_ulong_V___Impl.Vtbl** a1, 
+					global::Windows.Foundation.AsyncStatus a2);
+
+		public delegate int AddrOfTarget653(
+					global::System.IntPtr a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Web_Http_HttpResponseMessage_j_Windows_Web_Http_HttpProgress_V___Impl.Vtbl** a1, 
+					global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a2);
+
+		public delegate int AddrOfTarget654(
+					global::System.IntPtr a0, 
+					global::Windows.Foundation.IAsyncOperationWithProgress_A_Windows_Web_Http_HttpResponseMessage_j_Windows_Web_Http_HttpProgress_V___Impl.Vtbl** a1, 
+					global::Windows.Foundation.AsyncStatus a2);
+
+		public delegate int AddrOfTarget655(
+					global::System.IntPtr a0, 
+					global::Windows.Web.Http.Filters.HttpCacheReadBehavior* a1);
+
+		public delegate int AddrOfTarget656(
+					global::System.IntPtr a0, 
+					global::Windows.Storage.Streams.InputStreamOptions* a1);
+
+		public delegate int AddrOfTarget657(
 					global::System.IntPtr a0, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Collections_Generic_IEnumerable_A_string_V__V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget526(
+		public delegate int AddrOfTarget658(
 					global::System.IntPtr a0, 
 					uint a1, 
 					global::System.Collections.Generic.KeyValuePair_A_string_j_System_Collections_Generic_IEnumerable_A_string_V__V___Impl.Vtbl*** a2, 
 					uint* a3);
 
-		public delegate int AddrOfTarget527(
+		public delegate int AddrOfTarget659(
+					global::System.IntPtr a0, 
+					global::Windows.Networking.HostNameType* a1);
+
+		public delegate int AddrOfTarget660(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationProgressHandler_A_Windows_Web_Http_HttpResponseMessage_j_Windows_Web_Http_HttpProgress_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget528(
+		public delegate int AddrOfTarget661(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_Windows_Web_Http_HttpResponseMessage_j_Windows_Web_Http_HttpProgress_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget529(
+		public delegate int AddrOfTarget662(
 					global::System.IntPtr a0, 
 					global::Windows.Web.Http.HttpStatusCode* a1);
 
-		public delegate int AddrOfTarget530(
+		public delegate int AddrOfTarget663(
 					global::System.IntPtr a0, 
 					global::Windows.Web.Http.HttpProgress__Impl.UnsafeType* a1);
 
-		public delegate int AddrOfTarget531(
+		public delegate int AddrOfTarget664(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationProgressHandler_A_Windows_Storage_Streams_IInputStream_j_ulong_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget532(
+		public delegate int AddrOfTarget665(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationWithProgressCompletedHandler_A_Windows_Storage_Streams_IInputStream_j_ulong_V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget533(
+		public delegate int AddrOfTarget666(
 					global::System.IntPtr a0, 
 					global::Windows.Web.Http.HttpVersion* a1);
 
-		public delegate int AddrOfTarget534(
+		public delegate int AddrOfTarget667(
 					global::System.IntPtr a0, 
 					global::Windows.Web.Http.HttpProgressStage* a1);
 
-		public delegate int AddrOfTarget535(
+		public delegate int AddrOfTarget668(
 					global::System.IntPtr a0, 
 					global::Windows.Foundation.AsyncOperationCompletedHandler_A_System_Collections_Generic_IReadOnlyList_A_Windows_Security_Cryptography_Certificates_Certificate_V__V___Impl.Vtbl*** a1);
 
-		public delegate int AddrOfTarget536(
+		public delegate int AddrOfTarget669(
 					global::System.IntPtr a0, 
 					global::System.IntPtr* a1);
 
-		public delegate int AddrOfTarget537(
+		public delegate int AddrOfTarget670(
 					global::System.IntPtr a0, 
 					global::System.Guid* a1, 
 					global::System.IntPtr a2, 
@@ -3888,7 +4671,7 @@ namespace McgInterop
 					uint a5, 
 					global::System.Guid* a6);
 
-		public delegate int AddrOfTarget538(
+		public delegate int AddrOfTarget671(
 					global::System.IntPtr a0, 
 					global::System.Guid* a1, 
 					global::System.IntPtr a2, 
@@ -3897,7 +4680,7 @@ namespace McgInterop
 					uint a5, 
 					uint* a6);
 
-		public delegate int AddrOfTarget539(
+		public delegate int AddrOfTarget672(
 					global::System.IntPtr a0, 
 					global::System.IntPtr a1, 
 					global::System.Guid* a2, 
@@ -3906,50 +4689,50 @@ namespace McgInterop
 					global::System.IntPtr a5, 
 					uint a6);
 
-		public delegate int AddrOfTarget540(
+		public delegate int AddrOfTarget673(
 					global::System.IntPtr a0, 
 					global::System.IntPtr a1, 
 					global::System.Guid* a2, 
 					global::System.IntPtr* a3);
 
-		public delegate object AddrOfTarget541<T>(global::System.Collections.Generic.IEnumerable<T> a0);
+		public delegate object AddrOfTarget674<T>(global::System.Collections.Generic.IEnumerable<T> a0);
 
-		public delegate int AddrOfTarget542<T>(
+		public delegate int AddrOfTarget675<T>(
 					global::Windows.Foundation.Collections.IIterator<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IIterator_Oper a1, 
 					ref object a2, 
 					int a3);
 
-		public delegate global::System.Array AddrOfTarget543<T>(
+		public delegate global::System.Array AddrOfTarget676<T>(
 					global::Windows.Foundation.Collections.IIterator<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IIterator_Oper a1, 
 					ref T a2, 
 					ref int a3);
 
-		public delegate int AddrOfTarget544<T>(
-					global::System.Collections.Generic.IReadOnlyList<T> a0, 
-					global::System.Runtime.InteropServices.Toolbox.IList_Oper a1, 
-					int a2, 
-					ref T a3);
-
-		public delegate int AddrOfTarget545<T>(
-					global::Windows.Foundation.AsyncOperationCompletedHandler<T> a0, 
-					global::Windows.Foundation.IAsyncOperation<T> a1, 
-					global::Windows.Foundation.AsyncStatus a2);
-
-		public delegate object AddrOfTarget546<T>(
+		public delegate object AddrOfTarget677<T>(
 					global::System.Collections.Generic.IList<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IList_Oper a1, 
 					ref int a2, 
 					ref T a3);
 
-		public delegate int AddrOfTarget547<T>(
+		public delegate int AddrOfTarget678<T>(
+					global::System.Collections.Generic.IReadOnlyList<T> a0, 
+					global::System.Runtime.InteropServices.Toolbox.IList_Oper a1, 
+					int a2, 
+					ref T a3);
+
+		public delegate int AddrOfTarget679<T>(
+					global::Windows.Foundation.AsyncOperationCompletedHandler<T> a0, 
+					global::Windows.Foundation.IAsyncOperation<T> a1, 
+					global::Windows.Foundation.AsyncStatus a2);
+
+		public delegate int AddrOfTarget680<T>(
 					global::System.Collections.Generic.IList<T> a0, 
 					global::System.Runtime.InteropServices.Toolbox.IList_Oper a1, 
 					int a2, 
 					ref object a3);
 
-		public delegate void AddrOfTarget548(
+		public delegate void AddrOfTarget681(
 					global::System.Guid* a0, 
 					int a1, 
 					byte a2, 
@@ -3958,27 +4741,27 @@ namespace McgInterop
 					global::Interop.mincore.EVENT_FILTER_DESCRIPTOR__System_Diagnostics_Tracing* a5, 
 					global::System.IntPtr a6);
 
-		public delegate object AddrOfTarget549(object a0);
+		public delegate object AddrOfTarget682(object a0);
 
-		public delegate object AddrOfTarget550(global::System.__ComObject a0);
+		public delegate object AddrOfTarget683(global::System.__ComObject a0);
 
-		public delegate int AddrOfTarget551(
+		public delegate int AddrOfTarget684(
 					ref global::Windows.UI.Xaml.Markup.XmlnsDefinition a0, 
 					out global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType a1);
 
-		public delegate int AddrOfTarget552(
+		public delegate int AddrOfTarget685(
 					ref global::Windows.UI.Xaml.Markup.XmlnsDefinition__Impl.UnsafeType a0, 
 					out global::Windows.UI.Xaml.Markup.XmlnsDefinition a1);
 
-		public delegate int AddrOfTarget553(
+		public delegate int AddrOfTarget686(
 					ref global::Windows.Web.Http.HttpProgress a0, 
 					out global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a1);
 
-		public delegate int AddrOfTarget554(
+		public delegate int AddrOfTarget687(
 					ref global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a0, 
 					out global::Windows.Web.Http.HttpProgress a1);
 
-		public delegate void AddrOfTarget555(ref global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a0);
+		public delegate void AddrOfTarget688(ref global::Windows.Web.Http.HttpProgress__Impl.UnsafeType a0);
 	}
 
 	internal static partial class Toolbox

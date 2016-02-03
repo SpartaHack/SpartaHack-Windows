@@ -14,15 +14,15 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
             <CollectionViewSource x:Name="Awards" IsSourceGrouped="True"/>
             <DataTemplate x:Name="grdAward">
-                <Grid Width="150" Height="150" Margin="10">
+                <StackPanel HorizontalAlignment="Stretch" Height="200" Width="300" Margin="10">
 
                     <!--<Ellipse Stroke="{StaticResource TargetForeground}" Width="150" Height="150"/>-->
                     <TextBlock FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="140" VerticalAlignment="Top"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
                     <TextBlock Margin="5" Width="140" VerticalAlignment="Bottom"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
-                </Grid>
+                </StackPanel>
             </DataTemplate>
             <DataTemplate x:Name="lsvHeader">
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal" >
                     <TextBlock FontSize="12" Foreground="{StaticResource TargetForeground}" Text="SPONSORED BY: " FontFamily="{StaticResource TargetFont}" VerticalAlignment="Bottom" Margin="0,0,10,0"/>
 
                     <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Company}" FontFamily="{StaticResource TargetFont}"/>
@@ -57,7 +57,12 @@
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
             </GridView.GroupStyle>
-        </GridView>
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </GridView.ItemContainerStyle>
+            </GridView>
             </ptr:PullToRefreshBox>
        
 

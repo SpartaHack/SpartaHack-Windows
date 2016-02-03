@@ -58,7 +58,7 @@ namespace SpartaHack
             {
             
             
-                DebugingHelper.ShowError("Error in HomePage, getAnnouncements(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in HomePage, getAnnouncements(): " + ex.Message);
             
             }
         }
@@ -72,7 +72,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in HomePage, OnNavigatedTo(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in HomePage, OnNavigatedTo(): " + ex.Message);
             }
         }
 

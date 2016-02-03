@@ -37,7 +37,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in SponsorPage, OnNavigatedTo(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in SponsorPage, OnNavigatedTo(): " + ex.Message);
             }
 
         }
@@ -51,7 +51,11 @@ namespace SpartaHack
                 foreach (ParseObject obj in companies)
                 {
                     sponsor = new Sponsor();
-                    sponsor.getLogo(obj["png_img"] as ParseFile);
+                    try
+                    {
+                        sponsor.getLogo(obj["png_img"] as ParseFile);
+                    }
+                    catch { }
                     sponsor.Name = obj["name"].ToString();
                     sponsor.URL = new Uri(obj["url"].ToString());
                     sponsor.Level = obj["level"].ToString();
@@ -70,7 +74,7 @@ namespace SpartaHack
             }
             catch (Exception ex)
             {
-                DebugingHelper.ShowError("Error in SponsorsPage, getSponsors(): " + ex.Message);
+                DebuggingHelper.ShowError("Error in SponsorsPage, getSponsors(): " + ex.Message);
             }
 
 

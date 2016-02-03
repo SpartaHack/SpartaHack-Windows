@@ -101,6 +101,9 @@
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\mlhBackground.png" />
     <Content Include="Assets\Moondance.otf" />
+    <Content Include="PDFs\ios-map.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +130,9 @@
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Styles\HeaderGroup.cs" />
+    <Compile Include="TicketPage.xaml.cs">
+      <DependentUpon>TicketPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Toast\ParseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Styles\PullToRefresh.xaml.cs">
@@ -204,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SponsorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

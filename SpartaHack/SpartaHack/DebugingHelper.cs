@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using System.Threading;
 namespace SpartaHack
 {
-    class DebugingHelper
+    class DebuggingHelper
     {
         public static async void ShowError(string message)
         {
+#if DEBUG
             await new Windows.UI.Popups.MessageDialog(message,"Error found").ShowAsync();
+#endif
         }
     }
 }
