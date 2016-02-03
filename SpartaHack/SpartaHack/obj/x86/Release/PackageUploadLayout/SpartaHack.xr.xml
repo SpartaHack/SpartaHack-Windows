@@ -4,14 +4,14 @@
     <RootPropertyPathName Name="Company" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="ObjectId" />
+    <RootPropertyPathName Name="Header" />
+    <RootPropertyPathName Name="SubCategory" />
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="Time" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Pinned" />
     <RootPropertyPathName Name="Value" />
-    <RootPropertyPathName Name="Day" />
-    <RootPropertyPathName Name="Level" />
+    <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="Logo" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -43,13 +43,16 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="MinWidth" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FlowDirection" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="FontSize" />
@@ -64,27 +67,30 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="TextTrimming" />
       <RootProperty Name="TextAlignment" />
+      <RootProperty Name="Name" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Background" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="RowDefinitions" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="Loaded" />
@@ -139,27 +145,36 @@
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Margin" />
       <RootProperty Name="GroupStyle" />
+      <RootProperty Name="ItemContainerStyle" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
       <RootProperty Name="HeaderTemplate" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GridViewItem" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="SpartaHack.AwardsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Tag" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Flyout" />
+      <RootProperty Name="Content" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Width" />
       <RootProperty Name="RequestedTheme" />
-      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="Height" />
+      <RootProperty Name="BorderThickness" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
@@ -171,6 +186,7 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Width" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Height" />
@@ -182,6 +198,7 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -194,53 +211,48 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="IsSynchronizedWithCurrentItem" />
       <RootProperty Name="MinHeight" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="Margin" />
       <RootProperty Name="GroupStyle" />
+      <RootProperty Name="ItemContainerStyle" />
+      <RootProperty Name="SelectionMode" />
+      <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Control">
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="Background" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="OnContent" />
+      <RootProperty Name="OffContent" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="VerticalContentAlignment" />
-      <RootProperty Name="Template" />
+      <RootEvent Name="Toggled" />
+      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="SpartaHack.HelpDesk" />
-    <RootType FullName="Windows.UI.Xaml.Shapes.Polyline">
-      <RootProperty Name="Points" />
-      <RootProperty Name="StrokeThickness" />
-      <RootProperty Name="Stroke" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Typography">
       <RootMethod Name="GetCapitals" />
       <RootMethod Name="SetCapitals" />
     </RootType>
     <RootType FullName="SpartaHack.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="VerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Source" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="VerticalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
-      <RootProperty Name="Header" />
-      <RootEvent Name="Toggled" />
-      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="PlaceholderText" />
@@ -291,6 +303,14 @@
       <RootEvent Name="Checked" />
     </RootType>
     <RootType FullName="SpartaHack.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.FlipView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsSynchronizedWithCurrentItem" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
     <RootType FullName="SpartaHack.MapPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Content" />
@@ -393,5 +413,6 @@
       <RootMethod Name="SetAccessibilityView" />
     </RootType>
     <RootType FullName="SpartaHack.SponsorPage" />
+    <RootType FullName="SpartaHack.TicketPage" />
   </Roots.RootTypes>
 </Roots>

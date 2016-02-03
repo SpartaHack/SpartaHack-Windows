@@ -20,41 +20,48 @@
                     <TextBlock FontSize="12" Text="{Binding Description}" Foreground="White" TextWrapping="WrapWholeWords"/>
                            
                 </StackPanel>
-                    
+                
+
             </DataTemplate>
             
             
             
             <DataTemplate x:Key="ticketView">
-                <Grid  >
+                
                 <StackPanel HorizontalAlignment="Stretch" >
                     <TextBlock FontSize="18" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}"/>
                     <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="12" Margin="0,5,0,0" Text="{Binding Time}" Foreground="White" FontWeight="Bold"/>
                     <TextBlock FontSize="12" Margin="10,5,0,0" Text="{Binding Location}" Foreground="White" FontWeight="Bold"/>
                     </StackPanel>
+                    <TextBlock HorizontalAlignment="Left" FontSize="12" Margin="5" MaxWidth="500" Text="{Binding SubCategory}" Foreground="{StaticResource TargetForeground}" TextWrapping="WrapWholeWords"/>
                     <TextBlock HorizontalAlignment="Left" FontSize="12" Margin="5" MaxWidth="500" Text="{Binding Description}" Foreground="{StaticResource TargetForeground}" TextWrapping="WrapWholeWords"/>
 
                 </StackPanel>
-                    <Button x:ConnectionId='5' x:Name="btnDelete"                         FontFamily="Segoe MDL2 Assets" Content="&#xE74D;" Tag="{Binding ObjectId}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" Background="Transparent"/>
-                </Grid>
+                 
             </DataTemplate>
-            
-            <CollectionViewSource x:ConnectionId='2' x:Name="Tickets"/>
-            <CollectionViewSource x:ConnectionId='3' x:Name="Categories"/>
-            <CollectionViewSource x:ConnectionId='4' x:Name="SubCategories"/>
+
+            <DataTemplate x:ConnectionId='2' x:Name="lsvHeader">
+                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
+            </DataTemplate>
+
+            <CollectionViewSource x:ConnectionId='3' x:Name="Tickets" IsSourceGrouped="True"/>
+            <CollectionViewSource x:ConnectionId='4' x:Name="Categories"/>
+            <CollectionViewSource x:ConnectionId='5' x:Name="SubCategories"/>
         </ResourceDictionary>
         
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0">
 
+        <TextBlock Text="YOUR CURRENT TICKETS"  FontSize="18" HorizontalAlignment="Left" Margin="10,5"  FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
 
-                
+        <StackPanel x:ConnectionId='6' x:Name="grdMentor" Orientation="Horizontal" Height="40" Margin="0,10" VerticalAlignment="Top" HorizontalAlignment="Right" FlowDirection="RightToLeft" >
+            <ToggleSwitch x:ConnectionId='19' x:Name="tglMentor"                             OnContent="Show tickets for mentor" OffContent="Show tickets for mentor"  Margin="5"  HorizontalAlignment="Left" VerticalAlignment="Bottom"  Foreground="{StaticResource TargetForeground}" />
+         </StackPanel>
 
-                
-                    <TextBlock Text="YOUR CURRENT TICKETS" Width="5000" FontSize="18" HorizontalAlignment="Stretch" Margin="10,5"  FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}"/>
-                    
-                    <ptr:PullToRefreshBox x:ConnectionId='6' RefreshThreshold="160"                                                  Margin="10,40,0,20"  >
+
+        
+                    <ptr:PullToRefreshBox x:ConnectionId='7' RefreshThreshold="160"                                                  Margin="0,60,0,0"  >
 
                         <ptr:PullToRefreshBox.TopIndicatorTemplate>
                             <DataTemplate>
@@ -76,49 +83,79 @@
                             </DataTemplate>
                         </ptr:PullToRefreshBox.TopIndicatorTemplate>
                         
-                        <ListView x:ConnectionId='17' x:Name="lsvTickets" IsSynchronizedWithCurrentItem="False" MinHeight="400"   ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" HorizontalAlignment="Stretch"  >
-
-                            <ListView.ItemContainerStyle>
+                        <ListView x:ConnectionId='18' x:Name="lsvTickets" IsItemClickEnabled="True"                                   IsSynchronizedWithCurrentItem="False" MinHeight="400"   ItemsSource="{Binding Source={StaticResource Tickets}}" ItemTemplate="{StaticResource ticketView}" HorizontalAlignment="Stretch" Margin="0,0,0,0" >
+                <ListView.GroupStyle>
+                    <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
+                </ListView.GroupStyle>
+                <ListView.ItemContainerStyle>
                                 <Style TargetType="ListViewItem">
                                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                                 </Style>
                             </ListView.ItemContainerStyle>
                         </ListView>
                     </ptr:PullToRefreshBox>
-                    <ProgressRing x:ConnectionId='7' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0"/>
+                    <ProgressRing x:ConnectionId='8' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0"/>
 
 
-        <Button x:ConnectionId='8' x:Name="btnAdd" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20" Background="Transparent" BorderBrush="Transparent">
+        <Button x:ConnectionId='9' x:Name="btnAdd" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20" Background="Transparent" BorderBrush="Transparent">
             <Button.Flyout>
                 <Flyout Placement="Full">
-                <StackPanel x:ConnectionId='9' x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
+                <StackPanel x:ConnectionId='10' x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
                     <TextBlock Margin="10"  FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC" HorizontalAlignment="Center"/>
 
-                    <ComboBox x:ConnectionId='10' x:Name="cmbCategories"  Margin="10"                                                   ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" Width="300"/>
-                        <ComboBox x:ConnectionId='11' x:Name="cmbSubCategories" Margin="10" ItemsSource="{Binding Source={StaticResource SubCategories}}" Width="300"/>
-                        <TextBox x:ConnectionId='12'  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
+                    <ComboBox x:ConnectionId='11' x:Name="cmbCategories"  Margin="10"                                                   ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" Width="300"/>
+                        <ComboBox x:ConnectionId='12' x:Name="cmbSubCategories" Margin="10" ItemsSource="{Binding Source={StaticResource SubCategories}}" Width="300"/>
+                        <TextBox x:ConnectionId='13'  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
 
-                    <TextBox x:ConnectionId='13' x:Name="txtLocation" Margin="10" PlaceholderText="Location ex: Wells B115" Foreground="{StaticResource TargetForeground}" BorderBrush="{StaticResource TargetForeground}"/>
-                    <TextBox x:ConnectionId='14' x:Name="txtDescription" MinHeight="20" TextWrapping="Wrap" Margin="10" PlaceholderText="Please describe your problem" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
+                    <TextBox x:ConnectionId='14' x:Name="txtLocation" Margin="10" PlaceholderText="Location ex: Wells B115" Foreground="{StaticResource TargetForeground}" BorderBrush="{StaticResource TargetForeground}"/>
+                    <TextBox x:ConnectionId='15' x:Name="txtDescription" MinHeight="20" TextWrapping="Wrap" Margin="10" PlaceholderText="Please describe your problem" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
                         <Grid HorizontalAlignment="Stretch">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             
-                        <Button x:ConnectionId='15' x:Name="btnSubmit" Grid.Column="0"                         Content="SUBMIT" Margin="10" HorizontalAlignment="Stretch"/>
-                        <Button x:ConnectionId='16' x:Name="btnCancel" Grid.Column="1"                          Content="CANCEL" Margin="10" HorizontalAlignment="Stretch"/>
+                        <Button x:ConnectionId='16' x:Name="btnSubmit" Grid.Column="0"                         Content="SUBMIT" Margin="10" HorizontalAlignment="Stretch"/>
+                        <Button x:ConnectionId='17' x:Name="btnCancel" Grid.Column="1"                          Content="CANCEL" Margin="10" HorizontalAlignment="Stretch"/>
                         </Grid>
                     </StackPanel>
                     </Flyout>
             </Button.Flyout>
             <Grid>
                 <Ellipse Width="40" Height="40" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Text="&#xE710;" FontFamily="Segoe MDL2 Assets" Foreground="{StaticResource TargetBackground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock FontWeight="Bold" Text="&#xE710;" FontFamily="Segoe MDL2 Assets" Foreground="{StaticResource TargetBackground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         
         
         </Button>
+        <!--<Button x:Name="btnAdd" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20" BorderBrush="{StaticResource TargetForeground}" Foreground="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}" Content="SUBMIT TICKET">
+            <Button.Flyout>
+                <Flyout Placement="Full">
+                    <StackPanel x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
+                        <TextBlock Margin="10"  FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC" HorizontalAlignment="Center"/>
+
+                        <ComboBox x:Name="cmbCategories"  Margin="10" SelectionChanged="cmbCategories_SelectionChanged" ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" Width="300"/>
+                        <ComboBox x:Name="cmbSubCategories" Margin="10" ItemsSource="{Binding Source={StaticResource SubCategories}}" Width="300"/>
+                        <TextBox  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
+
+                        <TextBox x:Name="txtLocation" Margin="10" PlaceholderText="Location ex: Wells B115" Foreground="{StaticResource TargetForeground}" BorderBrush="{StaticResource TargetForeground}"/>
+                        <TextBox x:Name="txtDescription" MinHeight="20" TextWrapping="Wrap" Margin="10" PlaceholderText="Please describe your problem" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button x:Name="btnSubmit" Grid.Column="0" Click="btnSubmit_Click" Content="SUBMIT" Margin="10" HorizontalAlignment="Stretch"/>
+                            <Button x:Name="btnCancel" Grid.Column="1" Click="btnCancel_Click"  Content="CANCEL" Margin="10" HorizontalAlignment="Stretch"/>
+                        </Grid>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+          
+
+
+        </Button>-->
 
 
     </Grid>

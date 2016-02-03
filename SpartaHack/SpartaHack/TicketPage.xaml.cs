@@ -13,6 +13,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Parse;
+using System.Xml.Linq;
+
+using Windows.UI.Notifications;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -24,6 +27,7 @@ namespace SpartaHack
     {
 
         Ticket t;
+        
         public TicketPage()
         {
             this.InitializeComponent();
@@ -37,7 +41,26 @@ namespace SpartaHack
                 MainPage.title.Value = "TICKET";
                 t = e.Parameter as Ticket;
                 grdTicket.DataContext = t;
-                
+                if (t.IsMentor)
+                {
+                    btnDelete.Visibility = Visibility.Collapsed;
+                    btnReissue.Visibility = Visibility.Collapsed;
+                    if (t.Status == "Accepted")
+                        btnAcceptTicket.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    btnAcceptTicket.Visibility = Visibility.Collapsed;
+                }
+                if (t.Status == "Expired")
+                {
+                    btnDelete.Visibility = Visibility.Collapsed;
+                }
+                else if(t.Status=="Open")
+                {
+                    btnReissue.Visibility = Visibility.Collapsed;
+                }
+
             }
             catch (Exception ex)
             {
@@ -47,86 +70,59 @@ namespace SpartaHack
 
        
 
-        private async void btnReissue_Click(object sender, RoutedEventArgs e)
+        private void btnReissue_Click(object sender, RoutedEventArgs e)
+        {
+            updateTicket("Open");
+        }
+
+      
+
+  
+
+        private void btnAcceptTicket_Click(object sender, RoutedEventArgs e)
+        {
+            updateTicket("Accepted");
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            updateTicket("Expired");
+        }
+
+
+        private async void updateTicket(string status)
         {
             try
             {
                 ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("HelpDeskTickets");
-               var q = await query.Where(obj => obj.ObjectId == t.ObjectId).FindAsync();
-                ParseObject ticket=q.First();
-                ticket["status"] = "Open";
+                var q = await query.Where(obj => obj.ObjectId == t.ObjectId).FindAsync();
+                ParseObject ticket = q.First();
+                ticket["status"] = status;
                 await ticket.SaveAsync();
+                var xDoc = new XDocument(
+             new XElement("toast",
+                 new XElement("visual",
+                     new XElement("binding", new XAttribute("template", "ToastGeneric"),
+                         new XElement("text", "SpartaHack 2016"),
+                         new XElement("text", "Ticket Updated")
+                         )
+                     )
+                 )
+             );
 
+                var xmlDoc = new Windows.Data.Xml.Dom.XmlDocument();
+                xmlDoc.LoadXml(xDoc.ToString());
+                var notifi = ToastNotificationManager.CreateToastNotifier();
+                notifi.Show(new ToastNotification(xmlDoc));
+                if (MainPage.rootFrame.CanGoBack)
+                    MainPage.rootFrame.GoBack();
 
-                }
+            }
             catch
             {
 
             }
         }
 
-        private async void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                //if (ParseUser.CurrentUser != null)
-                //{
-                //    Ticket t = cmbCategories.SelectedItem as Ticket;
-                //    if (txtDescription.Text != "" && txtLocation.Text != "" && txtTitle.Text != "")
-                //    {
-                //        ParseObject ticket = new ParseObject("HelpDeskTickets");
-                //        ticket["subCategory"] = cmbSubCategories.SelectedItem.ToString();
-                //        ticket["status"] = "Open";
-                //        ticket["notifiedFlag"] = false;
-                //        ticket["subject"] = txtTitle.Text;
-                //        ticket["description"] = txtDescription.Text;
-                //        ticket["user"] = ParseUser.CurrentUser;
-                //        ticket["location"] = txtLocation.Text;
-                //        ticket["category"] = new ParseObject("HelpDesk")
-                //        {
-                //            ObjectId = t.Category
-                //        };
-                //        await ticket.SaveAsync();
-
-                //        await new Windows.UI.Popups.MessageDialog("Your message has been sent!", "Thank you for letting us know").ShowAsync();
-                //        btnEdit.Flyout.Hide();
-                        
-                //    }
-                //}
-                //else
-                //{
-                //    await new Windows.UI.Popups.MessageDialog("login so you can see your support tickets", "Looks like you're not logged in").ShowAsync();
-                //}
-            }
-            catch (Exception ex)
-            {
-                DebuggingHelper.ShowError("Error in HelpDesk, btnSubmit: " + ex.Message);
-            }
-        }
-
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                txtTitle.Text = "";
-                txtDescription.Text = "";
-                txtLocation.Text = "";
-                btnEdit.Flyout.Hide();
-            }
-            catch { }
-        }
-
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                txtTitle.Text = t.Title;
-                txtDescription.Text = t.Description;
-                txtLocation.Text = t.Location;
-               
-                btnEdit.Flyout.Hide();
-            }
-            catch { }
-        }
     }
 }

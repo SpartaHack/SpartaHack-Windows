@@ -62,6 +62,11 @@
 					<Base64Value>[Embedded Binary Data]</Base64Value>
 				</Candidate>
 			</NamedResource>
+			<NamedResource name="TicketPage.xbf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/TicketPage.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
 			<ResourceMapSubtree name="Assets">
 				<NamedResource name="FacebookTwitterIGProfilePic.png" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Assets/FacebookTwitterIGProfilePic.png">
 					<Candidate type="Path">
@@ -113,14 +118,12 @@
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
-			<ResourceMapSubtree name="Parse.UWP">
-				<ResourceMapSubtree name="Properties">
-					<NamedResource name="Parse.UWP.rd.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Parse.UWP/Properties/Parse.UWP.rd.xml">
-						<Candidate type="Path">
-							<Value>Parse.UWP\Properties\Parse.UWP.rd.xml</Value>
-						</Candidate>
-					</NamedResource>
-				</ResourceMapSubtree>
+			<ResourceMapSubtree name="PDFs">
+				<NamedResource name="ios-map.pdf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/PDFs/ios-map.pdf">
+					<Candidate type="Path">
+						<Value>PDFs\ios-map.pdf</Value>
+					</Candidate>
+				</NamedResource>
 			</ResourceMapSubtree>
 			<ResourceMapSubtree name="Properties">
 				<NamedResource name="Default.rd.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/Properties/Default.rd.xml">
@@ -146,6 +149,15 @@
 					<NamedResource name="Generic.xbf" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/PullToRefresh.UWP/Themes/Generic.xbf">
 						<Candidate type="EmbeddedData">
 							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="SpartaHackToast">
+				<ResourceMapSubtree name="Properties">
+					<NamedResource name="SpartaHackToast.rd.xml" uri="ms-resource://47002MMPIndustries.SpartaHack/Files/SpartaHackToast/Properties/SpartaHackToast.rd.xml">
+						<Candidate type="Path">
+							<Value>SpartaHackToast\Properties\SpartaHackToast.rd.xml</Value>
 						</Candidate>
 					</NamedResource>
 				</ResourceMapSubtree>

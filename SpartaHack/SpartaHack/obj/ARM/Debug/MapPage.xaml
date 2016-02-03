@@ -11,12 +11,28 @@
             <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
             <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-          
+          <CollectionViewSource x:ConnectionId='1' x:Name="Pdfs"/>
         </ResourceDictionary>
 
     </Page.Resources>
+    
     <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0"  >
-<TextBlock Text="Not available yet" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource TargetForeground}"/>
+       
+        
+        <FlipView x:ConnectionId='2' x:Name="flpView" ItemsSource="{Binding Source={StaticResource Pdfs}}" 
+                  Margin="10,10,10,40" IsSynchronizedWithCurrentItem="False" 
+                  Background="{StaticResource TargetBackground}"
+                                                            
+                  >
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}" Margin="5" MaxWidth="800" HorizontalAlignment="Center"/>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+        <TextBlock x:ConnectionId='3' Name="txtPage" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="10" />
+        
+        
     </Grid>
 </Page>
 

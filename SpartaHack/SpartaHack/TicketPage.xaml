@@ -12,42 +12,28 @@
         <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
     </Page.Resources>
     <Grid Background="{StaticResource TargetBackground}" Margin="0,48,0,0">
-        <StackPanel HorizontalAlignment="Center" x:Name="grdTicket" Margin="10">
-            <TextBlock FontSize="24" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" Margin="5"/>
-            <TextBlock FontSize="20" Text="{Binding Title}" Foreground="{StaticResource TargetForeground}" FontFamily="{StaticResource TargetFont}" Margin="5"/>
-
-            <TextBlock FontSize="20" Margin="0,5,0,0" Text="{Binding Time}" Foreground="{StaticResource TargetForeground}" />
-            <TextBlock FontSize="20" Margin="10,5,0,0" Text="{Binding Location}" Foreground="White"/>
-           
+        <StackPanel HorizontalAlignment="Center" x:Name="grdTicket" Margin="10" VerticalAlignment="Top">
+            <TextBlock Text="Title" FontSize="12" Foreground="{StaticResource TargetForeground}"/>
+            <TextBlock FontSize="20" Text="{Binding Title}" Foreground="White"  Margin="10"/>
+            <TextBlock Text="Sub-Category" FontSize="12" Foreground="{StaticResource TargetForeground}"/>
+            <TextBlock FontSize="20" Margin="10" Text="{Binding SubCategory}" Foreground="White" />
+            <TextBlock Text="Time" FontSize="12" Foreground="{StaticResource TargetForeground}"/>
+            <TextBlock FontSize="20" Margin="10" Text="{Binding Time}" Foreground="White" />
+            <TextBlock Text="Location" FontSize="12" Foreground="{StaticResource TargetForeground}"/>
+            <TextBlock FontSize="20" Margin="10" Text="{Binding Location}" Foreground="White"/>
+            <TextBlock Text="Description" FontSize="12" Foreground="{StaticResource TargetForeground}"/>
             <TextBlock HorizontalAlignment="Left" FontSize="20" Margin="10" MaxWidth="500" Height="300" Text="{Binding Description}" Foreground="White" TextWrapping="WrapWholeWords"/>
-            
-            
-            <Button x:Name="btnReissue" Click="btnReissue_Click" Content="Reissue Ticket" BorderBrush="{StaticResource TargetForeground}" Foreground="{StaticResource TargetForeground}" Width="300" Margin="10,100,10,10"/>
-            <Button x:Name="btnEdit" Click="btnEdit_Click" Content="Edit Ticket" BorderBrush="{StaticResource TargetForeground}" Foreground="{StaticResource TargetForeground}" Width="300" Margin="10">
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Margin="10" HorizontalAlignment="Center">
+            <Button x:Name="btnAcceptTicket" Click="btnAcceptTicket_Click" Content="Accept Ticket" BorderBrush="{StaticResource TargetForeground}" Foreground="{StaticResource TargetForeground}" Width="300" Margin="10"/>
+            <Button x:Name="btnReissue" Click="btnReissue_Click" Content="Reissue Ticket" BorderBrush="{StaticResource TargetForeground}" Foreground="{StaticResource TargetForeground}" Width="300" Margin="10"/>
+            <Button x:Name="btnDelete" Content="Delete Ticket" BorderBrush="{StaticResource TargetForeground}" Foreground="{StaticResource TargetForeground}" Width="300" Margin="10">
                 <Button.Flyout>
-                    <Flyout Placement="Full">
-                        <StackPanel x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
-                            <TextBlock Margin="10"  FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC" HorizontalAlignment="Center"/>
-                            <TextBox Text="Title" Margin="5"/>
-                            <TextBox  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
-                            <TextBox Text="Location" Margin="5"/>
-                            <TextBox x:Name="txtLocation" Margin="10" PlaceholderText="Location ex: Wells B115" Foreground="{StaticResource TargetForeground}" BorderBrush="{StaticResource TargetForeground}"/>
-                            <TextBox Text="Description" Margin="5"/>
-                            <TextBox x:Name="txtDescription" MinHeight="20" TextWrapping="Wrap" Margin="10" PlaceholderText="Please describe your problem" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
-                            <Grid HorizontalAlignment="Stretch">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-
-                                <Button x:Name="btnSubmit" Grid.Column="0" Click="btnSubmit_Click" Content="SUBMIT" Margin="10" HorizontalAlignment="Stretch"/>
-                                <Button x:Name="btnCancel" Grid.Column="1" Click="btnCancel_Click"  Content="CANCEL" Margin="10" HorizontalAlignment="Stretch"/>
-                            </Grid>
-                        </StackPanel>
+                    <Flyout>
+                        <Button  Click="btnDelete_Click" Content="Delete?" Width="300"/>
                     </Flyout>
                 </Button.Flyout>
             </Button>
-
         </StackPanel>
     </Grid>
 </Page>

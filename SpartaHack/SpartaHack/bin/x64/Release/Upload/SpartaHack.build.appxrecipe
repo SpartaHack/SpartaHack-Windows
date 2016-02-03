@@ -342,11 +342,14 @@
     <AppxPackagedFile Include="C:\Users\Matt\.nuget\packages\System.Xml.XmlSerializer\4.0.10\runtimes\win8-aot\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Parse\Parse.dll">
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\bin\Release\Parse.dll">
       <PackagePath>Parse.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Parse\Parse.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse.UWP\bin\x64\Release\Parse.UWP.dll">
       <PackagePath>Parse.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\.nuget\packages\ZXing.Net\0.14.0.1\lib\windows8\ZXing.winmd">
+      <PackagePath>ZXing.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\.nuget\packages\PullToRefresh.UWP\0.3.3\build\uap10.0\lib\win10-x64\PullToRefresh.UWP.winmd">
       <PackagePath>PullToRefresh.UWP.winmd</PackagePath>
@@ -394,17 +397,8 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\Moondance.otf">
       <PackagePath>Assets\Moondance.otf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Parse\Parse.dll">
-      <PackagePath>Parse\Parse.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Parse\Parse.UWP.dll">
-      <PackagePath>Parse\Parse.UWP.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Parse\Parse.UWP\Properties\Parse.UWP.rd.xml">
-      <PackagePath>Parse\Parse.UWP\Properties\Parse.UWP.rd.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Parse\Parse.xml">
-      <PackagePath>Parse\Parse.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\PDFs\ios-map.pdf">
+      <PackagePath>PDFs\ios-map.pdf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -414,9 +408,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Parse\Parse.UWP\Properties\Parse.UWP.rd.xml">
-      <PackagePath>Parse.UWP\Properties\Parse.UWP.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\.nuget\packages\PullToRefresh.UWP\0.3.3\build\uap10.0\lib\win10-x64\PullToRefresh.UWP\PullToRefresh.UWP.xr.xml">
       <PackagePath>PullToRefresh.UWP\PullToRefresh.UWP.xr.xml</PackagePath>

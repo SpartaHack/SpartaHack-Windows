@@ -10,19 +10,19 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>23ce9752-905d-4ff9-9c28-cacf0a721d44</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>4AB0082C583A8F8C0F6F6D8EEE28D9BB2C675C58A27903ED9F96D242BCC1BB24</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>47002MMPIndustries.SpartaHack_1.1.2.0_x86__c1c6qnm3bnjg4</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>2F3CC407CC2982F739CFE4D2AEB509FF58DFCEF6E3A4106B55AC7DB3F17B44AC</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>47002MMPIndustries.SpartaHack_1.1.3.0_x86__c1c6qnm3bnjg4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>47002MMPIndustries.SpartaHack_c1c6qnm3bnjg4!App</RegisteredUserModeAppID>
     <RegisteredPackageID>47002MMPIndustries.SpartaHack</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=98AE6015-DA35-4C52-821A-32B1274E1CBD</RegisteredPackagePublisher>
-    <RegisteredVersion>1.1.2.0</RegisteredVersion>
+    <RegisteredVersion>1.1.3.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-02-03T03:49:39.972</Modified>
+      <Modified>2016-02-03T18:05:15.468</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +87,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\entrypoint\SpartaHack.exe">
       <PackagePath>entrypoint\SpartaHack.exe</PackagePath>
-      <Modified>2016-02-03T03:49:38.616</Modified>
+      <Modified>2016-02-03T18:05:13.963</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -119,11 +119,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\Parse.dll">
       <PackagePath>Parse.dll</PackagePath>
-      <Modified>2016-01-30T06:42:31.895</Modified>
+      <Modified>2016-02-03T17:36:10.880</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\Parse.UWP.dll">
       <PackagePath>Parse.UWP.dll</PackagePath>
-      <Modified>2016-01-30T06:42:32.855</Modified>
+      <Modified>2016-02-03T17:36:12.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\PDFs\ios-map.pdf">
       <PackagePath>PDFs\ios-map.pdf</PackagePath>
@@ -147,23 +147,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-02-03T03:49:39.487</Modified>
+      <Modified>2016-02-03T18:05:14.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack.exe">
       <PackagePath>SpartaHack.exe</PackagePath>
-      <Modified>2016-02-03T03:49:39.972</Modified>
+      <Modified>2016-02-03T18:05:15.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack.xr.xml">
       <PackagePath>SpartaHack.xr.xml</PackagePath>
-      <Modified>2016-02-03T03:49:38.353</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHackToast.winmd">
-      <PackagePath>SpartaHackToast.winmd</PackagePath>
-      <Modified>2016-01-30T06:42:32.813</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHackToast\Properties\SpartaHackToast.rd.xml">
-      <PackagePath>SpartaHackToast\Properties\SpartaHackToast.rd.xml</PackagePath>
-      <Modified>2016-01-20T01:31:00.966</Modified>
+      <Modified>2016-02-03T17:55:30.507</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

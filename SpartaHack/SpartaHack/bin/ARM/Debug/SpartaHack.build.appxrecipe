@@ -109,6 +109,9 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Parse\Parse.xml">
       <PackagePath>Parse\Parse.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\PDFs\ios-map.pdf">
+      <PackagePath>PDFs\ios-map.pdf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -132,6 +135,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\SpartaHackToast.dll">
       <PackagePath>SpartaHackToast.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\SpartaHackToast.winmd">
+      <PackagePath>SpartaHackToast.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\SpartaHackToast\Properties\SpartaHackToast.rd.xml">
       <PackagePath>SpartaHackToast\Properties\SpartaHackToast.rd.xml</PackagePath>
@@ -435,6 +441,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Debug\Core\ZXing.winmd">
+      <PackagePath>ZXing.winmd</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -79,9 +79,6 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\SpartaHack.exe">
       <PackagePath>SpartaHack.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\SpartaHackToast.winmd">
-      <PackagePath>SpartaHackToast.winmd</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\ZXing.winmd">
       <PackagePath>ZXing.winmd</PackagePath>
     </AppxPackagedFile>

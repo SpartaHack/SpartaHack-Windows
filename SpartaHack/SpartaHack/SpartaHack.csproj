@@ -20,7 +20,7 @@
     <PackageCertificateKeyFile>SpartaHack_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>EB8FF09D14131E480EC952C7F44EEF0500308366</PackageCertificateThumbprint>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
-    <AppxBundle>Auto</AppxBundle>
+    <AppxBundle>Never</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
@@ -229,10 +229,6 @@
     <ProjectReference Include="..\Parse\Parse.csproj">
       <Project>{de07a443-9619-4bd7-b540-41296f8a2959}</Project>
       <Name>Parse</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SpartaHackToast\SpartaHackToast.csproj">
-      <Project>{75ed5032-d7f4-477f-a7c4-e838d2005638}</Project>
-      <Name>SpartaHackToast</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

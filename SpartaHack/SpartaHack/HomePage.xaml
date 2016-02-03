@@ -42,7 +42,7 @@
                 </DataTemplate>
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
             
-            <ListView IsSynchronizedWithCurrentItem="False" Margin="5" SelectionMode="None"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
+            <ListView ItemClick="listAnnouncements_ItemClick" IsItemClickEnabled="True" IsSynchronizedWithCurrentItem="False" Margin="5" SelectionMode="None"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
                 <ListView.GroupStyle>
                     <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
                 </ListView.GroupStyle>
@@ -56,9 +56,10 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="60"/>
                                     </Grid.ColumnDefinitions>
+                                    
                                 <StackPanel Grid.Column="0">
                                 <TextBlock  Margin="5" HorizontalAlignment="Left" Text="{Binding Title}" FontSize="22" Foreground="{StaticResource TargetForeground}" TextTrimming="WordEllipsis" Typography.Capitals="AllSmallCaps" />
-                                <TextBlock Margin="10,5" FontSize="12" HorizontalAlignment="Left" MaxWidth="500" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
+                                <TextBlock  Margin="10,5" FontSize="12" HorizontalAlignment="Left" MaxWidth="500" Text="{Binding Description}" TextWrapping="WrapWholeWords" />
                                 </StackPanel>
                                 <StackPanel HorizontalAlignment="Right" Grid.Column="1">
                                     <TextBlock  FontFamily="Segoe MDL2 Assets" Text="&#xE718;" HorizontalAlignment="Right" Visibility="{Binding Pinned}" Margin="5" VerticalAlignment="Top" />

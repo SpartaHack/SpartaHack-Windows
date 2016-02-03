@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-
+using System.Threading;
+using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -129,23 +130,8 @@ namespace SpartaHack
                         query = ParseObject.GetQuery("HelpDeskTickets").WhereEqualTo("user", ParseUser.CurrentUser);
                     }
 
-                Ticket t;
-                foreach (ParseObject obj in await query.FindAsync())
-                {
-                    t = new Ticket();
-                    t.Created = obj.CreatedAt.Value.ToLocalTime();
-                        string val;
-                         obj.TryGetValue<string>("subject",out val);
-                        t.Title = val;
-                        obj.TryGetValue<string>("location", out val);
-                        t.Location = val;
-                        obj.TryGetValue<string>("description", out val);
-                        t.Description = val;
-                        obj.TryGetValue<string>("status", out val);
-                        t.Status = val; 
-                        tickets.Add(t);
-                        t.ObjectId = obj.ObjectId;
-                }
+                    tickets = await parseTickets(query);
+                
             }
                 Tickets.Source = from ti in tickets
                                  orderby ti.StatusNum, ti.Created descending
@@ -186,39 +172,22 @@ namespace SpartaHack
 
                         ParseObject mentor = (await query.FindAsync()).First();
 
-                    query = ParseObject.GetQuery("HelpDeskTickets").Where(p => (mentor["categories"] as List<object>).Contains(p["subCategory"])).Where(p => p["user"] != ParseUser.CurrentUser);
+                    query = ParseObject.GetQuery("HelpDeskTickets").Where(p => (mentor["categories"] as List<object>).Contains(p["subCategory"])).Where(p => p["user"] != ParseUser.CurrentUser).WhereEqualTo("status", "Open");
 
-
-
-                    Ticket t;
-                        foreach (ParseObject obj in await query.FindAsync())
+                    tickets = await parseTickets(query);
+                    if (tickets.Count() == 0)
+                    {
+                        tickets.Add(new Ticket()
                         {
-                            t = new Ticket();
-                            t.Created = obj.CreatedAt.Value.ToLocalTime();
-                            string val;
-                            obj.TryGetValue<string>("subject", out val);
-                            t.Title = val;
-                            obj.TryGetValue<string>("location", out val);
-                            t.Location = val;
-                            obj.TryGetValue<string>("description", out val);
-                            t.Description = val;
-                            obj.TryGetValue<string>("status", out val);
-                            t.Status = val;
-                            tickets.Add(t);
-                            t.ObjectId = obj.ObjectId;
-                        }
-
-                        if(tickets.Count()==0)
-                         {
-                            t = new Ticket()
-                            {
-                                Title = "Looks like there are no tickets to be found"
-                            };
-
-                        }
-                        
+                            Title = "Looks like there are no tickets to be found",
+                            Created=DateTime.Now
+                        });
 
                     }
+
+
+
+                }
 
                 
                 Tickets.Source = from ti in tickets
@@ -237,7 +206,32 @@ namespace SpartaHack
 
 
 
+        public async Task<List<Ticket>> parseTickets(ParseQuery<ParseObject> query)
+        {
+            List<Ticket> tickets = new List<Ticket>();
+            Ticket t;
+            foreach (ParseObject obj in await query.FindAsync())
+            {
+                t = new Ticket();
+                t.Created = obj.CreatedAt.Value.ToLocalTime();
+                string val;
+                obj.TryGetValue<string>("subject", out val);
+                t.Title = val;
+                obj.TryGetValue<string>("location", out val);
+                t.Location = val;
+                obj.TryGetValue<string>("description", out val);
+                t.Description = val;
+                obj.TryGetValue<string>("status", out val);
+                t.Status = val;
+                obj.TryGetValue<string>("subCategory", out val);
+                t.SubCategory = val;
+                tickets.Add(t);
+                t.ObjectId = obj.ObjectId;
+            }
 
+            
+            return tickets;
+        }
 
 
 
@@ -310,61 +304,6 @@ namespace SpartaHack
             }
 }
 
-        private async void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (ParseUser.CurrentUser != null)
-                {
-                    ParseObject ticket = new ParseObject("HelpDeskTickets");
-                    Ticket t = ((sender as Button).DataContext as Ticket);
-                    ticket.ObjectId = t.ObjectId;
-                    Windows.UI.Popups.MessageDialog md;
-                    string status;
-                    string title;
-                    if(isMentor)
-                    {
-                        title = "Accept the ticket?";
-                        status = "Accepted";
-                    }
-
-                   else if (t.Status == "Open"||t.Status=="Accepted")
-                    {
-                        title = "Are you sure you want to delete your ticket?";
-                        status = "Expired";
-                    }
-                    else
-                    {
-                        title = "Reissue the ticket?";
-                        status = "Open";
-                    }
-                    md = new Windows.UI.Popups.MessageDialog(t.Title, title);
-
-                    md.Commands.Add(new Windows.UI.Popups.UICommand("Yes", (s) =>
-                    {
-                        ticket["status"] = status;
-                        ticket.SaveAsync();
-                        getTickets();
-                    }));
-
-                    md.Commands.Add(new Windows.UI.Popups.UICommand("Cancel"));
-
-                    await md.ShowAsync();
-
-
-
-
-
-
-
-                }
-            }
-            catch(Exception ex)
-            {
-                DebuggingHelper.ShowError("Error in HelpDesk, btnDelete: " + ex.Message);
-            }
-        }
-
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -381,8 +320,15 @@ namespace SpartaHack
         {
             try
             {
-                getCategories();
-                getTickets();
+                if (tglMentor.IsOn)
+                {
+                    getTicketsForMentor();
+                }
+                else
+                {
+                    getCategories();
+                    getTickets();
+                }
             }
             catch { }
         }
@@ -412,19 +358,21 @@ namespace SpartaHack
             }
         }
 
+        private void lsvTickets_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try {
+                Ticket t = e.ClickedItem as Ticket;
+                t.IsMentor = isMentor && tglMentor.IsOn;
+                MainPage.rootFrame.Navigate(typeof(TicketPage), t);
+            }
+            catch { }
 
-
+        }
     }
     public class Ticket
     {
-        public string UserName
-        {
-            get
-            {
-                return "";
-            }
-        }
-        public ParseUser user { get; set; }
+        public bool IsMentor { get; set; }
+       
 
         public string Title { get; set; }
         public string Description { get; set; }

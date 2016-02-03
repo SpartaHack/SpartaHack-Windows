@@ -1184,43 +1184,6 @@ namespace McgInterop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-winrt-robuffer-l1-1-0.dll'
-	/// </summary>
-	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll
-	{
-		// Signature, RoGetBufferMarshaler, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] System_Runtime_InteropServices_IMarshal__System_Runtime_WindowsRuntime__System_Runtime_InteropServices__IMarshal__System_Runtime_WindowsRuntime *, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Runtime.WindowsRuntime, Version=4.0.10.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "Interop+mincore_PInvokes", "RoGetBufferMarshaler")]
-		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
-		public static int RoGetBufferMarshaler(out global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime bufferMarshalerPtr)
-		{
-			// Setup
-			global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl** unsafe_bufferMarshalerPtr = default(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl**);
-			int unsafe___value;
-			try
-			{
-				// Marshalling
-				unsafe_bufferMarshalerPtr = null;
-				// Call to native method
-				unsafe___value = global::McgInterop.api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes.RoGetBufferMarshaler(&(unsafe_bufferMarshalerPtr));
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				bufferMarshalerPtr = (global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe_bufferMarshalerPtr), 
-									global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("System.Runtime.InteropServices.IMarshal,System.Runtime.WindowsRuntime, Version=4.0.10.0, Culture=neutral, Public" +
-											"KeyToken=b77a5c561934e089")
-								);
-				// Return
-				return unsafe___value;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_bufferMarshalerPtr)));
-			}
-		}
-	}
-
-	/// <summary>
 	/// P/Invoke class for module 'api-ms-win-core-file-l1-1-0'
 	/// </summary>
 	public unsafe static partial class api_ms_win_core_file_l1_1_0
@@ -1380,6 +1343,43 @@ namespace McgInterop
 				// Cleanup
 				if (unsafe_buffer != null)
 					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_buffer);
+			}
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-winrt-robuffer-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll
+	{
+		// Signature, RoGetBufferMarshaler, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] System_Runtime_InteropServices_IMarshal__System_Runtime_WindowsRuntime__System_Runtime_InteropServices__IMarshal__System_Runtime_WindowsRuntime *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Runtime.WindowsRuntime, Version=4.0.10.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "Interop+mincore_PInvokes", "RoGetBufferMarshaler")]
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		public static int RoGetBufferMarshaler(out global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime bufferMarshalerPtr)
+		{
+			// Setup
+			global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl** unsafe_bufferMarshalerPtr = default(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl**);
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				unsafe_bufferMarshalerPtr = null;
+				// Call to native method
+				unsafe___value = global::McgInterop.api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes.RoGetBufferMarshaler(&(unsafe_bufferMarshalerPtr));
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				bufferMarshalerPtr = (global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime)global::System.Runtime.InteropServices.McgModuleManager.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe_bufferMarshalerPtr), 
+									global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("System.Runtime.InteropServices.IMarshal,System.Runtime.WindowsRuntime, Version=4.0.10.0, Culture=neutral, Public" +
+											"KeyToken=b77a5c561934e089")
+								);
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_bufferMarshalerPtr)));
 			}
 		}
 	}
@@ -1723,13 +1723,6 @@ namespace McgInterop
 		public extern static void SysFreeString(global::System.IntPtr bstr);
 	}
 
-	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes
-	{
-		[global::McgInterop.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-winrt-robuffer-l1-1-0.dll")]
-		public extern static int RoGetBufferMarshaler(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl*** bufferMarshalerPtr);
-	}
-
 	public unsafe static partial class api_ms_win_core_file_l1_1_0_PInvokes
 	{
 		[global::McgInterop.McgGeneratedNativeCallCode]
@@ -1761,6 +1754,13 @@ namespace McgInterop
 					int numBufferChars, 
 					ushort* buffer, 
 					global::System.IntPtr mustBeZero);
+	}
+
+	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes
+	{
+		[global::McgInterop.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-winrt-robuffer-l1-1-0.dll")]
+		public extern static int RoGetBufferMarshaler(global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime__Impl.Vtbl*** bufferMarshalerPtr);
 	}
 }
 

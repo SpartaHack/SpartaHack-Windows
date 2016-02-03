@@ -56,7 +56,7 @@ namespace SpartaHack
                 txtCountDown.Text = "FINISHED";
             else
                 //txtCountDown.Text = dt.ToString(@"hh\:mm\:ss");
-                txtCountDown.Text = ((int)dt.TotalHours).ToString() + "h " + dt.Minutes.ToString() + "m " + dt.Seconds.ToString()+"s";
+                txtCountDown.Text =string.Format("{0}h {1}m {2}s", ((int)dt.TotalHours),  dt.Minutes.ToString() , dt.Seconds.ToString());
         }
 
         private void OnNotificationsChecked(object sender, RoutedEventArgs e)

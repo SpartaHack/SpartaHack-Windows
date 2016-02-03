@@ -5,7 +5,8 @@ HomePage.xbf
 LoginPage.xbf
 MainPage.xbf
 MapPage.xbf
-PullToRefresh.xbf
 SchedulePage.xbf
-SplitViewStyles.xbf
 SponsorPage.xbf
+Styles\PullToRefresh.xbf
+Styles\SplitViewStyles.xbf
+TicketPage.xbf

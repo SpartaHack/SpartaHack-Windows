@@ -92,6 +92,20 @@ namespace SpartaHack
         {
             getAnnouncements();
         }
+
+        private async void listAnnouncements_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try {
+                Announcement a = e.ClickedItem as Announcement;
+                int index = a.Description.IndexOf("http");
+                string link = a.Description.Substring(index, a.Description.IndexOf(" ", index) - index);
+                await Windows.System.Launcher.LaunchUriAsync(new Uri(link));
+            }
+            catch
+            {
+
+            }
+        }
     }
     class Announcement
     {

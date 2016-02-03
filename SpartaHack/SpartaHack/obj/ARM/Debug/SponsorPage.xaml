@@ -14,14 +14,14 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
             <CollectionViewSource x:ConnectionId='1' x:Name="Sponsors" IsSourceGrouped="True"/>
             <DataTemplate x:ConnectionId='2' x:Name="lsvHeader">
-                <TextBlock Margin="5" FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Level}" FontFamily="{StaticResource TargetFont}"/>
+                <TextBlock Margin="5" FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
             </DataTemplate>
         </ResourceDictionary>
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0" >
-
-        <ptr:PullToRefreshBox x:ConnectionId='3' RefreshThreshold="160"                                                  MinHeight="300"  >
+      
+        <ptr:PullToRefreshBox x:ConnectionId='3'  RefreshThreshold="160"                                                  MinHeight="300"  >
 
             <ptr:PullToRefreshBox.TopIndicatorTemplate>
                 <DataTemplate>
@@ -49,9 +49,8 @@
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <!--<StackPanel Margin="20" >-->
-                            <Image  Height="100"  Source="{Binding Logo}" VerticalAlignment="Top" Margin="20"/>
-                            <!--<TextBlock Margin="10" TextWrapping="WrapWholeWords" HorizontalAlignment="Center" Text="{Binding Name}" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" FontSize="14"/>-->
-                        <!--</StackPanel>-->
+                            <Image  Width="{Binding Size}"  Source="{Binding Logo}" VerticalAlignment="Top" Margin="20"/>
+                     
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>

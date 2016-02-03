@@ -14,11 +14,11 @@
             <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
             <CollectionViewSource x:ConnectionId='1' x:Name="Awards" IsSourceGrouped="True"/>
             <DataTemplate x:ConnectionId='2' x:Name="grdAward">
-                <StackPanel HorizontalAlignment="Stretch" Height="200" Width="300" Margin="10">
+                <StackPanel HorizontalAlignment="Stretch" Height="100" Width="280" Margin="10">
 
                     <!--<Ellipse Stroke="{StaticResource TargetForeground}" Width="150" Height="150"/>-->
-                    <TextBlock FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="140" VerticalAlignment="Top"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
-                    <TextBlock Margin="5" Width="140" VerticalAlignment="Bottom"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
+                    <TextBlock FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="260" VerticalAlignment="Top"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
+                    <TextBlock Margin="5" Width="260" VerticalAlignment="Bottom"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
                 </StackPanel>
             </DataTemplate>
             <DataTemplate x:ConnectionId='3' x:Name="lsvHeader">

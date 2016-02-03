@@ -156,7 +156,7 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[16];
+            _typeNameTable = new string[17];
             _typeNameTable[0] = "PullToRefresh.UWP.PullToRefreshBox";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentControl";
             _typeNameTable[2] = "Double";
@@ -173,8 +173,9 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             _typeNameTable[13] = "SpartaHack.MapPage";
             _typeNameTable[14] = "SpartaHack.SchedulePage";
             _typeNameTable[15] = "SpartaHack.SponsorPage";
+            _typeNameTable[16] = "SpartaHack.TicketPage";
 
-            _typeTable = new global::System.Type[16];
+            _typeTable = new global::System.Type[17];
             _typeTable[0] = typeof(global::PullToRefresh.UWP.PullToRefreshBox);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
             _typeTable[2] = typeof(global::System.Double);
@@ -191,6 +192,7 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             _typeTable[13] = typeof(global::SpartaHack.MapPage);
             _typeTable[14] = typeof(global::SpartaHack.SchedulePage);
             _typeTable[15] = typeof(global::SpartaHack.SponsorPage);
+            _typeTable[16] = typeof(global::SpartaHack.TicketPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -234,6 +236,7 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
         private object Activate_13_MapPage() { return new global::SpartaHack.MapPage(); }
         private object Activate_14_SchedulePage() { return new global::SpartaHack.SchedulePage(); }
         private object Activate_15_SponsorPage() { return new global::SpartaHack.SponsorPage(); }
+        private object Activate_16_TicketPage() { return new global::SpartaHack.TicketPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -338,6 +341,13 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
             case 15:   //  SpartaHack.SponsorPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_15_SponsorPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 16:   //  SpartaHack.TicketPage
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_TicketPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

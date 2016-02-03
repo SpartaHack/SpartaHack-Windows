@@ -53,7 +53,7 @@ namespace SpartaHack
                     sponsor = new Sponsor();
                     try
                     {
-                        sponsor.getLogo(obj["png_img"] as ParseFile);
+                        sponsor.getLogo(obj["png"] as ParseFile);
                     }
                     catch { }
                     sponsor.Name = obj["name"].ToString();
@@ -138,9 +138,10 @@ namespace SpartaHack
                 return 0;
             }
         }
-
+        public double Size { get {
+                return 100*numLevel; } }
     }
-
     
+
 
 }

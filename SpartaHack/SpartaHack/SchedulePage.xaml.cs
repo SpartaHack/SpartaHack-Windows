@@ -76,7 +76,7 @@ namespace SpartaHack
                 try {
                     await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                     {
-                        var item = from ev in events where ev.EventTime > DateTime.Now.AddDays(25) select ev;
+                        var item = from ev in events where ev.EventTime > DateTime.Now select ev;
 
                         lsvSchedule.ScrollIntoView(item.First());
                     });
@@ -84,6 +84,7 @@ namespace SpartaHack
                 catch
                 {
                     //spartahack is over
+
                 }
                 
             }
