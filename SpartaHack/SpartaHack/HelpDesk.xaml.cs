@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Parse;
 using SpartaHack.Styles;
+using System.Collections.ObjectModel;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -29,6 +30,7 @@ namespace SpartaHack
         }
 
         bool isMentor = true;
+        bool onMentor = false;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -59,14 +61,14 @@ namespace SpartaHack
                 if (mentor["categories"] == null)
                 {
                     //not a mentor
-                    grdMentor.Visibility = Visibility.Collapsed;
+                   // grdMentor.Visibility = Visibility.Collapsed;
                     isMentor = false;
                 }
             }
             catch
             {
                 //not a mentor
-                grdMentor.Visibility = Visibility.Collapsed;
+                //grdMentor.Visibility = Visibility.Collapsed;
                 isMentor = false;
             }
         }
@@ -133,13 +135,37 @@ namespace SpartaHack
                     tickets = await parseTickets(query);
                 
             }
-                Tickets.Source = from ti in tickets
-                                 orderby ti.StatusNum, ti.Created descending
-                                 group ti by ti.Status into grouped
-                                 select new HeaderGroup(grouped)
-                                 {
-                                     Header = grouped.Key
-                                 };
+                ObservableCollection<TicketPivot> pivotItems = new ObservableCollection<TicketPivot>();
+                ObservableCollection<Ticket> subset;
+                string[] categories = new string[] { "Accepted", "Open", "Expired" };
+
+                foreach(var s in categories)
+                {
+                    subset = new ObservableCollection<Ticket>(from ti in tickets
+                                                               orderby ti.StatusNum, ti.Created descending
+                                                               where ti.Status == s
+                                                               select ti);
+                    if (subset.Count != 0)
+                    {
+                        pivotItems.Add(new TicketPivot
+                        {
+                            Title = s,
+                            Tickets = subset
+                        });
+                    }
+
+                }
+
+
+                
+
+             
+                if (isMentor)
+                    pivotItems.Add(await getTicketsForMentor());
+
+                Tickets.Source = pivotItems;
+
+
                 showLoading();
             }
             catch (Exception ex)
@@ -150,7 +176,7 @@ namespace SpartaHack
 
 
 
-        public async void getTicketsForMentor()
+        public async Task<TicketPivot> getTicketsForMentor()
         {
             try
             {
@@ -189,19 +215,18 @@ namespace SpartaHack
 
                 }
 
+                return new TicketPivot()
+                {
+                    Title = "Mentor",
+                    Tickets = new ObservableCollection<Ticket>(tickets)
+                };
                 
-                Tickets.Source = from ti in tickets
-                                 orderby ti.StatusNum, ti.Created descending
-                                 group ti by ti.Status into grouped
-                                 select new HeaderGroup(grouped)
-                                 {
-                                     Header = grouped.Key
-                                 };
-                showLoading();
+
+
             }
             catch { }
 
-
+            return new TicketPivot();
         }
 
 
@@ -242,9 +267,9 @@ namespace SpartaHack
         private async void showLoading()
         {
             pgrRing.IsActive = true;
-            lsvTickets.Visibility = Visibility.Collapsed;
+           // lsvTickets.Visibility = Visibility.Collapsed;
             await System.Threading.Tasks.Task.Delay(300);
-            lsvTickets.Visibility = Visibility.Visible;
+          //  lsvTickets.Visibility = Visibility.Visible;
             pgrRing.IsActive = false;
         }
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -320,15 +345,10 @@ namespace SpartaHack
         {
             try
             {
-                if (tglMentor.IsOn)
-                {
-                    getTicketsForMentor();
-                }
-                else
-                {
-                    getCategories();
-                    getTickets();
-                }
+                
+                getCategories();
+                getTickets();
+                
             }
             catch { }
         }
@@ -346,27 +366,56 @@ namespace SpartaHack
 
         private void tglMentor_Toggled(object sender, RoutedEventArgs e)
         {
-            if (tglMentor.IsOn)
-            {
-                btnAdd.Visibility = Visibility.Collapsed;
-                getTicketsForMentor();
-            }
-            else
-            {
-                getTickets();
-                btnAdd.Visibility = Visibility.Visible;
-            }
+            //if (tglMentor.IsOn)
+            //{
+            //    btnAdd.Visibility = Visibility.Collapsed;
+            //    getTicketsForMentor();
+            //}
+            //else
+            //{
+            //    getTickets();
+            //    btnAdd.Visibility = Visibility.Visible;
+            //}
         }
 
         private void lsvTickets_ItemClick(object sender, ItemClickEventArgs e)
         {
             try {
                 Ticket t = e.ClickedItem as Ticket;
-                t.IsMentor = isMentor && tglMentor.IsOn;
+                t.IsMentor = isMentor && onMentor;
                 MainPage.rootFrame.Navigate(typeof(TicketPage), t);
             }
             catch { }
 
+        }
+
+        private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            for (int i=0;i<MyPivot.Items.Count;i++)
+            {
+                if (i == MyPivot.SelectedIndex)
+                {
+                    // Header of the selected item to white
+                    (Tickets.Source as ObservableCollection<TicketPivot>)[i].Color.Value = Resources["TargetForeground"] as SolidColorBrush;
+                        }
+                else
+                {
+                    // Headers of other items to slightly darker
+                    (Tickets.Source as ObservableCollection<TicketPivot>)[i].Color.Value = Resources["OffForeground"] as SolidColorBrush;
+                }
+
+                if((MyPivot.SelectedItem as TicketPivot).Title=="Mentor")
+                {
+                    btnAdd.Visibility = Visibility.Collapsed;
+                    onMentor = true;
+                }
+                else
+                {
+                    onMentor = false;
+                    btnAdd.Visibility = Visibility.Visible;
+                }
+
+            }
         }
     }
     public class Ticket
@@ -410,5 +459,14 @@ namespace SpartaHack
         public List<object> SubCategories { get; set; }
     }
 
+
+    public class TicketPivot
+    {
+        public TicketPivot ()
+        { Color = new PivotColor(); }
+        public string Title { get; set;}
+        public ObservableCollection<Ticket> Tickets { get; set; }
+        public PivotColor Color { get; set; }
+    }
 
 }

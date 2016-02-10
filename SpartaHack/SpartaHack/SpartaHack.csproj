@@ -130,6 +130,7 @@
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Styles\HeaderGroup.cs" />
+    <Compile Include="Styles\PivotColor.cs" />
     <Compile Include="TicketPage.xaml.cs">
       <DependentUpon>TicketPage.xaml</DependentUpon>
     </Compile>
