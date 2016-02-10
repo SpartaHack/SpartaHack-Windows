@@ -97,7 +97,7 @@
                     <ProgressRing x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0"/>
 
 
-        <Button x:Name="btnAdd" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20" Background="Transparent" BorderBrush="Transparent">
+        <!--<Button x:Name="btnAdd" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20" Background="Transparent" BorderBrush="Transparent">
             <Button.Flyout>
                 <Flyout Placement="Full">
                 <StackPanel x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
@@ -127,6 +127,35 @@
             </Grid>
         
         
+        </Button>-->
+
+        <Button x:Name="btnAdd" HorizontalAlignment="Right" Background="Transparent" Foreground="{StaticResource TargetForeground}" Content="&#xE710;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Bottom" Height="48" Width="48"  BorderBrush="{StaticResource TargetForeground}">
+            <Button.Flyout>
+                <Flyout Placement="Full">
+                    <StackPanel x:Name="grdAddTicket"  MaxWidth="350" HorizontalAlignment="Center" Margin="10">
+                        <TextBlock Margin="10"  FontSize="18" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="NEED HELP? SELECT A TOPIC" HorizontalAlignment="Center"/>
+
+                        <ComboBox x:Name="cmbCategories"  Margin="10" SelectionChanged="cmbCategories_SelectionChanged" ItemsSource="{Binding Source={StaticResource Categories}}" ItemTemplate="{StaticResource ticketHeaderView}" Width="300"/>
+                        <ComboBox x:Name="cmbSubCategories" Margin="10" ItemsSource="{Binding Source={StaticResource SubCategories}}" Width="300"/>
+                        <TextBox  x:Name="txtTitle"  Height="20" Margin="10" PlaceholderText="Title" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
+
+                        <TextBox x:Name="txtLocation" Margin="10" PlaceholderText="Location ex: Wells B115" Foreground="{StaticResource TargetForeground}" BorderBrush="{StaticResource TargetForeground}"/>
+                        <TextBox x:Name="txtDescription" MinHeight="20" TextWrapping="Wrap" Margin="10" PlaceholderText="Please describe your problem" Foreground="{StaticResource TargetForeground}"  BorderBrush="{StaticResource TargetForeground}"/>
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button x:Name="btnSubmit" Grid.Column="0" Click="btnSubmit_Click" Content="SUBMIT" Margin="10" HorizontalAlignment="Stretch"/>
+                            <Button x:Name="btnCancel" Grid.Column="1" Click="btnCancel_Click"  Content="CANCEL" Margin="10" HorizontalAlignment="Stretch"/>
+                        </Grid>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+            
+
+
         </Button>
         <!--<Button x:Name="btnAdd" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20" BorderBrush="{StaticResource TargetForeground}" Foreground="{StaticResource TargetForeground}" Background="{StaticResource TargetBackground}" Content="SUBMIT TICKET">
             <Button.Flyout>

@@ -100,17 +100,20 @@ namespace SpartaHack
                 {
                     txtHeader.Text = "WELCOME " + ParseUser.CurrentUser.Username;
                 }
-                BarcodeWriter writer = new BarcodeWriter();
-                writer.Format = BarcodeFormat.CODE_128;
-                writer.Options.Height = 200;
-                writer.Options.Width = 400;
-                writer.Options.Margin = 10;
-                var result = writer.Write(ParseUser.CurrentUser.ObjectId);
-               
+                try
+                {
+                    BarcodeWriter writer = new BarcodeWriter();
+                    writer.Format = BarcodeFormat.CODE_128;
+                    writer.Options.Height = 200;
+                    writer.Options.Width = 400;
+                    writer.Options.Margin = 10;
+                    var result = writer.Write(ParseUser.CurrentUser.ObjectId);
 
-                imgBC.Source = result.ToBitmap() as Windows.UI.Xaml.Media.Imaging.WriteableBitmap;
 
+                    imgBC.Source = result.ToBitmap() as Windows.UI.Xaml.Media.Imaging.WriteableBitmap;
 
+                }
+                catch { }
             }
             catch (Exception ex)
             {

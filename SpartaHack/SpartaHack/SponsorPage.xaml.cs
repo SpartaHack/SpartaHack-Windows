@@ -61,7 +61,7 @@ namespace SpartaHack
                     sponsor.Level = obj["level"].ToString();
                     sponsors.Add(sponsor);
                 }
-                var query = from s in sponsors orderby s.numLevel descending
+                var query = from s in sponsors orderby s.Name, s.numLevel descending
                             group s by s.Level into grouped
                             select new HeaderGroup(grouped)
                             {
