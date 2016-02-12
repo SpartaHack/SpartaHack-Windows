@@ -31,16 +31,16 @@ namespace SpartaHack
 
         bool isMentor = true;
         bool onMentor = false;
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             try
             { 
             MainPage.title.Value = "HELP DESK";
-        
-            getCategories();
+              await load();
+                getCategories();
             getTickets();
-                load();
+                
             }
             catch (Exception ex)
             {
@@ -49,7 +49,7 @@ namespace SpartaHack
         }
 
 
-        public async void load()
+        public async Task<bool> load()
         {
             try
             {
@@ -71,6 +71,7 @@ namespace SpartaHack
                 //grdMentor.Visibility = Visibility.Collapsed;
                 isMentor = false;
             }
+            return isMentor;
         }
 
 
@@ -110,14 +111,21 @@ namespace SpartaHack
         {
             try { 
             List<Ticket> tickets = new List<Ticket>();
-           
-            if (ParseUser.CurrentUser == null)
+                ObservableCollection<TicketPivot> pivotItems = new ObservableCollection<TicketPivot>();
+                if (ParseUser.CurrentUser == null)
             {
                     tickets.Add(new Ticket()
                     {
                         Description = "Looks like youre not logged in, login so you can see your support tickets",
                         Created = DateTime.Now
                 });
+                    pivotItems.Add(new TicketPivot()
+                    {
+                        Title = "Login First",
+                        Tickets = new ObservableCollection<Ticket>( tickets)
+                    });
+
+
                     
             }
             else
@@ -135,7 +143,7 @@ namespace SpartaHack
                     tickets = await parseTickets(query);
                 
             }
-                ObservableCollection<TicketPivot> pivotItems = new ObservableCollection<TicketPivot>();
+               
                 ObservableCollection<Ticket> subset;
                 string[] categories = new string[] { "Accepted", "Open", "Expired" };
 

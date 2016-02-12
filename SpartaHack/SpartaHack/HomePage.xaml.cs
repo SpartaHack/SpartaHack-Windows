@@ -29,17 +29,35 @@ namespace SpartaHack
                 
                     List<Announcement> announcements = new List<Announcement>();
                     List<ParseObject> _announcements = new List<ParseObject>( await ParseObject.GetQuery("Announcements").FindAsync());
-              
+                    Announcement a;
                     foreach (ParseObject obj in _announcements)
                     {
-                        announcements.Add(new Announcement
-                        {
-                            Title = obj["Title"].ToString(),
-                            pinned = (bool)obj["Pinned"],
-                            Created = obj.CreatedAt.Value.ToLocalTime(),
-                            Description = obj["Description"].ToString()
-                        });
+                    
+
+                      a =new Announcement();
+
+                    try {
+                        a.Title = obj["Title"].ToString();
                     }
+                    catch { }
+                    try
+                    {
+                        a.pinned = (bool)obj["Pinned"];
+                    }
+                    catch { }
+                    try
+                    {
+                        a.Created = obj.CreatedAt.Value.ToLocalTime();
+                    }
+                    catch { }
+                    try
+                    {
+                        a.Description = obj["Description"].ToString();
+                    }
+                    catch { }
+                    announcements.Add(a);
+
+                }
                 Data.Source = from note in announcements orderby note.Created descending orderby note.pinned descending
                               group note by note.pinned into grouped select new HeaderGroup(grouped)
                               {

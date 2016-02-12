@@ -13,7 +13,7 @@
         </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid Background="{StaticResource TargetBackground}" Margin="0,48,0,0">
+    <Grid  Margin="0,48,0,0">
         <StackPanel HorizontalAlignment="Center" x:Name="grdTicket" Margin="10" VerticalAlignment="Top">
             <TextBlock Text="Title" FontSize="12" Foreground="{StaticResource TargetForeground}"/>
             <TextBlock FontSize="20" Text="{Binding Title}" Foreground="White"  Margin="10"/>

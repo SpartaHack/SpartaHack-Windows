@@ -78,7 +78,6 @@
       <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
       <RootProperty Name="BorderBrush" />
@@ -86,6 +85,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Height" />
       <RootProperty Name="RequestedTheme" />
       <RootProperty Name="RowDefinitions" />
@@ -237,9 +237,9 @@
     <RootType FullName="SpartaHack.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="ZoomMode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />
@@ -247,8 +247,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Source" />
       <RootProperty Name="MaxWidth" />
-      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="MaxHeight" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
       <RootProperty Name="HorizontalAlignment" />
@@ -272,6 +273,10 @@
     <RootType FullName="SpartaHack.LoginPage" />
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="ImageSource" />
+      <RootProperty Name="Stretch" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
       <RootProperty Name="States" />

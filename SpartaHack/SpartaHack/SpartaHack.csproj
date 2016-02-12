@@ -101,6 +101,7 @@
     <Content Include="Assets\logo.png" />
     <Content Include="Assets\mlhBackground.png" />
     <Content Include="Assets\Moondance.otf" />
+    <Content Include="Assets\SpartaHackII-VisualComps-04.png" />
     <Content Include="PDFs\ios-map.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

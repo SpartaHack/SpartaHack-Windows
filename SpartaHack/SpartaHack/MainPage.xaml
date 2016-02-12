@@ -15,7 +15,10 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid Loaded="Grid_Loaded">
+    <Grid Loaded="Grid_Loaded" >
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/SpartaHackII-VisualComps-04.png" Stretch="UniformToFill"/>
+        </Grid.Background>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -52,7 +55,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Grid Background="{StaticResource TargetBackground}" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
+        <Grid  Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
 
             <Button x:Name="HambButton" BorderBrush="#26494D" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="#162934" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    BorderThickness=".75" Width="48" Height="48"  Click="HambButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -88,7 +91,7 @@
                             </StackPanel>
                             <RadioButton x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnScheduleChecked"/>
                             <RadioButton x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked" IsChecked="True"/>
-                            <RadioButton x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapsChecked"/>
+                            <RadioButton x:Name="rdMap" Tag="&#xE707;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapsChecked"/>
                             <RadioButton x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHelpChecked"/>
                             <RadioButton x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorsChecked"/>
                             <RadioButton x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnAwardsChecked"/>

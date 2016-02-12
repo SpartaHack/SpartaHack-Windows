@@ -16,24 +16,29 @@
 
     </Page.Resources>
     
-    <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0"  >
+    <Grid   Margin="0,48,0,0"  >
 
 
         <FlipView x:ConnectionId='2' x:Name="flpView" ItemsSource="{Binding Source={StaticResource Pdfs}}" 
                   Margin="10,10,10,40" IsSynchronizedWithCurrentItem="False" 
-                  Background="{StaticResource TargetBackground}"
+                  Background="Transparent"
                                                             
                   >
             <FlipView.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding}" Margin="5" MaxWidth="800" HorizontalAlignment="Center"/>
-                </DataTemplate>
+                    <ScrollViewer ZoomMode="Enabled" >
+                       
+                            <Image Source="{Binding}" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Stretch" MaxHeight="600" />
+                         
+                 </ScrollViewer>
+    </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
         <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="40" Height="40"  Margin="10">
             <Ellipse Width="40" Height="40" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:ConnectionId='3' Name="txtPage"  Foreground="{StaticResource TargetBackground}" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+        <TextBlock x:ConnectionId='4' Name="txtPage"  Foreground="{StaticResource TargetBackground}" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" />
         </Grid>
+        <ProgressRing x:ConnectionId='3' Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" x:Name="pgrRing"/>
 
 
     </Grid>

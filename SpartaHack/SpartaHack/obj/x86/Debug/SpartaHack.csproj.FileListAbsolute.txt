@@ -529,3 +529,5 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Styles\Shared.xbf
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Styles\Shared.xaml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Styles\Shared.xbf
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Debug\Core\Assets\SpartaHackII-VisualComps-04.png
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x86\Debug\Core\Assets\SpartaHackII-VisualComps-04.png

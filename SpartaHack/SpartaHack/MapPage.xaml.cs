@@ -69,6 +69,7 @@ namespace SpartaHack
 
                 }
                 Pdfs.Source = images;
+                pgrRing.IsActive = false;
         }
             catch { }
         }
