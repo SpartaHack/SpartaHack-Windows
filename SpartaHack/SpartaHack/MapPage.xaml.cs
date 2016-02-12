@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-
+using System.Net.Http;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -41,8 +41,18 @@ namespace SpartaHack
         {
             try
             {
-                StorageFile file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(@"PDFs\ios-map.pdf");
-                PdfDocument pdf = await PdfDocument.LoadFromFileAsync(file);
+
+                HttpClient client = new HttpClient();
+
+                Stream s = await client.GetStreamAsync("http://www.spartahack.com/map.pdf");
+            MemoryStream ms = new MemoryStream();
+            await s.CopyToAsync(ms);
+            ms.Position = 0;
+
+                // StorageFile file = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFileAsync(@"PDFs\ios-map.pdf");
+                // PdfDocument pdf = await PdfDocument.LoadFromFileAsync(file);
+                PdfDocument pdf = await PdfDocument.LoadFromStreamAsync(ms.AsRandomAccessStream());
+               
                 List<BitmapImage> images = new List<BitmapImage>();
                 pageCount = pdf.PageCount;
                 for (uint pageNum = 0; pageNum < pdf.PageCount; pageNum++)
@@ -59,7 +69,7 @@ namespace SpartaHack
 
                 }
                 Pdfs.Source = images;
-            }
+        }
             catch { }
         }
 

@@ -139,7 +139,7 @@ namespace SpartaHack
             }
         }
         public double Size { get {
-                return 100*numLevel; } }
+                return 20*numLevel; } }
     }
     
 

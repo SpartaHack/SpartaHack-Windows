@@ -39,26 +39,20 @@
                     </local:PullToRefresh>
                 </DataTemplate>
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
-            <GridView x:ConnectionId='4'  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
+            <GridView x:ConnectionId='4' IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
                 <GridView.GroupStyle>
                     <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
                 </GridView.GroupStyle>
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <!--<StackPanel Margin="20" >-->
-                            <Image  Width="{Binding Size}"  Source="{Binding Logo}" VerticalAlignment="Top" Margin="20"/>
+                            <Image  Height="{Binding Size}"  Source="{Binding Logo}" VerticalAlignment="Top" Margin="20"/>
                      
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
         </ptr:PullToRefreshBox>
-        <!--<Button x:Name="btnRefresh" Click="btnRefresh_Click" FontFamily="Segoe MDL2 Assets"  Margin="20"  Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <Grid>
-                <Ellipse Width="48" Height="48" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource TargetBackground}" Text="&#xE72C;" FontFamily="Segoe MDL2 Assets"/>
-            </Grid>
 
-        </Button>-->
 
         <ProgressRing x:ConnectionId='3' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 

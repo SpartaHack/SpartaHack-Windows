@@ -16,6 +16,8 @@
 
                     <!--<Ellipse Stroke="{StaticResource TargetForeground}" Width="150" Height="150"/>-->
                     <TextBlock TextAlignment="Center" FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="300" VerticalAlignment="Top"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
+                  
+
                     <TextBlock Margin="5" Width="300" VerticalAlignment="Bottom"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
                 </StackPanel>
             </DataTemplate>
