@@ -9,18 +9,16 @@
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+            
             <CollectionViewSource x:ConnectionId='1' x:Name="Data" IsSourceGrouped="True"/>
-            <DataTemplate x:ConnectionId='2' x:Name="lsvHeader">
-                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
-            </DataTemplate>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
         
     </Page.Resources>
      <Grid Background="{StaticResource TargetBackground}" Margin="0,48,0,0" >
-        <ptr:PullToRefreshBox x:ConnectionId='3' RefreshThreshold="160"                                                  >
+        <ptr:PullToRefreshBox x:ConnectionId='2' RefreshThreshold="160"                                                  >
             
             <ptr:PullToRefreshBox.TopIndicatorTemplate>
                 <DataTemplate>
@@ -42,7 +40,7 @@
                 </DataTemplate>
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
             
-            <ListView x:ConnectionId='5'                                         IsItemClickEnabled="True" IsSynchronizedWithCurrentItem="False" Margin="5" SelectionMode="None"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
+            <ListView x:ConnectionId='4'                                         IsItemClickEnabled="True" IsSynchronizedWithCurrentItem="False" Margin="5" SelectionMode="None"  x:Name="listAnnouncements" ItemsSource="{Binding Source={StaticResource Data}}" HorizontalAlignment="Stretch" >
                 <ListView.GroupStyle>
                     <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
                 </ListView.GroupStyle>
@@ -87,7 +85,7 @@
            
         </Button>-->
        
-         <ProgressRing x:ConnectionId='4' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+         <ProgressRing x:ConnectionId='3' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 
     

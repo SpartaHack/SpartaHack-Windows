@@ -23,6 +23,7 @@ namespace SpartaHack
     public sealed partial class MainPage : Page
     {
         public static Title title;
+        public static Title loggedIn;
         DateTime d;
         public static MainPage root;
         public static Frame rootFrame;
@@ -31,18 +32,20 @@ namespace SpartaHack
             this.InitializeComponent();
             this.MySplitView.Content = frame;
             title = new Title();
+            loggedIn = new Title();
             DataContext = title;
+
+            rdLogin.DataContext = loggedIn;
+
+            loggedIn.Value = Parse.ParseUser.CurrentUser == null ? "Login" : "Profile";
+
+
             DispatcherTimer dt = new DispatcherTimer();
             dt.Interval = TimeSpan.FromSeconds(1);
             d = DateTime.Parse("2/27/2016 8:00 AM");
             dt.Tick += Dt_Tick;
             txtCountDown.Loaded += (s, e) => { dt.Start(); };
-            ApplicationDataContainer settings = ApplicationData.Current.LocalSettings;
-            try
-            {
-                DebuggingHelper.ShowError(settings.Values["Task"].ToString());
-            }
-            catch { }
+            
 
             MySplitView.PaneClosed += (s, e) => { bgPane.Width = 48; };
             root = this;
@@ -51,7 +54,7 @@ namespace SpartaHack
 
         private void Dt_Tick(object sender, object e)
         {
-            TimeSpan dt = d.Subtract(DateTime.Now);
+            TimeSpan dt = d.ToUniversalTime().Subtract(DateTime.Now.ToUniversalTime());
             if (dt.TotalSeconds <= 0)
                 txtCountDown.Text = "FINISHED";
             else

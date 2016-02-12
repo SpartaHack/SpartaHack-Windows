@@ -9,26 +9,24 @@
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+            
             <CollectionViewSource x:Name="Events" IsSourceGrouped="True"/>
             <DataTemplate x:Name="tmpEvent">
-                <StackPanel Margin="5">
+                <StackPanel Margin="10" BorderBrush="{StaticResource OffForeground}" BorderThickness="0,0,0,.5">
                     <Grid HorizontalAlignment="Stretch">
-                        
-                    <TextBlock  FontSize="22" VerticalAlignment="Center"  Text="{Binding Title}" Foreground="{StaticResource TargetForeground}" />
+
+                        <TextBlock Typography.Capitals="AllSmallCaps"  FontSize="22" VerticalAlignment="Center"  Text="{Binding Title}" Foreground="{StaticResource TargetForeground}" />
             
                         <TextBlock  FontSize="12" VerticalAlignment="Bottom" Margin="0,5,0,0" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White"  FontWeight="Bold" HorizontalAlignment="Right"/>
                     </Grid>
-                    <TextBlock FontSize="12" Margin="5,5,0,0" Text="{Binding Location}" Foreground="WhiteSmoke"/>
-                    <TextBlock  FontSize="12" Margin="5,5,0,0" TextWrapping="WrapWholeWords" Text="{Binding Description}" Foreground="White"/>
+                    <TextBlock FontSize="12" Margin="10,5" Text="{Binding Location}" Foreground="WhiteSmoke"/>
+                    <TextBlock  FontSize="12" Margin="10,5" TextWrapping="WrapWholeWords" Text="{Binding Description}" Foreground="White"/>
                 
                 </StackPanel>
             </DataTemplate>
-            <DataTemplate x:Name="lsvHeader">
-                <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
-            </DataTemplate>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
     </Page.Resources>

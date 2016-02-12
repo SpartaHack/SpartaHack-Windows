@@ -10,17 +10,6 @@
     <Page.Resources>
         <ResourceDictionary>
 
-
-
-            <SolidColorBrush x:Key="OffForeground" Color="#162934"/>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-            
-            
-            
-            
-
             <DataTemplate x:ConnectionId='1' x:Name="ticketHeaderView">
                 
                 <StackPanel Margin="10"  MinWidth="400" >
@@ -57,8 +46,14 @@
             <CollectionViewSource x:ConnectionId='3' x:Name="Tickets" />
             <CollectionViewSource x:ConnectionId='4' x:Name="Categories"/>
             <CollectionViewSource x:ConnectionId='5' x:Name="SubCategories"/>
-           
-            
+
+
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
         </ResourceDictionary>
         
     </Page.Resources>

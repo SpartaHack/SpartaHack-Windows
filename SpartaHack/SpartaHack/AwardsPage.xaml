@@ -9,9 +9,7 @@
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+           
             <CollectionViewSource x:Name="Awards" IsSourceGrouped="True"/>
             <DataTemplate x:Name="grdAward">
                 <StackPanel HorizontalAlignment="Stretch" Height="100" Width="350" Margin="10">
@@ -28,6 +26,9 @@
                     <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Company}" FontFamily="{StaticResource TargetFont}"/>
                 </StackPanel>
             </DataTemplate>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
     </Page.Resources>

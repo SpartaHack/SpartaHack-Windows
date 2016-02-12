@@ -9,19 +9,16 @@
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
             <CollectionViewSource x:ConnectionId='1' x:Name="Sponsors" IsSourceGrouped="True"/>
-            <DataTemplate x:ConnectionId='2' x:Name="lsvHeader">
-                <TextBlock Margin="5" FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
-            </DataTemplate>
         </ResourceDictionary>
 
     </Page.Resources>
     <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0" >
       
-        <ptr:PullToRefreshBox x:ConnectionId='3'  RefreshThreshold="160"                                                  MinHeight="300"  >
+        <ptr:PullToRefreshBox x:ConnectionId='2'  RefreshThreshold="160"                                                  MinHeight="300"  >
 
             <ptr:PullToRefreshBox.TopIndicatorTemplate>
                 <DataTemplate>
@@ -42,7 +39,7 @@
                     </local:PullToRefresh>
                 </DataTemplate>
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
-            <GridView x:ConnectionId='5'  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
+            <GridView x:ConnectionId='4'  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
                 <GridView.GroupStyle>
                     <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
                 </GridView.GroupStyle>
@@ -63,7 +60,7 @@
 
         </Button>-->
 
-        <ProgressRing x:ConnectionId='4' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ProgressRing x:ConnectionId='3' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
   

@@ -8,12 +8,10 @@
     mc:Ignorable="d" RequestedTheme="Dark">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-
+           
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/SplitViewStyles.xaml"/>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
@@ -89,7 +87,7 @@
                                 <TextBlock  VerticalAlignment="Center" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="SpartaHack 2016"/>
                             </StackPanel>
                             <RadioButton x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnScheduleChecked"/>
-                            <RadioButton x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked"/>
+                            <RadioButton x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnNotificationsChecked" IsChecked="True"/>
                             <RadioButton x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapsChecked"/>
                             <RadioButton x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHelpChecked"/>
                             <RadioButton x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorsChecked"/>
@@ -98,7 +96,7 @@
 
                         </StackPanel>
                     </ScrollViewer>
-                    <RadioButton x:Name="rdLogin" Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnLoginChecked"/>
+                    <RadioButton x:Name="rdLogin" Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="{Binding Value}"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnLoginChecked"/>
 
 
                 </Grid>

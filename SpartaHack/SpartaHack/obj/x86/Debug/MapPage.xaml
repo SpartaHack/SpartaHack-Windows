@@ -8,17 +8,17 @@
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-          <CollectionViewSource x:ConnectionId='1' x:Name="Pdfs"/>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <CollectionViewSource x:ConnectionId='1' x:Name="Pdfs"/>
         </ResourceDictionary>
 
     </Page.Resources>
     
     <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0"  >
-       
-        
+
+
         <FlipView x:ConnectionId='2' x:Name="flpView" ItemsSource="{Binding Source={StaticResource Pdfs}}" 
                   Margin="10,10,10,40" IsSynchronizedWithCurrentItem="False" 
                   Background="{StaticResource TargetBackground}"
@@ -30,9 +30,12 @@
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
-        <TextBlock x:ConnectionId='3' Name="txtPage" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Margin="10" />
-        
-        
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="40" Height="40"  Margin="10">
+            <Ellipse Width="40" Height="40" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:ConnectionId='3' Name="txtPage"  Foreground="{StaticResource TargetBackground}" TextAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Center" />
+        </Grid>
+
+
     </Grid>
 </Page>
 

@@ -69,6 +69,7 @@ namespace SpartaHack
                 txtHeader.Text = "SPARTAHACK 2016";
                 imgBC.Source = null;
             MainPage.title.Value = "LOGIN";
+                MainPage.loggedIn.Value = "Login";
             grdLogin.Visibility = Visibility.Visible;
             grdLoggedIn.Visibility = Visibility.Collapsed;
             }
@@ -79,7 +80,7 @@ namespace SpartaHack
 
         }
 
-        async void setupProfileScreen()
+        void setupProfileScreen()
         {
             try
             {
@@ -87,13 +88,12 @@ namespace SpartaHack
                 grdLoggedIn.Visibility = Visibility.Visible;
                 txtEmail.Text = "";
                 txtPassword.Password = "";
+                MainPage.title.Value = "Profile";
+                MainPage.loggedIn.Value = "Profile";
                 try {
-                    ParseQuery<ParseObject> query = ParseObject.GetQuery("Application").WhereEqualTo("user", ParseUser.CurrentUser);
-                    ParseObject applicant = await query.FirstAsync();
-
-                    //grdFlyout.DataContext = applicant;
                     
-                    txtHeader.Text = "WELCOME " + applicant["firstName"];
+
+                    txtHeader.Text = "WELCOME " + ParseUser.CurrentUser["firstName"].ToString();
 
                 }
                 catch
@@ -108,8 +108,6 @@ namespace SpartaHack
                     writer.Options.Width = 400;
                     writer.Options.Margin = 10;
                     var result = writer.Write(ParseUser.CurrentUser.ObjectId);
-
-
                     imgBC.Source = result.ToBitmap() as Windows.UI.Xaml.Media.Imaging.WriteableBitmap;
 
                 }
@@ -120,58 +118,7 @@ namespace SpartaHack
                 DebuggingHelper.ShowError("Error in LoginPage, setupProfileScreen(): " + ex.Message);
             }
         }
-        //async void deleteQRCodeFromFile()
-        //{
-        //    try
-        //    {
-        //        var file = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
-        //        await file.DeleteAsync();
-             
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        DebugingHelper.ShowError("Error in LoginPage, deleteQRCodeFromFile(): " + ex.Message);
-        //    }
-        //}
-        //async void getQRCodeFromFile()
-        //{
-        //    try { 
-        //    var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync("QR.png");
-
-        //    var buffer = await Windows.Storage.FileIO.ReadBufferAsync(fileio);
-        //    Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
-
-        //    await bi.SetSourceAsync(buffer.AsStream().AsRandomAccessStream());
-        //    imgQR.Source = bi;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        DebugingHelper.ShowError("Error in LoginPage, getQRCodeFromFile(): " + ex.Message);
-        //    }
-        //}
-        //async void getQRCode()
-        //{
-        //    try
-        //    {
-        //        ParseFile file = ParseUser.CurrentUser["qrCode"] as ParseFile;
-        //    Windows.UI.Xaml.Media.Imaging.BitmapImage bi = new Windows.UI.Xaml.Media.Imaging.BitmapImage();
-        //    HttpClient client = new HttpClient();
-        //        byte[] data=await client.GetByteArrayAsync(file.Url);
-        //        // bi.UriSource = file.Url;
-        //     await bi.SetSourceAsync(new MemoryStream(data).AsRandomAccessStream());
-        //    imgQR.Source = bi;
-
-        //       var fileio = await Windows.Storage.ApplicationData.Current.LocalFolder.CreateFileAsync("QR.png", Windows.Storage.CreationCollisionOption.ReplaceExisting);
-
-
-
-        //        await Windows.Storage.FileIO.WriteBytesAsync(fileio, data);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        DebugingHelper.ShowError("Error in LoginPage, getQRCode(): " + ex.Message);
-        //    }
-        //}
+    
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             login();
