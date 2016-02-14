@@ -116,6 +116,7 @@
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\FacebookTwitterIGProfilePic.png" "Assets\FacebookTwitterIGProfilePic.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\logo.png" "Assets\logo.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\mlhBackground.png" "Assets\mlhBackground.png"
+"C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\SpartaHackII-VisualComps-04.png" "Assets\SpartaHackII-VisualComps-04.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\StoreLogo.scale-100.png" "Assets\StoreLogo.scale-100.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\LockScreenLogo.scale-200.png" "Assets\LockScreenLogo.scale-200.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\Assets\SplashScreen.scale-200.png" "Assets\SplashScreen.scale-200.png"

@@ -135,7 +135,7 @@
     <Compile Include="TicketPage.xaml.cs">
       <DependentUpon>TicketPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Toast\ParseService.cs" />
+    <Compile Include="ParseHelper\ParseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Styles\PullToRefresh.xaml.cs">
       <DependentUpon>PullToRefresh.xaml</DependentUpon>

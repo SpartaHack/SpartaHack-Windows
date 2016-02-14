@@ -47,10 +47,10 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="MinWidth" />
-      <RootProperty Name="MaxWidth" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="MaxWidth" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
@@ -65,8 +65,8 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="MaxWidth" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="MaxWidth" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="TextTrimming" />
       <RootProperty Name="Name" />
@@ -80,9 +80,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Background" />
@@ -161,6 +161,10 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="SpartaHack.AwardsPage" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Typography">
+      <RootMethod Name="GetCapitals" />
+      <RootMethod Name="SetCapitals" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
       <RootProperty Name="Name" />
       <RootProperty Name="ItemsSource" />
@@ -230,10 +234,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
     <RootType FullName="SpartaHack.HelpDesk" />
-    <RootType FullName="Windows.UI.Xaml.Documents.Typography">
-      <RootMethod Name="GetCapitals" />
-      <RootMethod Name="SetCapitals" />
-    </RootType>
     <RootType FullName="SpartaHack.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Margin" />

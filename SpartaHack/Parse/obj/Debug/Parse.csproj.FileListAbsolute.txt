@@ -1,6 +1,5 @@
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\bin\Debug\Parse.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\bin\Debug\Parse.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\bin\Debug\Parse.pdb
-C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\obj\Debug\Parse.csprojResolveAssemblyReference.cache
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\obj\Debug\Parse.dll
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\Parse\obj\Debug\Parse.pdb

@@ -42,7 +42,7 @@ namespace SpartaHack
 
             DispatcherTimer dt = new DispatcherTimer();
             dt.Interval = TimeSpan.FromSeconds(1);
-           //d= DateTime.Parse("Sun, 27 Feb 2016 13:00:00 GMT");
+           
             d = DateTime.Parse("2/27/2016 13:00:00 GMT");
             dt.Tick += Dt_Tick;
             txtCountDown.Loaded += (s, e) => { dt.Start(); };

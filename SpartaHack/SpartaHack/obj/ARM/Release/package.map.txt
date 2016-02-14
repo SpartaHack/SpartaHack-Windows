@@ -6,6 +6,7 @@
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Assets\logo.png" "Assets\logo.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Assets\mlhBackground.png" "Assets\mlhBackground.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Assets\Moondance.otf" "Assets\Moondance.otf"
+"C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Assets\SpartaHackII-VisualComps-04.png" "Assets\SpartaHackII-VisualComps-04.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Assets\SplashScreen.scale-200.png" "Assets\SplashScreen.scale-200.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Assets\Square150x150Logo.scale-200.png" "Assets\Square150x150Logo.scale-200.png"
 "C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\ARM\Release\ilc\Assets\Square44x44Logo.scale-200.png" "Assets\Square44x44Logo.scale-200.png"

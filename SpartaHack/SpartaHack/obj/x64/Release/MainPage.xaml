@@ -8,16 +8,17 @@
     mc:Ignorable="d" RequestedTheme="Dark">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
-
+           
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/SplitViewStyles.xaml"/>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid x:ConnectionId='1'                     >
+    <Grid x:ConnectionId='1'                      >
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/SpartaHackII-VisualComps-04.png" Stretch="UniformToFill"/>
+        </Grid.Background>
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -54,7 +55,7 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        <Grid Background="{StaticResource TargetBackground}" Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
+        <Grid  Height="48" VerticalAlignment="Top" RequestedTheme="Dark">
 
             <Button x:ConnectionId='14' x:Name="HambButton" BorderBrush="#26494D" RequestedTheme="Dark" Foreground="{StaticResource TargetForeground}" Background="#162934" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    BorderThickness=".75" Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -89,8 +90,8 @@
                                 <TextBlock  VerticalAlignment="Center" FontFamily="{StaticResource TargetFont}" Foreground="{StaticResource TargetForeground}" Text="SpartaHack 2016"/>
                             </StackPanel>
                             <RadioButton x:ConnectionId='7' x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
-                            <RadioButton x:ConnectionId='8' x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                 />
-                            <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE909;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
+                            <RadioButton x:ConnectionId='8' x:Name="rdNotifications" Tag="&#xE90A;" Content="Notifications"  Style="{StaticResource SplitViewNavButtonStyle}"                                  IsChecked="True"/>
+                            <RadioButton x:ConnectionId='9' x:Name="rdMap" Tag="&#xE707;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
                             <RadioButton x:ConnectionId='10' x:Name="rdHelpDesk" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                        />
                             <RadioButton x:ConnectionId='11' x:Name="rdSponsors" Tag="&#xE716;" Content="Sponsors"  Style="{StaticResource SplitViewNavButtonStyle}"                            />
                             <RadioButton x:ConnectionId='12' x:Name="rdAwards" Tag="&#xE728;" Content="Awards"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
@@ -98,7 +99,7 @@
 
                         </StackPanel>
                     </ScrollViewer>
-                    <RadioButton x:ConnectionId='6' x:Name="rdLogin" Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Login"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
+                    <RadioButton x:ConnectionId='6' x:Name="rdLogin" Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="{Binding Value}"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
 
 
                 </Grid>

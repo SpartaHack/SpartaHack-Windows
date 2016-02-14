@@ -11,19 +11,7 @@
         <ResourceDictionary>
             
             <CollectionViewSource x:ConnectionId='1' x:Name="Events" IsSourceGrouped="True"/>
-            <DataTemplate x:ConnectionId='2' x:Name="tmpEvent">
-                <StackPanel Margin="10" BorderBrush="{StaticResource OffForeground}" BorderThickness="0,0,0,.5">
-                    <Grid HorizontalAlignment="Stretch">
-
-                        <TextBlock Typography.Capitals="AllSmallCaps"  FontSize="22" VerticalAlignment="Center"  Text="{Binding Title}" Foreground="{StaticResource TargetForeground}" />
             
-                        <TextBlock  FontSize="12" VerticalAlignment="Bottom" Margin="0,5,0,0" TextWrapping="WrapWholeWords" Text="{Binding Time}" Foreground="White"  FontWeight="Bold" HorizontalAlignment="Right"/>
-                    </Grid>
-                    <TextBlock FontSize="12" Margin="10,5" Text="{Binding Location}" Foreground="WhiteSmoke"/>
-                    <TextBlock  FontSize="12" Margin="10,5" TextWrapping="WrapWholeWords" Text="{Binding Description}" Foreground="White"/>
-                
-                </StackPanel>
-            </DataTemplate>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/Shared.xaml"/>
             </ResourceDictionary.MergedDictionaries>
@@ -31,7 +19,7 @@
 
     </Page.Resources>
     <Grid   Margin="0,48,0,0" >
-        <ptr:PullToRefreshBox x:ConnectionId='3' RefreshThreshold="160"                                                  >
+        <ptr:PullToRefreshBox x:ConnectionId='2' RefreshThreshold="160"                                                  >
 
             <ptr:PullToRefreshBox.TopIndicatorTemplate>
                 <DataTemplate>
@@ -53,7 +41,7 @@
                 </DataTemplate>
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
 
-            <ListView x:ConnectionId='5' x:Name="lsvSchedule"  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
+            <ListView x:ConnectionId='4' x:Name="lsvSchedule"  IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding Source={StaticResource Events}}" ItemTemplate="{StaticResource tmpEvent}">
                 <ListView.GroupStyle>
                     <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
                 </ListView.GroupStyle>
@@ -65,7 +53,7 @@
             </ListView>
         </ptr:PullToRefreshBox>
 
-        <ProgressRing x:ConnectionId='4' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ProgressRing x:ConnectionId='3' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 

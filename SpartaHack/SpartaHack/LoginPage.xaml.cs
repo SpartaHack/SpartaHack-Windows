@@ -172,10 +172,22 @@ namespace SpartaHack
 
         private async void tsPush_Toggled(object sender, RoutedEventArgs e)
         {
-            if (tsPush.IsOn)
-                await ParsePush.SubscribeAsync("");
-            else
-                await ParsePush.UnsubscribeAsync("");
+            try
+            {
+                if (tsPush.IsOn)
+                {
+                    ParseInstallation.CurrentInstallation["user"] = ParseUser.CurrentUser;
+                    //await ParsePush.SubscribeAsync("");
+                }
+                else
+                {
+                    ParseInstallation.CurrentInstallation["user"] = null;
+                    //await ParsePush.UnsubscribeAsync("");
+                }
+                await ParseInstallation.CurrentInstallation.SaveAsync();
+            }
+            catch { }
+                
         }
 
         private void tsPush_Loaded(object sender, RoutedEventArgs e)

@@ -1,1 +1,1 @@
-C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\AppPackages\SpartaHack_1.1.3.0_x86_Test\SpartaHack_1.1.3.0_x86.appx
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\AppPackages\SpartaHack_1.1.4.0_x86_Test\SpartaHack_1.1.4.0_x86.appx

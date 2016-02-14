@@ -9,16 +9,16 @@
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+           
             <CollectionViewSource x:ConnectionId='1' x:Name="Awards" IsSourceGrouped="True"/>
             <DataTemplate x:ConnectionId='2' x:Name="grdAward">
-                <StackPanel HorizontalAlignment="Stretch" Height="100" Width="280" Margin="10">
+                <StackPanel HorizontalAlignment="Stretch" Height="100" Width="350" Margin="10">
 
                     <!--<Ellipse Stroke="{StaticResource TargetForeground}" Width="150" Height="150"/>-->
-                    <TextBlock FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="260" VerticalAlignment="Top"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
-                    <TextBlock Margin="5" Width="260" VerticalAlignment="Bottom"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
+                    <TextBlock TextAlignment="Center" FontFamily="{StaticResource TargetFont}" TextWrapping="WrapWholeWords" HorizontalAlignment="Center"  Margin="5" Width="300" VerticalAlignment="Top"  FontSize="18" Text="{Binding Name}" Foreground="{StaticResource TargetForeground}"/>
+                  
+
+                    <TextBlock Margin="5" Width="300" VerticalAlignment="Bottom"   HorizontalAlignment="Center" TextWrapping="WrapWholeWords" FontSize="12" Text="{Binding Description}" Foreground="White"/>
                 </StackPanel>
             </DataTemplate>
             <DataTemplate x:ConnectionId='3' x:Name="lsvHeader">
@@ -28,10 +28,13 @@
                     <TextBlock FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Company}" FontFamily="{StaticResource TargetFont}"/>
                 </StackPanel>
             </DataTemplate>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
     </Page.Resources>
-    <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0"  >
+    <Grid   Margin="0,48,0,0"  >
         <ptr:PullToRefreshBox x:ConnectionId='4' RefreshThreshold="160"                                                  MinHeight="300" Margin="5"  >
 
             <ptr:PullToRefreshBox.TopIndicatorTemplate>

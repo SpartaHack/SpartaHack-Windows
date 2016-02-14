@@ -410,3 +410,8 @@ C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x64\Release\ZXing.pri.xml
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x64\Release\ilc\in\ZXing.winmd
 C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x64\Release\ilc\in\PDFs\ios-map.pdf
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x64\Release\Styles\Shared.xbf
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x64\Release\ilc\Assets\SpartaHackII-VisualComps-04.png
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x64\Release\Styles\Shared.xaml
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x64\Release\Styles\Shared.xbf
+C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\obj\x64\Release\ilc\in\Assets\SpartaHackII-VisualComps-04.png

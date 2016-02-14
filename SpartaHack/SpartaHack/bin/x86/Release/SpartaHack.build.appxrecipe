@@ -37,6 +37,9 @@
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\Assets\Moondance.otf">
       <PackagePath>Assets\Moondance.otf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\Assets\SpartaHackII-VisualComps-04.png">
+      <PackagePath>Assets\SpartaHackII-VisualComps-04.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Matt\Documents\GitHub\SpartaHack2016-Windows\SpartaHack\SpartaHack\bin\x86\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

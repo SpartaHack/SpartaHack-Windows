@@ -9,19 +9,16 @@
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
-            <SolidColorBrush x:Key="TargetBackground" Color="#FF030316"/>
-            <SolidColorBrush x:Key="TargetForeground" Color="#FF80FFDB"/>
-            <FontFamily x:Key="TargetFont">/Assets/Moondance.otf#Moondance</FontFamily>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Shared.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
             <CollectionViewSource x:ConnectionId='1' x:Name="Sponsors" IsSourceGrouped="True"/>
-            <DataTemplate x:ConnectionId='2' x:Name="lsvHeader">
-                <TextBlock Margin="5" FontSize="18" Foreground="{StaticResource TargetForeground}" Text="{Binding Header}" FontFamily="{StaticResource TargetFont}"/>
-            </DataTemplate>
         </ResourceDictionary>
 
     </Page.Resources>
-    <Grid  Background="{StaticResource TargetBackground}" Margin="0,48,0,0" >
+    <Grid   Margin="0,48,0,0" >
       
-        <ptr:PullToRefreshBox x:ConnectionId='3'  RefreshThreshold="160"                                                  MinHeight="300"  >
+        <ptr:PullToRefreshBox x:ConnectionId='2'  RefreshThreshold="160"                                                  MinHeight="300"  >
 
             <ptr:PullToRefreshBox.TopIndicatorTemplate>
                 <DataTemplate>
@@ -42,28 +39,22 @@
                     </local:PullToRefresh>
                 </DataTemplate>
             </ptr:PullToRefreshBox.TopIndicatorTemplate>
-            <GridView x:ConnectionId='5'  IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
+            <GridView x:ConnectionId='4' IsSynchronizedWithCurrentItem="False" x:Name="grdSponsors" ItemsSource="{Binding Source={StaticResource Sponsors}}"                                                 >
                 <GridView.GroupStyle>
                     <GroupStyle HeaderTemplate="{Binding Source={StaticResource lsvHeader}}"/>
                 </GridView.GroupStyle>
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <!--<StackPanel Margin="20" >-->
-                            <Image  Width="{Binding Size}"  Source="{Binding Logo}" VerticalAlignment="Top" Margin="20"/>
+                            <Image  Height="{Binding Size}"  Source="{Binding Logo}" VerticalAlignment="Top" Margin="20"/>
                      
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
         </ptr:PullToRefreshBox>
-        <!--<Button x:Name="btnRefresh" Click="btnRefresh_Click" FontFamily="Segoe MDL2 Assets"  Margin="20"  Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-            <Grid>
-                <Ellipse Width="48" Height="48" Fill="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource TargetBackground}" Text="&#xE72C;" FontFamily="Segoe MDL2 Assets"/>
-            </Grid>
 
-        </Button>-->
 
-        <ProgressRing x:ConnectionId='4' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ProgressRing x:ConnectionId='3' x:Name="pgrRing" IsActive="True" Foreground="{StaticResource TargetForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
   
