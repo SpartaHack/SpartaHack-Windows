@@ -134,7 +134,7 @@ namespace SpartaHack
         public string Time { get {
                 if (DateTime.Now.DayOfYear == Created.DayOfYear)
                     return Created.ToString("t");
-                else if (DateTime.Now - Created == TimeSpan.FromDays(1))
+                else if (DateTime.Now.DayOfYear - Created.DayOfYear== 1)
                     return "Yesterday";
                 else
                     return (DateTime.Now - Created).Days + " Days Ago"; } }

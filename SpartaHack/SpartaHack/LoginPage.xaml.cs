@@ -190,13 +190,16 @@ namespace SpartaHack
                 
         }
 
-        private void tsPush_Loaded(object sender, RoutedEventArgs e)
+        private async void tsPush_Loaded(object sender, RoutedEventArgs e)
         {
 
             try
             {
-                if (ParseInstallation.CurrentInstallation.Channels != null)
-                    tsPush.IsOn = ParseInstallation.CurrentInstallation.Channels.Contains("");
+                
+                    await ParseInstallation.CurrentInstallation.FetchAsync();
+                    tsPush.IsOn = ParseInstallation.CurrentInstallation["user"] != null;
+                   
+                
             }
             catch { }
         }
