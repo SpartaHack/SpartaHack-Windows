@@ -1,0 +1,2 @@
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\SpartaHack.BLL.csproj;x86
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\SpartaHack.csproj;x86

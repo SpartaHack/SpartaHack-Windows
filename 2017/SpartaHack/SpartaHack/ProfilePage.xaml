@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="SpartaHack.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpartaHack"
+    xmlns:mvvm="using:SpartaHack.MVVM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <mvvm:BooleanToVisibilityConverter x:Key="Boolean"/>
+            <mvvm:NegateBooleanToVisibilityConverter x:Key="Negate"/>
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Style.xaml"/>
+                <ResourceDictionary Source="Theme/SplitViewStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Margin="0,48,0,0" >
+
+        <Grid Visibility="{x:Bind LoggedIn.Value, Mode=OneWay, Converter={StaticResource Negate}}" >
+            <Grid.Transitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition FromVerticalOffset="10000"></EntranceThemeTransition>
+
+                </TransitionCollection>
+            </Grid.Transitions>
+
+            <StackPanel  Width="400"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Width="200" Height="200" Source="Assets/logo.png"/>
+
+                <StackPanel DataContext="{Binding User}">
+                    <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Register" Margin="5"/>
+                    <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
+                    <TextBox PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <PasswordBox PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
+                    <PasswordBox PlaceholderText="Password Confirmation" Password="{Binding password_confirmation, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
+
+
+
+
+                    <Button x:Name="btnCreate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Register" Margin="5" Click="btnCreate_Click"/>
+
+                </StackPanel>
+
+                <StackPanel DataContext="{Binding User}" >
+                   
+                    <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Login" Margin="5"/>
+                    <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
+                    <TextBox PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+
+                  
+                  
+                    <PasswordBox PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
+
+
+
+
+                    <Button x:Name="btnLogin" Style="{ThemeResource ButtonSyle}" Width="390" Content="Login" Margin="5" Click="btnLogin_Click" />
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid Visibility="{x:Bind LoggedIn.Value, Mode=OneWay, Converter={StaticResource Boolean}}">
+
+            <StackPanel MaxWidth="800" Height="400" HorizontalAlignment="Center" MinWidth="400">
+                <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Email: "/>
+                <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="First Name: "/>
+                <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Last Name: "/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

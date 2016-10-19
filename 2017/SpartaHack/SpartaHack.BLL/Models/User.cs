@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SpartaHack.BLL.Models
+{
+    public class User
+    {
+        public int id { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public string password_confirmation { get; set; }
+        public string auth_token { get; set; }
+        public List<string> roles { get; set; }
+    }
+}

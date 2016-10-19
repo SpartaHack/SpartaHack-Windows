@@ -1,0 +1,17 @@
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.dll
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.pdb
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.pri
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\SpartaHack.BLL.csprojResolveAssemblyReference.cache
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\SpartaHack.BLL.dll
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\SpartaHack.BLL.pdb
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\priconfig.xml
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\layout.resfiles
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\layout.resfiles.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\resources.resfiles
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\pri.resfiles
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\qualifiers.txt
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
