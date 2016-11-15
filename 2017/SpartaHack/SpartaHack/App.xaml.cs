@@ -37,7 +37,7 @@ namespace SpartaHack
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);*/
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-           
+            SpartaHack.BLL.Models.SpartaHackDataStore.InitializeMigration();//Migrate the Database
 
         }
 

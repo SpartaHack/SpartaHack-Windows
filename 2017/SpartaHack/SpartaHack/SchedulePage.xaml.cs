@@ -43,7 +43,12 @@ namespace SpartaHack
 
         public async void init()
         {
-             Schedule.Value= await _scheduleCaller.getSchedule();
+            Schedule.Value = _scheduleCaller.getScheduleLocal();
+          var data= await _scheduleCaller.getSchedule();
+            if(data!=null)
+            {
+                Schedule.Value = data;
+            }
             
         }
     }

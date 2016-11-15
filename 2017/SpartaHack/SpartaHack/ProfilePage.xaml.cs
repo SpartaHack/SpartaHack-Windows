@@ -27,9 +27,28 @@ namespace SpartaHack
     {
         public ObservableValue<bool> LoggedIn;
 
-        private SpartaHackUser _user;
-
-        public User User { get; set; }
+        private SpartaHackUser userRepo;
+        private User user;
+        public User User
+        {
+            get
+            {
+                return user;
+            }
+            set
+            {
+                user = value;
+                if (user == null)
+                {
+                    user = new User();
+                    LoggedIn.Value = false;
+                }
+                else if( user.auth_token!=null)
+                {
+                    LoggedIn.Value = true;
+                }
+            }
+        }
 
         public ProfilePage()
         {
@@ -43,19 +62,22 @@ namespace SpartaHack
             LoggedIn.Value = false;
             MainPage.LoggedIn = LoggedIn;
             MainPage.Title.Value = "Login";
-            _user = new SpartaHackUser();
-            User = new User();
+            userRepo = new SpartaHackUser();
+
+
+            User = SpartaHackUser.getCurrentUser();
+            
             DataContext = this;
         }
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            await _user.getUser(User);
+            User=await userRepo.CreateSession(User);
         }
 
         private async void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            await _user.createUser(User);
+           User= await userRepo.createUser(User);
         }
     }
 }

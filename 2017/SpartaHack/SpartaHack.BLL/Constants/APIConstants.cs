@@ -17,5 +17,9 @@ namespace SpartaHack.BLL.Constants
         public static string FAQ = RootURL + "/faq/";
         public static string Sessions = RootURL + "/sessions/";
         public static string Users = RootURL + "/users/";
+
+
+
+        public static string SlackURL = "https://hooks.slack.com/services/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";
     }
 }

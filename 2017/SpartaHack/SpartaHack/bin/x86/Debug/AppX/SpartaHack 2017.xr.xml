@@ -6,8 +6,10 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="User" />
-    <RootPropertyPathName Name="password" />
+    <RootPropertyPathName Name="last_name" />
+    <RootPropertyPathName Name="first_name" />
     <RootPropertyPathName Name="email" />
+    <RootPropertyPathName Name="password" />
     <RootPropertyPathName Name="password_confirmation" />
     <RootPropertyPathName Name="Schedule" />
     <RootPropertyPathName Name="Color" />
@@ -49,10 +51,10 @@
       <RootMethod Name="SetRowSpan" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
@@ -116,8 +118,8 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="MinWidth" />
-      <RootProperty Name="Width" />
       <RootProperty Name="DataContext" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
@@ -151,11 +153,18 @@
       <RootProperty Name="OpticalMarginAlignment" />
     </RootType>
     <RootType FullName="SpartaHack.MainPage" />
+    <RootType FullName="SpartaHack.MentorPage" />
     <RootType FullName="SpartaHack.MVVM.BooleanToVisibilityConverter" />
     <RootType FullName="SpartaHack.MVVM.NegateBooleanToVisibilityConverter" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
       <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition">
@@ -172,17 +181,14 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Password" />
       <RootProperty Name="Style" />
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="SpartaHack.ProfilePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
@@ -249,9 +255,6 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Visibility" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Stroke" />
       <RootProperty Name="StrokeDashOffset" />
