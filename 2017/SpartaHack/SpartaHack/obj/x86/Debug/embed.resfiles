@@ -1,9 +1,11 @@
 App.xbf
 MainPage.xbf
-MentorPage.xbf
+MapPage.xbf
 ProfilePage.xbf
 SchedulePage.xbf
+SponsorPage.xbf
 Theme\SplitViewStyles.xbf
 Theme\Style.xbf
 Theme\Theme.xbf
 Theme\Views.xbf
+TicketPage.xbf

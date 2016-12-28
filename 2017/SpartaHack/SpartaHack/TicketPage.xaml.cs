@@ -13,6 +13,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using SpartaHack.BLL.Models;
+using SpartaHack.BLL.APICalls;
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -20,11 +23,29 @@ namespace SpartaHack
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MentorPage : Page
+    public sealed partial class TicketPage : Page
     {
-        public MentorPage()
+       
+        public Ticket ticket { get; set; }
+        private SpartaHackMentor shMentorRepo;
+       
+        public TicketPage()
         {
             this.InitializeComponent();
+            MainPage.Title.Value = "Help Desk";
+            shMentorRepo = new SpartaHackMentor();
+            ticket = new Ticket();
+
+            User User = SpartaHackUser.getCurrentUser();
+            ticket.username = User.first_name + " " + User.last_name;
+            DataContext = this;
+        }
+
+
+        private async void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            await shMentorRepo.SubmitTicket(ticket);
+            ticket.text = "";
         }
     }
 }

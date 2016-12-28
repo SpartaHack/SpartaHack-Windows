@@ -17,6 +17,8 @@
     <RootPropertyPathName Name="location" />
     <RootPropertyPathName Name="time" />
     <RootPropertyPathName Name="title" />
+    <RootPropertyPathName Name="ticket" />
+    <RootPropertyPathName Name="text" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -123,6 +125,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="MaxHeight" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Style" />
@@ -133,6 +136,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Name" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -153,7 +157,7 @@
       <RootProperty Name="OpticalMarginAlignment" />
     </RootType>
     <RootType FullName="SpartaHack.MainPage" />
-    <RootType FullName="SpartaHack.MentorPage" />
+    <RootType FullName="SpartaHack.MapPage" />
     <RootType FullName="SpartaHack.MVVM.BooleanToVisibilityConverter" />
     <RootType FullName="SpartaHack.MVVM.NegateBooleanToVisibilityConverter" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
@@ -200,6 +204,7 @@
       <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="SpartaHack.SchedulePage" />
+    <RootType FullName="SpartaHack.SponsorPage" />
     <RootType FullName="Windows.UI.Xaml.Media.FontFamily" />
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
@@ -293,5 +298,6 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="SpartaHack.MVVM.DateTimeConverter" />
+    <RootType FullName="SpartaHack.TicketPage" />
   </Roots.RootTypes>
 </Roots>

@@ -30,9 +30,13 @@ namespace SpartaHack
             this.InitializeComponent();
             Title = new ObservableValue<string>();
             LoggedIn = new ObservableValue<bool>();
-
             this.MySplitView.Content = frame;
             DataContext = Title;
+
+            this.Loaded += (s,e) =>
+            {
+                rdSchedule.IsChecked = true;
+            };
           
         }
         private void OnScheduleChecked(object sender, RoutedEventArgs e)
@@ -40,11 +44,42 @@ namespace SpartaHack
             try
             {
                 MySplitView.IsPaneOpen = false;
-                //if (MySplitView.Content != null)
-                //    ((Frame)MySplitView.Content).Navigate(typeof(SchedulePage));
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(SchedulePage));
             }
             catch { }
         }
+        private void OnTicketChecked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(TicketPage));
+            }
+            catch { }
+        }
+        private void OnMapChecked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(MapPage));
+            }
+            catch { }
+        }
+        private void OnSponsorChecked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(SponsorPage));
+            }
+            catch { }
+        }
+
 
         private void OnLoginChecked(object sender, RoutedEventArgs e)
         {

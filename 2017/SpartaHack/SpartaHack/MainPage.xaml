@@ -100,6 +100,9 @@
                             
                             
                             <RadioButton x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnScheduleChecked"/>
+                            <RadioButton x:Name="rdMap" Tag="&#xE707;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapChecked"/>
+                            <RadioButton x:Name="rdTicket" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnTicketChecked"/>
+                            <RadioButton x:Name="rdSponsor" Tag="&#xE716;" Content="Sponsor"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorChecked"/>
 
 
                         </StackPanel>

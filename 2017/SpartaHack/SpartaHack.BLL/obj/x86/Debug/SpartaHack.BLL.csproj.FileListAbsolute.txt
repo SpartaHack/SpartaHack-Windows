@@ -15,4 +15,3 @@ C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BL
 C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\qualifiers.txt
 C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\SpartaHack.BLL.csprojResolveAssemblyReference.cache

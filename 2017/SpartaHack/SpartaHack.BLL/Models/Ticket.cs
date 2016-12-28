@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SpartaHack.BLL.Models
 {
-    class Ticket
+    public class Ticket
     {
-        public string channel { get; set; } = "#technology";
+        public string channel { get; set; } = "#testsupporttickets";
         public string username { get; set; }
         public string text { get; set; }
     }

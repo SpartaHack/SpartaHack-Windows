@@ -58,6 +58,18 @@
 
     </Style>
 
+    <Style x:Key="LargeButtonSyle"  TargetType="Button">
+        <Setter Property="FontFamily" Value="{ThemeResource LatoRegular}"/>
+        <Setter Property="Foreground" Value="{ThemeResource ThemeDarkerGold}"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontSize" Value="21"/>
+        <Setter Property="BorderBrush" Value="{ThemeResource ThemeLightGold}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0.75"/>
+        <Setter Property="Typography.Capitals" Value="AllSmallCaps"/>
+
+    </Style>
+
     <Style x:Key="BaseTextBoxStyle" TargetType="TextBox">
         <Setter Property="FontFamily" Value="{ThemeResource LatoRegular}"/>
         <Setter Property="Foreground" Value="{ThemeResource ThemeDarkerGold}"/>

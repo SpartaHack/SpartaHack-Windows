@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-15T07:14:44.489</Modified>
+      <Modified>2016-12-04T22:45:25.123</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHack 2017.exe">
       <PackagePath>entrypoint\SpartaHack 2017.exe</PackagePath>
-      <Modified>2016-11-15T07:14:43.197</Modified>
+      <Modified>2016-12-04T22:45:22.832</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.1.0-preview1-final\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Hosting.Abstractions.dll</PackagePath>
@@ -606,7 +606,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.dll">
       <PackagePath>SpartaHack.BLL.dll</PackagePath>
-      <Modified>2016-11-15T07:11:03.637</Modified>
+      <Modified>2016-12-04T22:38:37.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
@@ -680,7 +680,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHack 2017.xr.xml">
       <PackagePath>SpartaHack 2017.xr.xml</PackagePath>
-      <Modified>2016-11-15T07:14:42.950</Modified>
+      <Modified>2016-12-04T22:26:26.229</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -689,11 +689,11 @@
     <AppxPackagedFile Include="C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-11-15T07:14:44.222</Modified>
+      <Modified>2016-12-04T22:45:24.677</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack 2017.exe">
       <PackagePath>SpartaHack 2017.exe</PackagePath>
-      <Modified>2016-11-15T07:14:44.484</Modified>
+      <Modified>2016-12-04T22:45:25.113</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
