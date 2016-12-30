@@ -5,9 +5,30 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="using:SpartaHack.MVVM"
     mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Theme.xaml"/>
+                <ResourceDictionary Source="Theme/Style.xaml"/>
+                <ResourceDictionary Source="Theme/Views.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
 
-    <Grid Margin="0,48,0,0" Background="Transparent">
+        </ResourceDictionary>
+    </Page.Resources>
 
+    <Grid Background="Transparent">
+        <mvvm:RefreshButton x:Name="btnRefresh" Height="48" Width="48" HorizontalAlignment="Right" VerticalAlignment="Top" RefreshClicked="RefreshButton_RefreshClicked"/>
+
+
+        <GridView Margin="0,48,0,0" Padding="10" DataContext="{Binding}" ItemsSource="{Binding Prizes.Value}" ItemTemplate="{ThemeResource PrizeItem }">
+            <GridView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition FromVerticalOffset="-100"/>
+                </TransitionCollection>
+            </GridView.ItemContainerTransitions>
+        </GridView>
     </Grid>
 </Page>

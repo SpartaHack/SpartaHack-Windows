@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="using:SpartaHack.MVVM"
     mc:Ignorable="d">
     <Page.Resources>
         <ResourceDictionary>
@@ -18,9 +19,10 @@
         </ResourceDictionary>
     </Page.Resources>
 
-    <Grid Margin="0,48,0,0">
-        <ProgressRing x:ConnectionId='2' x:Name="prgRing" Visibility="Collapsed" IsActive="True" />
-        <GridView DataContext="{Binding}" ItemsSource="{Binding Source={StaticResource Sponsors}}" ItemTemplate="{ThemeResource SponsorItem }">
+    <Grid >
+        <mvvm:RefreshButton x:ConnectionId='2' x:Name="btnRefresh"                                              />
+
+        <GridView Margin="0,48,0,0" DataContext="{Binding}" ItemsSource="{Binding Source={StaticResource Sponsors}}" ItemTemplate="{ThemeResource SponsorItem }">
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={ThemeResource BaseListViewHeader}}"/>
             </GridView.GroupStyle>

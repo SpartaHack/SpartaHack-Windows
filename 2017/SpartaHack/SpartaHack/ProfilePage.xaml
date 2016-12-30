@@ -85,7 +85,7 @@
                 <TextBox  Text="{Binding last_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
                 <Button x:Name="btnUpdate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Update" Margin="5" />
-                <Button x:Name="btnLogout" Style="{ThemeResource ButtonSyle}" Width="390" Content="Logout" Margin="5"  />
+                <Button x:Name="btnLogout" Style="{ThemeResource ButtonSyle}" Width="390" Content="Logout" Margin="5" Click="btnLogout_Click"  />
 
 
             </StackPanel>

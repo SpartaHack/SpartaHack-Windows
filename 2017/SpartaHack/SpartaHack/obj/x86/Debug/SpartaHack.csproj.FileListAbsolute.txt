@@ -595,3 +595,8 @@ D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\PrizePage.
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\PrizePage.xaml
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\PrizePage.xbf
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\PrizePage.xbf
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\MVVM\RefreshButton.xbf
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\RefreshButton.g.i.cs
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\RefreshButton.g.cs
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\RefreshButton.xaml
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\RefreshButton.xbf

@@ -81,5 +81,10 @@ namespace SpartaHack
         {
            User= await userRepo.createUser(User);
         }
+
+        private async void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            User = await userRepo.DeleteSession(User);
+        }
     }
 }

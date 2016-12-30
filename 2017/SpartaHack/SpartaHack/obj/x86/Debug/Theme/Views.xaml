@@ -11,7 +11,7 @@
         <ResourceDictionary Source="Style.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
-
+    
     <DataTemplate x:Name="ScheduleItem">
         
         <StackPanel Margin="10" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness="0,0,0,.5">
@@ -34,6 +34,7 @@
     <DataTemplate x:Name="SponsorItem">
 
         <StackPanel Margin="10" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness=".5" Width="350" Height="350">
+        <!--<StackPanel Margin="10" Background="{ThemeResource ThemeLighterGold}" BorderBrush="#44000000" BorderThickness="0,0,4,4" Width="350" Height="350">-->
             <StackPanel.Resources>
                 <mvvm:DataUrlToImageConverter x:Key="DataUrlToImageConverter"/>
             </StackPanel.Resources>
@@ -44,11 +45,22 @@
         </StackPanel>
     </DataTemplate>
 
+    <DataTemplate x:Name="PrizeItem">
+        <StackPanel Margin="10" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness=".5" Width="350" Height="350">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" Style="{ThemeResource SubHeaderTextBlockStyle}" Text="{Binding name}" MaxWidth="300" Margin="5" Height="80" />
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Margin="5"  HorizontalAlignment="Center" TextAlignment="Center" Text="SPONSORED BY"/>
+            <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}"  HorizontalAlignment="Center" TextAlignment="Center"   Margin="10,5" Text="{Binding sponsor.name}"  />
+            <TextBlock Style="{ThemeResource BodyTextBlockStyle}"   Margin="10,5" Text="{Binding description}" MaxHeight="200" />
+           
+        </StackPanel>
+    </DataTemplate>
+
 
 
     <DataTemplate x:Name="BaseListViewHeader">
         <TextBlock FontSize="22" Foreground="{ThemeResource ThemeDarkerGold}" Text="{Binding Header}" FontFamily="{ThemeResource NemoyLight}" Margin="10"/>
     </DataTemplate>
+
 
 
 </ResourceDictionary>

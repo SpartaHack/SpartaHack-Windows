@@ -114,6 +114,35 @@ namespace SpartaHack.BLL.APICalls
 
         }
 
+        public async Task<User> DeleteSession(User user)
+        {
+
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.example.v2"));
+
+            HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Delete, APIConstants.Sessions+$"/{user.auth_token}/");
+
+            message.Headers.Authorization = new AuthenticationHeaderValue("Token", $"token={APIConstants.Token}");
+
+            
+
+
+            var response = await client.SendAsync(message);
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+               // setCurrentUser(null);
+            }
+            //}
+            //catch (Exception e)
+            //{
+            //    string message = e.Message;
+
+            //}
+            return null ;
+        }
+
 
 
     }

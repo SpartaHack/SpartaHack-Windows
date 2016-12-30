@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 using SpartaHack.BLL.APICalls;
 using SpartaHack.BLL.Models;
 using SpartaHack.MVVM;
+using Windows.UI.Xaml.Media.Animation;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SpartaHack
@@ -26,11 +27,14 @@ namespace SpartaHack
     public sealed partial class PrizePage : Page
     {
         SpartaHackPrize _prizesCaller;
+        public ObservableValue<List<Prize>> Prizes { get; set; }
+
         public PrizePage()
         {
             this.InitializeComponent();
             MainPage.Title.Value = "Prizes";
             _prizesCaller = new SpartaHackPrize();
+            Prizes = new ObservableValue<List<Prize>>();
 
             init();
             DataContext = this;
@@ -38,7 +42,15 @@ namespace SpartaHack
 
         public async void init()
         {
-            var data = await _prizesCaller.getPrizes();
+            btnRefresh.IsRefreshing = true;
+            Prizes.Value= await _prizesCaller.getPrizes();
+            btnRefresh.IsRefreshing = false;
+        }
+
+
+        private void RefreshButton_RefreshClicked(object sender, RoutedEventArgs e)
+        {
+            init();
         }
     }
 }

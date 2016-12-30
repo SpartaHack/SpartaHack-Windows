@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 using SpartaHack.BLL.APICalls;
 using SpartaHack.BLL.Models;
 using SpartaHack.MVVM;
+using Windows.UI.Xaml.Media.Animation;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -41,9 +42,13 @@ namespace SpartaHack
         }
         public async void init()
         {
-           // prgRing.Visibility = Visibility.Visible;
-           Sponsors.Source = await _sponsorCaller.getSponsorsGrouped();
-           // prgRing.Visibility = Visibility.Collapsed;
+            btnRefresh.IsRefreshing = true;
+            Sponsors.Source = await _sponsorCaller.getSponsorsGrouped();
+            btnRefresh.IsRefreshing = false;
+        }
+        private void RefreshButton_RefreshClicked(object sender, RoutedEventArgs e)
+        {
+            init();
         }
     }
 }

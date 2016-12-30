@@ -5,6 +5,7 @@
     xmlns:local="using:SpartaHack"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="using:SpartaHack.MVVM"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -16,8 +17,10 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid   Margin="0,48,0,0" >
-        <ListView Style="{ThemeResource BaseListView}" MinWidth="500" MaxWidth="1000" DataContext="{Binding}" ItemsSource="{Binding Schedule.Value}" ItemTemplate="{StaticResource ScheduleItem}">
+    <Grid   >
+        <mvvm:RefreshButton x:Name="btnRefresh" RefreshClicked="RefreshButton_RefreshClicked"/>
+
+        <ListView  Margin="0,48,0,0" Style="{ThemeResource BaseListView}" MinWidth="500" MaxWidth="1000" DataContext="{Binding}" ItemsSource="{Binding Schedule.Value}" ItemTemplate="{StaticResource ScheduleItem}">
         </ListView>
     </Grid>
 </Page>
