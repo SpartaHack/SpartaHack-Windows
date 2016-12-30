@@ -30,5 +30,26 @@
         </StackPanel>
     </DataTemplate>
 
+
+    <DataTemplate x:Name="SponsorItem">
+
+        <StackPanel Margin="10" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness=".5" Width="350" Height="350">
+            <StackPanel.Resources>
+                <mvvm:DataUrlToImageConverter x:Key="DataUrlToImageConverter"/>
+            </StackPanel.Resources>
+            <Image Source="{Binding logo_png_light, Mode=OneWay, Converter={StaticResource DataUrlToImageConverter}}"  HorizontalAlignment="Center" Height="250" Width="250" />
+            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Style="{ThemeResource SubHeaderTextBlockStyle}" Text="{Binding name}" MaxWidth="300" />
+            <HyperlinkButton Content="{Binding url}" HorizontalAlignment="Center" MaxWidth="300" />
+
+        </StackPanel>
+    </DataTemplate>
+
+
+
+    <DataTemplate x:Name="BaseListViewHeader">
+        <TextBlock FontSize="22" Foreground="{ThemeResource ThemeDarkerGold}" Text="{Binding Header}" FontFamily="{ThemeResource NemoyLight}" Margin="10"/>
+    </DataTemplate>
+
+
 </ResourceDictionary>
 

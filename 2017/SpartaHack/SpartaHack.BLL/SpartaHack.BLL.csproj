@@ -108,8 +108,10 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APICalls\SpartaHackPrize.cs" />
     <Compile Include="APICalls\SpartaHackMentor.cs" />
     <Compile Include="APICalls\SpartaHackSession.cs" />
+    <Compile Include="APICalls\SpartaHackSponsor.cs" />
     <Compile Include="APICalls\SpartaHackUser.cs" />
     <Compile Include="Constants\APIConstants.cs" />
     <Compile Include="Migrations\20161115070031_MyFirstMigration.cs" />
@@ -118,8 +120,11 @@
     </Compile>
     <Compile Include="Migrations\SpartaHackDataStoreModelSnapshot.cs" />
     <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\Prize.cs" />
+    <Compile Include="Models\HeaderGroup.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\SpartaHackDataStore.cs" />
+    <Compile Include="Models\Sponsor.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -36,16 +36,24 @@ namespace SpartaHack
             shMentorRepo = new SpartaHackMentor();
             ticket = new Ticket();
 
-            User User = SpartaHackUser.getCurrentUser();
-            ticket.username = User.first_name + " " + User.last_name;
+           
             DataContext = this;
         }
 
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            await shMentorRepo.SubmitTicket(ticket);
-            ticket.text = "";
+            User User = SpartaHackUser.getCurrentUser();
+            if (User == null)
+            {
+                await new Windows.UI.Popups.MessageDialog("You must be logged in to submit a ticket","Please login in").ShowAsync();
+            }
+            else
+            {
+                ticket.username = User.first_name + " " + User.last_name;
+                await shMentorRepo.SubmitTicket(ticket);
+                ticket.text = "";
+            }
         }
     }
 }

@@ -60,14 +60,14 @@
         <!--<Image    Name="imgLogo" Source="Assets/logo.png" Opacity=".4" MaxHeight="450" MaxWidth="450">-->
         
         <!--</Image>-->
-        <Grid  Height="48" VerticalAlignment="Top">
+        <Grid  Height="48" VerticalAlignment="Top" Background="{ThemeResource ThemeLightGold}" >
 
-            <Button x:ConnectionId='11' x:Name="HambButton" Style="{ThemeResource ButtonSyle}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+            <Button x:ConnectionId='12' x:Name="HambButton" Style="{ThemeResource ButtonSyle}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
             <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Text="{Binding Value}"  Style="{ThemeResource HeaderTextBlockStyle}"/>
 
-            <TextBlock x:ConnectionId='12' Margin="0,0,5,0"  HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" />
+            <TextBlock x:ConnectionId='13' Margin="0,0,5,0"  HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" />
 
 
 
@@ -92,7 +92,7 @@
                         <StackPanel Grid.Row="0">
 
                             <StackPanel Orientation="Horizontal" Height="48" VerticalAlignment="Center" >
-                                <Button x:ConnectionId='10' Style="{ThemeResource ButtonSyle}"  FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                                <Button x:ConnectionId='11' Style="{ThemeResource ButtonSyle}"  FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    Width="48" Height="48"                           HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <TextBlock Margin="10,0,0,0"  VerticalAlignment="Center" Text="SpartaHack 2017" Style="{ThemeResource HeaderSplitViewTextBlockStyle}"/>
                             </StackPanel>
@@ -103,6 +103,7 @@
                             <RadioButton x:ConnectionId='7' x:Name="rdMap" Tag="&#xE707;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}"                       />
                             <RadioButton x:ConnectionId='8' x:Name="rdTicket" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}"                          />
                             <RadioButton x:ConnectionId='9' x:Name="rdSponsor" Tag="&#xE716;" Content="Sponsor"  Style="{StaticResource SplitViewNavButtonStyle}"                           />
+                            <RadioButton x:ConnectionId='10' x:Name="rdPrize" Tag="&#xE728;" Content="Prizes"  Style="{StaticResource SplitViewNavButtonStyle}"                         />
 
 
                         </StackPanel>

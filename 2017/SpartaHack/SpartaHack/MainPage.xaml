@@ -60,7 +60,7 @@
         <!--<Image    Name="imgLogo" Source="Assets/logo.png" Opacity=".4" MaxHeight="450" MaxWidth="450">-->
         
         <!--</Image>-->
-        <Grid  Height="48" VerticalAlignment="Top">
+        <Grid  Height="48" VerticalAlignment="Top" Background="{ThemeResource ThemeLightGold}" >
 
             <Button x:Name="HambButton" Style="{ThemeResource ButtonSyle}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    Width="48" Height="48"  Click="HambButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -103,6 +103,7 @@
                             <RadioButton x:Name="rdMap" Tag="&#xE707;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapChecked"/>
                             <RadioButton x:Name="rdTicket" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnTicketChecked"/>
                             <RadioButton x:Name="rdSponsor" Tag="&#xE716;" Content="Sponsor"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSponsorChecked"/>
+                            <RadioButton x:Name="rdPrize" Tag="&#xE728;" Content="Prizes"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnPrizeChecked"/>
 
 
                         </StackPanel>

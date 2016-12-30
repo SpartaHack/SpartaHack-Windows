@@ -73,6 +73,8 @@ namespace SpartaHack
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             User=await userRepo.CreateSession(User);
+            DataContext = null;
+            DataContext = this;
         }
 
         private async void btnCreate_Click(object sender, RoutedEventArgs e)

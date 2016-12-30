@@ -132,39 +132,43 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[15];
+            _typeNameTable = new string[17];
             _typeNameTable[0] = "SpartaHack.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "SpartaHack.MapPage";
-            _typeNameTable[4] = "SpartaHack.MVVM.BooleanToVisibilityConverter";
-            _typeNameTable[5] = "Object";
-            _typeNameTable[6] = "SpartaHack.MVVM.NegateBooleanToVisibilityConverter";
-            _typeNameTable[7] = "SpartaHack.ProfilePage";
-            _typeNameTable[8] = "SpartaHack.BLL.Models.User";
-            _typeNameTable[9] = "SpartaHack.SchedulePage";
-            _typeNameTable[10] = "SpartaHack.ObservableValue`1<System.Collections.Generic.List`1<SpartaHack.BLL.Models.Schedule>>";
-            _typeNameTable[11] = "SpartaHack.SponsorPage";
-            _typeNameTable[12] = "SpartaHack.MVVM.DateTimeConverter";
-            _typeNameTable[13] = "SpartaHack.TicketPage";
-            _typeNameTable[14] = "SpartaHack.BLL.Models.Ticket";
+            _typeNameTable[4] = "SpartaHack.PrizePage";
+            _typeNameTable[5] = "SpartaHack.MVVM.BooleanToVisibilityConverter";
+            _typeNameTable[6] = "Object";
+            _typeNameTable[7] = "SpartaHack.MVVM.NegateBooleanToVisibilityConverter";
+            _typeNameTable[8] = "SpartaHack.ProfilePage";
+            _typeNameTable[9] = "SpartaHack.BLL.Models.User";
+            _typeNameTable[10] = "SpartaHack.SchedulePage";
+            _typeNameTable[11] = "SpartaHack.ObservableValue`1<System.Collections.Generic.List`1<SpartaHack.BLL.Models.Schedule>>";
+            _typeNameTable[12] = "SpartaHack.SponsorPage";
+            _typeNameTable[13] = "SpartaHack.MVVM.DataUrlToImageConverter";
+            _typeNameTable[14] = "SpartaHack.MVVM.DateTimeConverter";
+            _typeNameTable[15] = "SpartaHack.TicketPage";
+            _typeNameTable[16] = "SpartaHack.BLL.Models.Ticket";
 
-            _typeTable = new global::System.Type[15];
+            _typeTable = new global::System.Type[17];
             _typeTable[0] = typeof(global::SpartaHack.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::SpartaHack.MapPage);
-            _typeTable[4] = typeof(global::SpartaHack.MVVM.BooleanToVisibilityConverter);
-            _typeTable[5] = typeof(global::System.Object);
-            _typeTable[6] = typeof(global::SpartaHack.MVVM.NegateBooleanToVisibilityConverter);
-            _typeTable[7] = typeof(global::SpartaHack.ProfilePage);
-            _typeTable[8] = typeof(global::SpartaHack.BLL.Models.User);
-            _typeTable[9] = typeof(global::SpartaHack.SchedulePage);
-            _typeTable[10] = typeof(global::SpartaHack.ObservableValue<global::System.Collections.Generic.List<global::SpartaHack.BLL.Models.Schedule>>);
-            _typeTable[11] = typeof(global::SpartaHack.SponsorPage);
-            _typeTable[12] = typeof(global::SpartaHack.MVVM.DateTimeConverter);
-            _typeTable[13] = typeof(global::SpartaHack.TicketPage);
-            _typeTable[14] = typeof(global::SpartaHack.BLL.Models.Ticket);
+            _typeTable[4] = typeof(global::SpartaHack.PrizePage);
+            _typeTable[5] = typeof(global::SpartaHack.MVVM.BooleanToVisibilityConverter);
+            _typeTable[6] = typeof(global::System.Object);
+            _typeTable[7] = typeof(global::SpartaHack.MVVM.NegateBooleanToVisibilityConverter);
+            _typeTable[8] = typeof(global::SpartaHack.ProfilePage);
+            _typeTable[9] = typeof(global::SpartaHack.BLL.Models.User);
+            _typeTable[10] = typeof(global::SpartaHack.SchedulePage);
+            _typeTable[11] = typeof(global::SpartaHack.ObservableValue<global::System.Collections.Generic.List<global::SpartaHack.BLL.Models.Schedule>>);
+            _typeTable[12] = typeof(global::SpartaHack.SponsorPage);
+            _typeTable[13] = typeof(global::SpartaHack.MVVM.DataUrlToImageConverter);
+            _typeTable[14] = typeof(global::SpartaHack.MVVM.DateTimeConverter);
+            _typeTable[15] = typeof(global::SpartaHack.TicketPage);
+            _typeTable[16] = typeof(global::SpartaHack.BLL.Models.Ticket);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -200,16 +204,18 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
         }
 
         private object Activate_3_MapPage() { return new global::SpartaHack.MapPage(); }
-        private object Activate_4_BooleanToVisibilityConverter() { return new global::SpartaHack.MVVM.BooleanToVisibilityConverter(); }
-        private object Activate_6_NegateBooleanToVisibilityConverter() { return new global::SpartaHack.MVVM.NegateBooleanToVisibilityConverter(); }
-        private object Activate_7_ProfilePage() { return new global::SpartaHack.ProfilePage(); }
-        private object Activate_8_User() { return new global::SpartaHack.BLL.Models.User(); }
-        private object Activate_9_SchedulePage() { return new global::SpartaHack.SchedulePage(); }
-        private object Activate_10_ObservableValue() { return new global::SpartaHack.ObservableValue<global::System.Collections.Generic.List<global::SpartaHack.BLL.Models.Schedule>>(); }
-        private object Activate_11_SponsorPage() { return new global::SpartaHack.SponsorPage(); }
-        private object Activate_12_DateTimeConverter() { return new global::SpartaHack.MVVM.DateTimeConverter(); }
-        private object Activate_13_TicketPage() { return new global::SpartaHack.TicketPage(); }
-        private object Activate_14_Ticket() { return new global::SpartaHack.BLL.Models.Ticket(); }
+        private object Activate_4_PrizePage() { return new global::SpartaHack.PrizePage(); }
+        private object Activate_5_BooleanToVisibilityConverter() { return new global::SpartaHack.MVVM.BooleanToVisibilityConverter(); }
+        private object Activate_7_NegateBooleanToVisibilityConverter() { return new global::SpartaHack.MVVM.NegateBooleanToVisibilityConverter(); }
+        private object Activate_8_ProfilePage() { return new global::SpartaHack.ProfilePage(); }
+        private object Activate_9_User() { return new global::SpartaHack.BLL.Models.User(); }
+        private object Activate_10_SchedulePage() { return new global::SpartaHack.SchedulePage(); }
+        private object Activate_11_ObservableValue() { return new global::SpartaHack.ObservableValue<global::System.Collections.Generic.List<global::SpartaHack.BLL.Models.Schedule>>(); }
+        private object Activate_12_SponsorPage() { return new global::SpartaHack.SponsorPage(); }
+        private object Activate_13_DataUrlToImageConverter() { return new global::SpartaHack.MVVM.DataUrlToImageConverter(); }
+        private object Activate_14_DateTimeConverter() { return new global::SpartaHack.MVVM.DateTimeConverter(); }
+        private object Activate_15_TicketPage() { return new global::SpartaHack.TicketPage(); }
+        private object Activate_16_Ticket() { return new global::SpartaHack.BLL.Models.Ticket(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -242,76 +248,90 @@ namespace SpartaHack.SpartaHack_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  SpartaHack.MVVM.BooleanToVisibilityConverter
-                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_4_BooleanToVisibilityConverter;
+            case 4:   //  SpartaHack.PrizePage
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_PrizePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Object
+            case 5:   //  SpartaHack.MVVM.BooleanToVisibilityConverter
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_BooleanToVisibilityConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Object
                 xamlType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  SpartaHack.MVVM.NegateBooleanToVisibilityConverter
+            case 7:   //  SpartaHack.MVVM.NegateBooleanToVisibilityConverter
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("SpartaHack.MVVM.BooleanToVisibilityConverter"));
-                userType.Activator = Activate_6_NegateBooleanToVisibilityConverter;
+                userType.Activator = Activate_7_NegateBooleanToVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  SpartaHack.ProfilePage
+            case 8:   //  SpartaHack.ProfilePage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_ProfilePage;
+                userType.Activator = Activate_8_ProfilePage;
                 userType.AddMemberName("User");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  SpartaHack.BLL.Models.User
+            case 9:   //  SpartaHack.BLL.Models.User
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 9:   //  SpartaHack.SchedulePage
+            case 10:   //  SpartaHack.SchedulePage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_SchedulePage;
+                userType.Activator = Activate_10_SchedulePage;
                 userType.AddMemberName("Schedule");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  SpartaHack.ObservableValue`1<System.Collections.Generic.List`1<SpartaHack.BLL.Models.Schedule>>
+            case 11:   //  SpartaHack.ObservableValue`1<System.Collections.Generic.List`1<SpartaHack.BLL.Models.Schedule>>
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  SpartaHack.SponsorPage
+            case 12:   //  SpartaHack.SponsorPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_SponsorPage;
+                userType.Activator = Activate_12_SponsorPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  SpartaHack.MVVM.DateTimeConverter
+            case 13:   //  SpartaHack.MVVM.DataUrlToImageConverter
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_12_DateTimeConverter;
+                userType.Activator = Activate_13_DataUrlToImageConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  SpartaHack.TicketPage
+            case 14:   //  SpartaHack.MVVM.DateTimeConverter
+                userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_14_DateTimeConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  SpartaHack.TicketPage
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_TicketPage;
+                userType.Activator = Activate_15_TicketPage;
                 userType.AddMemberName("ticket");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  SpartaHack.BLL.Models.Ticket
+            case 16:   //  SpartaHack.BLL.Models.Ticket
                 userType = new global::SpartaHack.SpartaHack_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;

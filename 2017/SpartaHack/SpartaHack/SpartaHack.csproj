@@ -120,7 +120,11 @@
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\BooleanToVisibilityConverter.cs" />
+    <Compile Include="MVVM\DataUrlToImageConverter.cs" />
     <Compile Include="MVVM\DateTimeConverter.cs" />
+    <Compile Include="PrizePage.xaml.cs">
+      <DependentUpon>PrizePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
@@ -162,6 +166,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrizePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

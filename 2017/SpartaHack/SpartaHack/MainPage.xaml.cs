@@ -79,6 +79,16 @@ namespace SpartaHack
             }
             catch { }
         }
+        private void OnPrizeChecked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(PrizePage));
+            }
+            catch { }
+        }
 
 
         private void OnLoginChecked(object sender, RoutedEventArgs e)
