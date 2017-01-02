@@ -108,7 +108,7 @@
 
                         </StackPanel>
                     </ScrollViewer>
-                    <RadioButton x:ConnectionId='5' x:Name="rdLogin" Grid.Row="1" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="{Binding Value}"  Style="{StaticResource SplitViewNavButtonStyle}" Foreground="{ThemeResource ThemeLighterGold}"                         />
+                    <RadioButton x:ConnectionId='5' x:Name="rdLogin" Grid.Row="1" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness="0,1,0,0" VerticalAlignment="Bottom" Tag="&#xE77B;" Content="Profile"  Style="{StaticResource SplitViewNavButtonStyle}" Foreground="{ThemeResource ThemeLighterGold}"                         />
 
 
                 </Grid>

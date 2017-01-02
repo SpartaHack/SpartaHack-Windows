@@ -108,6 +108,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APICalls\SpartaHackFAQ.cs" />
     <Compile Include="APICalls\SpartaHackPrize.cs" />
     <Compile Include="APICalls\SpartaHackMentor.cs" />
     <Compile Include="APICalls\SpartaHackSession.cs" />
@@ -120,6 +121,7 @@
     </Compile>
     <Compile Include="Migrations\SpartaHackDataStoreModelSnapshot.cs" />
     <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\FAQ.cs" />
     <Compile Include="Models\Prize.cs" />
     <Compile Include="Models\HeaderGroup.cs" />
     <Compile Include="Models\Schedule.cs" />

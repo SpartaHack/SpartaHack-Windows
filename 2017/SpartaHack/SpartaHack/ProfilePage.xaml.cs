@@ -70,11 +70,16 @@ namespace SpartaHack
             DataContext = this;
         }
 
-        private async void btnLogin_Click(object sender, RoutedEventArgs e)
+        private async void login()
         {
-            User=await userRepo.CreateSession(User);
+            User = await userRepo.CreateSession(User);
             DataContext = null;
             DataContext = this;
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            login();
         }
 
         private async void btnCreate_Click(object sender, RoutedEventArgs e)
@@ -84,7 +89,26 @@ namespace SpartaHack
 
         private async void btnLogout_Click(object sender, RoutedEventArgs e)
         {
-            User = await userRepo.DeleteSession(User);
+           
+             User=await userRepo.DeleteSession(User);
+            DataContext = null;
+            DataContext = this;
+        }
+
+        private void PasswordBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            try
+            {
+                if (e.Key == Windows.System.VirtualKey.Enter)
+                {
+                    login();
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+               // DebuggingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
+            }
         }
     }
 }

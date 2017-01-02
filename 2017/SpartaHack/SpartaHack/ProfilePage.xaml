@@ -19,8 +19,33 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
+   
     <Grid Margin="0,48,0,0" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="850" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
 
+                        <Setter Target="grdLogin.(RelativePanel.RightOf)"
+                            Value="grdNewUser" />
+                    
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState  x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="grdLogin.(RelativePanel.Below)"
+                            Value="grdNewUser" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid Visibility="{x:Bind LoggedIn.Value, Mode=OneWay, Converter={StaticResource Negate}}" >
             <Grid.Transitions>
                 <TransitionCollection>
@@ -28,11 +53,13 @@
 
                 </TransitionCollection>
             </Grid.Transitions>
+           
+        
 
-            <StackPanel  Width="400"  HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image Width="200" Height="200" Source="Assets/logo.png"/>
-
-                <StackPanel DataContext="{Binding User}">
+            <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image x:Name="imgLogo" HorizontalAlignment="Stretch" Width="200" Height="200" Source="Assets/logo.png"/>
+                <RelativePanel>
+                <StackPanel  Width="400"  x:Name="grdNewUser" DataContext="{Binding User}" Margin="10">
                     <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Register" Margin="5"/>
                     <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
                     <TextBox PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
@@ -54,15 +81,15 @@
 
                 </StackPanel>
 
-                <StackPanel DataContext="{Binding User}" >
+                <StackPanel x:Name="grdLogin"  DataContext="{Binding User}" Width="400" Margin="10" >
                    
                     <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Login" Margin="5"/>
                     <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
-                    <TextBox PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox KeyDown="PasswordBox_KeyDown" PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
                   
                   
-                    <PasswordBox PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
+                    <PasswordBox KeyDown="PasswordBox_KeyDown" PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
 
 
 
@@ -70,6 +97,7 @@
                     <Button x:Name="btnLogin" Style="{ThemeResource ButtonSyle}" Width="390" Content="Login" Margin="5" Click="btnLogin_Click" />
 
                 </StackPanel>
+                </RelativePanel>
             </StackPanel>
         </Grid>
         <Grid Visibility="{x:Bind LoggedIn.Value, Mode=OneWay, Converter={StaticResource Boolean}}">

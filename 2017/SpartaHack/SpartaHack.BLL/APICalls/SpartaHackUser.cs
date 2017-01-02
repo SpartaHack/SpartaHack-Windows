@@ -20,13 +20,29 @@ namespace SpartaHack.BLL.APICalls
             {
                 if (db.CurrentUser.Count() > 0)
                 {
-                    db.CurrentUser.Remove(db.CurrentUser.ElementAt(0));
+                    db.CurrentUser.Remove(db.CurrentUser.FirstOrDefault());
                     db.SaveChanges();
                 }
                 db.CurrentUser.Add(user);
                 db.SaveChanges();
             }
         }
+
+        public static void removeCurrentUser()
+        {
+            using (var db = new SpartaHackDataStore())
+            {
+                if (db.CurrentUser.Count() > 0)
+                {
+                    db.CurrentUser.Remove(db.CurrentUser.FirstOrDefault());
+                    db.SaveChanges();
+                }
+                
+             
+            }
+        }
+    
+
         public static User getCurrentUser()
         {
             User current = null;
@@ -132,7 +148,7 @@ namespace SpartaHack.BLL.APICalls
             if (response.IsSuccessStatusCode)
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
-               // setCurrentUser(null);
+                removeCurrentUser();
             }
             //}
             //catch (Exception e)

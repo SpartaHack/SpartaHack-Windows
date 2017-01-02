@@ -28,13 +28,13 @@
     <AppXManifest Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-30T20:16:34.231</Modified>
+      <Modified>2016-12-31T04:39:53.003</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHack 2017.exe">
       <PackagePath>entrypoint\SpartaHack 2017.exe</PackagePath>
-      <Modified>2016-12-30T20:16:33.513</Modified>
+      <Modified>2016-12-31T04:39:52.039</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.1.0-preview1-final\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Hosting.Abstractions.dll</PackagePath>
@@ -606,7 +606,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.dll">
       <PackagePath>SpartaHack.BLL.dll</PackagePath>
-      <Modified>2016-12-30T20:16:30.664</Modified>
+      <Modified>2016-12-31T04:06:50.054</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
@@ -680,7 +680,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHack 2017.xr.xml">
       <PackagePath>SpartaHack 2017.xr.xml</PackagePath>
-      <Modified>2016-12-30T19:59:56.033</Modified>
+      <Modified>2016-12-31T04:39:51.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -689,11 +689,11 @@
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-30T20:16:34.036</Modified>
+      <Modified>2016-12-31T04:39:52.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack 2017.exe">
       <PackagePath>SpartaHack 2017.exe</PackagePath>
-      <Modified>2016-12-30T20:16:34.228</Modified>
+      <Modified>2016-12-31T04:39:52.999</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

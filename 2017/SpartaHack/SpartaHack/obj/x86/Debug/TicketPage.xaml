@@ -18,7 +18,8 @@
     </Page.Resources>
     <Grid Margin="0,48,0,0" >
         <StackPanel MaxWidth="500" MaxHeight="500" DataContext="{Binding ticket}">
-           
+            <TextBlock Style="{ThemeResource HeaderTextBlockStyle}" Text="Create a Ticket" Margin="5"/>
+            <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}" Margin="10"/>
             <TextBlock Text="Technology" Style="{ThemeResource SubHeaderTextBlockStyle}" Margin="0,10,0,0"/>
             <TextBox Style="{ThemeResource BaseTextBoxStyle}" Margin="5" />
 

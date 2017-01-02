@@ -22,7 +22,7 @@
     <Grid >
         <mvvm:RefreshButton x:ConnectionId='2' x:Name="btnRefresh"                                              />
 
-        <GridView Margin="0,48,0,0" DataContext="{Binding}" ItemsSource="{Binding Source={StaticResource Sponsors}}" ItemTemplate="{ThemeResource SponsorItem }">
+        <GridView Margin="0,48,0,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" MaxWidth="1200" DataContext="{Binding}" ItemsSource="{Binding Source={StaticResource Sponsors}}" ItemTemplate="{ThemeResource SponsorItem }">
             <GridView.GroupStyle>
                 <GroupStyle HeaderTemplate="{Binding Source={ThemeResource BaseListViewHeader}}"/>
             </GridView.GroupStyle>

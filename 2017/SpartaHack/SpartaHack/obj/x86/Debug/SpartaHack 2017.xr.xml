@@ -111,12 +111,6 @@
       <RootProperty Name="GroupName" />
       <RootEvent Name="Checked" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="Path" />
-      <RootProperty Name="Converter" />
-    </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
@@ -168,6 +162,12 @@
       <RootProperty Name="Height" />
       <RootProperty Name="MaxHeight" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="Converter" />
+    </RootType>
     <RootType FullName="SpartaHack.MainPage" />
     <RootType FullName="SpartaHack.MapPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -197,6 +197,9 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="MaxWidth" />
       <RootProperty Name="Padding" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="ItemsSource" />
@@ -220,24 +223,30 @@
       <RootProperty Name="Style" />
       <RootProperty Name="Margin" />
       <RootProperty Name="PlaceholderText" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Source" />
-      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Password" />
       <RootProperty Name="Style" />
       <RootProperty Name="Margin" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />

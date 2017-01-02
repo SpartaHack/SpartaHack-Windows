@@ -52,6 +52,7 @@ namespace SpartaHack
             }
             btnRefresh.IsRefreshing = false;
 
+         
         }
         private void RefreshButton_RefreshClicked(object sender, RoutedEventArgs e)
         {

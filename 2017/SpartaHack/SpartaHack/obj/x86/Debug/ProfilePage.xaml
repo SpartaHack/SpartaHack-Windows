@@ -19,20 +19,47 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
+   
     <Grid Margin="0,48,0,0" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='2' x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="850" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
 
-        <Grid x:ConnectionId='2'                                                                                      >
+                        <Setter Target="grdLogin.(RelativePanel.RightOf)"
+                            Value="grdNewUser" />
+                    
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='3'  x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="grdLogin.(RelativePanel.Below)"
+                            Value="grdNewUser" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid x:ConnectionId='4'                                                                                      >
             <Grid.Transitions>
                 <TransitionCollection>
                     <EntranceThemeTransition FromVerticalOffset="10000"></EntranceThemeTransition>
 
                 </TransitionCollection>
             </Grid.Transitions>
+           
+        
 
-            <StackPanel  Width="400"  HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image Width="200" Height="200" Source="Assets/logo.png"/>
-
-                <StackPanel DataContext="{Binding User}">
+            <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image x:ConnectionId='8' x:Name="imgLogo" HorizontalAlignment="Stretch" Width="200" Height="200" Source="Assets/logo.png"/>
+                <RelativePanel>
+                <StackPanel x:ConnectionId='9'  Width="400"  x:Name="grdNewUser" DataContext="{Binding User}" Margin="10">
                     <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Register" Margin="5"/>
                     <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
                     <TextBox PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
@@ -50,29 +77,30 @@
 
 
 
-                    <Button x:ConnectionId='7' x:Name="btnCreate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Register" Margin="5"                        />
+                    <Button x:ConnectionId='14' x:Name="btnCreate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Register" Margin="5"                        />
 
                 </StackPanel>
 
-                <StackPanel DataContext="{Binding User}" >
+                <StackPanel x:ConnectionId='10' x:Name="grdLogin"  DataContext="{Binding User}" Width="400" Margin="10" >
                    
                     <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Login" Margin="5"/>
                     <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
-                    <TextBox PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox x:ConnectionId='11'                               PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
                   
                   
-                    <PasswordBox PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
+                    <PasswordBox x:ConnectionId='12'                               PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
 
 
 
 
-                    <Button x:ConnectionId='6' x:Name="btnLogin" Style="{ThemeResource ButtonSyle}" Width="390" Content="Login" Margin="5"                        />
+                    <Button x:ConnectionId='13' x:Name="btnLogin" Style="{ThemeResource ButtonSyle}" Width="390" Content="Login" Margin="5"                        />
 
                 </StackPanel>
+                </RelativePanel>
             </StackPanel>
         </Grid>
-        <Grid x:ConnectionId='3'                                                                                      >
+        <Grid x:ConnectionId='5'                                                                                      >
 
             <StackPanel MaxWidth="800" Height="400" HorizontalAlignment="Center" MinWidth="400" DataContext="{Binding User}">
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Email: "/>
@@ -84,8 +112,8 @@
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Last Name: "/>
                 <TextBox  Text="{Binding last_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
-                <Button x:ConnectionId='4' x:Name="btnUpdate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Update" Margin="5" />
-                <Button x:ConnectionId='5' x:Name="btnLogout" Style="{ThemeResource ButtonSyle}" Width="390" Content="Logout" Margin="5"                          />
+                <Button x:ConnectionId='6' x:Name="btnUpdate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Update" Margin="5" />
+                <Button x:ConnectionId='7' x:Name="btnLogout" Style="{ThemeResource ButtonSyle}" Width="390" Content="Logout" Margin="5"                          />
 
 
             </StackPanel>
