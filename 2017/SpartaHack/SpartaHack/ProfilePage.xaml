@@ -102,20 +102,20 @@
         </Grid>
         <Grid Visibility="{x:Bind LoggedIn.Value, Mode=OneWay, Converter={StaticResource Boolean}}">
             <ScrollViewer>
-            <StackPanel MaxWidth="800"  HorizontalAlignment="Center" MinWidth="400" DataContext="{Binding User}">
-                <Image Width="250" Height="250"  Source="{Binding QRImage.Value}"
+            <StackPanel MaxWidth="800"  HorizontalAlignment="Center" MinWidth="400" >
+                    <Image Width="250" Height="250" Margin="10" Source="{x:Bind QRImage.Value, Mode=OneWay}"
                        HorizontalAlignment="Center" />
 
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Email: "/>
-                <TextBox  Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox  Text="{Binding User.email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
                
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="First Name: "/>
-                <TextBox  Text="{Binding first_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox  Text="{Binding User.first_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Last Name: "/>
-                <TextBox  Text="{Binding last_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox  Text="{Binding User.last_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
-                <Button x:Name="btnUpdate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Update" Margin="5" />
+                <Button x:Name="btnUpdate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Update" Margin="5" Click="btnUpdate_Click"  />
                 <Button x:Name="btnLogout" Style="{ThemeResource ButtonSyle}" Width="390" Content="Logout" Margin="5" Click="btnLogout_Click"  />
 
 

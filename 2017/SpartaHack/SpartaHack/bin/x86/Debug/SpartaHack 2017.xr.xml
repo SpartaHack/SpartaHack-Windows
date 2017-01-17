@@ -12,7 +12,6 @@
     <RootPropertyPathName Name="last_name" />
     <RootPropertyPathName Name="first_name" />
     <RootPropertyPathName Name="email" />
-    <RootPropertyPathName Name="QRImage" />
     <RootPropertyPathName Name="password" />
     <RootPropertyPathName Name="password_confirmation" />
     <RootPropertyPathName Name="Color" />
@@ -27,6 +26,9 @@
     <RootPropertyPathName Name="title" />
     <RootPropertyPathName Name="ticket" />
     <RootPropertyPathName Name="text" />
+    <RootPropertyPathName Name="Categories" />
+    <RootPropertyPathName Name="selectedCategory" />
+    <RootPropertyPathName Name="category" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -46,14 +48,15 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Transitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Resources" />
+      <RootEvent Name="Tapped" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
       <RootMethod Name="GetRow" />
@@ -129,8 +132,8 @@
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="MinWidth" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Width" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
@@ -372,6 +375,14 @@
       <RootProperty Name="MaxWidth" />
     </RootType>
     <RootType FullName="SpartaHack.MVVM.DateTimeConverter" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
     <RootType FullName="SpartaHack.TicketPage" />
   </Roots.RootTypes>
 </Roots>

@@ -92,6 +92,43 @@ namespace SpartaHack.BLL.APICalls
             return current;
         }
 
+        public async Task<User> updateUser(User user)
+        {
+            User current = new User();
+            try
+            {
+
+                
+                var jsonBodyString = JsonConvert.SerializeObject(new{ first_name= user.first_name, last_name=user.last_name});
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Put, $"{APIConstants.Users}{user.id}");
+                
+                client.DefaultRequestHeaders.Add("X-WWW-USER-TOKEN", user.auth_token);
+                message.Content = new StringContent(jsonBodyString, Encoding.UTF8, "application/json");
+
+                var response = await client.SendAsync(message);
+
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonString = await response.Content.ReadAsStringAsync();
+                    current = JsonConvert.DeserializeObject<User>(jsonString);
+                    setCurrentUser(current);
+                }
+
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+            }
+
+
+
+            return current;
+        }
+
+
         public async Task<User> CreateSession(User user)
         {
 

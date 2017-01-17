@@ -17,18 +17,27 @@
         </ResourceDictionary>
     </Page.Resources>
     <Grid Margin="0,48,0,0" >
-        <StackPanel MaxWidth="500" MaxHeight="500" DataContext="{Binding ticket}">
+        <StackPanel MaxWidth="500" MaxHeight="500" DataContext="{Binding}">
             <TextBlock Style="{ThemeResource HeaderTextBlockStyle}" Text="Create a Ticket" Margin="5"/>
             <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}" Margin="10"/>
             <TextBlock Text="Technology" Style="{ThemeResource SubHeaderTextBlockStyle}" Margin="0,10,0,0"/>
-            <TextBox Style="{ThemeResource BaseTextBoxStyle}" Margin="5" />
+
+
+            <ComboBox Margin="5" HorizontalAlignment="Stretch" DataContext="{Binding}" ItemsSource="{Binding Categories.Value}" SelectedItem="{Binding selectedCategory, Mode=TwoWay}" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Style="{ThemeResource BaseTextBlockStyle}"
+                                 Text="{Binding category}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
 
             <TextBlock Text="Location" Style="{ThemeResource SubHeaderTextBlockStyle}" Margin="0,10,0,0" />
             <TextBox Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
             <TextBlock Text="Description" Style="{ThemeResource SubHeaderTextBlockStyle}" Margin="0,10,0,0" />
             
-            <TextBox Style="{ThemeResource BaseTextBoxStyle}" Margin="5" Text="{Binding text, Mode=TwoWay}"/>
+            <TextBox Style="{ThemeResource BaseTextBoxStyle}" Margin="5" Text="{Binding ticket.text, Mode=TwoWay}"/>
           
             <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Style="{ThemeResource LargeButtonSyle}" HorizontalAlignment="Stretch" Margin="5,10" />
         </StackPanel>

@@ -19,7 +19,7 @@
         </ResourceDictionary>
     </Page.Resources>
 
-    <Grid Background="Transparent">
+    <Grid >
         <mvvm:RefreshButton x:ConnectionId='1' x:Name="btnRefresh" Height="48" Width="48" HorizontalAlignment="Right" VerticalAlignment="Top"                                              />
 
 

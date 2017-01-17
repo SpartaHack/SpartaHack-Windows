@@ -87,11 +87,11 @@
 
             <TextBlock x:ConnectionId='14' Margin="0,0,5,0"  HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" />
         </Grid>
-        <Grid x:ConnectionId='3' x:Name="grdHideView" Background="#88000000" Visibility="Collapsed"/>
+        
 
 
 
-        <SplitView x:ConnectionId='4' x:Name="MySplitView"  Margin="0" DisplayMode="Overlay"  OpenPaneLength="300" CompactPaneLength="48" IsPaneOpen="False" PaneBackground="{ThemeResource ThemeDarkGradient}">
+        <SplitView x:ConnectionId='3' x:Name="MySplitView"  Margin="0" DisplayMode="Overlay"  OpenPaneLength="300" CompactPaneLength="48" IsPaneOpen="False" PaneBackground="{ThemeResource ThemeDarkGradient}">
 
             <SplitView.Pane  >
                 <Grid >
@@ -142,6 +142,7 @@
 
 
         </SplitView>
+        <Grid x:ConnectionId='4' Margin="300,0,0,0" x:Name="grdHideView" Background="#88000000" Visibility="Collapsed"                            />
         <Grid x:ConnectionId='5' x:Name="bgPane" Width="3"  Margin="48,48,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" >
                         <Grid.Background>
                             <LinearGradientBrush  StartPoint="0,0.5" EndPoint="1,0.5">

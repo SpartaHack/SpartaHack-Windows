@@ -28,6 +28,8 @@ namespace SpartaHack
        
         public Ticket ticket { get; set; }
         private SpartaHackMentor shMentorRepo;
+        public TicketCategory selectedCategory { get; set; }
+        public ObservableValue<List<TicketCategory>> Categories { get; set; }
        
         public TicketPage()
         {
@@ -35,25 +37,45 @@ namespace SpartaHack
             MainPage.Title.Value = "Help Desk";
             shMentorRepo = new SpartaHackMentor();
             ticket = new Ticket();
-
+            Categories = new ObservableValue<List<TicketCategory>>();
+           
            
             DataContext = this;
+            init();
+        }
+
+        public async void init()
+        {
+            Categories.Value = await shMentorRepo.getTicketCategories();
         }
 
 
         private async void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            User User = SpartaHackUser.getCurrentUser();
-            if (User == null)
+            try
             {
-                await new Windows.UI.Popups.MessageDialog("You must be logged in to submit a ticket","Please login in").ShowAsync();
+                User User = SpartaHackUser.getCurrentUser();
+                if (User == null)
+                {
+                    await new Windows.UI.Popups.MessageDialog("You must be logged in to submit a ticket", "Please login in").ShowAsync();
+                }
+                else
+                {
+                    ticket.username = User.first_name + " " + User.last_name;
+                    ticket.channel = selectedCategory.channel;
+                    try
+                    {
+                        await shMentorRepo.SubmitTicket(ticket);
+
+                        ticket.text = "";
+                        ticket = new Ticket();
+                        selectedCategory = null;
+                        await new Windows.UI.Popups.MessageDialog("Your ticket was sucessfully submitted", "Ticket Submitted").ShowAsync();
+                    }
+                    catch { }
+                }
             }
-            else
-            {
-                ticket.username = User.first_name + " " + User.last_name;
-                await shMentorRepo.SubmitTicket(ticket);
-                ticket.text = "";
-            }
+            catch { }
         }
     }
 }

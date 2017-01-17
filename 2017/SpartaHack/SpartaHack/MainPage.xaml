@@ -87,7 +87,7 @@
 
             <TextBlock Margin="0,0,5,0"  HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" />
         </Grid>
-        <Grid x:Name="grdHideView" Background="#88000000" Visibility="Collapsed"/>
+        
 
 
 
@@ -142,6 +142,7 @@
 
 
         </SplitView>
+        <Grid Margin="300,0,0,0" x:Name="grdHideView" Background="#88000000" Visibility="Collapsed" Tapped="grdHideView_Tapped"/>
         <Grid x:Name="bgPane" Width="3"  Margin="48,48,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" >
                         <Grid.Background>
                             <LinearGradientBrush  StartPoint="0,0.5" EndPoint="1,0.5">

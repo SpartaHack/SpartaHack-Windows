@@ -17,8 +17,10 @@ namespace SpartaHack.BLL.Constants
         public static readonly string Users = RootURL + "/users/";
         public static readonly string Sponsors = RootURL + "/sponsors/";
         public static readonly string Prizes = RootURL + "/prizes/";
+        public static readonly string Categories = RootURL + "/categories/";
 
 
-        public static readonly string SlackURL = "https://hooks.slack.com/services/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";
+        public static readonly string OldSlackURL = "https://hooks.slack.com/services/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";
+        public static readonly string SlackURL = "https://hooks.slack.com/services/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";
     }
 }

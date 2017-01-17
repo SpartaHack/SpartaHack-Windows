@@ -57,9 +57,9 @@
         
 
             <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image x:ConnectionId='8' x:Name="imgLogo" HorizontalAlignment="Stretch" Width="200" Height="200" Source="Assets/logo.png"/>
+                <Image x:ConnectionId='9' x:Name="imgLogo" HorizontalAlignment="Stretch" Width="200" Height="200" Source="Assets/logo.png"/>
                 <RelativePanel>
-                <StackPanel x:ConnectionId='9'  Width="400"  x:Name="grdNewUser" DataContext="{Binding User}" Margin="10">
+                <StackPanel x:ConnectionId='10'  Width="400"  x:Name="grdNewUser" DataContext="{Binding User}" Margin="10">
                     <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Register" Margin="5"/>
                     <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
                     <TextBox PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
@@ -77,24 +77,24 @@
 
 
 
-                    <Button x:ConnectionId='14' x:Name="btnCreate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Register" Margin="5"                        />
+                    <Button x:ConnectionId='15' x:Name="btnCreate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Register" Margin="5"                        />
 
                 </StackPanel>
 
-                <StackPanel x:ConnectionId='10' x:Name="grdLogin"  DataContext="{Binding User}" Width="400" Margin="10" >
+                <StackPanel x:ConnectionId='11' x:Name="grdLogin"  DataContext="{Binding User}" Width="400" Margin="10" >
                    
                     <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Login" Margin="5"/>
                     <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}"/>
-                    <TextBox x:ConnectionId='11'                               PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox x:ConnectionId='12'                               PlaceholderText="Email" Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
                   
                   
-                    <PasswordBox x:ConnectionId='12'                               PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
+                    <PasswordBox x:ConnectionId='13'                               PlaceholderText="Password" Password="{Binding password, Mode=TwoWay}" Style="{ThemeResource PasswordTextBoxStyle}" Margin="5"/>
 
 
 
 
-                    <Button x:ConnectionId='13' x:Name="btnLogin" Style="{ThemeResource ButtonSyle}" Width="390" Content="Login" Margin="5"                        />
+                    <Button x:ConnectionId='14' x:Name="btnLogin" Style="{ThemeResource ButtonSyle}" Width="390" Content="Login" Margin="5"                        />
 
                 </StackPanel>
                 </RelativePanel>
@@ -102,21 +102,21 @@
         </Grid>
         <Grid x:ConnectionId='5'                                                                                      >
             <ScrollViewer>
-            <StackPanel MaxWidth="800"  HorizontalAlignment="Center" MinWidth="400" DataContext="{Binding User}">
-                <Image Width="250" Height="250"  Source="{Binding QRImage.Value}"
+            <StackPanel MaxWidth="800"  HorizontalAlignment="Center" MinWidth="400" >
+                    <Image x:ConnectionId='6' Width="250" Height="250" Margin="10"                                             
                        HorizontalAlignment="Center" />
 
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Email: "/>
-                <TextBox  Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox  Text="{Binding User.email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
                
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="First Name: "/>
-                <TextBox  Text="{Binding first_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox  Text="{Binding User.first_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Last Name: "/>
-                <TextBox  Text="{Binding last_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
+                    <TextBox  Text="{Binding User.last_name, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
 
-                <Button x:ConnectionId='6' x:Name="btnUpdate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Update" Margin="5" />
-                <Button x:ConnectionId='7' x:Name="btnLogout" Style="{ThemeResource ButtonSyle}" Width="390" Content="Logout" Margin="5"                          />
+                <Button x:ConnectionId='7' x:Name="btnUpdate" Style="{ThemeResource ButtonSyle}" Width="390" Content="Update" Margin="5"                          />
+                <Button x:ConnectionId='8' x:Name="btnLogout" Style="{ThemeResource ButtonSyle}" Width="390" Content="Logout" Margin="5"                          />
 
 
             </StackPanel>

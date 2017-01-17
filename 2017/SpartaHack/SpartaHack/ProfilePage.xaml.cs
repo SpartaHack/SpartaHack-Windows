@@ -66,6 +66,7 @@ namespace SpartaHack
         private void init()
         {
             QRImage = new ObservableValue<ImageSource>();
+          
             LoggedIn = new ObservableValue<bool>();
             LoggedIn.Value = false;
             MainPage.LoggedIn = LoggedIn;
@@ -127,8 +128,13 @@ namespace SpartaHack
             barcodeWriter.Options.Height = 250;
             barcodeWriter.Options.Width = 250;
             // write text and generate a 2-D barcode as a bitmap
+           
+           QRImage.Value = (ImageSource)barcodeWriter.Write(user.id.ToString()).ToBitmap();
+        }
 
-            QRImage.Value = (WriteableBitmap)barcodeWriter.Write(user.id.ToString()).ToBitmap();
+        private async void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            User = await userRepo.updateUser(User);
         }
     }
 }

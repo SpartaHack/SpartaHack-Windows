@@ -43,13 +43,17 @@ namespace SpartaHack
 
         public async void init()
         {
-            Schedule.Value = _scheduleCaller.getScheduleLocal();
-            btnRefresh.IsRefreshing = true;
-            var data= await _scheduleCaller.getScheduleGrouped();
-            if(data!=null)
+            try
             {
-                GroupedSchedule.Source = data;
+                Schedule.Value = _scheduleCaller.getScheduleLocal();
+                btnRefresh.IsRefreshing = true;
+                var data = await _scheduleCaller.getScheduleGrouped();
+                if (data != null)
+                {
+                    GroupedSchedule.Source = data;
+                }
             }
+            catch { }
             btnRefresh.IsRefreshing = false;
 
          
