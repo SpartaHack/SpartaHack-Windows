@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
 
 using SpartaHack.BLL.Models;
 using SpartaHack.BLL.APICalls;
@@ -44,9 +45,36 @@ namespace SpartaHack
             init();
         }
 
+        public async Task<bool> isLoggedIn()
+        {
+            grdMain.IsTapEnabled = false;
+            try
+            {
+                User User = SpartaHackUser.getCurrentUser();
+                if (User == null)
+                {
+                    await new Windows.UI.Popups.MessageDialog("You must be logged in to submit a ticket", "Please login in").ShowAsync();
+                    return false;
+                }
+                grdMain.IsTapEnabled = true;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public async void init()
         {
-            Categories.Value = await shMentorRepo.getTicketCategories();
+            if (await isLoggedIn())
+            {
+                try
+                {
+                    Categories.Value = await shMentorRepo.getTicketCategories();
+                }
+                catch { }
+            }
         }
 
 
@@ -54,13 +82,10 @@ namespace SpartaHack
         {
             try
             {
-                User User = SpartaHackUser.getCurrentUser();
-                if (User == null)
+               
+                if(await isLoggedIn())
                 {
-                    await new Windows.UI.Popups.MessageDialog("You must be logged in to submit a ticket", "Please login in").ShowAsync();
-                }
-                else
-                {
+                    User User = SpartaHackUser.getCurrentUser();
                     ticket.username = User.first_name + " " + User.last_name;
                     ticket.channel = selectedCategory.channel;
                     try

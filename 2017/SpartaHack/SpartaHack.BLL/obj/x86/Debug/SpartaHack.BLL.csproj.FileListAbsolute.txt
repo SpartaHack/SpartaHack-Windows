@@ -32,4 +32,3 @@ D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\pri.re
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\qualifiers.txt
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\qualifiers.txt.intermediate
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
-D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Debug\SpartaHack.BLL.csprojResolveAssemblyReference.cache

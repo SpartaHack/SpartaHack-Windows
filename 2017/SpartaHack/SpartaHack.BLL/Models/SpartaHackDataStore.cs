@@ -7,6 +7,12 @@ namespace SpartaHack.BLL.Models
     {
         public DbSet<Schedule> ScheduleItems { get; set; }
         public DbSet<User> CurrentUser { get; set; }
+
+        public DbSet<Prize> Prizes { get; set; }
+
+        public DbSet<Sponsor> Sponsors { get; set; }
+
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Filename=SpartaHack.db");

@@ -16,7 +16,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid Margin="0,48,0,0" >
+    <Grid Margin="0,48,0,0" x:Name="grdMain" >
         <StackPanel MaxWidth="500" MaxHeight="500" DataContext="{Binding}">
             <TextBlock Style="{ThemeResource HeaderTextBlockStyle}" Text="Create a Ticket" Margin="5"/>
             <Border BorderThickness="0,0,0,1" BorderBrush="{StaticResource ThemeDarkGold}" Margin="10"/>

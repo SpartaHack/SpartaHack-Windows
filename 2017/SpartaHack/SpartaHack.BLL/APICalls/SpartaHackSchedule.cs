@@ -33,7 +33,7 @@ namespace SpartaHack.BLL.APICalls
             if (response.IsSuccessStatusCode)
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
-               schedule = JsonConvert.DeserializeObject<ScheduleResponse>(jsonString).schedule;
+               schedule = JsonConvert.DeserializeObject<List<Schedule>>(jsonString);
                 using (var db = new SpartaHackDataStore())
                 {
                     db.ScheduleItems.RemoveRange(db.ScheduleItems);
@@ -45,18 +45,36 @@ namespace SpartaHack.BLL.APICalls
             return schedule;
 
         }
+
+        public List<HeaderGroup<Schedule>> groupSchedule(List<Schedule>schedule)
+        {
+            var query = from s in schedule
+                        group s by DateTime.Parse(s.time).Date into grouped
+                        select new HeaderGroup<Schedule>(grouped)
+                        {
+                            Header = grouped.Key.ToString("dddd, dd")
+                        };
+            return query.ToList();
+        }
+        public List<HeaderGroup<Schedule>> getLocalScheduleGrouped()
+        {
+            List<Schedule> schedule =  getScheduleLocal();
+            try
+            {
+                return groupSchedule(schedule);
+            }
+            catch
+            {
+                return new List<HeaderGroup<Schedule>>();
+            }
+        }
+
         public async Task<List<HeaderGroup<Schedule>>> getScheduleGrouped()
         {
             List<Schedule> schedule = await getSchedule();
             try
             {
-                var query = from s in schedule
-                            group s by DateTime.Parse(s.time).Date into grouped
-                            select new HeaderGroup<Schedule>(grouped)
-                            {
-                                Header = grouped.Key.ToString("dddd, dd")
-                            };
-                return query.ToList();
+                return groupSchedule(schedule);
             }
             catch
             {

@@ -28,13 +28,13 @@
     <AppXManifest Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-01-17T04:42:32.773</Modified>
+      <Modified>2017-01-17T18:09:21.361</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHack 2017.exe">
       <PackagePath>entrypoint\SpartaHack 2017.exe</PackagePath>
-      <Modified>2017-01-17T04:40:06.123</Modified>
+      <Modified>2017-01-17T18:09:20.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.1.0-preview1-final\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Hosting.Abstractions.dll</PackagePath>
@@ -606,7 +606,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.dll">
       <PackagePath>SpartaHack.BLL.dll</PackagePath>
-      <Modified>2017-01-17T04:22:27.020</Modified>
+      <Modified>2017-01-17T18:09:18.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\.nuget\packages\ZXing.Net\0.14.0.1\lib\windows8\ZXing.winmd">
       <PackagePath>ZXing.winmd</PackagePath>
@@ -697,11 +697,11 @@
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-01-17T04:42:32.525</Modified>
+      <Modified>2017-01-17T18:09:21.103</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack 2017.exe">
       <PackagePath>SpartaHack 2017.exe</PackagePath>
-      <Modified>2017-01-17T04:42:32.770</Modified>
+      <Modified>2017-01-17T18:09:21.358</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

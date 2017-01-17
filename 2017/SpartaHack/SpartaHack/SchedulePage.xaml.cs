@@ -45,7 +45,7 @@ namespace SpartaHack
         {
             try
             {
-                Schedule.Value = _scheduleCaller.getScheduleLocal();
+                GroupedSchedule.Source = _scheduleCaller.getLocalScheduleGrouped();
                 btnRefresh.IsRefreshing = true;
                 var data = await _scheduleCaller.getScheduleGrouped();
                 if (data != null)
