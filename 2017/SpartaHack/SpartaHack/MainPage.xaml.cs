@@ -37,7 +37,13 @@ namespace SpartaHack
             {
                 rdSchedule.IsChecked = true;
             };
-          
+            MySplitView.PaneClosed += (s, e) =>
+            {
+                grdHideView.Visibility = Visibility.Collapsed;
+                bgPane.Margin = new Thickness(MySplitView.IsPaneOpen ? MySplitView.OpenPaneLength : MySplitView.CompactPaneLength, bgPane.Margin.Top, bgPane.Margin.Right, bgPane.Margin.Bottom);
+
+            };
+
         }
         private void OnScheduleChecked(object sender, RoutedEventArgs e)
         {
@@ -105,8 +111,11 @@ namespace SpartaHack
         {
             try
             {
+                grdHideView.Visibility = grdHideView.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
                 MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-                bgPane.Width = MySplitView.IsPaneOpen ? MySplitView.OpenPaneLength : MySplitView.CompactPaneLength;
+                bgPane.Margin = new Thickness(MySplitView.IsPaneOpen ? MySplitView.OpenPaneLength : MySplitView.CompactPaneLength, bgPane.Margin.Top, bgPane.Margin.Right, bgPane.Margin.Bottom);
+
+
 
             }
             catch { }

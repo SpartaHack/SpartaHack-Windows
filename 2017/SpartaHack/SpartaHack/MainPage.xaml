@@ -31,6 +31,8 @@
 
                         <Setter Target="MySplitView.DisplayMode"
                             Value="CompactOverlay" />
+                        <Setter Target="bgPane.Visibility"
+                            Value="Visible" />
                         <!--<Setter Target="MySplitView.Margin"
                                 Value="0"/>-->
 
@@ -48,6 +50,8 @@
 
                         <Setter Target="MySplitView.DisplayMode"
                             Value="Overlay" />
+                        <Setter Target="bgPane.Visibility"
+                            Value="Collapsed" />
                         <!--<Setter Target="MySplitView.Margin"
                                 Value="0,48,0,0"/>-->
 
@@ -60,20 +64,30 @@
         <!--<Image    Name="imgLogo" Source="Assets/logo.png" Opacity=".4" MaxHeight="450" MaxWidth="450">-->
         
         <!--</Image>-->
-        <Grid  Height="48" VerticalAlignment="Top" Background="{ThemeResource ThemeLightGold}" >
+        
+            <Grid Height="48" VerticalAlignment="Top" Background="{ThemeResource ThemeLightGold}"  >
+                
+            <Grid Height="3" VerticalAlignment="Bottom"  Margin="0,0,0,-3">
+                <Grid.Background>
+                <LinearGradientBrush  StartPoint="0.5,0" EndPoint="0.5,1">
 
-            <Button x:Name="HambButton" Style="{ThemeResource ButtonSyle}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+
+                    <GradientStop Color="#88000000" Offset="0"/>
+                    <GradientStop Color="#00000000" Offset="1"/>
+
+
+                </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+
+                <Button x:Name="HambButton" Style="{ThemeResource ButtonSyle}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    Width="48" Height="48"  Click="HambButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-            <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Text="{Binding Value}"  Style="{ThemeResource HeaderTextBlockStyle}"/>
+                <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Text="{Binding Value}"  Style="{ThemeResource HeaderTextBlockStyle}"/>
 
             <TextBlock Margin="0,0,5,0"  HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" />
-
-
-
-
-
         </Grid>
+        <Grid x:Name="grdHideView" Background="#88000000" Visibility="Collapsed"/>
 
 
 
@@ -85,7 +99,18 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="48"/>
                     </Grid.RowDefinitions>
-                    <Grid x:Name="bgPane" Width="48" Grid.RowSpan="2"   BorderBrush="{ThemeResource ThemeDarkerGold}" Opacity=".5" BorderThickness=".75" HorizontalAlignment="Left" ></Grid>
+                    <!--<Grid x:Name="bgPane" Width="3"  Margin="48,48,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" >
+                        <Grid.Background>
+                            <LinearGradientBrush  StartPoint="0,0.5" EndPoint="1,0.5">
+
+
+                                <GradientStop Color="#88000000" Offset="0"/>
+                                <GradientStop Color="#ffffffff" Offset="1"/>
+
+
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                    </Grid>-->
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto" >
 
@@ -117,6 +142,20 @@
 
 
         </SplitView>
+        <Grid x:Name="bgPane" Width="3"  Margin="48,48,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" >
+                        <Grid.Background>
+                            <LinearGradientBrush  StartPoint="0,0.5" EndPoint="1,0.5">
+
+
+                                <GradientStop Color="#88000000" Offset="0"/>
+                                <GradientStop Color="#00000000" Offset="1"/>
+
+
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                    </Grid>
+     
+      
 
     </Grid>
 

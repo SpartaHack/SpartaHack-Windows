@@ -23,7 +23,7 @@
             </Storyboard>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Button x:ConnectionId='2' x:Name="btnRefresh" Style="{ThemeResource ButtonSyle}" 
+    <Button x:ConnectionId='2' x:Name="btnRefresh" Style="{ThemeResource ButtonSyle}" BorderBrush="Transparent"
                    Width="48" Height="48"                           HorizontalAlignment="Right" VerticalAlignment="Top">
         <Button.Content>
             <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE72C;" RenderTransformOrigin="0.5,0.5">

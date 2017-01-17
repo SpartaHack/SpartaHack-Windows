@@ -12,9 +12,13 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Imaging;
 
 using SpartaHack.BLL.Models;
 using SpartaHack.BLL.APICalls;
+
+
+using ZXing;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,6 +30,7 @@ namespace SpartaHack
     public sealed partial class ProfilePage : Page
     {
         public ObservableValue<bool> LoggedIn;
+        public ObservableValue<ImageSource> QRImage;
 
         private SpartaHackUser userRepo;
         private User user;
@@ -46,6 +51,7 @@ namespace SpartaHack
                 else if( user.auth_token!=null)
                 {
                     LoggedIn.Value = true;
+                    generateQR();
                 }
             }
         }
@@ -53,11 +59,13 @@ namespace SpartaHack
         public ProfilePage()
         {
             this.InitializeComponent();
+        
             init();
         }
 
         private void init()
         {
+            QRImage = new ObservableValue<ImageSource>();
             LoggedIn = new ObservableValue<bool>();
             LoggedIn.Value = false;
             MainPage.LoggedIn = LoggedIn;
@@ -109,6 +117,18 @@ namespace SpartaHack
             {
                // DebuggingHelper.ShowError("Error in LoginPage, txtPassword_KeyDown(): " + ex.Message);
             }
+        }
+
+        private void generateQR()
+        {
+            // instantiate a writer object
+            var barcodeWriter = new BarcodeWriter() { Format = BarcodeFormat.QR_CODE };
+            barcodeWriter.Options.Margin = 10;
+            barcodeWriter.Options.Height = 250;
+            barcodeWriter.Options.Width = 250;
+            // write text and generate a 2-D barcode as a bitmap
+
+            QRImage.Value = (WriteableBitmap)barcodeWriter.Write(user.id.ToString()).ToBitmap();
         }
     }
 }

@@ -600,3 +600,7 @@ D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\Refre
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\RefreshButton.g.cs
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\RefreshButton.xaml
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\MVVM\RefreshButton.xbf
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\LocalFiles\SpartaHack17-map.pdf
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\ZXing.winmd
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\ZXing.pdb
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\ZXing.pri.xml

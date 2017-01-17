@@ -16,7 +16,8 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>SpartaHack_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>SpartaHack_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>9FBF246F0BD5237E01947973CDC889756F3435FC</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -90,8 +91,13 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\logo.png" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Theme\Fonts\nemoy\nemoy_light-webfont.svg" />
+    <Content Include="LocalFiles\SpartaHack17-map.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
+    <None Include="SpartaHack_StoreKey.pfx" />
     <None Include="Theme\Fonts\Lato\lato-italic-webfont.woff" />
     <None Include="Theme\Fonts\Lato\lato-italic-webfont.woff2" />
     <Content Include="Theme\Fonts\Lato\Lato-Italic.ttf" />

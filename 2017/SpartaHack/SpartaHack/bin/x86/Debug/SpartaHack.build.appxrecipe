@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>65056a2b-793f-4ee6-a489-5eef00b4387d</PackageIdentityName>
-    <PackageIdentityPublisher>CN=mattp</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=98AE6015-DA35-4C52-821A-32B1274E1CBD</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
@@ -454,6 +454,9 @@
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.dll">
       <PackagePath>SpartaHack.BLL.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mattp\.nuget\packages\ZXing.Net\0.14.0.1\lib\windows8\ZXing.winmd">
+      <PackagePath>ZXing.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
     </AppxPackagedFile>
@@ -486,6 +489,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\Theme\Fonts\nemoy\nemoy_light-webfont.svg">
       <PackagePath>Theme\Fonts\nemoy\nemoy_light-webfont.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\LocalFiles\SpartaHack17-map.pdf">
+      <PackagePath>LocalFiles\SpartaHack17-map.pdf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\Theme\Fonts\Lato\Lato-Italic.ttf">
       <PackagePath>Theme\Fonts\Lato\Lato-Italic.ttf</PackagePath>

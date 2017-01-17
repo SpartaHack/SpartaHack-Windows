@@ -9,32 +9,32 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>65056a2b-793f-4ee6-a489-5eef00b4387d</PackageIdentityName>
-    <PackageIdentityPublisher>CN=mattp</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=98AE6015-DA35-4C52-821A-32B1274E1CBD</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>04B80CDF0384147A07DEF3B1329CE8439AD3020795800BEB8783F4BB1A62E263</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>65056a2b-793f-4ee6-a489-5eef00b4387d_1.0.0.0_x86__ydr6r9d3rjjnt</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>65056a2b-793f-4ee6-a489-5eef00b4387d_ydr6r9d3rjjnt!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>65056a2b-793f-4ee6-a489-5eef00b4387d</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=mattp</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredManifestChecksum>7A2ACD5A00382BE1EC94189C06005B18EDD7C1B244B76681F02C5E2DC5C79EEC</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>47002MMPIndustries.SpartaHack_1.1.0.0_x86__c1c6qnm3bnjg4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>47002MMPIndustries.SpartaHack_c1c6qnm3bnjg4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>47002MMPIndustries.SpartaHack</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=98AE6015-DA35-4C52-821A-32B1274E1CBD</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-31T04:39:53.003</Modified>
+      <Modified>2017-01-17T02:06:49.165</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHack 2017.exe">
       <PackagePath>entrypoint\SpartaHack 2017.exe</PackagePath>
-      <Modified>2016-12-31T04:39:52.039</Modified>
+      <Modified>2017-01-17T02:06:47.352</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mattp\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.1.0-preview1-final\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Hosting.Abstractions.dll</PackagePath>
@@ -606,7 +606,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Debug\SpartaHack.BLL.dll">
       <PackagePath>SpartaHack.BLL.dll</PackagePath>
-      <Modified>2016-12-31T04:06:50.054</Modified>
+      <Modified>2017-01-17T01:52:19.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mattp\.nuget\packages\ZXing.Net\0.14.0.1\lib\windows8\ZXing.winmd">
+      <PackagePath>ZXing.winmd</PackagePath>
+      <Modified>2014-04-30T01:06:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\Assets\logo.png">
       <PackagePath>Assets\logo.png</PackagePath>
@@ -650,6 +654,10 @@
       <PackagePath>Theme\Fonts\nemoy\nemoy_light-webfont.svg</PackagePath>
       <Modified>2016-12-28T15:18:42.674</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\LocalFiles\SpartaHack17-map.pdf">
+      <PackagePath>LocalFiles\SpartaHack17-map.pdf</PackagePath>
+      <Modified>2017-01-15T18:15:29.681</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\Theme\Fonts\Lato\Lato-Italic.ttf">
       <PackagePath>Theme\Fonts\Lato\Lato-Italic.ttf</PackagePath>
       <Modified>2016-12-28T15:18:42.594</Modified>
@@ -680,7 +688,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\SpartaHack 2017.xr.xml">
       <PackagePath>SpartaHack 2017.xr.xml</PackagePath>
-      <Modified>2016-12-31T04:39:51.804</Modified>
+      <Modified>2017-01-17T01:54:30.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -689,11 +697,11 @@
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-12-31T04:39:52.831</Modified>
+      <Modified>2017-01-17T02:06:48.102</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Core\SpartaHack 2017.exe">
       <PackagePath>SpartaHack 2017.exe</PackagePath>
-      <Modified>2016-12-31T04:39:52.999</Modified>
+      <Modified>2017-01-17T02:06:49.156</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

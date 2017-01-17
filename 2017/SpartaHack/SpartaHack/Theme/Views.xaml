@@ -14,15 +14,15 @@
     
     <DataTemplate x:Name="ScheduleItem">
         
-        <StackPanel Margin="10" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness="0,0,0,.5">
+        <StackPanel Margin="15,10,10,10" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness="0,0,0,.5">
             <Grid HorizontalAlignment="Stretch">
                 <Grid.Resources>
-                    <mvvm:DateTimeConverter x:Key="DateTimeConverter"/>
+                    <mvvm:DateTimeConverter x:Key="LocalDateTimeConverter"/>
                 </Grid.Resources>
 
                 <TextBlock VerticalAlignment="Center" Style="{ThemeResource SubHeaderTextBlockStyle}" Text="{Binding title}" />
 
-                <TextBlock  Style="{ThemeResource BaseAlternateTextBlockStyle}" VerticalAlignment="Bottom" Margin="0,5,0,0" Text="{Binding Path=time, Mode=OneWay, Converter={StaticResource DateTimeConverter}}"  HorizontalAlignment="Right"/>
+                <TextBlock  Style="{ThemeResource BaseAlternateTextBlockStyle}" VerticalAlignment="Bottom" Margin="0,5,0,0" Text="{Binding Path=time, Mode=OneWay, Converter={StaticResource LocalDateTimeConverter}}"  HorizontalAlignment="Right"/>
             </Grid>
             <TextBlock Style="{ThemeResource BaseAlternateTextBlockStyle}" Margin="10,5" Text="{Binding location}" />
             <TextBlock Style="{ThemeResource BaseTextBlockStyle}"   Margin="10,5" Text="{Binding description}" />
@@ -58,7 +58,9 @@
 
 
     <DataTemplate x:Name="BaseListViewHeader">
-        <TextBlock FontSize="22" Foreground="{ThemeResource ThemeDarkerGold}" Text="{Binding Header}" FontFamily="{ThemeResource NemoyLight}" Margin="10"/>
+        
+            <TextBlock FontSize="22" Foreground="{ThemeResource ThemeDarkerGold}" Text="{Binding Header}" FontFamily="{ThemeResource NemoyLight}"  />
+      
     </DataTemplate>
 
 

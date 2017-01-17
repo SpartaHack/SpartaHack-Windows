@@ -15,12 +15,22 @@
                 <ResourceDictionary Source="Theme/Style.xaml"/>
                 <ResourceDictionary Source="Theme/Views.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <CollectionViewSource x:Name="GroupedSchedule" IsSourceGrouped="True" />
         </ResourceDictionary>
     </Page.Resources>
     <Grid   >
         <mvvm:RefreshButton x:Name="btnRefresh" RefreshClicked="RefreshButton_RefreshClicked"/>
 
-        <ListView  Margin="0,48,0,0" Style="{ThemeResource BaseListView}" MinWidth="500" MaxWidth="1000" DataContext="{Binding}" ItemsSource="{Binding Schedule.Value}" ItemTemplate="{StaticResource ScheduleItem}">
+        <ListView  Margin="0,48,0,0" 
+                   Style="{ThemeResource BaseListView}" 
+                   MinWidth="500" MaxWidth="1000" 
+                   DataContext="{Binding}" 
+                   ItemsSource="{Binding Source={StaticResource GroupedSchedule}}"
+                    IsSynchronizedWithCurrentItem="False"
+                   ItemTemplate="{StaticResource ScheduleItem}">
+            <ListView.GroupStyle>
+                <GroupStyle HeaderTemplate="{Binding Source={ThemeResource BaseListViewHeader}}"/>
+            </ListView.GroupStyle>
         </ListView>
     </Grid>
 </Page>

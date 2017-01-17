@@ -101,8 +101,11 @@
             </StackPanel>
         </Grid>
         <Grid Visibility="{x:Bind LoggedIn.Value, Mode=OneWay, Converter={StaticResource Boolean}}">
+            <ScrollViewer>
+            <StackPanel MaxWidth="800"  HorizontalAlignment="Center" MinWidth="400" DataContext="{Binding User}">
+                <Image Width="250" Height="250"  Source="{Binding QRImage.Value}"
+                       HorizontalAlignment="Center" />
 
-            <StackPanel MaxWidth="800" Height="400" HorizontalAlignment="Center" MinWidth="400" DataContext="{Binding User}">
                 <TextBlock Style="{ThemeResource SubHeaderTextBlockStyle}" Text="Email: "/>
                 <TextBox  Text="{Binding email, Mode=TwoWay}" Style="{ThemeResource BaseTextBoxStyle}" Margin="5"/>
                
@@ -117,6 +120,7 @@
 
 
             </StackPanel>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Page>
