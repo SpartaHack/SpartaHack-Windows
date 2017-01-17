@@ -26,6 +26,25 @@ namespace SpartaHack.BLL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Sponsors",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    level = table.Column<string>(nullable: true),
+                    logo_png_dark = table.Column<string>(nullable: true),
+                    logo_png_light = table.Column<string>(nullable: true),
+                    logo_svg_dark = table.Column<string>(nullable: true),
+                    logo_svg_light = table.Column<string>(nullable: true),
+                    name = table.Column<string>(nullable: true),
+                    url = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sponsors", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CurrentUser",
                 columns: table => new
                 {
@@ -42,15 +61,47 @@ namespace SpartaHack.BLL.Migrations
                 {
                     table.PrimaryKey("PK_CurrentUser", x => x.id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Prizes",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    description = table.Column<string>(nullable: true),
+                    name = table.Column<string>(nullable: true),
+                    sponsorid = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Prizes", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Prizes_Sponsors_sponsorid",
+                        column: x => x.sponsorid,
+                        principalTable: "Sponsors",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Prizes_sponsorid",
+                table: "Prizes",
+                column: "sponsorid");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Prizes");
+
+            migrationBuilder.DropTable(
                 name: "ScheduleItems");
 
             migrationBuilder.DropTable(
                 name: "CurrentUser");
+
+            migrationBuilder.DropTable(
+                name: "Sponsors");
         }
     }
 }

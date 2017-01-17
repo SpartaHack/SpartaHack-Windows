@@ -24,6 +24,7 @@ namespace SpartaHack.BLL.Models
                 .HasKey(s => s.id)
                 .HasName("PrimaryKey_id");
             */
+        
 
         }
 

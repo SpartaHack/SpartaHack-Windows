@@ -19,7 +19,7 @@ namespace SpartaHack
 
             set
             {
-                if (!value.Equals( _Value))
+                if (!(value == null|| value.Equals( _Value)))
                 {
                     _Value = value;
                     NotifyPropertyChanged("Value");

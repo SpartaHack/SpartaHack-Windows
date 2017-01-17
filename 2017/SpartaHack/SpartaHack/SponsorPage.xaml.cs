@@ -42,8 +42,13 @@ namespace SpartaHack
         }
         public async void init()
         {
-            btnRefresh.IsRefreshing = true;
-            Sponsors.Source = await _sponsorCaller.getSponsorsGrouped();
+            try
+            {
+                Sponsors.Source = _sponsorCaller.getLocalSponsorsGrouped();
+                btnRefresh.IsRefreshing = true;
+                Sponsors.Source = await _sponsorCaller.getSponsorsGrouped();
+            }
+            catch { }
             btnRefresh.IsRefreshing = false;
         }
         private void RefreshButton_RefreshClicked(object sender, RoutedEventArgs e)

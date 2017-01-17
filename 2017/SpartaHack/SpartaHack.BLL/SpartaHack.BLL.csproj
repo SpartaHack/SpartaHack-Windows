@@ -115,9 +115,9 @@
     <Compile Include="APICalls\SpartaHackSponsor.cs" />
     <Compile Include="APICalls\SpartaHackUser.cs" />
     <Compile Include="Constants\APIConstants.cs" />
-    <Compile Include="Migrations\20161115070031_MyFirstMigration.cs" />
-    <Compile Include="Migrations\20161115070031_MyFirstMigration.designer.cs">
-      <DependentUpon>20161115070031_MyFirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20170117182001_MyFirstMigration.cs" />
+    <Compile Include="Migrations\20170117182001_MyFirstMigration.designer.cs">
+      <DependentUpon>20170117182001_MyFirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\SpartaHackDataStoreModelSnapshot.cs" />
     <Compile Include="Models\Application.cs" />

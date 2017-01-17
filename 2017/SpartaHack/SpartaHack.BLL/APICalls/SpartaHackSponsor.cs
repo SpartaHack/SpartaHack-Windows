@@ -26,14 +26,20 @@ namespace SpartaHack.BLL.APICalls
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
                 sponsors = JsonConvert.DeserializeObject<List<Sponsor>>(jsonString);
+                using (var db = new SpartaHackDataStore())
+                {
+                    db.Sponsors.RemoveRange(db.Sponsors);
+                    db.SaveChanges();
+                    db.Sponsors.AddRange(sponsors);
+                    db.SaveChanges();
+                }
             }
             return sponsors;
-        }
 
-        public async Task<List<HeaderGroup<Sponsor>>> getSponsorsGrouped()
+
+        }
+        public List<HeaderGroup<Sponsor>> groupSponsors(List<Sponsor> sponsors)
         {
-            List<Sponsor> sponsors = await getSponsors();
-            
             var query = from s in sponsors
                         orderby s.name, s.levelId descending
                         group s by s.level into grouped
@@ -43,6 +49,24 @@ namespace SpartaHack.BLL.APICalls
 
                         };
             return query.ToList();
+        }
+        public List<HeaderGroup<Sponsor>> getLocalSponsorsGrouped()
+        {
+            List<Sponsor> data;
+            using (var db = new SpartaHackDataStore())
+            {
+                data = db.Sponsors.Where(s=>s.level!="").ToList();
+            }
+            if (data == null)
+                return new List<HeaderGroup<Sponsor>>();
+            return groupSponsors(data);
+        }
+
+        public async Task<List<HeaderGroup<Sponsor>>> getSponsorsGrouped()
+        {
+            List<Sponsor> sponsors = await getSponsors();
+            return groupSponsors(sponsors);
+            
         }
     }
 }

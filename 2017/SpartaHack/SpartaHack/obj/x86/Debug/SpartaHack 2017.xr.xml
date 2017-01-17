@@ -113,13 +113,11 @@
       <RootProperty Name="ZoomMode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
-      <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Tag" />
       <RootProperty Name="Content" />
       <RootProperty Name="Style" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="GroupName" />
       <RootEvent Name="Checked" />
     </RootType>
@@ -299,7 +297,6 @@
     </RootType>
     <RootType FullName="SpartaHack.SchedulePage" />
     <RootType FullName="SpartaHack.SponsorPage" />
-    <RootType FullName="Windows.UI.Xaml.Media.FontFamily" />
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
     </RootType>
@@ -360,6 +357,7 @@
       <RootMethod Name="GetAccessibilityView" />
       <RootMethod Name="SetAccessibilityView" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.FontFamily" />
     <RootType FullName="Windows.UI.Xaml.Documents.Typography">
       <RootMethod Name="GetCapitals" />
       <RootMethod Name="SetCapitals" />

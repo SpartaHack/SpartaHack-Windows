@@ -42,8 +42,13 @@ namespace SpartaHack
 
         public async void init()
         {
-            btnRefresh.IsRefreshing = true;
-            Prizes.Value= await _prizesCaller.getPrizes();
+            //try
+            //{
+                Prizes.Value = _prizesCaller.getPrizesLocal();
+                btnRefresh.IsRefreshing = true;
+                Prizes.Value = await _prizesCaller.getPrizes();
+           // }
+           // catch { }
             btnRefresh.IsRefreshing = false;
         }
 

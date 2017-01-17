@@ -15,6 +15,24 @@ namespace SpartaHack.BLL.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.0-preview1-22509");
 
+            modelBuilder.Entity("SpartaHack.BLL.Models.Prize", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("description");
+
+                    b.Property<string>("name");
+
+                    b.Property<int?>("sponsorid");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("sponsorid");
+
+                    b.ToTable("Prizes");
+                });
+
             modelBuilder.Entity("SpartaHack.BLL.Models.Schedule", b =>
                 {
                     b.Property<int>("id")
@@ -33,6 +51,30 @@ namespace SpartaHack.BLL.Migrations
                     b.HasKey("id");
 
                     b.ToTable("ScheduleItems");
+                });
+
+            modelBuilder.Entity("SpartaHack.BLL.Models.Sponsor", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("level");
+
+                    b.Property<string>("logo_png_dark");
+
+                    b.Property<string>("logo_png_light");
+
+                    b.Property<string>("logo_svg_dark");
+
+                    b.Property<string>("logo_svg_light");
+
+                    b.Property<string>("name");
+
+                    b.Property<string>("url");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Sponsors");
                 });
 
             modelBuilder.Entity("SpartaHack.BLL.Models.User", b =>
@@ -55,6 +97,13 @@ namespace SpartaHack.BLL.Migrations
                     b.HasKey("id");
 
                     b.ToTable("CurrentUser");
+                });
+
+            modelBuilder.Entity("SpartaHack.BLL.Models.Prize", b =>
+                {
+                    b.HasOne("SpartaHack.BLL.Models.Sponsor", "sponsor")
+                        .WithMany()
+                        .HasForeignKey("sponsorid");
                 });
         }
     }

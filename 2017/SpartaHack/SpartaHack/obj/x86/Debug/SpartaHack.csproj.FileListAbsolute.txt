@@ -604,3 +604,6 @@ D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\LocalFiles
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\ZXing.winmd
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\ZXing.pdb
 D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\ZXing.pri.xml
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\bin\x86\Debug\Theme\SplitViewStylesAlt.xbf
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\Theme\SplitViewStylesAlt.xaml
+D:\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack\obj\x86\Debug\Theme\SplitViewStylesAlt.xbf
