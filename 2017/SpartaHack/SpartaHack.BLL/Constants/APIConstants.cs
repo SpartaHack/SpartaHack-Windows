@@ -8,7 +8,7 @@ namespace SpartaHack.BLL.Constants
 {
     public class APIConstants
     {
-        public static readonly string RootURL= "https://d.api.spartahack.com";
+        public static readonly string RootURL= "https://api.spartahack.com";
         public static readonly string Token = "67a016ff86e35dd9dac23a9faaf99b96";
                      
         public static readonly string Schedule = RootURL + "/schedule/";
@@ -18,6 +18,7 @@ namespace SpartaHack.BLL.Constants
         public static readonly string Sponsors = RootURL + "/sponsors/";
         public static readonly string Prizes = RootURL + "/prizes/";
         public static readonly string Categories = RootURL + "/categories/";
+        public static readonly string Announcements = RootURL + "/announcements/";
 
 
         public static readonly string OldSlackURL = "https://hooks.slack.com/services/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";

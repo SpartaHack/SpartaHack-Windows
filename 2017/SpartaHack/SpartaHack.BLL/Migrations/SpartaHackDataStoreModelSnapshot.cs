@@ -15,6 +15,26 @@ namespace SpartaHack.BLL.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.0-preview1-22509");
 
+            modelBuilder.Entity("SpartaHack.BLL.Models.Announcement", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("created_at");
+
+                    b.Property<string>("description");
+
+                    b.Property<int>("pinned");
+
+                    b.Property<string>("title");
+
+                    b.Property<string>("updated_at");
+
+                    b.HasKey("id");
+
+                    b.ToTable("AnnouncementItems");
+                });
+
             modelBuilder.Entity("SpartaHack.BLL.Models.Prize", b =>
                 {
                     b.Property<int>("id")

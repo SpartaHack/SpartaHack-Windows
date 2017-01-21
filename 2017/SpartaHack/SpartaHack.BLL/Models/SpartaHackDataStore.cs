@@ -11,8 +11,9 @@ namespace SpartaHack.BLL.Models
         public DbSet<Prize> Prizes { get; set; }
 
         public DbSet<Sponsor> Sponsors { get; set; }
+        public DbSet<Announcement> AnnouncementItems { get; set; }
 
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Filename=SpartaHack.db");

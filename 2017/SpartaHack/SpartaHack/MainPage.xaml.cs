@@ -22,20 +22,33 @@ namespace SpartaHack
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public static ObservableValue<string> Title;
-        public static ObservableValue<bool> LoggedIn;
+        public static ObservableValue<string> Title { get; set; }
+        public static ObservableValue<bool> LoggedIn { get; set; }
+        public static ObservableValue<string> Time { get; set; }
         public static MainPage root;
+        private DateTime DoneTime;
         public MainPage(Frame frame)
         {
             this.InitializeComponent();
             Title = new ObservableValue<string>();
             LoggedIn = new ObservableValue<bool>();
+            Time = new ObservableValue<string>();
             this.MySplitView.Content = frame;
-            DataContext = Title;
+            DataContext = this;
+
+
+            DoneTime = DateTime.Parse("1/22/2017 17:00:00 GMT");
+
+            DispatcherTimer dt = new DispatcherTimer();
+            dt.Interval = TimeSpan.FromSeconds(1);
+            dt.Tick += Dt_Tick;
+
+
 
             this.Loaded += (s,e) =>
             {
-                rdSchedule.IsChecked = true;
+                rdAnnouncements.IsChecked = true;
+                dt.Start();
             };
             MySplitView.PaneClosed += (s, e) =>
             {
@@ -43,7 +56,31 @@ namespace SpartaHack
                 bgPane.Margin = new Thickness(MySplitView.IsPaneOpen ? MySplitView.OpenPaneLength : MySplitView.CompactPaneLength, bgPane.Margin.Top, bgPane.Margin.Right, bgPane.Margin.Bottom);
 
             };
+          
 
+            
+        }
+
+        private void Dt_Tick(object sender, object e)
+        {
+            TimeSpan dt = DoneTime.ToUniversalTime().Subtract(DateTime.Now.ToUniversalTime());
+            if (dt.TotalSeconds <= 0)
+                Time.Value = "FINISHED";
+            else
+                //txtCountDown.Text = dt.ToString(@"hh\:mm\:ss");
+                //Time.Value = $"{(int)dt.TotalHours}H {dt.Minutes}M {dt.Seconds}S";
+                   Time.Value= string.Format("{0:##}h {1:##}m {2:##}s", ((int)dt.TotalHours), dt.Minutes.ToString(), dt.Seconds.ToString());
+        }
+
+        private void OnAnnouncementsChecked(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MySplitView.IsPaneOpen = false;
+                if (MySplitView.Content != null)
+                    ((Frame)MySplitView.Content).Navigate(typeof(AnnouncementsPage));
+            }
+            catch { }
         }
         private void OnScheduleChecked(object sender, RoutedEventArgs e)
         {

@@ -29,6 +29,23 @@
 
         </StackPanel>
     </DataTemplate>
+    <DataTemplate x:Name="AnnouncementItem">
+
+        <StackPanel Margin="15,10,10,10" BorderBrush="{ThemeResource ThemeDarkerGold}" BorderThickness="0,0,0,.5">
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.Resources>
+                    <mvvm:DateTimeConverter x:Key="LocalDateTimeConverter"/>
+                </Grid.Resources>
+
+                <TextBlock VerticalAlignment="Center" Style="{ThemeResource SubHeaderTextBlockStyle}" Text="{Binding title}" />
+
+                <TextBlock  Style="{ThemeResource BaseAlternateTextBlockStyle}" VerticalAlignment="Bottom" Margin="0,5,0,0" Text="{Binding Path=updated_at, Mode=OneWay, Converter={StaticResource LocalDateTimeConverter}}"  HorizontalAlignment="Right"/>
+            </Grid>
+            
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}"   Margin="10,5" Text="{Binding description}" />
+
+        </StackPanel>
+    </DataTemplate>
 
 
     <DataTemplate x:Name="SponsorItem">

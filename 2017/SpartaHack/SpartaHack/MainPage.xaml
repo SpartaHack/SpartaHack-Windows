@@ -34,8 +34,12 @@
                             Value="CompactOverlay" />
                         <Setter Target="bgPane.Visibility"
                             Value="Visible" />
-                        <!--<Setter Target="MySplitView.Margin"
-                                Value="0"/>-->
+                        <Setter Target="txtTitle.Margin"
+                                Value="0"/>
+                        <Setter Target="txtTitle.HorizontalAlignment"
+                                Value="Center"/>
+                        <Setter Target="txtTitle.TextAlignment"
+                                Value="Center"/>
 
                     </VisualState.Setters>
                 </VisualState>
@@ -53,8 +57,12 @@
                             Value="Overlay" />
                         <Setter Target="bgPane.Visibility"
                             Value="Collapsed" />
-                        <!--<Setter Target="MySplitView.Margin"
-                                Value="0,48,0,0"/>-->
+                        <Setter Target="txtTitle.Margin"
+                                Value="48,0,0,0"/>
+                        <Setter Target="txtTitle.HorizontalAlignment"
+                                Value="Left"/>
+                        <Setter Target="txtTitle.TextAlignment"
+                                Value="Left"/>
 
 
                     </VisualState.Setters>
@@ -84,9 +92,9 @@
                 <Button x:Name="HambButton" Style="{ThemeResource ButtonSyle}" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                    Width="48" Height="48"  Click="HambButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-                <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Text="{Binding Value}"  Style="{ThemeResource HeaderTextBlockStyle}"/>
+                <TextBlock Name="txtTitle" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Text="{Binding Title.Value}"  Style="{ThemeResource HeaderTextBlockStyle}" FontSize="24"/>
 
-            <TextBlock Margin="0,0,5,0"  HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" />
+            <TextBlock Margin="0,0,53,0"  HorizontalAlignment="Right" VerticalAlignment="Center" x:Name="txtCountDown" Text="{Binding Time.Value}" Style="{ThemeResource SubHeaderTextBlockStyle}" />
         </Grid>
         
 
@@ -122,9 +130,9 @@
                    Width="48" Height="48"  Click="HambButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                 <TextBlock Margin="10,0,0,0"  VerticalAlignment="Center" Text="SpartaHack 2017" Style="{ThemeResource HeaderSplitViewTextBlockStyle}"/>
                             </StackPanel>
+
                             
-                            
-                            
+                            <RadioButton x:Name="rdAnnouncements" Tag="&#xE789;" Content="Announcements"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnAnnouncementsChecked"/>
                             <RadioButton x:Name="rdSchedule" Tag="&#xE787;" Content="Schedule"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnScheduleChecked"/>
                             <RadioButton x:Name="rdMap" Tag="&#xE707;" Content="Map"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnMapChecked"/>
                             <RadioButton x:Name="rdTicket" Tag="&#xE897;" Content="Help Desk"  Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnTicketChecked"/>

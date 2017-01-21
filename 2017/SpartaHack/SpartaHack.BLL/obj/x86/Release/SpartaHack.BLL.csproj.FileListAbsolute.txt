@@ -1,0 +1,17 @@
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Release\SpartaHack.BLL.dll.config
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Release\SpartaHack.BLL.dll
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Release\SpartaHack.BLL.pdb
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\bin\x86\Release\SpartaHack.BLL.pri
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\SpartaHack.BLL.dll
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\SpartaHack.BLL.pdb
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\priconfig.xml
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\priconfig.xml.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\layout.resfiles
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\layout.resfiles.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\resources.resfiles
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\resources.resfiles.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\pri.resfiles
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\pri.resfiles.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\qualifiers.txt
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\qualifiers.txt.intermediate
+C:\Users\mattp\Documents\GitHub\SpartaHack-Windows\2017\SpartaHack\SpartaHack.BLL\obj\x86\Release\MultipleQualifiersPerDimensionFound.txt

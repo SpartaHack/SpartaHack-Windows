@@ -4,7 +4,9 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Time" />
     <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="SelectedPage" />
     <RootPropertyPathName Name="File" />
     <RootPropertyPathName Name="Prizes" />
@@ -21,9 +23,10 @@
     <RootPropertyPathName Name="name" />
     <RootPropertyPathName Name="url" />
     <RootPropertyPathName Name="logo_png_light" />
+    <RootPropertyPathName Name="updated_at" />
+    <RootPropertyPathName Name="title" />
     <RootPropertyPathName Name="location" />
     <RootPropertyPathName Name="time" />
-    <RootPropertyPathName Name="title" />
     <RootPropertyPathName Name="ticket" />
     <RootPropertyPathName Name="text" />
     <RootPropertyPathName Name="Categories" />
@@ -35,17 +38,20 @@
       <RootProperty Name="RequestedTheme" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
+      <RootProperty Name="RequestedTheme" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
       <RootProperty Name="MergedDictionaries" />
       <RootProperty Name="Source" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
+      <RootProperty Name="IsSourceGrouped" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
@@ -66,10 +72,39 @@
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
     </RootType>
+    <RootType FullName="SpartaHack.MVVM.RefreshButton">
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootEvent Name="RefreshClicked" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="MaxWidth" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="IsSynchronizedWithCurrentItem" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="GroupStyle" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
+      <RootProperty Name="HeaderTemplate" />
+    </RootType>
+    <RootType FullName="SpartaHack.AnnouncementsPage" />
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.VisualStateGroup">
       <RootProperty Name="States" />
     </RootType>
@@ -121,7 +156,6 @@
       <RootProperty Name="GroupName" />
       <RootEvent Name="Checked" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
@@ -156,13 +190,14 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Text" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextAlignment" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Height" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="RenderTransform" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="TextTrimming" />
@@ -172,12 +207,6 @@
       <RootProperty Name="OpticalMarginAlignment" />
       <RootProperty Name="MaxWidth" />
       <RootProperty Name="MaxHeight" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="Path" />
-      <RootProperty Name="Converter" />
     </RootType>
     <RootType FullName="SpartaHack.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.FlipView">
@@ -220,13 +249,6 @@
       <RootProperty Name="RepeatBehavior" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.RotateTransform" />
-    <RootType FullName="SpartaHack.MVVM.RefreshButton">
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootEvent Name="RefreshClicked" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
@@ -278,23 +300,6 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="SpartaHack.ProfilePage" />
-    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
-      <RootProperty Name="IsSourceGrouped" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="MinWidth" />
-      <RootProperty Name="MaxWidth" />
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="IsSynchronizedWithCurrentItem" />
-      <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="GroupStyle" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
-      <RootProperty Name="HeaderTemplate" />
-    </RootType>
     <RootType FullName="SpartaHack.SchedulePage" />
     <RootType FullName="SpartaHack.SponsorPage" />
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
